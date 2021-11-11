@@ -10,17 +10,17 @@ module.exports = plugin(
         '@apply focus:outline-none focus-within:outline-none transition duration-300 disabled:ring-0 hover:ring-2 focus:ring-2 focus-within:ring-2 group-hover:ring-2 group-focus:ring-2 hover:ring-accent focus:ring-accent focus-within:ring-accent group-hover:ring-accent group-focus:ring-accent ring-accent ring-offset-4 ring-offset-white':
           {},
       },
-      '.set-color-accent-danger': {
-        '--color-accent': 'var(--color-danger-500)',
+      '.set-colors-accent-danger': {
+        '--colors-accent-500': 'var(--colors-danger-500)',
       },
-      '.set-color-accent-success': {
-        '--color-accent': 'var(--color-success-500)',
+      '.set-colors-accent-success': {
+        '--colors-accent-500': 'var(--colors-success-500)',
       },
     });
 
     addBase({
       html: {
-        '@apply text-primary antialiased bg-primary font-sans': {},
+        '@apply text-primary antialiased font-sans': {},
       },
       body: {
         position: 'relative',
