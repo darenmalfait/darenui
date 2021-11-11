@@ -11,10 +11,10 @@ module.exports = plugin(
           {},
       },
       '.set-color-accent-danger': {
-        '--color-accent': 'var(--color-danger)',
+        '--color-accent': 'var(--color-danger-500)',
       },
       '.set-color-accent-success': {
-        '--color-accent': 'var(--color-success)',
+        '--color-accent': 'var(--color-success-500)',
       },
     });
 
@@ -154,9 +154,11 @@ module.exports = plugin(
         backgroundColor: {
           primary: {
             DEFAULT: 'var(--colors-background-500)',
-            100: 'var(--colors-background-100)',
-            400: 'var(--colors-background-400)',
             500: 'var(--colors-background-500)',
+            600: 'var(--colors-background-600)',
+            700: 'var(--colors-background-700)',
+            800: 'var(--colors-background-800)',
+            900: 'var(--colors-background-900)',
           },
         },
         textColor: {
@@ -168,6 +170,10 @@ module.exports = plugin(
             300: 'var(--colors-text-300)',
             400: 'var(--colors-text-400)',
             500: 'var(--colors-text-500)',
+            600: 'var(--colors-text-600)',
+            700: 'var(--colors-text-700)',
+            800: 'var(--colors-text-800)',
+            900: 'var(--colors-text-900)',
           },
         },
         borderColor: {
@@ -179,12 +185,22 @@ module.exports = plugin(
             300: 'var(--colors-text-300)',
             400: 'var(--colors-text-400)',
             500: 'var(--colors-text-500)',
+            600: 'var(--colors-text-600)',
+            700: 'var(--colors-text-700)',
+            800: 'var(--colors-text-800)',
+            900: 'var(--colors-text-900)',
           },
         },
         colors: {
           transparent: 'transparent',
           current: 'currentColor',
-          link: 'var(--colors-link)',
+          daren: 'var(--colors-daren)',
+          accent: {
+            DEFAULT: 'var(--colors-accent-500)',
+            400: 'var(--colors-accent-400)',
+            500: 'var(--colors-accent-500)',
+            600: 'var(--colors-accent-600)',
+          },
           danger: {
             DEFAULT: 'var(--colors-danger-500)',
             100: 'var(--colors-danger-100)',
