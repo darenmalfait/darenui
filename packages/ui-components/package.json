@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "sideEffects": false,
   "license": "ISC",
   "publishConfig": {
@@ -42,9 +42,9 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@daren/theme": "^1.0.0",
-    "@daren/typography": "^1.0.0",
-    "@daren/utils": "^1.0.0"
+    "@daren/theme": "^1.1.0",
+    "@daren/typography": "^1.1.0",
+    "@daren/utils": "^1.1.0"
   },
   "peerDependencies": {
     "react": ">=17.0.2"
