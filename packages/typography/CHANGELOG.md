@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.1.0...@daren/typography@1.1.3) (2021-11-11)
+
+
+### Bug Fixes
+
+* force version bump ([5a0cfa1](https://github.com/darenmalfait/darenui/commit/5a0cfa13ba4c39fe2ceb9b718f492a9deadc7050))
+
+
+
+
+
 # 1.1.0 (2021-11-11)
 
 
