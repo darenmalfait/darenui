@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules/
+
+# dist
+packages/*/dist
+
+# Optional npm cache directory
+.npm
+
+# Mac files
+.DS_Store
+
+# misc
+lerna-debug.log
+.history
+.package-lock.json

@@ -1,0 +1,77 @@
+{
+  "name": "darenui",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darenmalfait/darenui.git"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "build-storybook": "build-storybook",
+    "build": "lerna run build --stream",
+    "clean": "lerna clean --yes && rm -rf node_modules",
+    "lint:src": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:types": "tsc --noEmit",
+    "postinstall": "npm run bootstrap",
+    "publish:ci": "lerna publish from-package --yes --no-verify-access",
+    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
+    "start": "yarn build && yarn storybook",
+    "storybook": "start-storybook -p 6006",
+    "validate": "concurrently yarn:lint:*"
+  },
+  "resolutions": {
+    "**/react": "17.0.2",
+    "**/react-dom": "17.0.2"
+  },
+  "author": "Daren Malfait",
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-plugin": "^7.14.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/runtime": "^7.16.0",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.3.12",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "@types/react-dom": "^17.0.11",
+    "@types/react": "^17.0.34",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "eslint-config-daren": "^3.0.2",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint": "^7.32.0",
+    "lerna": "^4.0.0",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "react-dom": "^17.0.2",
+    "react": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "storybook-addon-performance": "^0.16.1",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
+  }
+}

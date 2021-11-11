@@ -1,0 +1,25 @@
+{
+  "name": "@daren/ui-core",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:darenmalfait/darenui.git",
+    "directory": "packages/ui-core"
+  },
+  "author": "Daren Malfait",
+  "main": "./index.js",
+  "peerDependencies": {
+    "tailwindcss": ">=2.2.19"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "concurrently": "^6.3.0"
+  }
+}
