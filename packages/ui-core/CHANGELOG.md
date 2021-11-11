@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.1.2...@daren/ui-core@1.1.3) (2021-11-11)
+
+
+### Bug Fixes
+
+* adjust var naming ([06bc6dc](https://github.com/darenmalfait/darenui/commit/06bc6dc03256f91421cb14c97571262876bd75d0))
+
+
+
+
+
 ## [1.1.2](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.1.0...@daren/ui-core@1.1.2) (2021-11-11)
 
 
