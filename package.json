@@ -21,7 +21,7 @@
     "lint:types": "tsc --noEmit",
     "postinstall": "npm run bootstrap",
     "publish:ci": "lerna publish from-package --yes --no-verify-access",
-    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
+    "version:ci": "lerna version --yes --conventional-commits --conventional-graduate=* --create-release github --message 'chore(release): publish'",
     "start": "yarn build && yarn storybook",
     "storybook": "start-storybook -p 6006",
     "validate": "concurrently yarn:lint:*"
