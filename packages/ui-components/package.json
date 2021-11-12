@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.2.0-alpha.0",
+  "version": "1.2.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -36,9 +36,9 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/theme": "^1.3.0-alpha.0",
-    "@daren/typography": "^1.2.0-alpha.0",
-    "@daren/utils": "^1.2.0-alpha.0"
+    "@daren/theme": "^1.3.0",
+    "@daren/typography": "^1.2.0",
+    "@daren/utils": "^1.2.0"
   },
   "devDependencies": {
     "react": "^17.0.2"
