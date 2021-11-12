@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.1.3...@daren/ui-core@1.2.0) (2021-11-12)
+
+
+### Features
+
+* add breakpoints to theme ([3b7913a](https://github.com/darenmalfait/darenui/commit/3b7913a8472a32cfce53161e4efc1146a6e90e19))
+
+
+
+
+
 ## [1.1.3](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.1.2...@daren/ui-core@1.1.3) (2021-11-11)
 
 
