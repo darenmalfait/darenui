@@ -17,7 +17,7 @@
     "build-storybook": "build-storybook",
     "build": "lerna run build --stream",
     "clean": "lerna clean --yes && rm -rf node_modules",
-    "lint:src": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:lib": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:types": "tsc --noEmit",
     "postinstall": "npm run bootstrap",
     "publish:ci": "lerna publish from-package --yes --no-verify-access",
