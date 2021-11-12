@@ -4,18 +4,18 @@ import * as React from 'react';
 import { colors } from './colors';
 import { toCSSVar } from './to-css-var';
 
-export const ThemeContext = React.createContext<
+const ThemeContext = React.createContext<
   | {
       theme: WithCSSVar<Dict>;
     }
   | undefined
 >(undefined);
 
-export interface ThemeProviderProps {
+interface ThemeProviderProps {
   children: React.ReactNode;
 }
 
-export function ThemeProvider({ children }: ThemeProviderProps) {
+function ThemeProvider({ children }: ThemeProviderProps) {
   const theme = toCSSVar({
     colors,
   });
@@ -51,3 +51,18 @@ function updateThemeVariables(vars: Record<string, string>) {
     updateStyleHelper(key, val);
   });
 }
+
+function useTheme<T extends Record<string, unknown> = Dict>() {
+  const theme = React.useContext(
+    ThemeContext as unknown as React.Context<T | undefined>,
+  );
+  if (!theme) {
+    throw Error(
+      'useTheme: `theme` is undefined. Seems you forgot to wrap your app in `<ThemeProvider />`',
+    );
+  }
+
+  return theme as WithCSSVar<T>;
+}
+
+export { ThemeContext, ThemeProvider, useTheme, ThemeProviderProps };

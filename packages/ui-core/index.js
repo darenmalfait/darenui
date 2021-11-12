@@ -1,7 +1,6 @@
+const breakpoints = require('@daren/theme').breakpoints;
 const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
-
-const breakpoints = require('./src/breakpoints');
 
 module.exports = plugin(
   ({ addBase, addUtilities }) => {

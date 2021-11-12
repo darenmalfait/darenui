@@ -17,9 +17,10 @@
     "tailwindcss": ">=2.2.19"
   },
   "devDependencies": {
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "concurrently": "^6.3.0"
   },
   "dependencies": {
-    "concurrently": "^6.3.0"
+    "@daren/theme": "^1.1.2"
   }
 }

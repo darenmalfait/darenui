@@ -22,3 +22,13 @@ export interface ColorHues {
 export type Colors = RecursiveObject<
   Record<string, Partial<ColorHues>> | string
 >;
+
+export interface Breakpoints {
+  xsm: string;
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+  xxl: string;
+  wd: string;
+}
