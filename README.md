@@ -13,8 +13,6 @@
   - [Installation](#installation)
   - [Configuration](#configuration)
   - [Quick start](#quick-start)
-- [Component library development](#component-library-development)
-  - [Storybook](#storybook)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -86,12 +84,3 @@ function App() {
   );
 }
 ```
-
-## Component library development
-
-Install node_modules with `npm install`.
-
-### Storybook
-
-1. Run `npm start` file in the project folder.
-2. Visit `localhost:6006`
