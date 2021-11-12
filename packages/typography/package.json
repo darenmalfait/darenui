@@ -1,6 +1,6 @@
 {
   "name": "@daren/typography",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -35,7 +35,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.2.0"
+    "@daren/utils": "^1.2.1"
   },
   "devDependencies": {
     "react": "^17.0.2"
