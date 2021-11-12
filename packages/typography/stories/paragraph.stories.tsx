@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Paragraph } from '../src';
+import { Paragraph } from '../lib';
 
 export default {
   title: 'Paragraph',
