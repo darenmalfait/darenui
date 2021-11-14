@@ -13,4 +13,5 @@ packages/*/dist
 # misc
 lerna-debug.log
 .history
-.package-lock.json
+package-lock.json
+packages/**/yarn.lock
