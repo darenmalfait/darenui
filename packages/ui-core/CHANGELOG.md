@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.3.1...@daren/ui-core@1.4.0) (2021-11-14)
+
+
+### Features
+
+* **code-block:** add component to library ([#1](https://github.com/darenmalfait/darenui/issues/1)) ([ad62e93](https://github.com/darenmalfait/darenui/commit/ad62e93fe56ac351eee6e5df2f82fd78428a57da))
+
+
+
+
+
 ## [1.3.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.2.0...@daren/ui-core@1.3.1) (2021-11-12)
 
 **Note:** Version bump only for package @daren/ui-core
