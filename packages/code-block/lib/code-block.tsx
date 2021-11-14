@@ -39,10 +39,26 @@ function CodeBlock({
     return num;
   }
 
+  const preStyles = {
+    '--shiki-color-text': 'var(--base05)',
+    '--shiki-color-background': 'var(--base00)',
+    '--shiki-token-constant': 'var(--base09)',
+    '--shiki-token-string': 'var(--base0b)',
+    '--shiki-token-comment': 'var(--base03)',
+    '--shiki-token-keyword': 'var(--base0a)',
+    '--shiki-token-parameter': 'var(--base08)',
+    '--shiki-token-function': 'var(--base0d)',
+    '--shiki-token-string-expression': 'var(--base0b)',
+    '--shiki-token-punctuation': 'var(--base05)',
+    '--shiki-token-link': 'var(--base05)',
+    backgroundColor: 'var(--base00)',
+  } as React.CSSProperties;
+
   return (
     <pre
+      style={preStyles}
       className={cx(
-        'pr-8 py-4 relative my-5 overflow-x-auto text-sm leading-relaxed rounded bg-[#0F111A]',
+        'pr-8 py-4 relative my-5 overflow-x-auto text-sm leading-relaxed rounded',
         {
           'pl-4': !showLineNumbers,
           'pl-16': showLineNumbers,
@@ -61,7 +77,7 @@ function CodeBlock({
             lineHeight: 'inherit',
           }}
         >
-          <div className="flex flex-col text-primary-200">
+          <div className="flex flex-col text-primary-400">
             {tokens.map((line: any, i: number) => {
               if (i === tokens.length - 1 && line.length === 0) return null;
 
@@ -74,7 +90,7 @@ function CodeBlock({
                   })}
                 >
                   {showLineNumbers && (
-                    <span className="absolute grid place-items-center w-[40px] mr-[16px] flex-shrink-0 -left-14 border-r-primary-500 border-r text-primary-300">
+                    <span className="absolute grid place-items-center w-[40px] mr-[16px] flex-shrink-0 -left-14 text-primary-300">
                       {pad(i + 1)}
                     </span>
                   )}
@@ -94,6 +110,11 @@ function CodeBlock({
           </div>
         </code>
       </div>
+      {languageProp && (
+        <span className="sticky right-0 block w-full text-xs text-right">
+          {languageProp}
+        </span>
+      )}
     </pre>
   );
 }

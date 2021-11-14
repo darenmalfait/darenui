@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { getHighlighter, setCDN } from 'shiki';
+import { getHighlighter, Highlighter, setCDN } from 'shiki';
 
-setCDN('https://unpkg.com/shiki@0.9.3/');
+setCDN('https://unpkg.com/shiki@0.9.12/');
 
 const defaultToTokens = (code: string) => {
   const tokens = code
@@ -15,16 +15,15 @@ interface HighlighterProps {
   language?: string;
 }
 
-function useHighlighter({
-  code = '',
-  language = 'tsx',
-}: HighlighterProps): any {
-  const [highlighter, setHighlighter] = React.useState<any>(null);
+function useHighlighter({ code = '', language = 'tsx' }: HighlighterProps) {
+  const [highlighter, setHighlighter] = React.useState<null | Highlighter>(
+    null,
+  );
 
   React.useEffect(() => {
     async function fetchHljs() {
       const hljs = await getHighlighter({
-        theme: 'material-theme-ocean',
+        theme: 'css-variables',
         langs: ['tsx'],
       });
 
@@ -37,7 +36,7 @@ function useHighlighter({
   const tokens = React.useMemo(
     () =>
       highlighter && language !== 'text'
-        ? highlighter.codeToThemedTokens(code, language, null, {
+        ? highlighter.codeToThemedTokens(code, language, undefined, {
             includeExplanation: false,
           })
         : defaultToTokens(code),
@@ -48,7 +47,7 @@ function useHighlighter({
     ({ key, className, style, line, ...rest }) => {
       const output = {
         ...rest,
-        className: 'token-line',
+        className: 'codeblock-line',
         style: undefined,
         key: undefined,
       };
@@ -70,7 +69,6 @@ function useHighlighter({
     ({ key, className, style, token, ...rest }) => {
       const output = {
         ...rest,
-        className: `token`,
         children: token.content,
         style: {
           ...token.style,
