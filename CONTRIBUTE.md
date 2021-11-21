@@ -46,7 +46,9 @@ npx lerna create @daren/component-name
 
 > ⚠️ **Important!** <br />The package version should be: `"version": "1.0.0-alpha.0",`. That way it will be 1.0.0 on release. Otherwise it would be 1.1.0 on release and 1.0.0 will be skipped.
 
-Then copy the missing stuff from `@daren/theme` such as `scripts`, `repository`, `sideEffects`, `exports`, `main`, `module`, `types`, `typings`, `files` and the peer dependency to `react`.
+Then copy the missing stuff from `@daren/theme` `package.json` such as `scripts`, `repository`, `sideEffects`, `exports`, `main`, `module`, `types`, `typings`, `files` and the peer dependency to `react`.
+
+Copy the `tsconfig.json`.
 
 The folder structure should be like this:
 
