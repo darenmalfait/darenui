@@ -6,6 +6,8 @@ import { useHighlighter } from './highlighter';
 function getLanguage(language: string) {
   const map: any = {
     bash: 'text',
+    typescript: 'tsx',
+    javascript: 'tsx',
     tsx: 'tsx',
     jsx: 'tsx',
     js: 'tsx',
