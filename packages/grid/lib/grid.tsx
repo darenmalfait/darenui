@@ -2,6 +2,7 @@ import { cx, __DEV__ } from '@daren/utils';
 import * as React from 'react';
 
 interface GridProps {
+  style?: React.CSSProperties;
   children: React.ReactNode;
   className?: string;
   as?: React.ElementType;
@@ -13,6 +14,7 @@ interface GridProps {
 function Grid({
   children,
   className,
+  style,
   as: Tag = 'div',
   nested,
   featured,
@@ -20,6 +22,7 @@ function Grid({
 }: GridProps) {
   return (
     <Tag
+      style={style}
       className={cx('relative', {
         'mx-10vw': !nested,
         'w-full': nested,
