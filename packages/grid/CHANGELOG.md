@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.0.1...@daren/grid@1.1.0) (2021-11-25)
+
+
+### Features
+
+* **grid:** add style prop ([56f09db](https://github.com/darenmalfait/darenui/commit/56f09dbcbfc42378bb5d46aea72055651f0bcaa8))
+
+
+
+
+
 ## [1.0.1](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.0.0...@daren/grid@1.0.1) (2021-11-21)
 
 
