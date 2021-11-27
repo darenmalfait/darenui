@@ -21,10 +21,6 @@ module.exports = plugin(
       html: {
         '@apply text-primary antialiased font-sans': {},
       },
-      body: {
-        position: 'relative',
-        minHeight: '100%',
-      },
       pre: {
         '--base00': '#f3f3f3' /* editor background */,
         '--base01': '#e0e0e0' /* unused (currently) */,
