@@ -43,10 +43,6 @@ module.exports = plugin(
   },
   {
     mode: 'jit',
-    variants: {
-      opacity: ['responsive', 'hover', 'focus', 'dark', 'group-hover'],
-      boxShadow: ['responsive', 'hover', 'focus', 'dark'],
-    },
     theme: {
       extend: {
         fontFamily: {

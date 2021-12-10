@@ -34,15 +34,11 @@ The theme of this library depends on the @tailwindcss/typography plugin. To use 
 // tailwind.config.js
 module.exports = {
   mode: "jit",
-  purge: [ // purge is a bad name, it should be called components or something...
+  content: [
     // ... paths that use tailwind
     "./node_modules/@daren/**/*.{js,ts,jsx,tsx}", // path to daren
   ],
-  darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [

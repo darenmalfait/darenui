@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { getHighlighter, Highlighter, setCDN } from 'shiki';
 
-setCDN('https://unpkg.com/shiki@0.9.12/');
+setCDN('https://unpkg.com/shiki/');
 
 const defaultToTokens = (code: string) => {
   const tokens = code
@@ -21,16 +21,15 @@ function useHighlighter({ code = '', language = 'tsx' }: HighlighterProps) {
   );
 
   React.useEffect(() => {
-    async function fetchHljs() {
-      const hljs = await getHighlighter({
+    async function fetchHighlighter() {
+      const highlighter = await getHighlighter({
         theme: 'css-variables',
-        langs: ['tsx'],
       });
 
-      setHighlighter(hljs);
+      setHighlighter(highlighter);
     }
 
-    fetchHljs();
+    fetchHighlighter();
   }, []);
 
   const tokens = React.useMemo(
