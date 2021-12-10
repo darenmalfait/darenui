@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.4.1...@daren/ui-core@2.0.0) (2021-12-10)
+
+
+### chore
+
+* migrate to tailwind 3.0 ([ab842df](https://github.com/darenmalfait/darenui/commit/ab842df739006b9c060511c2d90b7a77852fa164))
+
+
+### BREAKING CHANGES
+
+* requires tailwind 3.0 as a dependency
+
+
+
+
+
 ## [1.4.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.4.0...@daren/ui-core@1.4.1) (2021-11-27)
 
 **Note:** Version bump only for package @daren/ui-core

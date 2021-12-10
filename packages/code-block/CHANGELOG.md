@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/code-block@1.0.2...@daren/code-block@2.0.0) (2021-12-10)
+
+
+### chore
+
+* migrate to tailwind 3.0 ([ab842df](https://github.com/darenmalfait/darenui/commit/ab842df739006b9c060511c2d90b7a77852fa164))
+
+
+### BREAKING CHANGES
+
+* requires tailwind 3.0 as a dependency
+
+
+
+
+
 ## [1.0.2](https://github.com/darenmalfait/darenui/compare/@daren/code-block@1.0.1...@daren/code-block@1.0.2) (2021-11-21)
 
 
