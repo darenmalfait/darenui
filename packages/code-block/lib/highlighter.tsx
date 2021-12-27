@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { getHighlighter, Highlighter, setCDN } from 'shiki';
 
-setCDN('https://unpkg.com/shiki/');
+setCDN('https://unpkg.com/shiki@0.9.12/');
 
 const defaultToTokens = (code: string) => {
   const tokens = code
