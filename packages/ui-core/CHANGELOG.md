@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.0.0...@daren/ui-core@2.1.0) (2022-01-09)
+
+
+### Features
+
+* add empty-content utility class ([ae220af](https://github.com/darenmalfait/darenui/commit/ae220af1d1f6eeb96b3f4019b2b4788aeda2d0b3))
+
+
+
+
+
 # [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@1.4.1...@daren/ui-core@2.0.0) (2021-12-10)
 
 
