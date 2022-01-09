@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.1.1...@daren/ui-core@2.2.0) (2022-01-09)
+
+
+### Features
+
+* add max-width tw class ([546afaa](https://github.com/darenmalfait/darenui/commit/546afaa87d1946f671f60b31dd1a5afeb706d50a))
+
+
+
+
+
 ## [2.1.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.1.0...@daren/ui-core@2.1.1) (2022-01-09)
 
 **Note:** Version bump only for package @daren/ui-core
