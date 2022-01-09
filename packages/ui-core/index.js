@@ -243,6 +243,9 @@ module.exports = plugin(
           '2xl': breakpoints.xxl,
           wd: breakpoints.wd,
         },
+        maxWidth: {
+          '8xl': '96rem',
+        },
         keyframes: {
           'fade-in-down': {
             '0%': {
