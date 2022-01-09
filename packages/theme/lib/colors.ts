@@ -20,7 +20,7 @@ export const colors: Colors = {
     900: '#000000',
   },
   background: {
-    500: '#fdfdfd',
+    500: '#ffffff',
     600: '#F2F2F2',
     700: '#E6E6E6',
     800: '#D9D9D9',
