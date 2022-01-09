@@ -15,6 +15,9 @@ module.exports = plugin(
       '.set-colors-accent-success': {
         '--colors-accent-500': 'var(--colors-success-500)',
       },
+      '.empty-content': {
+        content: "''",
+      },
     });
 
     addBase({
