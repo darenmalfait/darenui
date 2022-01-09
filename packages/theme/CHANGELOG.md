@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.3.1...@daren/theme@1.3.2) (2022-01-09)
+
+
+### Bug Fixes
+
+* **global:** adjust primary bg color ([5351b03](https://github.com/darenmalfait/darenui/commit/5351b0341e5d25331aa632a721e49740bfab522d))
+
+
+
+
+
 ## [1.3.1](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.2.0...@daren/theme@1.3.1) (2021-11-12)
 
 **Note:** Version bump only for package @daren/theme
