@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.4.6...@daren/ui-components@1.5.0) (2022-01-11)
+
+
+### Features
+
+* add progressive-image component ([0f6b667](https://github.com/darenmalfait/darenui/commit/0f6b667d5e5078b93e0367d68ca3d76f57e7cbf5))
+
+
+
+
+
 ## [1.4.6](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.4.5...@daren/ui-components@1.4.6) (2022-01-09)
 
 **Note:** Version bump only for package @daren/ui-components
