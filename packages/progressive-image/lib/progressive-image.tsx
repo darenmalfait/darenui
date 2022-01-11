@@ -65,7 +65,9 @@ function ProgressiveImage({
           className={clsx(className, 'min-w-full min-h-full object-cover')}
           alt={img.props.alt}
         />
-        <div className="absolute inset-0 w-full h-full backdrop-blur-xl" />
+        {placeholder && (
+          <div className="absolute inset-0 w-full h-full backdrop-blur-xl" />
+        )}
         {imgElement}
       </div>
     </div>
