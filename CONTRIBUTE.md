@@ -80,7 +80,7 @@ yarn workspace @daren/component-name add date-fns
 
 ```bash
 # adds button package to the ui-components package
-npx lerna add @darenui/button packages/ui-components
+npx lerna add @daren/button packages/ui-components
 ```
 
 ### Installing an npm package shared between multiple packages
