@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { ProgressiveImage } from '../lib';
+import { ProgressiveImage } from '../lib'
 
 export default {
   title: 'ProgressiveImage',
@@ -11,7 +11,7 @@ export default {
       defaultValue: 'https://picsum.photos/200/300',
     },
   },
-};
+}
 
 export function progressiveImage(args: any) {
   return (
@@ -23,5 +23,5 @@ export function progressiveImage(args: any) {
         {...args}
       />
     </div>
-  );
+  )
 }

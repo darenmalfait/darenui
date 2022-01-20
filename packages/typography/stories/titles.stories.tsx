@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { H1, H2, H3, H4, H5, H6 } from '../lib';
+import { H1, H2, H3, H4, H5, H6 } from '../lib'
 
 export default {
   title: 'Title',
   component: H1,
-};
+}
 
 export function Default() {
   return (
@@ -17,7 +17,7 @@ export function Default() {
       <H5>Title goes here.</H5>
       <H6>Title goes here.</H6>
     </div>
-  );
+  )
 }
 
 export function Secondary() {
@@ -30,5 +30,5 @@ export function Secondary() {
       <H5 variant="secondary">Title goes here.</H5>
       <H6 variant="secondary">Title goes here.</H6>
     </div>
-  );
+  )
 }

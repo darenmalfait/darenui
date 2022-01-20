@@ -1,13 +1,13 @@
-import { cx } from '@daren/utils';
-import Highlight, { defaultProps, Language } from 'prism-react-renderer';
-import github from 'prism-react-renderer/themes/github';
-import * as React from 'react';
+import { cx } from '@daren/utils'
+import Highlight, { defaultProps, Language } from 'prism-react-renderer'
+import github from 'prism-react-renderer/themes/github'
+import * as React from 'react'
 
 function pad(num: number | string, size = 2) {
-  num = num.toString();
-  while (num.length < size) num = `0${num}`;
+  num = num.toString()
+  while (num.length < size) num = `0${num}`
 
-  return num;
+  return num
 }
 
 export function CodeBlock({
@@ -15,9 +15,9 @@ export function CodeBlock({
   language = 'typescript',
   showLineNumbers,
 }: {
-  code?: string;
-  language?: Language;
-  showLineNumbers?: boolean;
+  code?: string
+  language?: Language
+  showLineNumbers?: boolean
 }) {
   return (
     <Highlight {...defaultProps} code={code} language={language} theme={github}>
@@ -34,7 +34,7 @@ export function CodeBlock({
           style={style}
         >
           {tokens.map((line, i) => {
-            if (i === tokens.length - 1 && line.length === 0) return null;
+            if (i === tokens.length - 1 && line.length === 0) return null
 
             return (
               // eslint-disable-next-line react/jsx-key
@@ -50,7 +50,7 @@ export function CodeBlock({
                   <span {...getTokenProps({ token, key })} />
                 ))}
               </div>
-            );
+            )
           })}
           {language && (
             <span className="sticky right-0 block w-full text-xs text-right">
@@ -60,5 +60,5 @@ export function CodeBlock({
         </pre>
       )}
     </Highlight>
-  );
+  )
 }

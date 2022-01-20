@@ -1,68 +1,66 @@
-import { Dict, isBrowser, useSafeEffect, WithCSSVar } from '@daren/utils';
-import * as React from 'react';
+import { Dict, isBrowser, useSafeEffect, WithCSSVar } from '@daren/utils'
+import * as React from 'react'
 
-import { colors } from './colors';
-import { toCSSVar } from './to-css-var';
+import { colors } from './colors'
+import { toCSSVar } from './to-css-var'
 
 const ThemeContext = React.createContext<
   | {
-      theme: WithCSSVar<Dict>;
+      theme: WithCSSVar<Dict>
     }
   | undefined
->(undefined);
+>(undefined)
 
 interface ThemeProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 function ThemeProvider({ children }: ThemeProviderProps) {
   const theme = toCSSVar({
     colors,
-  });
+  })
 
   useSafeEffect(() => {
-    if (isBrowser) updateThemeVariables(theme.cssVars);
-  }, [theme]);
+    if (isBrowser) updateThemeVariables(theme.cssVars)
+  }, [theme])
 
   const value = React.useMemo(
     () => ({
       theme,
     }),
     [theme],
-  );
+  )
 
-  return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
 
 function setStyleVariable(name: string, value: string) {
-  const rootStyle = document.documentElement.style;
-  rootStyle.setProperty(name, value);
+  const rootStyle = document.documentElement.style
+  rootStyle.setProperty(name, value)
 }
 
 function updateStyleHelper(_themeKey: string, style: string) {
-  const themeKey = _themeKey.startsWith('--') ? _themeKey : `--${_themeKey}`;
-  setStyleVariable(themeKey, style);
+  const themeKey = _themeKey.startsWith('--') ? _themeKey : `--${_themeKey}`
+  setStyleVariable(themeKey, style)
 }
 
 function updateThemeVariables(vars: Record<string, string>) {
   Object.entries(vars).forEach(([key, val]) => {
-    updateStyleHelper(key, val);
-  });
+    updateStyleHelper(key, val)
+  })
 }
 
 function useTheme<T extends Record<string, unknown> = Dict>() {
   const theme = React.useContext(
     ThemeContext as unknown as React.Context<T | undefined>,
-  );
+  )
   if (!theme) {
     throw Error(
       'useTheme: `theme` is undefined. Seems you forgot to wrap your app in `<ThemeProvider />`',
-    );
+    )
   }
 
-  return theme as WithCSSVar<T>;
+  return theme as WithCSSVar<T>
 }
 
-export { ThemeContext, ThemeProvider, useTheme, ThemeProviderProps };
+export { ThemeContext, ThemeProvider, useTheme, ThemeProviderProps }

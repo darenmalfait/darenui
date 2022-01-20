@@ -1,6 +1,6 @@
-const breakpoints = require('@daren/theme').breakpoints;
-const defaultTheme = require('tailwindcss/defaultTheme');
-const plugin = require('tailwindcss/plugin');
+const breakpoints = require('@daren/theme').breakpoints
+const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = plugin(
   ({ addBase, addUtilities }) => {
@@ -18,7 +18,7 @@ module.exports = plugin(
       '.empty-content': {
         content: "''",
       },
-    });
+    })
 
     addBase({
       html: {
@@ -42,7 +42,7 @@ module.exports = plugin(
         '--base0e': '#994cc3' /* unused (currently) */,
         '--base0f': '#d3423e' /* unused (currently) */,
       },
-    });
+    })
   },
   {
     mode: 'jit',
@@ -55,15 +55,15 @@ module.exports = plugin(
         },
         typography: theme => {
           const fontSize = size => {
-            const result = theme(`fontSize.${size}`);
-            return Array.isArray(result) ? result[0] : result;
-          };
+            const result = theme(`fontSize.${size}`)
+            return Array.isArray(result) ? result[0] : result
+          }
 
           const breakout = {
             marginLeft: 0,
             marginRight: 0,
             gridColumn: '2 / span 10',
-          };
+          }
 
           return {
             DEFAULT: {
@@ -161,7 +161,7 @@ module.exports = plugin(
                 },
               },
             },
-          };
+          }
         },
         backgroundColor: {
           primary: {
@@ -324,4 +324,4 @@ module.exports = plugin(
       },
     },
   },
-);
+)

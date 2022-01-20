@@ -1,79 +1,79 @@
-import { WithCSSVar, Dict, pick, walkObject } from '@daren/utils';
+import { WithCSSVar, Dict, pick, walkObject } from '@daren/utils'
 
-const tokens = ['colors'] as const;
+const tokens = ['colors'] as const
 
-type ThemeProps = typeof tokens[number];
+type ThemeProps = typeof tokens[number]
 
 function replaceWhiteSpace(value: string, replaceValue = '-') {
-  return value.replace(/\s+/g, replaceValue);
+  return value.replace(/\s+/g, replaceValue)
 }
 
 function escape(value: string | number) {
-  const valueStr = replaceWhiteSpace(value.toString());
-  if (valueStr.includes('\\.')) return value;
-  const isDecimal = !Number.isInteger(parseFloat(value.toString()));
+  const valueStr = replaceWhiteSpace(value.toString())
+  if (valueStr.includes('\\.')) return value
+  const isDecimal = !Number.isInteger(parseFloat(value.toString()))
 
-  return isDecimal ? valueStr.replace('.', `\\.`) : value;
+  return isDecimal ? valueStr.replace('.', `\\.`) : value
 }
 
 function toVarReference(name: string, fallback?: string) {
-  return `var(${escape(name)}${fallback ? `, ${fallback}` : ''})`;
+  return `var(${escape(name)}${fallback ? `, ${fallback}` : ''})`
 }
 
 function toVarDefinition(value: string) {
-  return `--${value}`;
+  return `--${value}`
 }
 
 function cssVar(name: string, fallback?: string) {
-  const cssVariable = toVarDefinition(name);
+  const cssVariable = toVarDefinition(name)
 
   return {
     variable: cssVariable,
     reference: toVarReference(cssVariable, fallback),
-  };
+  }
 }
 
 interface ThemeVars {
-  cssVars: Dict;
-  cssMap: Dict;
+  cssVars: Dict
+  cssMap: Dict
 }
 
 function createThemeVars(target: Dict) {
   const context: ThemeVars = {
     cssMap: {},
     cssVars: {},
-  };
+  }
 
   walkObject(target, (value, path) => {
     // firstKey will be e.g. "space"
-    const [firstKey] = path;
+    const [firstKey] = path
 
-    const handler = tokenHandlerMap[firstKey] ?? tokenHandlerMap.defaultHandler;
+    const handler = tokenHandlerMap[firstKey] ?? tokenHandlerMap.defaultHandler
 
-    const { cssVars, cssMap } = handler(path, value);
-    Object.assign(context.cssVars, cssVars);
-    Object.assign(context.cssMap, cssMap);
-  });
+    const { cssVars, cssMap } = handler(path, value)
+    Object.assign(context.cssVars, cssVars)
+    Object.assign(context.cssMap, cssMap)
+  })
 
-  return context;
+  return context
 }
 
 type TokenHandler = (
   keys: string[],
   value: unknown | { reference: string },
-) => ThemeVars;
+) => ThemeVars
 
 /**
  * Define transformation handlers for ThemeProps
  */
 const tokenHandlerMap: Partial<Record<ThemeProps, TokenHandler>> & {
-  defaultHandler: TokenHandler;
+  defaultHandler: TokenHandler
 } = {
   defaultHandler: (keys, value) => {
-    const lookupKey = keys.join('.');
-    const varKey = keys.join('-');
+    const lookupKey = keys.join('.')
+    const varKey = keys.join('-')
 
-    const { variable, reference } = cssVar(varKey, undefined);
+    const { variable, reference } = cssVar(varKey, undefined)
 
     return {
       cssVars: {
@@ -86,17 +86,17 @@ const tokenHandlerMap: Partial<Record<ThemeProps, TokenHandler>> & {
           varRef: reference,
         },
       },
-    };
+    }
   },
-};
+}
 
 function extractTokens(theme: Dict) {
-  return pick(theme, tokens as unknown as string[]);
+  return pick(theme, tokens as unknown as string[])
 }
 
 function omitVars(rawTheme: Dict) {
-  const { cssMap, cssVars, breakpoints, ...cleanTheme } = rawTheme;
-  return cleanTheme;
+  const { cssMap, cssVars, breakpoints, ...cleanTheme } = rawTheme
+  return cleanTheme
 }
 
 function toCSSVar<T extends Dict>(rawTheme: T) {
@@ -104,10 +104,10 @@ function toCSSVar<T extends Dict>(rawTheme: T) {
    * In the case the theme has already been converted to css-var (e.g extending the theme),
    * we can omit the computed css vars and recompute it for the extended theme.
    */
-  const theme = omitVars(rawTheme);
+  const theme = omitVars(rawTheme)
 
   // omit components and breakpoints from css variable map
-  const tokens = extractTokens(theme);
+  const tokens = extractTokens(theme)
 
   const {
     /**
@@ -119,14 +119,14 @@ function toCSSVar<T extends Dict>(rawTheme: T) {
      * The extracted css variables will be stored here
      */
     cssVars,
-  } = createThemeVars(tokens);
+  } = createThemeVars(tokens)
 
   Object.assign(theme, {
     cssVars,
     cssMap,
-  });
+  })
 
-  return theme as WithCSSVar<T>;
+  return theme as WithCSSVar<T>
 }
 
-export { toCSSVar };
+export { toCSSVar }

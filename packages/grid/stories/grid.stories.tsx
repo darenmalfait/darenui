@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Grid } from '../lib';
+import { Grid } from '../lib'
 
 export default {
   title: 'Grid',
@@ -12,7 +12,7 @@ export default {
     nested: { control: 'boolean', defaultValue: false },
     rowGap: { control: 'boolean', defaultValue: false },
   },
-};
+}
 
 export function grid(args: any) {
   return (
@@ -24,5 +24,5 @@ export function grid(args: any) {
         <div className="col-span-4">col-span-4</div>
       </Grid>
     </div>
-  );
+  )
 }

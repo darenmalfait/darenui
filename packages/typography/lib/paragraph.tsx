@@ -1,15 +1,15 @@
-import { cx } from '@daren/utils';
-import * as React from 'react';
+import { cx } from '@daren/utils'
+import * as React from 'react'
 
 type ParagraphProps = {
-  className?: string;
-  prose?: boolean;
-  textColorClassName?: string;
-  as?: React.ElementType;
+  className?: string
+  prose?: boolean
+  textColorClassName?: string
+  as?: React.ElementType
 } & (
   | { children: React.ReactNode }
   | { dangerouslySetInnerHTML: { __html: string } }
-);
+)
 
 function Paragraph({
   className,
@@ -23,7 +23,7 @@ function Paragraph({
       'prose prose-light': prose,
     }),
     ...rest,
-  });
+  })
 }
 
-export { Paragraph };
+export { Paragraph }

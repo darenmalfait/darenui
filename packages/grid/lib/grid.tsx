@@ -1,14 +1,14 @@
-import { cx, __DEV__ } from '@daren/utils';
-import * as React from 'react';
+import { cx, __DEV__ } from '@daren/utils'
+import * as React from 'react'
 
 interface GridProps {
-  style?: React.CSSProperties;
-  children: React.ReactNode;
-  className?: string;
-  as?: React.ElementType;
-  rowGap?: boolean;
-  nested?: boolean;
-  featured?: boolean;
+  style?: React.CSSProperties
+  children: React.ReactNode
+  className?: string
+  as?: React.ElementType
+  rowGap?: boolean
+  nested?: boolean
+  featured?: boolean
 }
 
 function Grid({
@@ -48,7 +48,7 @@ function Grid({
         {children}
       </div>
     </Tag>
-  );
+  )
 }
 
 /**
@@ -56,7 +56,7 @@ function Grid({
  */
 function GridLines() {
   if (!__DEV__) {
-    throw new Error('<GridLines />  should only be used during development');
+    throw new Error('<GridLines />  should only be used during development')
   }
 
   return (
@@ -74,7 +74,7 @@ function GridLines() {
         ))}
       </Grid>
     </div>
-  );
+  )
 }
 
-export { Grid, GridLines };
+export { Grid, GridLines }

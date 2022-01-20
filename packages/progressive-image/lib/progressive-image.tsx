@@ -1,11 +1,11 @@
-import { useSafeEffect } from '@daren/utils';
-import clsx from 'clsx';
-import * as React from 'react';
+import { useSafeEffect } from '@daren/utils'
+import clsx from 'clsx'
+import * as React from 'react'
 
 export type ResponsiveProps = {
-  maxWidth?: number;
-  size: { width: number; height?: number };
-};
+  maxWidth?: number
+  size: { width: number; height?: number }
+}
 
 function ProgressiveImage({
   img,
@@ -13,34 +13,34 @@ function ProgressiveImage({
   placeholder,
 }: {
   img: JSX.Element &
-    React.ReactElement<React.ImgHTMLAttributes<HTMLImageElement>>;
-  placeholder?: string;
+    React.ReactElement<React.ImgHTMLAttributes<HTMLImageElement>>
+  placeholder?: string
 } & React.HTMLAttributes<HTMLDivElement>) {
-  const [visible, setVisible] = React.useState(!placeholder);
-  const imgRef = React.useRef<HTMLImageElement>(null);
+  const [visible, setVisible] = React.useState(!placeholder)
+  const imgRef = React.useRef<HTMLImageElement>(null)
 
   // make this happen asap
   // if it's alrady loaded, don't bother fading it in.
   useSafeEffect(() => {
-    if (imgRef.current?.complete) setVisible(true);
-  }, []);
+    if (imgRef.current?.complete) setVisible(true)
+  }, [])
 
   React.useEffect(() => {
-    if (!imgRef.current) return;
-    if (imgRef.current.complete) return;
+    if (!imgRef.current) return
+    if (imgRef.current.complete) return
 
-    let current = true;
+    let current = true
     imgRef.current.addEventListener('load', () => {
-      if (!imgRef.current || !current) return;
+      if (!imgRef.current || !current) return
       setTimeout(() => {
-        setVisible(true);
-      }, 0);
-    });
+        setVisible(true)
+      }, 0)
+    })
 
     return () => {
-      current = false;
-    };
-  }, []);
+      current = false
+    }
+  }, [])
 
   const imgElement =
     !!placeholder &&
@@ -53,7 +53,7 @@ function ProgressiveImage({
           'opacity-0': !visible,
         },
       ),
-    });
+    })
 
   return (
     <div className={clsx(className, 'w-full')}>
@@ -71,7 +71,7 @@ function ProgressiveImage({
         {imgElement}
       </div>
     </div>
-  );
+  )
 }
 
-export { ProgressiveImage };
+export { ProgressiveImage }

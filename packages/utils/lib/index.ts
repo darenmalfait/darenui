@@ -1,9 +1,9 @@
-import cx from 'clsx';
+import cx from 'clsx'
 
-export * from './assertion';
-export * from './misc';
-export * from './object';
-export * from './types';
-export * from './walk-object';
+export * from './assertion'
+export * from './misc'
+export * from './object'
+export * from './types'
+export * from './walk-object'
 
-export { cx };
+export { cx }

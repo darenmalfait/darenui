@@ -1,1 +1,1 @@
-export * from './progressive-image';
+export * from './progressive-image'

@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { CodeBlock } from '../lib';
+import { CodeBlock } from '../lib'
 
 export default {
   title: 'Code Block',
@@ -15,7 +15,7 @@ export default {
       control: 'text',
     },
   },
-};
+}
 
 export function codeBlock({ showLineNumbers, language }: any) {
   return (
@@ -51,5 +51,5 @@ function CountProvider({children}) {
 export {CountProvider}`}
       />
     </div>
-  );
+  )
 }
