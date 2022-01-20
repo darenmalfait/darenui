@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.2.2...@daren/ui-core@2.3.0) (2022-01-20)
+
+
+### Features
+
+* **global:** add dark mode ([0458f89](https://github.com/darenmalfait/darenui/commit/0458f894a83806e41a2ff5237fd6bf2dba8770f5))
+
+
+
+
+
 ## [2.2.2](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.2.1...@daren/ui-core@2.2.2) (2022-01-20)
 
 **Note:** Version bump only for package @daren/ui-core
