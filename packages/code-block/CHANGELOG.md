@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.0.2...@daren/code-block@2.0.3) (2022-01-20)
+
+
+### Bug Fixes
+
+* **code-block:** export language type ([00a6b9e](https://github.com/darenmalfait/darenui/commit/00a6b9ef0da819189a988c6751ec093857975be8))
+
+
+
+
+
 ## [2.0.2](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.0.1...@daren/code-block@2.0.2) (2022-01-20)
 
 
