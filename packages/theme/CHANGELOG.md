@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.3.3...@daren/theme@1.3.4) (2022-01-20)
+
+
+### Bug Fixes
+
+* **theme:** add number as a possible key to colorhues type ([3047419](https://github.com/darenmalfait/darenui/commit/3047419028b7cb1fb7161719cde150b38177c83e))
+
+
+
+
+
 ## [1.3.3](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.3.2...@daren/theme@1.3.3) (2022-01-20)
 
 **Note:** Version bump only for package @daren/theme
