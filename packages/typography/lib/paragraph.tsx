@@ -15,12 +15,13 @@ function Paragraph({
   className,
   prose = true,
   as = 'p',
-  textColorClassName = 'text-primary-400',
+  textColorClassName = 'text-primary-400 dark:text-primary-100',
   ...rest
 }: ParagraphProps) {
   return React.createElement(as, {
-    className: cx('max-w-full text-lg', textColorClassName, className, {
-      'prose prose-light': prose,
+    className: cx('max-w-full text-lg', className, {
+      'prose prose-light dark:prose-invert': prose,
+      [textColorClassName]: !prose,
     }),
     ...rest,
   })

@@ -1,12 +1,16 @@
-import * as React from "react";
-import { withPerformance } from "storybook-addon-performance";
-import { ThemeProvider } from "@daren/ui-components";
+import * as React from "react"
+import { withPerformance } from "storybook-addon-performance"
+import { ThemeProvider } from "@daren/ui-components"
 
-import "./styles.css";
+import "./styles.css"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-};
+  darkMode: {
+    stylePreview: true
+  }
+
+}
 
 const withTheme = (StoryFn: Function) => {
   return (
@@ -17,7 +21,7 @@ const withTheme = (StoryFn: Function) => {
         <StoryFn />
       </div>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export const decorators = [withTheme, withPerformance];
+export const decorators = [withTheme, withPerformance]

@@ -25,8 +25,8 @@ const fontSize = {
 }
 
 const titleColors = {
-  primary: 'text-primary',
-  secondary: 'text-primary-400',
+  primary: 'text-primary dark:text-primary-100',
+  secondary: 'text-primary-400 dark:text-primary-200',
 }
 
 function Title({
