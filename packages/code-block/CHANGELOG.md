@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.0.1...@daren/code-block@2.0.2) (2022-01-20)
+
+
+### Bug Fixes
+
+* **code-block:** use prism instead of shiki ([7b034f6](https://github.com/darenmalfait/darenui/commit/7b034f66b04fa2caaa482d3a2d6357d02b78fac2))
+
+
+
+
+
 ## [2.0.1](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.0.0...@daren/code-block@2.0.1) (2021-12-27)
 
 
