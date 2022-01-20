@@ -3,7 +3,7 @@ export type RecursiveProperty<Nested = string | number> =
   | Nested
 
 export interface RecursiveObject<Nested = string | number> {
-  [property: string]: RecursiveProperty<Nested>
+  [property: string | number]: RecursiveProperty<Nested>
 }
 
 export interface ColorHues {
@@ -20,7 +20,7 @@ export interface ColorHues {
 }
 
 export type Colors = RecursiveObject<
-  Record<string, Partial<ColorHues>> | string
+  Record<string | number, Partial<ColorHues>> | string
 >
 
 export interface Breakpoints {
