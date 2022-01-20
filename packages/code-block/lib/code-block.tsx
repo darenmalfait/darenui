@@ -10,7 +10,9 @@ function pad(num: number | string, size = 2) {
   return num
 }
 
-export function CodeBlock({
+type CodeBlockLanguage = Language
+
+function CodeBlock({
   code = ``,
   language = 'typescript',
   showLineNumbers,
@@ -62,3 +64,6 @@ export function CodeBlock({
     </Highlight>
   )
 }
+
+export { CodeBlock }
+export type { CodeBlockLanguage }
