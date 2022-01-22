@@ -12,11 +12,17 @@ module.exports = plugin(
       '.bg-primary': {
         '@apply bg-primary-500 dark:bg-gray-900': {},
       },
+      '.bg-secondary': {
+        '@apply bg-primary-600 dark:bg-gray-800': {},
+      },
       '.bg-inverse': {
         '@apply bg-gray-900 dark:bg-primary-500': {},
       },
       '.text-primary': {
         '@apply text-primary-500 dark:text-primary-50': {},
+      },
+      '.text-secondary': {
+        '@apply text-primary-600 dark:text-primary-100': {},
       },
       '.text-inverse': {
         '@apply text-primary-50 dark:text-primary-500': {},
@@ -181,6 +187,7 @@ module.exports = plugin(
                       backgroundColor: theme('colors.gray.800'),
                     },
                     'thead, tbody tr': {
+                      color: theme('colors.white'),
                       borderBottomColor: theme('colors.gray.600'),
                     },
                   },
