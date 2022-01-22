@@ -6,8 +6,23 @@ module.exports = plugin(
   ({ addBase, addUtilities }) => {
     addUtilities({
       '.focus-ring': {
-        '@apply focus:outline-none focus-within:outline-none transition duration-300 disabled:ring-0 hover:ring-2 focus:ring-2 focus-within:ring-2 group-hover:ring-2 group-focus:ring-2 hover:ring-accent focus:ring-accent focus-within:ring-accent group-hover:ring-accent group-focus:ring-accent ring-accent ring-offset-4 ring-offset-white':
+        '@apply focus:outline-none focus-within:outline-none transition duration-300 disabled:ring-0 hover:ring-2 focus:ring-2 focus-within:ring-2 group-hover:ring-2 group-focus:ring-2 hover:ring-accent focus:ring-accent focus-within:ring-accent group-hover:ring-accent group-focus:ring-accent ring-accent ring-offset-4 dark:ring-offset-gray-900 ring-offset-white':
           {},
+      },
+      '.bg-primary': {
+        '@apply bg-primary-500 dark:bg-gray-900': {},
+      },
+      '.bg-inverse': {
+        '@apply bg-gray-900 dark:bg-primary-500': {},
+      },
+      '.text-primary': {
+        '@apply text-primary-500 dark:text-primary-50': {},
+      },
+      '.text-inverse': {
+        '@apply text-primary-50 dark:text-primary-500': {},
+      },
+      '.border-primary': {
+        '@apply border-primary-500 dark:border-primary-50': {},
       },
       '.set-colors-accent-danger': {
         '--colors-accent-500': 'var(--colors-danger-500)',
@@ -147,7 +162,7 @@ module.exports = plugin(
                   {
                     color: theme('colors.blueGray.500'),
                     a: {
-                      color: theme('colors.team.current'),
+                      color: theme('colors.white'),
                     },
                     strong: {
                       color: theme('colors.white'),
@@ -176,7 +191,6 @@ module.exports = plugin(
         },
         backgroundColor: {
           primary: {
-            DEFAULT: 'var(--colors-background-500)',
             500: 'var(--colors-background-500)',
             600: 'var(--colors-background-600)',
             700: 'var(--colors-background-700)',
@@ -186,7 +200,6 @@ module.exports = plugin(
         },
         textColor: {
           primary: {
-            DEFAULT: 'var(--colors-text-500)',
             50: 'var(--colors-text-50)',
             100: 'var(--colors-text-100)',
             200: 'var(--colors-text-200)',
@@ -201,7 +214,6 @@ module.exports = plugin(
         },
         borderColor: {
           primary: {
-            DEFAULT: 'var(--colors-text-500)',
             50: 'var(--colors-text-50)',
             100: 'var(--colors-text-100)',
             200: 'var(--colors-text-200)',

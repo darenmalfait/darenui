@@ -16,7 +16,7 @@ const withTheme = (StoryFn: Function) => {
   return (
     <ThemeProvider>
       <div
-        className="space-y-4"
+        className="space-y-4 text-primary"
       >
         <StoryFn />
       </div>
