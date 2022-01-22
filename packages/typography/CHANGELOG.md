@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.3.0...@daren/typography@1.3.1) (2022-01-22)
+
+
+### Bug Fixes
+
+* **core-ui:** remove double classes ([14dc00d](https://github.com/darenmalfait/darenui/commit/14dc00dfa002a3733d1829a47aa06459e98b94c0))
+
+
+
+
+
 # [1.3.0](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.2.2...@daren/typography@1.3.0) (2022-01-20)
 
 
