@@ -19,13 +19,13 @@ module.exports = plugin(
         '@apply bg-gray-900 dark:bg-primary-500': {},
       },
       '.text-primary': {
-        '@apply text-primary-500 dark:text-primary-100': {},
+        '@apply text-primary-500 dark:text-white': {},
       },
       '.text-secondary': {
-        '@apply text-primary-600 dark:text-primary-200': {},
+        '@apply text-primary-600 dark:text-primary-100': {},
       },
       '.text-inverse': {
-        '@apply text-primary-50 dark:text-primary-500': {},
+        '@apply text-white dark:text-primary-500': {},
       },
       '.border-primary': {
         '@apply border-primary-500 dark:border-primary-50': {},
