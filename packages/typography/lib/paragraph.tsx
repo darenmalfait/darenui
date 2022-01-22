@@ -15,7 +15,7 @@ function Paragraph({
   className,
   prose = true,
   as = 'p',
-  textColorClassName = 'text-primary-400 dark:text-primary-100',
+  textColorClassName = 'text-secondary',
   ...rest
 }: ParagraphProps) {
   return React.createElement(as, {

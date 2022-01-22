@@ -22,7 +22,7 @@ module.exports = plugin(
         '@apply text-primary-500 dark:text-primary-50': {},
       },
       '.text-secondary': {
-        '@apply text-primary-600 dark:text-primary-100': {},
+        '@apply text-primary-400 dark:text-primary-100': {},
       },
       '.text-inverse': {
         '@apply text-primary-50 dark:text-primary-500': {},
