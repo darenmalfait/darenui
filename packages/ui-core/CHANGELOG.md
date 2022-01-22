@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.3.2...@daren/ui-core@2.4.0) (2022-01-22)
+
+
+### Features
+
+* **core:** add secondary classes ([f879068](https://github.com/darenmalfait/darenui/commit/f879068a4664267d49457b2dc0c1f4699c2a89ab))
+
+
+
+
+
 ## [2.3.2](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.3.1...@daren/ui-core@2.3.2) (2022-01-22)
 
 **Note:** Version bump only for package @daren/ui-core
