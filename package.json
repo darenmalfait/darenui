@@ -16,6 +16,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build --stream",
+    "build:css": "npx tailwindcss build .storybook/styles.css -o .storybook/styles.output.css",
     "build-storybook": "build-storybook",
     "clean": "lerna clean --yes && rm -rf node_modules",
     "postinstall": "npm run bootstrap",
@@ -53,7 +54,6 @@
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "autoprefixer": "^10.4.2",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.4.0",
@@ -69,7 +69,6 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
-    "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -79,6 +78,9 @@
     "typescript": "^4.5.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "storybook-dark-mode": "^1.0.8"
   }
 }

@@ -19,13 +19,13 @@ module.exports = plugin(
         '@apply bg-gray-900 dark:bg-primary-500': {},
       },
       '.text-primary': {
-        '@apply text-primary-500 dark:text-white': {},
+        '@apply text-primary-500 dark:text-primary-50': {},
       },
       '.text-secondary': {
         '@apply text-primary-600 dark:text-primary-100': {},
       },
       '.text-inverse': {
-        '@apply text-white dark:text-primary-500': {},
+        '@apply text-primary-50 dark:text-primary-500': {},
       },
       '.border-primary': {
         '@apply border-primary-500 dark:border-primary-50': {},
@@ -166,7 +166,7 @@ module.exports = plugin(
               dark: {
                 css: [
                   {
-                    color: theme('colors.blueGray.500'),
+                    color: theme('colors.primary.500'),
                     a: {
                       color: theme('colors.white'),
                     },
@@ -183,7 +183,7 @@ module.exports = plugin(
                       color: theme('colors.white'),
                     },
                     blockquote: {
-                      color: theme('colors.blueGray.500'),
+                      color: theme('colors.primary.500'),
                       backgroundColor: theme('colors.gray.800'),
                     },
                     'thead, tbody tr': {
