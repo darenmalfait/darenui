@@ -1,6 +1,10 @@
 import { cx } from '@daren/utils'
-import Highlight, { defaultProps, Language } from 'prism-react-renderer'
-import github from 'prism-react-renderer/themes/github'
+import Highlight, {
+  defaultProps,
+  Language,
+  PrismTheme,
+} from 'prism-react-renderer'
+import nightOwl from 'prism-react-renderer/themes/nightOwl'
 import * as React from 'react'
 
 function pad(num: number | string, size = 2) {
@@ -16,13 +20,20 @@ function CodeBlock({
   code = ``,
   language = 'typescript',
   showLineNumbers,
+  theme,
 }: {
   code?: string
   language?: Language
   showLineNumbers?: boolean
+  theme?: PrismTheme
 }) {
   return (
-    <Highlight {...defaultProps} code={code} language={language} theme={github}>
+    <Highlight
+      {...defaultProps}
+      code={code}
+      language={language}
+      theme={theme ?? nightOwl}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={cx(
