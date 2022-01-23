@@ -21,11 +21,13 @@ function CodeBlock({
   language = 'typescript',
   showLineNumbers,
   theme,
+  className: classNameProp,
 }: {
   code?: string
   language?: Language
   showLineNumbers?: boolean
   theme?: PrismTheme
+  className?: string
 }) {
   return (
     <Highlight
@@ -37,8 +39,9 @@ function CodeBlock({
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={cx(
+            classNameProp,
             className,
-            'pr-8 py-4 relative my-5 overflow-x-auto text-sm leading-relaxed rounded',
+            'pr-8 py-4 relative my-5 overflow-x-auto text-sm leading-relaxed rounded-xl',
             {
               'pl-4': !showLineNumbers,
               'pl-16': showLineNumbers,
