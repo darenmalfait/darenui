@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.0.0...@daren/theme@2.0.1) (2022-01-24)
+
+
+### Bug Fixes
+
+* **theme:** add export of css file to package.json ([0c611f1](https://github.com/darenmalfait/darenui/commit/0c611f117aec62418b18ac171213ebd72fbfe969))
+
+
+
+
+
 # [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.3.5...@daren/theme@2.0.0) (2022-01-24)
 
 
