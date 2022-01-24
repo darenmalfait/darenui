@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.3.5...@daren/theme@2.0.0) (2022-01-24)
+
+
+### Features
+
+* **theme:** export vars in separate file ([27bc3bf](https://github.com/darenmalfait/darenui/commit/27bc3bf410a866ab106e2de893691848be6c1957))
+
+
+### BREAKING CHANGES
+
+* **theme:** the vars do not get exported anymore through the provider
+
+vars need to be imported manually with the new css file.
+
+
+
+
+
 ## [1.3.5](https://github.com/darenmalfait/darenui/compare/@daren/theme@1.3.4...@daren/theme@1.3.5) (2022-01-22)
 
 **Note:** Version bump only for package @daren/theme
