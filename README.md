@@ -71,7 +71,8 @@ Then you need a global css file which you import at the root of the project
 ```js
 import * as React from "react";
 import { ThemeProvider, H1 } from "@daren/ui-components";
-​
+import "@daren/theme/dist/darenui.css"
+
 function App() {
   return (
     <ThemeProvider>

@@ -4,6 +4,6 @@
 
 @layer base {
   html {
-    @apply overflow-x-hidden overscroll-none bg-primary-500 max-w-full;
+    @apply overflow-x-hidden overscroll-none  max-w-full;
   }
 }
