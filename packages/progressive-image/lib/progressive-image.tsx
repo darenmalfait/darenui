@@ -66,7 +66,15 @@ function ProgressiveImage({
           alt={img.props.alt}
         />
         {placeholder && (
-          <div className="absolute inset-0 w-full h-full backdrop-blur-xl" />
+          <div
+            className={clsx(
+              'absolute inset-0 w-full h-full transition-opacity duration-300',
+              {
+                'backdrop-blur-xl': !visible,
+                'opacity-0': visible,
+              },
+            )}
+          />
         )}
         {imgElement}
       </div>
