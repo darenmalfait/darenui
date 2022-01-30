@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.0.3...@daren/progressive-image@1.0.4) (2022-01-30)
+
+
+### Bug Fixes
+
+* **progressive-image:** put placeholder invisible when image loaded ([74f8490](https://github.com/darenmalfait/darenui/commit/74f84903d1b10492240c4af79d4763cffeda4e8b))
+
+
+
+
+
 ## [1.0.3](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.0.2...@daren/progressive-image@1.0.3) (2022-01-30)
 
 
