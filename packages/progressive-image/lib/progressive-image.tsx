@@ -57,7 +57,7 @@ function ProgressiveImage({
 
   return (
     <div className={clsx(className, 'w-full')}>
-      <div className="relative w-full h-full overflow-hidden rounded-xl ">
+      <div className="relative w-full h-full overflow-hidden">
         <img
           key={placeholder}
           src={placeholder || img.props.src}
