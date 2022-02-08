@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.0.5...@daren/code-block@2.1.0) (2022-02-08)
+
+
+### Features
+
+* **code-block:** add option to show/hide language ([4a129c1](https://github.com/darenmalfait/darenui/commit/4a129c1e08650d1b545ff3ad648a286b9e889092))
+
+
+
+
+
 ## [2.0.5](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.0.4...@daren/code-block@2.0.5) (2022-01-23)
 
 **Note:** Version bump only for package @daren/code-block

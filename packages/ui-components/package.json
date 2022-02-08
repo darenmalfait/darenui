@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.5.14",
+  "version": "1.5.15",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -36,7 +36,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/code-block": "^2.0.5",
+    "@daren/code-block": "^2.1.0",
     "@daren/grid": "^1.1.1",
     "@daren/progressive-image": "^1.0.5",
     "@daren/theme": "^2.0.1",
