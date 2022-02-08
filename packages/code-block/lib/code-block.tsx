@@ -20,12 +20,14 @@ function CodeBlock({
   code = ``,
   language = 'typescript',
   showLineNumbers,
+  showLanguage,
   theme,
   className: classNameProp,
 }: {
   code?: string
   language?: Language
   showLineNumbers?: boolean
+  showLanguage?: boolean
   theme?: PrismTheme
   className?: string
 }) {
@@ -68,7 +70,7 @@ function CodeBlock({
               </div>
             )
           })}
-          {language && (
+          {showLanguage && language && (
             <span className="sticky right-0 block w-full text-xs text-right">
               {language}
             </span>
