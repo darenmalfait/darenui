@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.2.2...@daren/utils@1.3.0) (2022-02-18)
+
+
+### Features
+
+* add use-controllable-state hook ([3ea3823](https://github.com/darenmalfait/darenui/commit/3ea3823116944836e84373b0cff355067f5d0864))
+
+
+
+
+
 ## [1.2.2](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.2.1...@daren/utils@1.2.2) (2022-01-20)
 
 **Note:** Version bump only for package @daren/utils

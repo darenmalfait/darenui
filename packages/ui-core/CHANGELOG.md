@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.7](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.4.6...@daren/ui-core@2.4.7) (2022-02-18)
+
+**Note:** Version bump only for package @daren/ui-core
+
+
+
+
+
 ## [2.4.6](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.4.5...@daren/ui-core@2.4.6) (2022-01-24)
 
 **Note:** Version bump only for package @daren/ui-core
