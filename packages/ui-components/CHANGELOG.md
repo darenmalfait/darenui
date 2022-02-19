@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.6.0...@daren/ui-components@1.6.1) (2022-02-19)
+
+
+### Bug Fixes
+
+* **ui-components:** add missing packages ([5aa232b](https://github.com/darenmalfait/darenui/commit/5aa232b3f39d94b4082d01e55bcdb6f31c533eb4))
+
+
+
+
+
 # [1.6.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.5.16...@daren/ui-components@1.6.0) (2022-02-19)
 
 
