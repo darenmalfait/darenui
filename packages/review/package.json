@@ -1,12 +1,13 @@
 {
-  "name": "@daren/ui-components",
-  "version": "1.5.16",
+  "name": "@daren/review",
+  "version": "1.0.0-alpha.0",
+  "description": "> TODO: description",
+  "author": "Daren Malfait <github@daren.be>",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
-    "directory": "packages/ui-components"
+    "directory": "packages/review"
   },
-  "license": "ISC",
   "sideEffects": false,
   "exports": {
     ".": {
@@ -36,12 +37,9 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/code-block": "^2.1.1",
-    "@daren/grid": "^1.1.2",
-    "@daren/progressive-image": "^1.0.6",
-    "@daren/theme": "^2.0.2",
     "@daren/typography": "^1.3.2",
-    "@daren/utils": "^1.3.0"
+    "@daren/utils": "^1.2.2",
+    "@heroicons/react": "^1.0.5"
   },
   "devDependencies": {
     "react": "^17.0.2"
