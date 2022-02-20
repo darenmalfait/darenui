@@ -1,3 +1,4 @@
+export * from '@daren/alert'
 export * from '@daren/code-block'
 export * from '@daren/form-elements'
 export * from '@daren/grid'
