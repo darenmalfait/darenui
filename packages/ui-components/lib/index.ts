@@ -1,4 +1,5 @@
 export * from '@daren/code-block'
+export * from '@daren/form-elements'
 export * from '@daren/grid'
 export * from '@daren/progressive-image'
 export * from '@daren/review'
