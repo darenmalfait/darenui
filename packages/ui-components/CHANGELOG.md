@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.6.2...@daren/ui-components@1.7.0) (2022-02-20)
+
+
+### Features
+
+* add new form-elements component ([7c13e8f](https://github.com/darenmalfait/darenui/commit/7c13e8f2f902cbddf9a6cf44c57ad6343dd40fe3))
+
+
+
+
+
 ## [1.6.2](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.6.1...@daren/ui-components@1.6.2) (2022-02-19)
 
 **Note:** Version bump only for package @daren/ui-components
