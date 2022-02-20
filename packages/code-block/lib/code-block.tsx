@@ -58,7 +58,7 @@ function CodeBlock({
               // eslint-disable-next-line react/jsx-key
               <div {...getLineProps({ line, key: i })}>
                 {showLineNumbers && (
-                  <span className="absolute grid place-items-center w-[40px] mr-[16px] flex-shrink-0 left-0 text-primary-300">
+                  <span className="grid absolute left-0 shrink-0 place-items-center mr-[16px] w-[40px] text-primary-300">
                     {pad(i + 1)}
                   </span>
                 )}
@@ -71,7 +71,7 @@ function CodeBlock({
             )
           })}
           {showLanguage && language && (
-            <span className="sticky right-0 block w-full text-xs text-right">
+            <span className="block sticky right-0 w-full text-xs text-right">
               {language}
             </span>
           )}

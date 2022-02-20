@@ -31,7 +31,7 @@ function Grid({
     >
       {featured ? (
         <div className="absolute inset-0 -mx-5vw">
-          <div className="w-full h-full mx-auto rounded-lg bg-secondary max-w-8xl" />
+          <div className="mx-auto w-full max-w-8xl h-full rounded-lg bg-secondary" />
         </div>
       ) : null}
 
@@ -67,7 +67,7 @@ function GridLines() {
             key={idx}
             className="flex items-start h-screen text-black bg-black opacity-10"
           >
-            <div className="w-full pt-4 text-lg text-center text-black">
+            <div className="pt-4 w-full text-lg text-center text-black">
               {idx + 1}
             </div>
           </div>

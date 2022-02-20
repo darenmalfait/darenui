@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['daren', 'daren/react', 'daren/jsx-a11y'],
+  extends: ['daren', 'daren/react', 'daren/jsx-a11y', 'daren/tailwind'],
 }

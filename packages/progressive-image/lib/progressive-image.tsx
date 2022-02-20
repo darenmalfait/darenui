@@ -48,7 +48,7 @@ function ProgressiveImage({
       ref: imgRef,
       className: clsx(
         img.props.className,
-        'transition-opacity duration-300 absolute object-cover w-full h-full inset-0',
+        'object-cover absolute inset-0 w-full h-full transition-opacity duration-300',
         {
           'opacity-0': !visible,
         },
@@ -57,14 +57,14 @@ function ProgressiveImage({
 
   return (
     <div className={clsx(className, 'w-full')}>
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="overflow-hidden relative w-full h-full">
         <img
           key={placeholder}
           src={placeholder || img.props.src}
           srcSet={!placeholder ? img.props.srcSet : undefined}
           className={clsx(
             className,
-            'min-w-full min-h-full transition-opacity duration-300 object-cover',
+            'object-cover min-w-full min-h-full transition-opacity duration-300',
             {
               'opacity-0': visible,
             },

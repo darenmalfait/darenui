@@ -31,7 +31,7 @@ function Review({
 }: ReviewProps) {
   return (
     <div className={cx(className, 'pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8')}>
-      <div className="lg:col-start-5 lg:col-span-8 xl:col-start-4 xl:col-span-9 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:items-start">
+      <div className="lg:col-span-8 lg:col-start-5 xl:grid xl:grid-cols-3 xl:col-span-9 xl:col-start-4 xl:gap-x-8 xl:items-start">
         <div className="flex items-center xl:col-span-1">
           <div className="flex items-center">
             {rating &&
@@ -54,7 +54,7 @@ function Review({
           </Paragraph>
         </div>
 
-        <div className="mt-4 lg:mt-6 xl:mt-0 xl:col-span-2">
+        <div className="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
           <H4 as="h3" className="text-sm font-medium text-primary">
             {title}
           </H4>
@@ -68,13 +68,13 @@ function Review({
         </div>
       </div>
 
-      <div className="mt-6 flex items-center text-sm lg:mt-0 lg:col-start-1 lg:col-span-4 lg:row-start-1 lg:flex-col lg:items-start xl:col-span-3">
+      <div className="flex items-center mt-6 text-sm lg:flex-col lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:items-start lg:mt-0 xl:col-span-3">
         <H4 as="h3" className="font-medium text-primary">
           {author}
         </H4>
         <time
           dateTime={datetime}
-          className="ml-4 border-l border-secondary pl-4 text-secondary lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
+          className="pl-4 ml-4 border-l lg:pl-0 lg:mt-2 lg:ml-0 lg:border-0 border-secondary text-secondary"
         >
           {date}
         </time>
@@ -101,7 +101,7 @@ function ReviewGroup({
       className={cx(className, 'max-w-2xl mx-auto py-16 sm:py-24 lg:max-w-7xl')}
     >
       {title && <H2 className={titleClass}>{title}</H2>}
-      <div className="mt-6 pb-10 border-t border-b border-secondary divide-y divide-gray-200 space-y-10">
+      <div className="pb-10 mt-6 space-y-10 border-y divide-y divide-gray-200 border-secondary">
         {children}
       </div>
     </div>
