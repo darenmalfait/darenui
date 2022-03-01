@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.8.0...@daren/ui-components@1.9.0) (2022-03-01)
+
+
+### Features
+
+* new layout-components package ([ca0f89b](https://github.com/darenmalfait/darenui/commit/ca0f89b74932101ca733d57901d979f818956995))
+
+
+
+
+
 # [1.8.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.7.0...@daren/ui-components@1.8.0) (2022-02-20)
 
 
