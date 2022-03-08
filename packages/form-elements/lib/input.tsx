@@ -3,6 +3,7 @@ import { ExclamationCircleIcon } from '@heroicons/react/solid'
 import * as React from 'react'
 
 import { InputProps } from './types'
+import { getInputClassName } from './utils'
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   props,
@@ -10,16 +11,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
 ) {
   const { type, hasError, ...inputProps } = props
 
-  const className = cx(
-    hasError ? 'border-red-300 border hover:border-transparent' : 'border-none',
-    'py-5 px-8 pr-10 w-full text-md font-bold placeholder:text-gray-500 disabled:text-gray-400 rounded-lg focus-ring',
-    {
-      'bg-primary-600 text-slate-900': !hasError,
-      '!text-danger bg-primary-600 animate-shake !set-colors-accent-danger':
-        hasError,
-    },
-    props.className,
-  )
+  const className = getInputClassName(props.className, hasError)
 
   if (type === 'textarea') {
     return (
