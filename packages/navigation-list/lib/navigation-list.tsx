@@ -1,7 +1,7 @@
 import { cx } from '@daren/utils'
 import * as React from 'react'
 
-type NavigationItemProps = JSX.IntrinsicElements['a'] & {
+type NavigationItemProps = {
   className?: string | ((props: { isActive: boolean }) => string | undefined)
   title: string
   href?: string
