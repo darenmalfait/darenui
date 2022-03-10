@@ -1,7 +1,7 @@
 import { cx } from '@daren/utils'
 import * as React from 'react'
 
-interface NavigationItemProps {
+type NavigationItemProps = JSX.IntrinsicElements['a'] & {
   className?: string | ((props: { isActive: boolean }) => string | undefined)
   title: string
   href?: string
@@ -23,7 +23,7 @@ function getNavigationItemClassName({
   )
 }
 
-function Item<T extends NavigationItemProps>({
+function Item<T>({
   as,
   className,
   title,
@@ -31,7 +31,7 @@ function Item<T extends NavigationItemProps>({
   to,
   icon: Icon,
   ...props
-}: T) {
+}: NavigationItemProps & T) {
   const Link = as ?? 'a'
 
   return (
