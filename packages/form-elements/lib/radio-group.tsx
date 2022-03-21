@@ -24,7 +24,7 @@ function Option({
         cx(
           className,
           'relative rounded-lg shadow-md px-5 py-4 cursor-pointer flex focus:outline-none group',
-          checked ? 'bg-secondary text-primary' : 'bg-inverse text-inverse',
+          checked ? 'bg-inverse text-inverse' : 'bg-secondary text-primary',
           {
             'ring-2 ring-offset-2 ring-inverse ring-inverse ring-opacity-60':
               active,
@@ -39,23 +39,25 @@ function Option({
               <HeadlessRadioGroup.Label
                 as="p"
                 className={`font-medium  ${
-                  checked ? 'text-primary' : 'text-inverse'
+                  checked ? 'text-invserse' : 'text-primary'
                 }`}
               >
                 {label}
               </HeadlessRadioGroup.Label>
-              <HeadlessRadioGroup.Description
-                as="span"
-                className={`inline ${
-                  checked ? 'text-slate-500' : 'text-slate-400'
-                }`}
-              >
-                {description}
-              </HeadlessRadioGroup.Description>
+              {description && (
+                <HeadlessRadioGroup.Description
+                  as="span"
+                  className={`inline ${
+                    checked ? 'text-slate-500' : 'text-slate-400'
+                  }`}
+                >
+                  {description}
+                </HeadlessRadioGroup.Description>
+              )}
             </div>
           </div>
           {checked && (
-            <div className="shrink-0 text-primary">
+            <div className="shrink-0 text-inverse">
               <CheckCircleIcon className="w-6 h-6" />
             </div>
           )}
