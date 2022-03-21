@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.1.0...@daren/form-elements@1.2.0) (2022-03-21)
+
+
+### Features
+
+* **form-elements:** add radio-group component ([c43fdee](https://github.com/darenmalfait/darenui/commit/c43fdee64846575a2f7a364023894118af6b4bcd))
+
+
+
+
+
 # [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.0.0...@daren/form-elements@1.1.0) (2022-03-08)
 
 
