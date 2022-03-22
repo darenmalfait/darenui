@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.1.2...@daren/code-block@2.2.0) (2022-03-22)
+
+
+### Features
+
+* **code-block:** add copy to clipboard ([528e1cd](https://github.com/darenmalfait/darenui/commit/528e1cd08252101b789c877c95e6ae9b5eb44312))
+
+
+
+
+
 ## [2.1.2](https://github.com/darenmalfait/darenui/compare/@daren/code-block@2.1.1...@daren/code-block@2.1.2) (2022-02-20)
 
 **Note:** Version bump only for package @daren/code-block
