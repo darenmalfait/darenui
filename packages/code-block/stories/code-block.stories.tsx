@@ -17,7 +17,7 @@ export default {
   },
 }
 
-export function codeBlock({ showLineNumbers, language }: any) {
+export function Default({ showLineNumbers, language }: any) {
   return (
     <div>
       <CodeBlock
@@ -49,6 +49,18 @@ function CountProvider({children}) {
 }
 
 export {CountProvider}`}
+      />
+    </div>
+  )
+}
+
+export function OneLine({ showLineNumbers, language }: any) {
+  return (
+    <div>
+      <CodeBlock
+        showLineNumbers={showLineNumbers}
+        language={language}
+        code={`import * as React from 'react'`}
       />
     </div>
   )
