@@ -4,19 +4,12 @@ import { Section } from '../lib'
 
 export default {
   title: 'Layout Components',
-  component: Section,
-  argTypes: {
-    as: {
-      control: 'text',
-      defaultValue: 'section',
-    },
-  },
 }
 
-export function section({ as }: any) {
+export function section() {
   return (
     <div>
-      <Section as={as}>content</Section>
+      <Section>content</Section>
     </div>
   )
 }

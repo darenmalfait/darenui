@@ -2,30 +2,50 @@ import * as React from 'react'
 
 import { Alert } from '../lib'
 
-export default {
-  title: 'Alert',
-  component: Alert,
-  argTypes: {
-    type: {
-      options: ['info', 'danger', 'warning', 'success'],
-      control: { type: 'radio' },
-      defaultValue: 'info',
-    },
-    description: {
-      control: { type: 'text' },
-      defaultValue: 'This is a description',
-    },
-    title: {
-      control: { type: 'text' },
-      defaultValue: 'This is a title',
-    },
-  },
-}
-
-export function alert({ type, title, description }: any) {
+export function Info() {
   return (
     <div>
-      <Alert type={type} title={title} description={description} />
+      <Alert
+        type="info"
+        title="this is a title"
+        description="this is a description"
+      />
+    </div>
+  )
+}
+
+export function Danger() {
+  return (
+    <div>
+      <Alert
+        type="danger"
+        title="this is a title"
+        description="this is a description"
+      />
+    </div>
+  )
+}
+
+export function Success() {
+  return (
+    <div>
+      <Alert
+        type="success"
+        title="this is a title"
+        description="this is a description"
+      />
+    </div>
+  )
+}
+
+export function Warning() {
+  return (
+    <div>
+      <Alert
+        type="warning"
+        title="this is a title"
+        description="this is a description"
+      />
     </div>
   )
 }

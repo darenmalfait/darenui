@@ -3,6 +3,7 @@ node_modules/
 
 # dist
 packages/*/dist
+build
 
 # Optional npm cache directory
 .npm
@@ -15,3 +16,4 @@ lerna-debug.log
 .history
 package-lock.json
 packages/**/yarn.lock
+styles.output.css

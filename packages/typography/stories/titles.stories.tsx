@@ -7,7 +7,7 @@ export default {
   component: H1,
 }
 
-export function Default() {
+export function title() {
   return (
     <div className="flex flex-col space-y-4">
       <H1>Title goes here.</H1>
@@ -20,7 +20,7 @@ export function Default() {
   )
 }
 
-export function Secondary() {
+export function secondary() {
   return (
     <div className="flex flex-col space-y-4">
       <H1 variant="secondary">Title goes here.</H1>

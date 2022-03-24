@@ -9,7 +9,7 @@ export default {
   argTypes: {},
 }
 
-export function Default() {
+export function navigationList() {
   return (
     <div>
       <NavigationList>
@@ -28,7 +28,7 @@ export function Default() {
               title="Item 2"
               className={getNavigationItemClassName({
                 textClassNames: 'text-gray-500 hover:text-indigo-400',
-                backgroundClassNames: 'bg-primary',
+                backgroundClassNames: 'bg-transparent',
               })}
             />
           </div>

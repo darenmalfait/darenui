@@ -2,27 +2,13 @@ import * as React from 'react'
 
 import { CodeBlock } from '../lib'
 
-export default {
-  title: 'Code Block',
-  component: CodeBlock,
-  argTypes: {
-    showLineNumbers: {
-      defaultValue: false,
-      control: 'boolean',
-    },
-    language: {
-      defaultValue: 'tsx',
-      control: 'text',
-    },
-  },
-}
-
-export function Default({ showLineNumbers, language }: any) {
+export function FullBlock() {
   return (
     <div>
       <CodeBlock
-        showLineNumbers={showLineNumbers}
-        language={language}
+        showLineNumbers={true}
+        language="tsx"
+        showLanguage={true}
         code={`import * as React from 'react'
 
 const CountContext = React.createContext()
@@ -54,14 +40,10 @@ export {CountProvider}`}
   )
 }
 
-export function OneLine({ showLineNumbers, language }: any) {
+export function OneLine() {
   return (
     <div>
-      <CodeBlock
-        showLineNumbers={showLineNumbers}
-        language={language}
-        code={`import * as React from 'react'`}
-      />
+      <CodeBlock code={`import * as React from 'react'`} />
     </div>
   )
 }

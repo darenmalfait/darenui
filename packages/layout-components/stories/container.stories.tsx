@@ -3,28 +3,34 @@ import * as React from 'react'
 
 import { Container } from '../lib'
 
-export default {
-  title: 'Layout Components',
-  component: Container,
-  argTypes: {
-    as: {
-      control: 'text',
-      defaultValue: 'div',
-    },
-    size: {
-      options: ['small', 'default', 'medium', 'full'],
-      control: { type: 'radio' },
-      defaultValue: 'text',
-    },
-  },
-}
-
-export function container({ as, size }: any) {
+export function Default() {
   return (
     <Grid>
-      <Container size={size} as={as}>
-        content
-      </Container>
+      <Container size="default">content</Container>
+    </Grid>
+  )
+}
+
+export function small() {
+  return (
+    <Grid>
+      <Container size="small">content</Container>
+    </Grid>
+  )
+}
+
+export function medium() {
+  return (
+    <Grid>
+      <Container size="medium">content</Container>
+    </Grid>
+  )
+}
+
+export function full() {
+  return (
+    <Grid>
+      <Container size="full">content</Container>
     </Grid>
   )
 }

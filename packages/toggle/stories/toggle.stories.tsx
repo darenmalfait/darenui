@@ -4,28 +4,12 @@ import { Toggle } from '../lib'
 
 export default {
   title: 'Toggle',
-  component: Toggle,
-  argTypes: {
-    disabled: {
-      defaultValue: false,
-      control: 'boolean',
-    },
-  },
 }
 
-export function toggle({
-  disabled,
-  activeColorClass,
-  inactiveColorClass,
-}: any) {
+export function toggle() {
   return (
     <div>
-      <Toggle
-        id="unique-id"
-        disabled={disabled}
-        activeColorClass={activeColorClass}
-        inactiveColorClass={inactiveColorClass}
-      />
+      <Toggle id="unique-id" />
     </div>
   )
 }

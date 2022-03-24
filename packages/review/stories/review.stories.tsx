@@ -4,54 +4,18 @@ import { Review, ReviewGroup } from '../lib'
 
 export default {
   title: 'Review',
-  component: Review,
-  argTypes: {
-    rating: {
-      defaultValue: 4,
-      control: 'number',
-    },
-    title: {
-      defaultValue: "I'm a title",
-      control: 'string',
-    },
-    html: {
-      defaultValue: "I'm a description",
-      control: 'string',
-    },
-    author: {
-      defaultValue: "I'm an author",
-      control: 'string',
-    },
-    date: {
-      defaultValue: 'May 16, 2021',
-      control: 'string',
-    },
-    datetime: {
-      defaultValue: '2021-01-06',
-      control: 'string',
-    },
-  },
 }
 
-export function review({
-  rating,
-  title,
-  html,
-  author,
-  date,
-  datetime,
-  className,
-}: any) {
+export function review() {
   return (
     <div>
       <Review
-        rating={rating}
-        title={title}
-        html={html}
-        author={author}
-        date={date}
-        datetime={datetime}
-        className={className}
+        rating={4}
+        title="this is a title"
+        html="<p>this is the content in html</p>"
+        author="auhor"
+        date="jan 2020"
+        datetime="2020-01-01T00:00:00.000Z"
       />
     </div>
   )

@@ -3,11 +3,6 @@ import * as React from 'react'
 
 import { RadioGroup } from '../lib'
 
-export default {
-  title: 'Form Elements',
-  component: RadioGroup,
-}
-
 export function radioGroup() {
   const [selected, setSelected] = React.useState<string | null>(null)
 
@@ -17,7 +12,6 @@ export function radioGroup() {
 
   return (
     <div>
-      <h2>Options</h2>
       <RadioGroup name="example-group" value={selected} onChange={onChange}>
         <RadioGroup.Option
           value="1"
