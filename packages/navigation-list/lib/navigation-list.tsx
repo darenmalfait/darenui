@@ -11,15 +11,15 @@ type NavigationItemProps = {
 }
 
 function getNavigationItemClassName({
-  textClassNames = 'text-primary',
+  textClassNames = 'text-primary hover:text-slate-800',
   paddingClassNames = 'px-3 py-2',
   backgroundClassNames = 'bg-primary hover:bg-gray-50',
 } = {}) {
   return cx(
-    'group flex items-center text-sm font-bold rounded-md',
     textClassNames,
     backgroundClassNames,
     paddingClassNames,
+    'group flex items-center text-sm font-bold rounded-md',
   )
 }
 
