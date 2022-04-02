@@ -17,11 +17,21 @@ interface DropdownProps {
   hasError?: boolean
   className?: string
   defaultValue?: string
+  disabled?: boolean
 }
 
 const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
   function Dropdown(props, ref) {
-    const { id, items, name, onChange, hasError, defaultValue, ...rest } = props
+    const {
+      id,
+      items,
+      name,
+      onChange,
+      hasError,
+      defaultValue,
+      disabled,
+      ...rest
+    } = props
     const value = items.find(({ value: val }) => val === defaultValue)
 
     const [selected, setSelected] = React.useState(value)
@@ -47,9 +57,10 @@ const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
 
     return (
       <div className="w-full">
-        <Combobox value={selected} onChange={handleChange}>
+        <Combobox value={selected} disabled={disabled} onChange={handleChange}>
           <input
             {...rest}
+            disabled={disabled}
             type="hidden"
             ref={ref}
             name={name}
@@ -59,6 +70,8 @@ const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
           <div className="relative">
             <div className="relative">
               <Combobox.Input
+                aria-disabled={disabled}
+                disabled={disabled}
                 className={getInputClassName(props.className, hasError)}
                 displayValue={item => (item as any).label}
                 onChange={event => setQuery(event.target.value)}
