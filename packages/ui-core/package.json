@@ -7,9 +7,6 @@
     "url": "git@github.com:darenmalfait/darenui.git",
     "directory": "packages/ui-core"
   },
-  "exports": {
-    "./package.json": "./package.json"
-  },
   "license": "ISC",
   "author": "Daren Malfait",
   "main": "./index.js",
