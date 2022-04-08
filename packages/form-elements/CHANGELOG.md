@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.3.1...@daren/form-elements@1.3.2) (2022-04-08)
+
+
+### Bug Fixes
+
+* **dropdown:** pass value with onChange ([5daf85a](https://github.com/darenmalfait/darenui/commit/5daf85a66db6cea37adf16fecbc0db57c3fb4695))
+
+
+
+
+
 ## [1.3.1](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.3.0...@daren/form-elements@1.3.1) (2022-04-08)
 
 
