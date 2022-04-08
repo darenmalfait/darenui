@@ -12,7 +12,7 @@ interface DropdownProps {
   id?: string
   name: string
   items: { id?: string; label: string; value: string }[]
-  onChange?(): void
+  onChange?(value?: string): void
   value?: string
   hasError?: boolean
   className?: string
@@ -50,7 +50,7 @@ const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
     const handleChange = React.useCallback(
       (val: typeof value) => {
         setSelected(val)
-        if (onChange) onChange()
+        if (onChange) onChange(val?.value)
       },
       [onChange],
     )
