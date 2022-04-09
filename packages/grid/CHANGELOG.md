@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.1.5...@daren/grid@1.1.6) (2022-04-09)
+
+
+### Bug Fixes
+
+* **grid:** remove fixed margin on mobile ([5b871c6](https://github.com/darenmalfait/darenui/commit/5b871c6a4df40ea9b59a5bedc2fca03d7320b7ea))
+
+
+
+
+
 ## [1.1.5](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.1.4...@daren/grid@1.1.5) (2022-04-09)
 
 
