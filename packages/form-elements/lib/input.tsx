@@ -9,26 +9,52 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   props,
   ref,
 ) {
-  const { type, hasError, ...inputProps } = props
+  const { type, hasError, icon: Icon, ...inputProps } = props
 
   const className = getInputClassName(props.className, hasError)
 
   if (type === 'textarea') {
     return (
-      <textarea
-        {...(inputProps as JSX.IntrinsicElements['textarea'])}
-        className={cx('h-36', className)}
-        aria-invalid={hasError}
-      />
+      <div className="relative flex-items-center">
+        {Icon && (
+          <Icon
+            width="20px"
+            height="20px"
+            className={cx(
+              'z-10 flex absolute top-0 left-5 justify-center items-center p-0 h-full',
+              {
+                'text-red-500': hasError,
+              },
+            )}
+          />
+        )}
+        <textarea
+          {...(inputProps as JSX.IntrinsicElements['textarea'])}
+          className={cx('h-36', className, { 'pl-14': !!Icon })}
+          aria-invalid={hasError}
+        />
+      </div>
     )
   }
 
   return (
     <div className="relative shadow-sm">
+      {Icon && (
+        <Icon
+          width="20px"
+          height="20px"
+          className={cx(
+            'z-10 flex absolute top-0 left-5 justify-center items-center p-0 h-full',
+            {
+              'text-red-500': hasError,
+            },
+          )}
+        />
+      )}
       <input
         type={type}
         {...(inputProps as JSX.IntrinsicElements['input'])}
-        className={className}
+        className={cx(className, { 'pl-14': !!Icon })}
         ref={ref}
         aria-invalid={hasError}
       />

@@ -1,4 +1,6 @@
-type InputProps = { hasError?: boolean } & (
+import React from 'react'
+
+type InputProps = { hasError?: boolean; icon?: React.ElementType } & (
   | ({ type: 'textarea' } & JSX.IntrinsicElements['textarea'])
   | JSX.IntrinsicElements['input']
 )
@@ -11,6 +13,7 @@ type FieldProps = {
   error?: string | null
   description?: React.ReactNode
   inputClass?: string
+  icon?: React.ElementType
 }
 
 export type { InputProps, FieldProps }
