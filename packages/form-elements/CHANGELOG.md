@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.3.2...@daren/form-elements@1.4.0) (2022-04-12)
+
+
+### Features
+
+* **input:** add icon prop ([85fc917](https://github.com/darenmalfait/darenui/commit/85fc917b623830cb2b06b095e912fcf263a2ba4b))
+
+
+
+
+
 ## [1.3.2](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.3.1...@daren/form-elements@1.3.2) (2022-04-08)
 
 
