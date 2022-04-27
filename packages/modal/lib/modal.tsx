@@ -115,13 +115,13 @@ function Modal({
                   >
                     {title}
                   </Dialog.Title>
-                  <div className="mt-2">
+                  <div className="mt-6">
                     <p className="text-sm text-secondary">{description}</p>
                   </div>
                 </div>
               </div>
               {actions && (
-                <div className="mt-5 sm:flex sm:pl-4 sm:mt-4 sm:ml-10">
+                <div className="mt-6 sm:flex sm:pl-4 sm:mt-4 sm:ml-10">
                   <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                     {actions}
                   </div>
