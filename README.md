@@ -13,6 +13,7 @@
   - [Installation](#installation)
   - [Configuration](#configuration)
   - [Quick start](#quick-start)
+  - [Updating packages](#updating-packages)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -80,4 +81,14 @@ function App() {
     </ThemeProvider>
   );
 }
+```
+
+### Updating packages
+
+There is a Command line interface for simplifying the process of bulk updating dependencies across multiple Lerna or Yarn Workspace packages.
+
+Simply run the lernaupdate command in the root of a Lerna-based project:
+
+```bash
+npx lerna-update-wizard
 ```
