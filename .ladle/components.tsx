@@ -1,11 +1,14 @@
 import { ThemeProvider } from '@daren/ui-components'
-import type { GlobalProvider } from '@ladle/react'
+import { GlobalState } from '@ladle/react/lib/shared/types'
 import * as React from 'react'
 
 import '../packages/theme/dist/darenui.css'
 import '../styles/styles.output.css'
 
-export const Provider: GlobalProvider = ({ children, globalState }) => (
+export const Provider = ({ children, globalState }: {
+  children: React.ReactNode
+  globalState: GlobalState
+}) => (
   <ThemeProvider>
     <div className={globalState.theme}>
       <div className="text-primary">{children}</div>

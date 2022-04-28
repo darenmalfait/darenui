@@ -6,7 +6,7 @@ import { RadioGroup } from '../lib'
 export function radioGroup() {
   const [selected, setSelected] = React.useState<string | null>(null)
 
-  const onChange = React.useCallback(val => {
+  const onChange = React.useCallback((val: string) => {
     setSelected(val)
   }, [])
 

@@ -78,7 +78,7 @@ function CodeBlock({
                   </div>
                 )
               })}
-              {showLanguage && language && (
+              {showLanguage && (
                 <span className="block sticky right-0 w-full text-xs text-right">
                   {language}
                 </span>

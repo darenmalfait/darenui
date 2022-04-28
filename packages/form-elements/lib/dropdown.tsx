@@ -40,13 +40,11 @@ const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
     const filteredItems =
       query === ''
         ? items
-        : items.filter(
-            item =>
-              item &&
-              item.label
-                .toLowerCase()
-                .replace(/\s+/g, '')
-                .includes(query.toLowerCase().replace(/\s+/g, '')),
+        : items.filter(item =>
+            item.label
+              .toLowerCase()
+              .replace(/\s+/g, '')
+              .includes(query.toLowerCase().replace(/\s+/g, '')),
           )
 
     const handleChange = React.useCallback(
@@ -75,7 +73,7 @@ const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
                 aria-disabled={disabled}
                 disabled={disabled}
                 className={getInputClassName(props.className, hasError)}
-                displayValue={item => (item as any).label}
+                displayValue={item => (item as any)?.label}
                 onChange={event => setQuery(event.target.value)}
               />
               <Combobox.Button className="flex absolute inset-y-0 right-0 items-center pr-3">
