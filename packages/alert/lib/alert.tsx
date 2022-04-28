@@ -9,6 +9,7 @@ import * as React from 'react'
 
 interface AlertProps {
   type: 'danger' | 'warning' | 'success' | 'info'
+  hideIcon?: boolean
   title?: string
   description?: React.ReactNode
   className?: string
@@ -21,7 +22,13 @@ const IconMap: Record<AlertProps['type'], React.ElementType> = {
   info: InformationCircleIcon,
 }
 
-function Alert({ type = 'info', title, description, className }: AlertProps) {
+function Alert({
+  type = 'info',
+  title,
+  hideIcon,
+  description,
+  className,
+}: AlertProps) {
   const Icon = IconMap[type]
 
   return (
@@ -34,17 +41,19 @@ function Alert({ type = 'info', title, description, className }: AlertProps) {
       })}
     >
       <div className="flex">
-        <div className="shrink-0">
-          <Icon
-            className={cx('w-5 h-5', {
-              'text-yellow-400': type === 'warning',
-              'text-green-400': type === 'success',
-              'text-blue-400': type === 'info',
-              'text-red-400': type === 'danger',
-            })}
-            aria-hidden="true"
-          />
-        </div>
+        {!hideIcon && (
+          <div className="shrink-0">
+            <Icon
+              className={cx('w-5 h-5', {
+                'text-yellow-400': type === 'warning',
+                'text-green-400': type === 'success',
+                'text-blue-400': type === 'info',
+                'text-red-400': type === 'danger',
+              })}
+              aria-hidden="true"
+            />
+          </div>
+        )}
         <div className="ml-3">
           {title && (
             <h3

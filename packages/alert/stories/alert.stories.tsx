@@ -49,3 +49,16 @@ export function Warning() {
     </div>
   )
 }
+
+export function WithoutIcon() {
+  return (
+    <div>
+      <Alert
+        hideIcon
+        type="warning"
+        title="this is a title"
+        description="this is a description"
+      />
+    </div>
+  )
+}
