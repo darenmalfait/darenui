@@ -40,11 +40,13 @@ const Dropdown = React.forwardRef<HTMLInputElement, DropdownProps>(
     const filteredItems =
       query === ''
         ? items
-        : items.filter(item =>
-            item.label
-              .toLowerCase()
-              .replace(/\s+/g, '')
-              .includes(query.toLowerCase().replace(/\s+/g, '')),
+        : items.filter(
+            item =>
+              item &&
+              item.label
+                .toLowerCase()
+                .replace(/\s+/g, '')
+                .includes(query.toLowerCase().replace(/\s+/g, '')),
           )
 
     const handleChange = React.useCallback(
