@@ -15,6 +15,7 @@
   - [Adding a dependency to a specific package](#adding-a-dependency-to-a-specific-package)
     - [Add a local scoped package:](#add-a-local-scoped-package)
   - [Installing an npm package shared between multiple packages](#installing-an-npm-package-shared-between-multiple-packages)
+  - [Updating packages](#updating-packages)
   - [Publishing](#publishing)
 - [Semantic Commit Messages](#semantic-commit-messages)
   - [Example](#example)
@@ -89,6 +90,16 @@ Yarn Workspaces makes it possible to share dependencies installed in the root di
 
 ```bash
 yarn add -W --dev typescript prettier eslint
+```
+
+### Updating packages
+
+There is a Command line interface for simplifying the process of bulk updating dependencies across multiple Lerna or Yarn Workspace packages.
+
+Simply run the lernaupdate command in the root of a Lerna-based project:
+
+```bash
+npx lerna-update-wizard
 ```
 
 ### Publishing
