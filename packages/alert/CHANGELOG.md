@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.0.2...@daren/alert@1.1.0) (2022-04-28)
+
+
+### Features
+
+* **alert:** add option to hide icon ([0290a51](https://github.com/darenmalfait/darenui/commit/0290a5147955c08580cabd4f29b01bc6d27fd9e7))
+
+
+
+
+
 ## [1.0.2](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.0.1...@daren/alert@1.0.2) (2022-04-08)
 
 
