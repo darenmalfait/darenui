@@ -13,7 +13,6 @@
   - [Running Storybook](#running-storybook)
   - [Adding a new package](#adding-a-new-package)
   - [Adding a dependency to a specific package](#adding-a-dependency-to-a-specific-package)
-    - [Add a local scoped package:](#add-a-local-scoped-package)
   - [Installing an npm package shared between multiple packages](#installing-an-npm-package-shared-between-multiple-packages)
   - [Updating packages](#updating-packages)
   - [Publishing](#publishing)
@@ -75,13 +74,6 @@ cd packages/component-name
 yarn add date-fns
 # or
 yarn workspace @daren/component-name add date-fns
-```
-
-#### Add a local scoped package:
-
-```bash
-# adds button package to the ui-components package
-npx lerna add @daren/button packages/ui-components
 ```
 
 ### Installing an npm package shared between multiple packages
