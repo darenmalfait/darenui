@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.0.3...@daren/theme@2.1.0) (2022-04-28)
+
+
+### Features
+
+* **form-elements:** add checkbox ([7137198](https://github.com/darenmalfait/darenui/commit/7137198056b8a7fae500300ebcb7250f82c11835))
+
+
+
+
+
 ## [2.0.3](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.0.2...@daren/theme@2.0.3) (2022-04-08)
 
 

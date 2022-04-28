@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.4.2...@daren/form-elements@1.5.0) (2022-04-28)
+
+
+### Features
+
+* **form-elements:** add checkbox ([7137198](https://github.com/darenmalfait/darenui/commit/7137198056b8a7fae500300ebcb7250f82c11835))
+
+
+
+
+
 ## [1.4.2](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.4.1...@daren/form-elements@1.4.2) (2022-04-28)
 
 **Note:** Version bump only for package @daren/form-elements

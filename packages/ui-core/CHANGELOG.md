@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.4.10...@daren/ui-core@2.5.0) (2022-04-28)
+
+
+### Features
+
+* **form-elements:** add checkbox ([7137198](https://github.com/darenmalfait/darenui/commit/7137198056b8a7fae500300ebcb7250f82c11835))
+
+
+
+
+
 ## [2.4.10](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.4.9...@daren/ui-core@2.4.10) (2022-04-28)
 
 **Note:** Version bump only for package @daren/ui-core
