@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.4.0...@daren/form-elements@1.4.1) (2022-04-28)
+
+
+### Bug Fixes
+
+* add check for item ([d48f7c0](https://github.com/darenmalfait/darenui/commit/d48f7c08112c1a9e57f940ce432eb436bc0b7720))
+
+
+
+
+
 # [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.3.2...@daren/form-elements@1.4.0) (2022-04-12)
 
 
