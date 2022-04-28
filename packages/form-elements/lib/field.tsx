@@ -1,6 +1,7 @@
 import { cx } from '@daren/utils'
 import * as React from 'react'
 
+import { Checkbox, CheckboxProps } from './checkbox'
 import { Dropdown, DropdownProps } from './dropdown'
 
 import { Input } from './input'
@@ -152,4 +153,36 @@ const DropdownField = React.forwardRef<
   )
 })
 
-export { Field, DropdownField }
+const CheckboxField = React.forwardRef<
+  HTMLInputElement,
+  FieldProps & CheckboxProps
+>(function DropdownField(
+  { error, name, label, id, className, defaultValue, ...props },
+  ref,
+) {
+  const inputId = id ?? name
+  const errorId = `${inputId}-error`
+
+  return (
+    <div className={cx(className, 'w-full group')}>
+      <div className="flex relative items-start">
+        <div className="flex items-center h-5">
+          <Checkbox ref={ref} id={inputId} name={name} {...props} />
+        </div>
+        <div className="ml-3 text-sm">
+          <label htmlFor={inputId} className="font-medium text-primary">
+            {label}
+          </label>
+        </div>
+      </div>
+
+      {error && (
+        <p className="mt-2 text-sm text-red-600" id={errorId}>
+          {error}
+        </p>
+      )}
+    </div>
+  )
+})
+
+export { Field, DropdownField, CheckboxField }

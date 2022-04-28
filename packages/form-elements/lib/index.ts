@@ -1,3 +1,4 @@
+export * from './checkbox'
 export * from './dropdown'
 export * from './field'
 export * from './input'

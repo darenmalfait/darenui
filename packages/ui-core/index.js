@@ -36,6 +36,9 @@ module.exports = plugin(
       '.set-colors-accent-success': {
         '--colors-accent-500': 'var(--colors-success-500)',
       },
+      '.set-colors-current': {
+        '--colors-accent-500': 'currentColor',
+      },
       '.empty-content': {
         content: "''",
       },
@@ -343,6 +346,31 @@ module.exports = plugin(
               transform: 'scale3d(1.1, 1.1, 1)',
             },
           },
+          check: {
+            '0%': {
+              transform: 'scale(1)',
+            },
+            '10%': {
+              transform: 'scale(0.7)',
+              opacity: '0.1',
+              background: 'rgba(0,0,0,0.2)',
+            },
+            '12%': {
+              transform: 'scale(0.7)',
+              opacity: '0.4',
+              background: 'rgba(0,0,0,0.1)',
+            },
+            '50%': {
+              transform: 'scale(1)',
+              opacity: '0.6',
+              background: 'currentColor',
+            },
+            '100%': {
+              transform: 'scale(1)',
+              opacity: '1',
+              background: 'currentColor',
+            },
+          },
         },
         animation: {
           'fade-in-down': `fade-in-down 0.2s forwards`,
@@ -352,6 +380,7 @@ module.exports = plugin(
           shake: `shake 0.5s forwards`,
           stroke: `stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;`,
           scale: `scale .3s ease-in-out`,
+          check: `check .5s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards`,
         },
       },
     },
