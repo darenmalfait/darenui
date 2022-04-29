@@ -11,6 +11,7 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "strict": true,
+    "isolatedModules": true,
     "noFallthroughCasesInSwitch": true,
     "suppressImplicitAnyIndexErrors": true,
     "noImplicitAny": true,
@@ -21,11 +22,14 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "incremental": true,
+    "declarationMap": true
   },
   "include": [
     "packages",
-    "./storybook"
+    "scripts",
+    "storybook"
   ],
   "exclude": [
     "node_modules"

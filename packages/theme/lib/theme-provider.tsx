@@ -43,4 +43,5 @@ function useTheme<T extends Record<string, unknown> = Dict>() {
   return theme as WithCSSVar<T>
 }
 
-export { ThemeContext, ThemeProvider, useTheme, ThemeProviderProps }
+export { ThemeContext, ThemeProvider, useTheme }
+export type { ThemeProviderProps }
