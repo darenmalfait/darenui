@@ -17,6 +17,7 @@
     "build": "turbo run build",
     "build-storybook": "build-storybook -c storybook",
     "clean": "turbo run clean && rm -rf node_modules",
+    "create:pkg": "node --loader ts-node/esm scripts/plopfile.ts",
     "dev": "yarn generate:css && start-storybook -p 6006 -c storybook",
     "generate:css": "npx tailwindcss build styles/styles.css -o styles/styles.output.css",
     "preinstall": "npx only-allow yarn",
@@ -28,12 +29,12 @@
     "version:ci": "lerna version --yes --conventional-commits --conventional-graduate=* --create-release github --message 'chore(release): publish'"
   },
   "dependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.9",
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/eslint-plugin": "^7.17.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@babel/runtime": "^7.17.9",
@@ -44,7 +45,7 @@
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/react": "^18.0.8",
-    "@types/react-dom": "^18.0.0",
+    "@types/react-dom": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "cross-env": "^7.0.3",
@@ -63,11 +64,17 @@
   "devDependencies": {
     "@lerna-lite/cli": "^1.0.5",
     "@storybook/addon-docs": "^6.4.22",
+    "@types/lodash": "^4.14.182",
+    "@types/shelljs": "^0.8.11",
     "autoprefixer": "^10.4.5",
     "eslint-plugin-prettier": "^4.0.0",
+    "lodash": "^4.17.21",
+    "plop": "^2.7.6",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
+    "shelljs": "^0.8.5",
     "storybook-dark-mode": "^1.1.0",
-    "turbo": "^1.2.5"
+    "ts-node": "^10.7.0",
+    "turbo": "^1.2.6"
   }
 }

@@ -18,3 +18,4 @@ package-lock.json
 packages/**/yarn.lock
 styles.output.css
 .turbo
+tsconfig.tsbuildinfo
