@@ -1,0 +1,68 @@
+import { Paragraph } from "../lib";
+import { Actions } from "../../../storybook/components/actions";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<Meta
+  title="Typography/Paragraph"
+  component={Paragraph}
+  argTypes={{
+    children: {
+      description: "The text to display",
+      defaultValue: "This is a paragraph",
+      control: {
+        type: "text",
+      },
+    },
+    prose: {
+      description: "Whether the text should be displayed as prose",
+      defaultValue: false,
+      control: {
+        type: "boolean",
+      },
+    },
+    textColorClassName: {
+      description: "The class name to apply to the text",
+      defaultValue: "text-secondary",
+      control: {
+        type: "text",
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => <Paragraph {...args} />;
+
+# Paragraph
+
+`Paragraph` component is the used to render text and paragraphs within an interface. It renders a `<p>` tag by default.
+
+<Actions packageName="typography" />
+
+<Story name="example">
+  <div className="mb-8">
+    <Paragraph>
+      Attack feet behind the couch destroy couch flop over give attitude hide
+      when guests come over hopped up on goofballs hunt anything that moves
+      sweet beast under the bed intently stare at the same spot intently sniff
+      hand , why must they do that chase imaginary bugs intrigued by the shower
+      rub face on everything bag stretch need to chase tail make muffins swat at
+      dog lick butt chase mice, destroy couch intrigued by the shower sweet
+      beast under the bed swat at dog give attitude make muffins bag stretch rub
+      face on everything.
+    </Paragraph>
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { Paragraph } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />

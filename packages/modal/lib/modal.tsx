@@ -56,7 +56,7 @@ function Modal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/25" />
+          <div className="fixed inset-0 bg-black/25 dark:bg-white/25" />
         </Transition.Child>
         <div className="overflow-y-auto fixed inset-0">
           <div className="flex justify-center items-center p-4 min-h-full text-center">
@@ -72,7 +72,7 @@ function Modal({
               <Dialog.Panel
                 className={cx(
                   className,
-                  'inline-block overflow-hidden relative px-4 pt-5 pb-4 text-left align-bottom bg-white rounded-lg shadow-xl transition-all sm:p-6 sm:my-8 sm:w-full sm:max-w-lg sm:align-middle',
+                  'inline-block overflow-hidden relative px-4 pt-5 pb-4 text-left align-bottom bg-primary rounded-lg shadow-xl transition-all sm:p-6 sm:my-8 sm:w-full sm:max-w-lg sm:align-middle',
                 )}
               >
                 <div className="sm:flex sm:items-start">

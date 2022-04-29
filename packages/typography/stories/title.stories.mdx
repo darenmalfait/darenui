@@ -1,0 +1,90 @@
+import { H1, H2, H3, H4, H5, H6 } from "../lib";
+import { Actions } from "../../../storybook/components/actions";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<Meta
+  title="Typography/Title"
+  component={H1}
+  argTypes={{
+    children: {
+      description: "The text to display",
+      defaultValue: "This is a title",
+      control: {
+        type: "text",
+      },
+    },
+    variant: {
+      description: "The color variant of the title",
+      defaultValue: "primary",
+      control: {
+        type: "select",
+        options: ["primary", "secondary"],
+      },
+    },
+    as: {
+      description: "The HTML element to render the title as",
+      control: {
+        type: null,
+      },
+    },
+    size: {
+      description: "The size of the title",
+      control: {
+        type: null,
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => <H2 {...args} />;
+
+# Title
+
+There are six different title sizes, all of which are available as `H1`, `H2`, `H3`, `H4`, `H5`, and `H6`.
+
+<Actions packageName="typography" />
+
+<Story name="example">
+  <div className="space-y-4 mb-8">
+    <H1>H1</H1>
+    <H2>H2</H2>
+    <H3>H3</H3>
+    <H4>H4</H4>
+    <H5>H5</H5>
+    <H6>H6</H6>
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { H1, H2, H3, H4, H5, H6 } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />
+
+## size
+
+<Canvas>
+  <Story name="size">
+    <div className="space-y-4">
+      <H2 as="h1">I am an H1 that looks like an H2</H2>
+    </div>
+  </Story>
+</Canvas>
+
+## as
+
+<Canvas>
+  <Story name="as">
+    <div className="space-y-4">
+      <H2 as="div">I am an div that looks like an H2</H2>
+    </div>
+  </Story>
+</Canvas>
