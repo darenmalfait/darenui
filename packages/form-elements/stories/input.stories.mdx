@@ -1,0 +1,70 @@
+import { Input } from "../lib";
+import { Actions } from "../../../storybook/components/actions";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { CheckIcon, SearchIcon } from "@heroicons/react/solid";
+
+<Meta
+  title="Form Elements/Input"
+  component={Input}
+  argTypes={{
+    hasError: {
+      defaultValue: false,
+      control: {
+        type: "boolean",
+      },
+    },
+    type: {
+      defaultValue: "text",
+      control: {
+        type: "select",
+        options: [
+          "text",
+          "textarea",
+          "password",
+          "email",
+          "number",
+          "search",
+          "tel",
+          "url",
+        ],
+      },
+    },
+  }}
+/>
+
+export const Template = (args) => <Input {...args} />;
+export const TemplateWithIcon = (args) => <Input icon={SearchIcon} {...args} />;
+
+# Input
+
+`Input` is a simple input component.
+
+<Actions packageName="form-elements" />
+
+<Story name="example">
+  <div className="mb-8">
+    <Input name="first" />
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { Input } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />
+
+### Custom icon
+
+<Canvas>
+  <Story name="custom-icon">{TemplateWithIcon.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="custom-icon" />
