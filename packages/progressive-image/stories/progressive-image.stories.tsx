@@ -3,7 +3,11 @@ import * as React from 'react'
 import { ProgressiveImage } from '../lib'
 
 export default {
-  title: 'ProgressiveImage',
+  title: 'Components',
+  component: ProgressiveImage,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 }
 
 export function progressiveImage() {

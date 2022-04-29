@@ -3,7 +3,11 @@ import * as React from 'react'
 import { Review, ReviewGroup } from '../lib'
 
 export default {
-  title: 'Review',
+  title: 'Components/Review',
+  component: Review,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 }
 
 export function review() {

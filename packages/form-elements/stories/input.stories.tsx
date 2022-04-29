@@ -3,6 +3,14 @@ import * as React from 'react'
 
 import { Input } from '../lib'
 
+export default {
+  title: 'Form Elements / Input',
+  component: Input,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function input() {
   return (
     <div>

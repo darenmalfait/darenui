@@ -27,11 +27,11 @@ Install node_modules with `yarn install`.
 
 ### Running Storybook
 
-1. Run `yarn start` file in the project folder.
-2. Visit `localhost:6006`
+1. Run `yarn run dev` file in the project folder.
+2. Visit `[localhost:6006](http://localhost:6006/)`
 
 ### Adding a new package
-
+// TODO add for yarn / turbo
 lerna create is a command to add a new package to be managed in Monorepo.
 
 ```bash
@@ -78,7 +78,7 @@ yarn workspace @daren/component-name add date-fns
 
 ### Installing an npm package shared between multiple packages
 
-Yarn Workspaces makes it possible to share dependencies installed in the root directory between all packages, useful for devDependencies like TypeScript, ESLint, and Jest. It leads to implicit dependencies because they are not listed in each package.json, but it reduces the cost to manage these npm packages in each package directory. To install shared npm packages, you have to add the -W flag to the yarn add command.
+yarn Workspaces makes it possible to share dependencies installed in the root directory between all packages, useful for devDependencies like TypeScript, ESLint, and Jest. It leads to implicit dependencies because they are not listed in each package.json, but it reduces the cost to manage these npm packages in each package directory. To install shared npm packages, you have to add the -W flag to the yarn add command.
 
 ```bash
 yarn add -W --dev typescript prettier eslint
@@ -86,7 +86,7 @@ yarn add -W --dev typescript prettier eslint
 
 ### Updating packages
 
-There is a Command line interface for simplifying the process of bulk updating dependencies across multiple Lerna or Yarn Workspace packages.
+There is a Command line interface for simplifying the process of bulk updating dependencies across multiple Lerna or yarn Workspace packages.
 
 Simply run the lernaupdate command in the root of a Lerna-based project:
 

@@ -2,6 +2,14 @@ import * as React from 'react'
 
 import { Grid } from '../lib'
 
+export default {
+  title: 'Layout Components / Grid',
+  component: Grid,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function grid() {
   return (
     <div>

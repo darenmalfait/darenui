@@ -4,9 +4,11 @@ import * as React from 'react'
 import { NavigationList, getNavigationItemClassName } from '../lib'
 
 export default {
-  title: 'NavigationList',
+  title: 'Components',
   component: NavigationList,
-  argTypes: {},
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 }
 
 export function navigationList() {

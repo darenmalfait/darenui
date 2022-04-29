@@ -3,7 +3,11 @@ import * as React from 'react'
 import { Modal } from '../lib'
 
 export default {
-  title: 'Modal',
+  title: 'Components/Modal',
+  component: Modal,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 }
 
 export function Default() {

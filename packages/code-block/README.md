@@ -3,7 +3,7 @@
 ## Usage
 
 ```
-yarn add @daren/code-block
+npm install @daren/code-block
 ```
 
 

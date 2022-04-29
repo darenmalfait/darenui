@@ -2,6 +2,14 @@ import * as React from 'react'
 
 import { CodeBlock } from '../lib'
 
+export default {
+  title: 'Components/CodeBlock',
+  component: CodeBlock,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function FullBlock() {
   return (
     <div>

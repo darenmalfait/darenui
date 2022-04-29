@@ -2,7 +2,15 @@
 import { PlusIcon } from '@heroicons/react/solid'
 import * as React from 'react'
 
-import { Checkbox, CheckboxField } from '../lib'
+import { Checkbox } from '../lib'
+
+export default {
+  title: 'Form Elements/Checkbox',
+  component: Checkbox,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
 
 export function checkbox() {
   return (
@@ -28,14 +36,6 @@ export function customIcon() {
         icon={PlusIcon}
         bgClassName="text-danger"
       />
-    </div>
-  )
-}
-
-export function checkboxField() {
-  return (
-    <div>
-      <CheckboxField name="example" label="This is a label" />
     </div>
   )
 }

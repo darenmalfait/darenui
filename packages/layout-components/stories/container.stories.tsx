@@ -3,6 +3,14 @@ import * as React from 'react'
 
 import { Container } from '../lib'
 
+export default {
+  title: 'Layout components / Container',
+  component: Container,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function Default() {
   return (
     <Grid>

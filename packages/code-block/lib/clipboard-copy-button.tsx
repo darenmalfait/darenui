@@ -1,5 +1,5 @@
+import { cx } from '@daren/utils'
 import { CheckCircleIcon, DuplicateIcon } from '@heroicons/react/solid'
-import clsx from 'clsx'
 import * as React from 'react'
 
 async function copyToClipboard(value: string) {
@@ -61,7 +61,7 @@ function ClipboardCopyButton({ value, className }: ClipboardCopyButtonProps) {
   return (
     <button
       onClick={() => setState(State.Copy)}
-      className={clsx(
+      className={cx(
         'p-2 text-lg font-medium whitespace-nowrap bg-transparent rounded-lg focus:outline-none group-hover:ring-2 focus:ring-2 shadow group-hover:shadow-md group-group-hover:opacity-100 group-hover:opacity-100 peer-group-hover:opacity-100 focus:opacity-100 peer-focus:opacity-100 transition lg:opacity-0',
         className,
         state === State.Copied

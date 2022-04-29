@@ -3,5 +3,5 @@
 ## Usage
 
 ```
-yarn install @daren/utils
+npm install @daren/utils
 ```

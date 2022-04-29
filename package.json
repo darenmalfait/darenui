@@ -15,20 +15,17 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "build:ladle": "ladle build",
+    "build-storybook": "build-storybook -c storybook",
     "clean": "turbo run clean && rm -rf node_modules",
-    "dev": "yarn generate:css && ladle serve --stories=packages/**/*.stories.{js,jsx,ts,tsx}",
+    "dev": "yarn generate:css && start-storybook -p 6006 -c storybook",
     "generate:css": "npx tailwindcss build styles/styles.css -o styles/styles.output.css",
+    "preinstall": "npx only-allow yarn",
     "lint:lib": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:types": "tsc --noEmit",
     "prepare": "husky install",
     "publish:ci": "lerna publish from-package --yes --no-verify-access",
-    "validate": "concurrently yarn:lint:*",
+    "validate": "run-p lint:*",
     "version:ci": "lerna version --yes --conventional-commits --conventional-graduate=* --create-release github --message 'chore(release): publish'"
-  },
-  "resolutions": {
-    "**/react": "17.0.2",
-    "**/react-dom": "17.0.2"
   },
   "dependencies": {
     "@babel/cli": "^7.17.6",
@@ -42,31 +39,35 @@
     "@babel/runtime": "^7.17.9",
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
-    "@ladle/react": "^0.13.1",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.4.22",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
-    "concurrently": "^7.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.14.0",
     "eslint-config-daren": "^3.5.1",
     "husky": "^7.0.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rimraf": "^3.0.2",
+    "storybook-addon-performance": "^0.16.1",
     "tailwindcss": "^3.0.24",
     "typescript": "^4.6.4"
   },
   "devDependencies": {
     "@lerna-lite/cli": "^1.0.5",
+    "@storybook/addon-docs": "^6.4.22",
     "autoprefixer": "^10.4.5",
     "eslint-plugin-prettier": "^4.0.0",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
+    "storybook-dark-mode": "^1.1.0",
     "turbo": "^1.2.5"
   }
 }

@@ -5,5 +5,5 @@
 ## Usage
 
 ```
-yarn install @daren/ui-core
+npm install @daren/ui-core
 ```

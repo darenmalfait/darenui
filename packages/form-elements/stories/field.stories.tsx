@@ -3,6 +3,14 @@ import * as React from 'react'
 
 import { Field } from '../lib'
 
+export default {
+  title: 'Form Elements / Field',
+  component: Field,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function field() {
   return (
     <div>

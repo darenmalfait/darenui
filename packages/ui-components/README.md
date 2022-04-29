@@ -3,5 +3,5 @@
 ## Usage
 
 ```
-yarn install @daren/ui-components
+npm install @daren/ui-components
 ```

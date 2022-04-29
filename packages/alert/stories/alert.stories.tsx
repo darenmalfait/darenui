@@ -2,6 +2,14 @@ import * as React from 'react'
 
 import { Alert } from '../lib'
 
+export default {
+  title: 'Components/Alert',
+  component: Alert,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function Info() {
   return (
     <div>

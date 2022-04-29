@@ -1,5 +1,4 @@
-import { useSafeEffect } from '@daren/utils'
-import clsx from 'clsx'
+import { cx, useSafeEffect } from '@daren/utils'
 import * as React from 'react'
 
 export type ResponsiveProps = {
@@ -46,7 +45,7 @@ function ProgressiveImage({
     !!placeholder &&
     React.cloneElement(img, {
       ref: imgRef,
-      className: clsx(
+      className: cx(
         img.props.className,
         'object-cover absolute inset-0 w-full h-full transition-opacity duration-300',
         {
@@ -56,13 +55,13 @@ function ProgressiveImage({
     })
 
   return (
-    <div className={clsx(className, 'w-full')}>
+    <div className={cx(className, 'w-full')}>
       <div className="overflow-hidden relative w-full h-full">
         <img
           key={placeholder}
           src={placeholder || img.props.src}
           srcSet={!placeholder ? img.props.srcSet : undefined}
-          className={clsx(
+          className={cx(
             className,
             'object-cover min-w-full min-h-full transition-opacity duration-300',
             {
@@ -73,7 +72,7 @@ function ProgressiveImage({
         />
         {placeholder && (
           <div
-            className={clsx('absolute inset-0 w-full h-full', {
+            className={cx('absolute inset-0 w-full h-full', {
               'backdrop-blur-xl': !visible,
             })}
           />

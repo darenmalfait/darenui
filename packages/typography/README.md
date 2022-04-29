@@ -3,5 +3,5 @@
 ## Usage
 
 ```
-yarn install @daren/typography
+npm install @daren/typography
 ```

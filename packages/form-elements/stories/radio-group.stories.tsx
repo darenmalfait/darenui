@@ -3,6 +3,14 @@ import * as React from 'react'
 
 import { RadioGroup } from '../lib'
 
+export default {
+  title: 'Form Elements / RadioGroup',
+  component: RadioGroup,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+}
+
 export function radioGroup() {
   const [selected, setSelected] = React.useState<string | null>(null)
 

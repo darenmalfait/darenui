@@ -3,5 +3,5 @@
 ## Usage
 
 ```
-yarn add @daren/grid
+npm install @daren/grid
 ```

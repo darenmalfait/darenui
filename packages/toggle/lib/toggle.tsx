@@ -1,7 +1,5 @@
-import { useControllableState } from '@daren/utils'
+import { cx, useControllableState } from '@daren/utils'
 import { Switch } from '@headlessui/react'
-import clsx from 'clsx'
-
 import * as React from 'react'
 
 interface ToggleProps {
@@ -30,20 +28,20 @@ function Toggle({
         disabled={disabled}
         checked={enabled}
         onChange={setEnabled}
-        className={clsx(
+        className={cx(
           enabled ? activeColorClass : inactiveColorClass,
           'inline-flex relative shrink-0 w-11 h-6 rounded-full border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200 ease-in-out cursor-pointer focus:ring-primary',
         )}
       >
         <span className="sr-only">Use setting</span>
         <span
-          className={clsx(
+          className={cx(
             enabled ? 'translate-x-5' : 'translate-x-0',
             'inline-block relative w-5 h-5 bg-white rounded-full ring-0 shadow transition duration-200 ease-in-out pointer-events-none',
           )}
         >
           <span
-            className={clsx(
+            className={cx(
               enabled
                 ? 'opacity-0 duration-100 ease-out'
                 : 'opacity-100 duration-200 ease-in',
@@ -66,7 +64,7 @@ function Toggle({
             </svg>
           </span>
           <span
-            className={clsx(
+            className={cx(
               enabled
                 ? 'opacity-100 duration-200 ease-in'
                 : 'opacity-0 duration-100 ease-out',
@@ -75,7 +73,7 @@ function Toggle({
             aria-hidden="true"
           >
             <svg
-              className={clsx('w-3 h-3 text-black')}
+              className={cx('w-3 h-3 text-black')}
               fill="currentColor"
               viewBox="0 0 12 12"
             >

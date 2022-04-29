@@ -3,5 +3,5 @@
 ## Usage
 
 ```
-yarn install @daren/theme
+npm install @daren/theme
 ```
