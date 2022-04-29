@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.5.0...@daren/form-elements@1.5.1) (2022-04-29)
+
+**Note:** Version bump only for package @daren/form-elements
+
+
+
+
+
 # [1.5.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.4.2...@daren/form-elements@1.5.0) (2022-04-28)
 
 
