@@ -23,7 +23,6 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
     "build": "npx ts-node ./lib/create-global-css.ts && run-p build:*",
     "build:cjs": "cross-env BABEL_ENV=cjs babel lib --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
     "build:esm": "cross-env BABEL_ENV=esm babel lib --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
