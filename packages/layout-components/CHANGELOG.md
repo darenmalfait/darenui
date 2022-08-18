@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.0.6...@daren/layout-components@1.0.7) (2022-08-18)
+
+**Note:** Version bump only for package @daren/layout-components
+
 ## [1.0.6](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.0.5...@daren/layout-components@1.0.6) (2022-04-29)
 
 **Note:** Version bump only for package @daren/layout-components

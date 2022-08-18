@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.3.3...@daren/utils@1.4.0) (2022-08-18)
+
+### Features
+
+* **form-elements:** add overall improvements ([b498998](https://github.com/darenmalfait/darenui/commit/b498998d27fcf1db3593d009c77ead7150807d62))
+
 ## [1.3.3](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.3.2...@daren/utils@1.3.3) (2022-04-29)
 
 **Note:** Version bump only for package @daren/utils
