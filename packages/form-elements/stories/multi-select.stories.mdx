@@ -1,0 +1,106 @@
+import {MultiSelect} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
+
+<Meta
+  title="Form Elements/Select/MultiSelect"
+  component={MultiSelect}
+  argTypes={{
+    name: {
+      defaultValue: 'multiselect-id',
+      control: {
+        type: 'text',
+      },
+    },
+    error: {
+      defaultValue: '',
+      control: {
+        type: 'text',
+      },
+    },
+  }}
+/>
+
+export const Template = args => (
+  <MultiSelect
+    items={[
+      {label: 'Item 1', value: '1'},
+      {label: 'Item 2', value: '2'},
+    ]}
+    {...args}
+  />
+)
+
+# Select
+
+`Select` is a dropdown field with search functionality
+
+<Actions packageName="form-elements" />
+
+<Story name="example">
+  <div className="mb-8">
+    <MultiSelect
+      items={[
+        {label: 'Item 1', value: '1'},
+        {label: 'Item 2', value: '2'},
+      ]}
+      name="multiselect"
+    />
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { Select } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />
+
+export const TemplateWithLabel = args => (
+  <MultiSelect
+    items={[
+      {label: 'Item 1', value: '1'},
+      {label: 'Item 2', value: '2'},
+    ]}
+    defaultValue={[{label: 'Item 1', value: '1'}]}
+    label="Select multiple"
+    {...args}
+  />
+)
+
+### With label
+
+<Canvas>
+  <Story name="with-label">{TemplateWithLabel.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="with-label" />
+
+export const TemplateDisabled = args => (
+  <MultiSelect
+    items={[
+      {label: 'Item 1', value: '1'},
+      {label: 'Item 2', value: '2'},
+    ]}
+    defaultValue={[{label: 'Item 1', value: '1'}]}
+    disabled
+    label="Select multiple"
+    {...args}
+  />
+)
+
+### With label
+
+<Canvas>
+  <Story name="disabled">{TemplateDisabled.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="disabled" />

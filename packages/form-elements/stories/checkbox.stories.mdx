@@ -1,29 +1,29 @@
-import { Checkbox } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import { CheckIcon, PlusIcon } from "@heroicons/react/solid";
+import {Checkbox} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, PlusIcon} from '@heroicons/react/solid'
 
 <Meta
   title="Form Elements/Checkbox/Checkbox"
   component={Checkbox}
   argTypes={{
     variant: {
-      defaultValue: "sm",
+      defaultValue: 'sm',
       control: {
-        type: "select",
-        options: ["sm", "md", "lg"],
+        type: 'select',
+        options: ['sm', 'md', 'lg'],
       },
     },
     bgClassName: {
-      defaultValue: "text-success",
+      defaultValue: 'text-success',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     textClassName: {
-      defaultValue: "text-white",
+      defaultValue: 'text-white',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     icon: {
@@ -34,7 +34,7 @@ import { CheckIcon, PlusIcon } from "@heroicons/react/solid";
   }}
 />
 
-export const Template = (args) => <Checkbox {...args} />;
+export const Template = args => <Checkbox {...args} />
 
 # Checkbox
 

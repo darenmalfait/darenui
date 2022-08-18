@@ -1,35 +1,35 @@
-import { CheckboxField } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import { CheckIcon, PlusIcon } from "@heroicons/react/solid";
+import {CheckboxField} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, PlusIcon} from '@heroicons/react/solid'
 
 <Meta
   title="Form Elements/Checkbox/CheckboxField"
   component={CheckboxField}
   argTypes={{
     error: {
-      defaultValue: "",
+      defaultValue: '',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     variant: {
-      defaultValue: "sm",
+      defaultValue: 'sm',
       control: {
-        type: "select",
-        options: ["sm", "md", "lg"],
+        type: 'select',
+        options: ['sm', 'md', 'lg'],
       },
     },
     bgClassName: {
-      defaultValue: "text-success",
+      defaultValue: 'text-success',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     textClassName: {
-      defaultValue: "text-white",
+      defaultValue: 'text-white',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     icon: {
@@ -38,21 +38,21 @@ import { CheckIcon, PlusIcon } from "@heroicons/react/solid";
       },
     },
     label: {
-      defaultValue: "checkbox label",
+      defaultValue: 'checkbox label',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     name: {
-      defaultValue: "checkbox-id",
+      defaultValue: 'checkbox-id',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
   }}
 />
 
-export const Template = (args) => <CheckboxField {...args} />;
+export const Template = args => <CheckboxField {...args} />
 
 # CheckboxField
 

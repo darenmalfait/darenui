@@ -1,53 +1,59 @@
-import { Field } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import { CheckIcon, SearchIcon } from "@heroicons/react/solid";
+import {Field} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
 
 <Meta
-  title="Form Elements/Field"
+  title="Form Elements/Input/Field"
   component={Field}
   argTypes={{
     error: {
-      defaultValue: "",
+      defaultValue: '',
       control: {
-        type: "text",
+        type: 'text',
+      },
+    },
+    description: {
+      defaultValue: '',
+      control: {
+        type: 'text',
       },
     },
     type: {
-      defaultValue: "text",
+      defaultValue: 'text',
       control: {
-        type: "select",
+        type: 'select',
         options: [
-          "text",
-          "textarea",
-          "password",
-          "email",
-          "number",
-          "search",
-          "tel",
-          "url",
+          'text',
+          'textarea',
+          'password',
+          'email',
+          'number',
+          'search',
+          'tel',
+          'url',
         ],
       },
     },
     label: {
-      defaultValue: "input label",
+      defaultValue: 'input label',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     name: {
-      defaultValue: "input-id",
+      defaultValue: 'input-id',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
   }}
 />
 
-export const Template = (args) => <Field label="input label" {...args} />;
-export const TemplateWithIcon = (args) => (
+export const Template = args => <Field label="input label" {...args} />
+export const TemplateWithIcon = args => (
   <Field label="input label" icon={SearchIcon} {...args} />
-);
+)
 
 # Field
 

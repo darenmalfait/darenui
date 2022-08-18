@@ -10,3 +10,5 @@ export type WithCSSVar<T> = T & {
 export type DeepPartial<T> = {
   [P in keyof T]?: DeepPartial<T[P]>
 }
+
+export type ExtractProps<T> = T extends React.ComponentType<infer P> ? P : T

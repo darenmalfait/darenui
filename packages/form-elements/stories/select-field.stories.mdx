@@ -1,0 +1,83 @@
+import {SelectField} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
+
+<Meta
+  title="Form Elements/Select/SelectField"
+  component={SelectField}
+  argTypes={{
+    error: {
+      defaultValue: '',
+      control: {
+        type: 'text',
+      },
+    },
+    name: {
+      defaultValue: 'selectfield-id',
+      control: {
+        type: 'text',
+      },
+    },
+    label: {
+      defaultValue: 'selectfield-id',
+      control: {
+        type: 'text',
+      },
+    },
+  }}
+/>
+
+export const Template = args => (
+  <SelectField
+    label="example label"
+    items={[
+      {label: 'Item 1', value: '1'},
+      {label: 'Item 2', value: '2'},
+    ]}
+    {...args}
+  />
+)
+export const TemplateWithIcon = args => (
+  <SelectField
+    label="select field label"
+    items={[
+      {label: 'Item 1', value: '1'},
+      {label: 'Item 2', value: '2'},
+    ]}
+    {...args}
+  />
+)
+
+# SelectField
+
+`SelectField` is a dropdown field with search functionality. It comes with a
+label and error fields
+
+<Actions packageName="form-elements" />
+
+<Story name="example">
+  <div className="mb-8">
+    <SelectField
+      items={[
+        {label: 'Item 1', value: '1'},
+        {label: 'Item 2', value: '2'},
+      ]}
+      name="select"
+    />
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { SelectField } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />

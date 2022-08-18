@@ -2,6 +2,8 @@ import { cx } from '@daren/utils'
 import { CheckIcon } from '@heroicons/react/solid'
 import * as React from 'react'
 
+import { FieldProps } from './types'
+
 type CheckboxProps = JSX.IntrinsicElements['input'] & {
   variant?: 'sm' | 'md' | 'lg'
   bgClassName?: string
@@ -31,7 +33,7 @@ function Checkbox({
       )}
     >
       <input {...props} className="peer sr-only" type="checkbox" />
-      <span className="inline-block w-full h-full rounded-full border-2 border-primary-100 peer-checked:border-transparent dark:border-primary-300 transition-all duration-300 peer-checked:animate-check cursor-pointer focus-ring set-colors-current" />
+      <span className="inline-block w-full h-full text-current rounded-full border-2 border-primary-100 peer-checked:border-transparent dark:border-primary-300 transition-all duration-300 peer-checked:animate-check cursor-pointer focus-ring" />
       <Icon
         className={cx(
           textClassName,
@@ -42,5 +44,37 @@ function Checkbox({
   )
 }
 
-export { Checkbox }
+const CheckboxField = React.forwardRef<
+  HTMLInputElement,
+  FieldProps & CheckboxProps
+>(function DropdownField(
+  { error, name, label, id, className, defaultValue, ...props },
+  ref,
+) {
+  const inputId = id ?? name
+  const errorId = `${inputId}-error`
+
+  return (
+    <div className={cx(className, 'group w-full')}>
+      <div className="flex relative items-start">
+        <div className="flex items-center h-5">
+          <Checkbox ref={ref} id={inputId} name={name} {...props} />
+        </div>
+        <div className="ml-3 text-base">
+          <label htmlFor={inputId} className="text-primary">
+            {label}
+          </label>
+        </div>
+      </div>
+
+      {error && (
+        <p className="mt-2 text-sm text-red-600" id={errorId}>
+          {error}
+        </p>
+      )}
+    </div>
+  )
+})
+
+export { Checkbox, CheckboxField }
 export type { CheckboxProps }

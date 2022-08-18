@@ -1,39 +1,38 @@
-import { Input } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import { CheckIcon, SearchIcon } from "@heroicons/react/solid";
+import {Input} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
 
 <Meta
-  title="Form Elements/Input"
+  title="Form Elements/Input/Input"
   component={Input}
   argTypes={{
     hasError: {
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
     type: {
-      defaultValue: "text",
+      defaultValue: 'text',
       control: {
-        type: "select",
+        type: 'select',
         options: [
-          "text",
-          "textarea",
-          "password",
-          "email",
-          "number",
-          "search",
-          "tel",
-          "url",
+          'text',
+          'textarea',
+          'password',
+          'email',
+          'number',
+          'search',
+          'tel',
+          'url',
         ],
       },
     },
   }}
 />
 
-export const Template = (args) => <Input {...args} />;
-export const TemplateWithIcon = (args) => <Input icon={SearchIcon} {...args} />;
+export const Template = args => <Input {...args} />
 
 # Input
 
@@ -60,6 +59,8 @@ import { Input } from '@daren/ui-components'
 </Canvas>
 
 <ArgsTable story="usage" />
+
+export const TemplateWithIcon = args => <Input icon={SearchIcon} {...args} />
 
 ### Custom icon
 

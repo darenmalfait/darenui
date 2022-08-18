@@ -1,0 +1,78 @@
+import {Toggle} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
+
+<Meta
+  title="Form Elements/Toggle"
+  component={Toggle}
+  argTypes={{
+    label: {
+      defaultValue: 'This is for screen readers only',
+      control: {
+        type: 'text',
+      },
+    },
+    disabled: {
+      defaultValue: false,
+      control: {
+        type: 'boolean',
+      },
+    },
+    name: {
+      defaultValue: 'toggle-name',
+      control: {
+        type: 'text',
+      },
+    },
+    activeColorClass: {
+      defaultValue: 'bg-daren',
+      control: {
+        type: 'text',
+      },
+    },
+    inactiveColorClass: {
+      defaultValue: 'bg-gray-200',
+      control: {
+        type: 'text',
+      },
+    },
+    defaultValue: {
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+    },
+  }}
+/>
+
+export const Template = args => <Toggle label="input label" {...args} />
+export const TemplateWithIcon = args => (
+  <Toggle label="input label" icon={SearchIcon} {...args} />
+)
+
+# Toggle
+
+`Toggle` is a simple toggle component to represent a boolean value.
+
+<Actions packageName="form-elements" />
+
+<Story name="example">
+  <div className="mb-8">
+    <Toggle label="input label" name="toggle" />
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { Toggle } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />
