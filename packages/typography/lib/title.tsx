@@ -69,4 +69,34 @@ function H6(props: TitleProps) {
   return <Title {...props} size="h6" />
 }
 
-export { H1, H2, H3, H4, H5, H6 }
+function TitleWithActions({
+  children,
+  actions,
+  size = 'h2',
+  className,
+  ...rest
+}: TitleProps & {
+  children: React.ReactNode
+  size?: keyof typeof fontSize
+  actions?: React.ReactNode
+}) {
+  return (
+    <Title
+      size={size}
+      className={cx(
+        className,
+        'flex flex-col space-y-1 sm:flex-row sm:justify-between sm:items-center sm:space-y-0 sm:space-x-3',
+      )}
+      {...rest}
+    >
+      <div className="flex-1">{children}</div>
+      {actions && (
+        <div className="flex flex-col flex-initial space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+          {actions}
+        </div>
+      )}
+    </Title>
+  )
+}
+
+export { H1, H2, H3, H4, H5, H6, TitleWithActions }
