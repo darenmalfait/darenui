@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.3.6...@daren/typography@1.4.0) (2022-08-19)
+
+### Features
+
+* **typography:** add title with actions ([f4210d0](https://github.com/darenmalfait/darenui/commit/f4210d0a086928d8d55793c39b5ef8e19f3bbf13))
+
 ## [1.3.6](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.3.5...@daren/typography@1.3.6) (2022-08-18)
 
 **Note:** Version bump only for package @daren/typography
