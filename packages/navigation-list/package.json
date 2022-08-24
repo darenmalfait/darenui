@@ -1,6 +1,6 @@
 {
   "name": "@daren/navigation-list",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -37,7 +37,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.4.0"
+    "@daren/utils": "^1.5.0"
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.5",

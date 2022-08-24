@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.6.0...@daren/form-elements@1.7.0) (2022-08-24)
+
+### Features
+
+* **form-elements:** add timepicker component ([c57f73c](https://github.com/darenmalfait/darenui/commit/c57f73c483fedc5c471462009f79e51fe4c791cf))
+
 # [1.6.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.5.2...@daren/form-elements@1.6.0) (2022-08-18)
 
 ### Features

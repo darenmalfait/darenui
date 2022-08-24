@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.4.0...@daren/typography@1.4.1) (2022-08-24)
+
+**Note:** Version bump only for package @daren/typography
+
 # [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.3.6...@daren/typography@1.4.0) (2022-08-19)
 
 ### Features

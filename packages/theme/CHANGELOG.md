@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.5](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.1.4...@daren/theme@2.1.5) (2022-08-24)
+
+**Note:** Version bump only for package @daren/theme
+
 ## [2.1.4](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.1.3...@daren/theme@2.1.4) (2022-08-18)
 
 **Note:** Version bump only for package @daren/theme
