@@ -2,7 +2,9 @@ import { cx, roundToNearest15 } from '@daren/utils'
 import { ExclamationCircleIcon } from '@heroicons/react/solid'
 import * as React from 'react'
 
-import { InputProps } from './types'
+import { Label } from './misc'
+
+import { FieldProps, InputProps } from './types'
 import { getInputClassName } from './utils'
 
 const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
@@ -122,4 +124,51 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
   },
 )
 
-export { TimePicker }
+const TimePickerField = React.forwardRef<
+  HTMLInputElement,
+  InputProps & FieldProps
+>(function TimePickerField(
+  { error, name, label, description, id, className, defaultValue, ...props },
+  ref,
+) {
+  const inputId = id ?? name
+  const errorId = `${inputId}-error`
+  const descriptionId = `${inputId}-description`
+
+  return (
+    <div className={cx(className, 'w-full')}>
+      {label && (
+        <div className="flex justify-between">
+          <Label htmlFor={inputId} className="mb-2">
+            {label}
+          </Label>
+          {description && (
+            <span className="text-sm text-slate-400" id={descriptionId}>
+              {description}
+            </span>
+          )}
+        </div>
+      )}
+
+      <TimePicker
+        hasError={!!error}
+        {...(props as InputProps)}
+        ref={ref}
+        name={name}
+        id={inputId}
+        defaultValue={defaultValue || roundToNearest15(new Date()).getTime()}
+        aria-describedby={
+          error ? errorId : description ? descriptionId : undefined
+        }
+      />
+
+      {error && (
+        <p className="mt-2 text-sm text-red-600" id={errorId}>
+          {error}
+        </p>
+      )}
+    </div>
+  )
+})
+
+export { TimePicker, TimePickerField }

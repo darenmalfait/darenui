@@ -1,0 +1,67 @@
+import {TimePickerField} from '../lib'
+import {Actions} from '../../../storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+
+<Meta
+  title="Form Elements/TimePicker/TimePickerField"
+  component={TimePickerField}
+  argTypes={{
+    error: {
+      defaultValue: '',
+      control: {
+        type: 'text',
+      },
+    },
+    name: {
+      defaultValue: 'timepickerFieldfield-id',
+      control: {
+        type: 'text',
+      },
+    },
+    description: {
+      defaultValue: 'description',
+      control: {
+        type: 'text',
+      },
+    },
+    label: {
+      defaultValue: 'selectfield-id',
+      control: {
+        type: 'text',
+      },
+    },
+  }}
+/>
+
+export const Template = args => <TimePickerField {...args} />
+export const TemplateWithIcon = args => <TimePickerField {...args} />
+
+# TimePickerField
+
+`TimePickerField` is a dropdown field with search functionality
+
+<Actions packageName="form-elements" />
+
+<Story name="example">
+  <div className="mb-8">
+    <TimePickerField
+      name="timepickerField"
+      label="label"
+      description="description"
+    />
+  </div>
+</Story>
+
+## Import
+
+```bash
+import { TimePickerField } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />
