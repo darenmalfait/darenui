@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.1.7...@daren/modal@1.2.0) (2022-08-24)
+
+### Features
+
+* **modal:** add neutral option ([69c850e](https://github.com/darenmalfait/darenui/commit/69c850ed7094fc7b5abc6afb813c21e75df8dbde))
+
 ## [1.1.7](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.1.6...@daren/modal@1.1.7) (2022-08-24)
 
 **Note:** Version bump only for package @daren/modal

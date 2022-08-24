@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.12.3",
+  "version": "1.12.4",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -42,7 +42,7 @@
     "@daren/form-elements": "^1.8.0",
     "@daren/grid": "^1.1.11",
     "@daren/layout-components": "^1.0.8",
-    "@daren/modal": "^1.1.7",
+    "@daren/modal": "^1.2.0",
     "@daren/navigation-list": "^1.0.8",
     "@daren/progressive-image": "^1.0.12",
     "@daren/review": "^1.0.8",
