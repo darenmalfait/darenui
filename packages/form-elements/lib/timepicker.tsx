@@ -1,5 +1,5 @@
 import { cx, roundToNearest15 } from '@daren/utils'
-import { ExclamationCircleIcon } from '@heroicons/react/solid'
+import { ClockIcon, ExclamationCircleIcon } from '@heroicons/react/solid'
 import * as React from 'react'
 
 import { Label } from './misc'
@@ -14,7 +14,7 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
       defaultValue,
       hasError,
       inputSize,
-      icon: Icon,
+      icon: Icon = ClockIcon,
       ...inputProps
     } = props
     const [value, setValue] = React.useState<any>(
@@ -98,7 +98,7 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
             </div>
           </div>
         </div>
-        {Icon && !hasError && (
+        {!hasError && (
           <Icon
             width="20px"
             height="20px"
