@@ -76,5 +76,8 @@
     "storybook-dark-mode": "^1.1.0",
     "ts-node": "^10.7.0",
     "turbo": "^1.2.6"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

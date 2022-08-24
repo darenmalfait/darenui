@@ -18,7 +18,7 @@ function Toggle({
   name,
   onChange,
   value,
-  activeColorClass = 'bg-daren',
+  activeColorClass = 'bg-green-500',
   inactiveColorClass = 'bg-gray-200',
   defaultValue,
   label,
