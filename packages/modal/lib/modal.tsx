@@ -1,4 +1,3 @@
-import { cx } from '@daren/utils'
 import { Dialog, Transition } from '@headlessui/react'
 
 import {
@@ -7,10 +6,11 @@ import {
   CheckCircleIcon,
   InformationCircleIcon,
 } from '@heroicons/react/solid'
+import clsx from 'clsx'
 import * as React from 'react'
 
 interface ModalProps {
-  type: 'danger' | 'warning' | 'success' | 'info'
+  type: 'danger' | 'warning' | 'success' | 'info' | 'neutral'
   title?: string
   description?: React.ReactNode
   className?: string
@@ -20,15 +20,16 @@ interface ModalProps {
   actions?: React.ReactNode
 }
 
-const IconMap: Record<ModalProps['type'], React.ElementType> = {
+const IconMap: Record<ModalProps['type'], React.ElementType | undefined> = {
   danger: XCircleIcon,
   warning: ExclamationIcon,
   success: CheckCircleIcon,
   info: InformationCircleIcon,
+  neutral: undefined,
 }
 
 function Modal({
-  type = 'info',
+  type = 'neutral',
   title,
   description,
   className,
@@ -43,7 +44,7 @@ function Modal({
     <Transition.Root show={open} as={React.Fragment}>
       <Dialog
         as="div"
-        className="overflow-y-auto fixed inset-0 z-10"
+        className="overflow-y-auto fixed inset-0 z-20"
         initialFocus={initialFocus}
         onClose={onClose}
       >
@@ -70,37 +71,39 @@ function Modal({
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel
-                className={cx(
+                className={clsx(
                   className,
-                  'inline-block overflow-hidden relative px-4 pt-5 pb-4 text-left align-bottom bg-primary rounded-lg shadow-xl transition-all sm:p-6 sm:my-8 sm:w-full sm:max-w-lg sm:align-middle',
+                  'inline-block relative px-4 pt-5 pb-4 w-full text-left align-bottom rounded-lg shadow-xl transition-all sm:p-6 sm:my-8 sm:w-full sm:max-w-xl sm:align-middle bg-primary',
                 )}
               >
                 <div className="sm:flex sm:items-start">
-                  <div
-                    className={cx(
-                      'flex shrink-0 justify-center items-center mx-auto w-12 h-12 rounded-full sm:mx-0 sm:w-10 sm:h-10',
-                      {
-                        'bg-yellow-100': type === 'warning',
-                        'bg-green-100': type === 'success',
-                        'bg-blue-100': type === 'info',
-                        'bg-red-100': type === 'danger',
-                      },
-                    )}
-                  >
-                    <Icon
-                      className={cx('w-6 h-6', {
-                        'text-yellow-400': type === 'warning',
-                        'text-green-400': type === 'success',
-                        'text-blue-400': type === 'info',
-                        'text-red-400': type === 'danger',
-                      })}
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  {Icon && (
+                    <div
+                      className={clsx(
+                        'flex shrink-0 justify-center items-center mx-auto w-12 h-12 rounded-full sm:mx-0 sm:w-10 sm:h-10',
+                        {
+                          'bg-yellow-100': type === 'warning',
+                          'bg-green-100': type === 'success',
+                          'bg-blue-100': type === 'info',
+                          'bg-red-100': type === 'danger',
+                        },
+                      )}
+                    >
+                      <Icon
+                        className={clsx('w-6 h-6', {
+                          'text-yellow-400': type === 'warning',
+                          'text-green-400': type === 'success',
+                          'text-blue-400': type === 'info',
+                          'text-red-400': type === 'danger',
+                        })}
+                        aria-hidden="true"
+                      />
+                    </div>
+                  )}
+                  <div className="mt-3 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <Dialog.Title
                       as="h3"
-                      className={cx('text-lg font-medium leading-6', {
+                      className={clsx('text-lg font-medium leading-6', {
                         'text-yellow-400': type === 'warning',
                         'text-green-400': type === 'success',
                         'text-blue-400': type === 'info',
@@ -109,7 +112,7 @@ function Modal({
                     >
                       {title}
                     </Dialog.Title>
-                    <div className="mt-6">
+                    <div className="mt-3">
                       <p className="text-sm text-secondary">{description}</p>
                     </div>
                   </div>
