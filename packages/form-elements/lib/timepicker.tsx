@@ -17,8 +17,10 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
       icon: Icon = ClockIcon,
       ...inputProps
     } = props
-    const [value, setValue] = React.useState<any>(
-      valueProp || defaultValue || roundToNearest15(new Date()).getTime(),
+    const [value, setValue] = React.useState<string>(
+      valueProp?.toString() ||
+        defaultValue?.toString() ||
+        roundToNearest15(new Date()).toISOString(),
     )
 
     const className = getInputClassName(props.className, hasError, inputSize)
@@ -27,14 +29,14 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
       const hour = e.target.value
       const date = new Date(value)
       date.setHours(parseInt(hour, 10))
-      setValue(date.getTime())
+      setValue(date.toISOString())
     }
 
     function onMinuteChange(e: React.ChangeEvent<HTMLSelectElement>) {
       const minute = e.target.value
       const date = new Date(value)
       date.setMinutes(parseInt(minute, 10))
-      setValue(date.getTime())
+      setValue(date.toISOString())
     }
 
     return (
@@ -156,7 +158,9 @@ const TimePickerField = React.forwardRef<
         ref={ref}
         name={name}
         id={inputId}
-        defaultValue={defaultValue || roundToNearest15(new Date()).getTime()}
+        defaultValue={
+          defaultValue || roundToNearest15(new Date()).toISOString()
+        }
         aria-describedby={
           error ? errorId : description ? descriptionId : undefined
         }
