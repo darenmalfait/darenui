@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.8.0...@daren/form-elements@1.8.1) (2022-09-26)
+
+### Bug Fixes
+
+* replace gettime with isostring ([944437e](https://github.com/darenmalfait/darenui/commit/944437eec3719ca67dd2b6f947aafda3b0242c99))
+
 # [1.8.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.7.0...@daren/form-elements@1.8.0) (2022-08-24)
 
 ### Features
