@@ -1,6 +1,6 @@
-import { Review } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import {Review} from '../lib'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 
 <Meta
   title="Components/Review"
@@ -9,62 +9,62 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
     rating: {
       defaultValue: 5,
       control: {
-        type: "number",
+        type: 'number',
       },
-      description: "The rating of the review",
+      description: 'The rating of the review',
     },
     title: {
-      defaultValue: "Review Title",
+      defaultValue: 'Review Title',
       control: {
-        type: "text",
+        type: 'text',
       },
-      description: "The title of the review",
+      description: 'The title of the review',
     },
     author: {
-      defaultValue: "Author Name",
+      defaultValue: 'Author Name',
       control: {
-        type: "text",
+        type: 'text',
       },
-      description: "The name of the author",
+      description: 'The name of the author',
     },
     html: {
-      defaultValue: "<p>this is the content in html</p>",
+      defaultValue: '<p>this is the content in html</p>',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     date: {
-      defaultValue: "jan 2020",
+      defaultValue: 'jan 2020',
       control: {
-        type: "text",
+        type: 'text',
       },
-      description: "The visual date of the review",
+      description: 'The visual date of the review',
     },
     datetime: {
-      defaultValue: "2020-01-01T00:00:00.000Z",
+      defaultValue: '2020-01-01T00:00:00.000Z',
       control: {
-        type: "text",
+        type: 'text',
       },
-      description: "The full date of the review",
+      description: 'The full date of the review',
     },
     activeStarColorClass: {
-      defaultValue: "text-yellow-400",
+      defaultValue: 'text-yellow-400',
       control: {
-        type: "text",
+        type: 'text',
       },
-      description: "The color class of the active star",
+      description: 'The color class of the active star',
     },
     inactiveStarColorClass: {
-      defaultValue: "text-secondary",
+      defaultValue: 'text-secondary',
       control: {
-        type: "text",
+        type: 'text',
       },
-      description: "The color class of the inactive star",
+      description: 'The color class of the inactive star',
     },
   }}
 />
 
-export const Template = (args) => <Review {...args} />;
+export const Template = args => <Review {...args} />
 
 # Review
 
@@ -115,9 +115,9 @@ There is also a component to group multiple reviews together.
 <p>I was really pleased with the overall shopping experience. My order even included a little personal, handwritten note, which delighted me!</p>
 <p>The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!</p>
 `,
-          author: "Risako M",
-          date: "May 16, 2021",
-          datetime: "2021-01-06",
+          author: 'Risako M',
+          date: 'May 16, 2021',
+          datetime: '2021-01-06',
         },
         {
           id: 2,
@@ -127,21 +127,21 @@ There is also a component to group multiple reviews together.
 <p>I was really pleased with the overall shopping experience. My order even included a little personal, handwritten note, which delighted me!</p>
 <p>The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!</p>
 `,
-          author: "Risako M",
-          date: "May 16, 2021",
-          datetime: "2021-01-06",
+          author: 'Risako M',
+          date: 'May 16, 2021',
+          datetime: '2021-01-06',
         },
-      ];
+      ]
       return (
         <ReviewGroup
           title="Recent reviews"
           titleClass="text-lg font-medium text-primary"
         >
-          {reviews.map((review) => (
+          {reviews.map(review => (
             <Review key={review.id} {...review} />
           ))}
         </ReviewGroup>
-      );
+      )
     }}
   </Story>
 </Canvas>

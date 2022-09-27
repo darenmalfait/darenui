@@ -1,6 +1,6 @@
-import { Section } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import {Section} from '../lib'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 
 <Meta
   title="Layout Components/Section"
@@ -8,15 +8,15 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
   argTypes={{
     as: {
       control: {
-        defaultValue: "section",
-        type: "select",
-        options: ["div", "section", "main", "article", "header", "footer"],
+        defaultValue: 'section',
+        type: 'select',
+        options: ['div', 'section', 'main', 'article', 'header', 'footer'],
       },
     },
   }}
 />
 
-export const Template = (args) => <Section {...args}>Hello World</Section>;
+export const Template = args => <Section {...args}>Hello World</Section>
 
 # Section
 

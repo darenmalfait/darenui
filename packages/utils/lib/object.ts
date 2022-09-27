@@ -1,7 +1,7 @@
 import { isObject } from './assertion'
 import type { Dict } from './types'
 
-export function omit<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
+function omit<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
   const result: Dict = {}
 
   Object.keys(object).forEach(key => {
@@ -12,7 +12,7 @@ export function omit<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
   return result as Omit<T, K>
 }
 
-export function pick<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
+function pick<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
   const result = {} as { [P in K]: T[P] }
 
   keys.forEach(key => {
@@ -24,7 +24,7 @@ export function pick<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
   return result
 }
 
-export function deepmerge<T1, T2>(
+function deepmerge<T1, T2>(
   target: Partial<T1>,
   source: Partial<T2>,
   options: { clone: boolean } = { clone: false },
@@ -49,3 +49,5 @@ export function deepmerge<T1, T2>(
 
   return output
 }
+
+export { omit, pick, deepmerge }

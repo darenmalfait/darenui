@@ -1,11 +1,11 @@
 import { isArray, isObject } from './'
 
-export type WalkObjectPredicate<Leaf = unknown> = (
+type WalkObjectPredicate<Leaf = unknown> = (
   value: unknown,
   path: string[],
 ) => Leaf
 
-export type MappedLeavesObject<Obj, LeafType> = {
+type MappedLeavesObject<Obj, LeafType> = {
   [Prop in keyof Obj]: Obj[Prop] extends Array<any>
     ? MappedLeavesObject<Obj[Prop][number], LeafType>[]
     : Obj[Prop] extends Record<string, unknown>
@@ -13,7 +13,7 @@ export type MappedLeavesObject<Obj, LeafType> = {
     : LeafType
 }
 
-export function walkObject<Target, LeafType>(
+function walkObject<Target, LeafType>(
   target: Target,
   predicate: WalkObjectPredicate<LeafType>,
 ): MappedLeavesObject<Target, ReturnType<WalkObjectPredicate<LeafType>>> {
@@ -36,3 +36,6 @@ export function walkObject<Target, LeafType>(
 
   return inner(target)
 }
+
+export type { WalkObjectPredicate, MappedLeavesObject }
+export { walkObject }

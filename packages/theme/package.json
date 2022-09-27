@@ -9,24 +9,22 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./dist/cjs/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/esm/index.js"
     },
     "./dist/darenui.css": "./dist/darenui.css",
     "./package.json": "./package.json"
   },
-  "main": "dist/cjs/index.js",
+  "main": "dist/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npx ts-node ./lib/create-global-css.ts && run-p build:*",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel lib --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
-    "build:esm": "cross-env BABEL_ENV=esm babel lib --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "build": "npx ts-node ./lib/create-global-css.ts && run-s build:*",
+    "build:source": "tsup ./index.ts --format esm,cjs --legacy-output --dts ./index.ts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "run-p lint:*",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",

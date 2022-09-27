@@ -1,50 +1,50 @@
-import { CodeBlock } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import dedent from "ts-dedent";
+import {CodeBlock} from '../lib'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+import dedent from 'ts-dedent'
 
 <Meta
   title="Components/CodeBlock"
   component={CodeBlock}
   argTypes={{
     showLineNumbers: {
-      description: "Whether to show line numbers",
+      description: 'Whether to show line numbers',
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
     showLanguage: {
-      description: "Show the language of the code block",
+      description: 'Show the language of the code block',
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
     theme: {
-      description: "Prisma theme file",
+      description: 'Prisma theme file',
       control: {
         type: null,
       },
     },
     language: {
-      description: "Language of the code block",
-      defaultValue: "javascript",
+      description: 'Language of the code block',
+      defaultValue: 'javascript',
       control: {
-        type: "select",
+        type: 'select',
         options: [
-          "javascript",
-          "typescript",
-          "html",
-          "css",
-          "json",
-          "yaml",
-          "markdown",
+          'javascript',
+          'typescript',
+          'html',
+          'css',
+          'json',
+          'yaml',
+          'markdown',
         ],
       },
     },
     code: {
-      description: "The code to be displayed",
+      description: 'The code to be displayed',
       defaultValue: dedent`import * as React from 'react'
 const CountContext = React.createContext()
   function countReducer(state, action) {
@@ -68,13 +68,13 @@ function CountProvider({children}) {
 }
 export {CountProvider}`,
       control: {
-        type: "text",
+        type: 'text',
       },
     },
   }}
 />
 
-export const Template = (args) => <CodeBlock {...args} />;
+export const Template = args => <CodeBlock {...args} />
 
 # CodeBlock
 

@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 
-export function useControllableState<T>(
+function useControllableState<T>(
   propValue: T | undefined,
   initialValue: T | (() => T),
   changeHandler?: Dispatch<SetStateAction<T | undefined>>,
@@ -18,3 +18,5 @@ export function useControllableState<T>(
     },
   ]
 }
+
+export { useControllableState }

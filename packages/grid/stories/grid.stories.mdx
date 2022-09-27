@@ -1,6 +1,6 @@
-import { Grid } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import {Grid} from '../lib'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 
 <Meta
   title="Layout Components/Grid"
@@ -8,28 +8,28 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
   argTypes={{
     as: {
       control: {
-        defaultValue: "Grid",
-        type: "select",
-        options: ["div", "section", "main", "article", "header", "footer"],
+        defaultValue: 'Grid',
+        type: 'select',
+        options: ['div', 'section', 'main', 'article', 'header', 'footer'],
       },
     },
     nested: {
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
   }}
 />
 
-export const Template = (args) => (
+export const Template = args => (
   <Grid {...args}>
     <div className="col-span-full">col-span-full</div>
     <div className="col-span-4">col-span-4</div>
     <div className="col-span-4">col-span-4</div>
     <div className="col-span-4">col-span-4</div>
   </Grid>
-);
+)
 
 # Grid
 

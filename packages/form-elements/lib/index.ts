@@ -1,6 +1,7 @@
 export * from './checkbox'
 export * from './input'
 export * from './misc'
+export * from './multi-select'
 export * from './radio-group'
 export * from './select'
 export * from './timepicker'

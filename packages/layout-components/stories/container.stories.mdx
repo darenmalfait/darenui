@@ -1,7 +1,7 @@
-import { Container } from "../lib";
-import { Grid } from "@daren/grid";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import {Container} from '../lib'
+import {Grid} from '@daren/grid'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 
 <Meta
   title="Layout Components/Container"
@@ -9,30 +9,31 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
   argTypes={{
     size: {
       control: {
-        defaultValue: "default",
-        type: "select",
-        options: ["small", "medium", "default", "full"],
+        defaultValue: 'default',
+        type: 'select',
+        options: ['small', 'medium', 'default', 'full'],
       },
     },
     as: {
       control: {
-        defaultValue: "div",
-        type: "select",
-        options: ["div", "section", "main", "article", "header", "footer"],
+        defaultValue: 'div',
+        type: 'select',
+        options: ['div', 'section', 'main', 'article', 'header', 'footer'],
       },
     },
   }}
 />
 
-export const Template = (args) => (
+export const Template = args => (
   <Grid nested>
     <Container {...args}>Hello World</Container>
   </Grid>
-);
+)
 
 # Container
 
-`Container` is a component that should be used within a `Grid` and provides a centered div with a specific width.
+`Container` is a component that should be used within a `Grid` and provides a
+centered div with a specific width.
 
 <Actions packageName="layout-components" />
 

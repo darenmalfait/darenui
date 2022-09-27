@@ -1,34 +1,34 @@
-import { H1, H2, H3, H4, H5, H6 } from "../lib";
-import { Actions } from "../../../storybook/components/actions";
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import {H1, H2, H3, H4, H5, H6} from '../lib'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 
 <Meta
   title="Typography/Title"
   component={H1}
   argTypes={{
     children: {
-      description: "The text to display",
-      defaultValue: "This is a title",
+      description: 'The text to display',
+      defaultValue: 'This is a title',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     variant: {
-      description: "The color variant of the title",
-      defaultValue: "primary",
+      description: 'The color variant of the title',
+      defaultValue: 'primary',
       control: {
-        type: "select",
-        options: ["primary", "secondary"],
+        type: 'select',
+        options: ['primary', 'secondary'],
       },
     },
     as: {
-      description: "The HTML element to render the title as",
+      description: 'The HTML element to render the title as',
       control: {
         type: null,
       },
     },
     size: {
-      description: "The size of the title",
+      description: 'The size of the title',
       control: {
         type: null,
       },
@@ -36,11 +36,12 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
   }}
 />
 
-export const Template = (args) => <H2 {...args} />;
+export const Template = args => <H2 {...args} />
 
 # Title
 
-There are six different title sizes, all of which are available as `H1`, `H2`, `H3`, `H4`, `H5`, and `H6`.
+There are six different title sizes, all of which are available as `H1`, `H2`,
+`H3`, `H4`, `H5`, and `H6`.
 
 <Actions packageName="typography" />
 

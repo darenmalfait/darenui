@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "declaration": true,
     "sourceMap": true,
     "moduleResolution": "node",
@@ -23,17 +20,10 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
-    "incremental": true,
     "declarationMap": true
   },
-  "include": [
-    "packages",
-    "scripts",
-    "storybook"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["packages", "scripts", ".storybook"],
+  "exclude": ["node_modules"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",

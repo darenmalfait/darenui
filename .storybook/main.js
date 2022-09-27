@@ -1,4 +1,7 @@
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     '../stories/*.stories.{tsx,mdx}',
     '../packages/**/stories/*.stories.{tsx,mdx}',
@@ -11,7 +14,11 @@ module.exports = {
       options: {
         postcssLoaderOptions: {
           implementation: require('postcss'),
+          postcssOptions: {
+            plugins: [require('tailwindcss')(), require('autoprefixer')()],
+          },
         },
+        cssLoaderOptions: { importLoaders: 1 },
       },
     },
   ],
