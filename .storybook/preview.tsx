@@ -1,10 +1,9 @@
 import {themes} from '@storybook/theming'
 import * as React from 'react'
-import {withPerformance} from 'storybook-addon-performance'
 
 import {DocsContainer} from './docs-container'
 
-import {ThemeProvider} from '../packages/ui-components'
+import {ThemeProvider} from '../packages/theme'
 import '../packages/theme/dist/darenui.css'
 
 import '!style-loader!css-loader!postcss-loader!../styles/styles.output.css'
@@ -33,4 +32,4 @@ const withDarenui = (StoryFn: any) => {
   )
 }
 
-export const decorators = [withDarenui, withPerformance]
+export const decorators = [withDarenui]

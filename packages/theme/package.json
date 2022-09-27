@@ -7,24 +7,27 @@
     "directory": "packages/theme"
   },
   "sideEffects": false,
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "default": "./dist/esm/index.js"
-    },
-    "./dist/darenui.css": "./dist/darenui.css",
-    "./package.json": "./package.json"
-  },
   "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.global.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ],
+  "tsup": {
+    "entry": [
+      "lib/index.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs",
+      "iife"
+    ]
+  },
   "scripts": {
-    "build": "npx ts-node ./lib/create-global-css.ts && run-s build:*",
-    "build:source": "tsup ./index.ts --format esm,cjs --legacy-output --dts ./index.ts",
+    "build": "run-s build:* && npx ts-node ./lib/create-global-css.ts",
+    "build:source": "tsup --env.NODE_ENV production --minify --sourcemap --clean --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "run-p lint:*",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",

@@ -6,8 +6,18 @@ module.exports = {
     '../stories/*.stories.{tsx,mdx}',
     '../packages/**/stories/*.stories.{tsx,mdx}',
   ],
+  framework: "@storybook/react",
   addons: [
-    '@storybook/addon-docs',
+    "@storybook/addon-essentials",
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null,
+        transcludeMarkdown: true,
+      },
+    },
     'storybook-dark-mode/register',
     {
       name: '@storybook/addon-postcss',
