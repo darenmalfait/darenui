@@ -1,6 +1,6 @@
 {
   "name": "@daren/code-block",
-  "version": "2.2.8",
+  "version": "2.2.9",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -39,7 +39,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.5.1",
+    "@daren/utils": "^1.5.2",
     "@heroicons/react": "^1.0.6",
     "prism-react-renderer": "^1.2.1"
   },
