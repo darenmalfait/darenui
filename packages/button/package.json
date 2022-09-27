@@ -1,12 +1,12 @@
 {
-  "name": "@daren/ui-components",
-  "version": "1.12.7",
+  "name": "@daren/button",
+  "version": "1.0.0-alpha.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
-    "directory": "packages/ui-components"
+    "directory": "packages/button"
   },
-  "license": "ISC",
+  "author": "Daren Malfait <github@daren.be>",
   "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -39,19 +39,8 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/alert": "^1.1.6",
-    "@daren/button": "^1.0.0-alpha.0",
-    "@daren/code-block": "^2.2.9",
-    "@daren/form-elements": "^1.8.3",
-    "@daren/grid": "^1.1.13",
-    "@daren/layout-components": "^1.0.10",
-    "@daren/modal": "^1.2.2",
-    "@daren/navigation-list": "^1.0.10",
-    "@daren/progressive-image": "^1.0.14",
-    "@daren/review": "^1.0.10",
-    "@daren/theme": "^2.1.7",
-    "@daren/typography": "^1.4.3",
-    "@daren/utils": "^1.5.2"
+    "@daren/utils": "^1.3.3",
+    "@heroicons/react": "^1.0.5"
   },
   "devDependencies": {
     "react": "^17.0.2"
