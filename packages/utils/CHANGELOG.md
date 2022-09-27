@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.5.0...@daren/utils@1.5.1) (2022-09-27)
+
+**Note:** Version bump only for package @daren/utils
+
 # [1.5.0](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.4.0...@daren/utils@1.5.0) (2022-08-24)
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.12.5",
+  "version": "1.12.6",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -35,18 +35,18 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/alert": "^1.1.4",
-    "@daren/code-block": "^2.2.7",
-    "@daren/form-elements": "^1.8.1",
-    "@daren/grid": "^1.1.11",
-    "@daren/layout-components": "^1.0.8",
-    "@daren/modal": "^1.2.0",
-    "@daren/navigation-list": "^1.0.8",
-    "@daren/progressive-image": "^1.0.12",
-    "@daren/review": "^1.0.8",
-    "@daren/theme": "^2.1.5",
-    "@daren/typography": "^1.4.1",
-    "@daren/utils": "^1.5.0"
+    "@daren/alert": "^1.1.5",
+    "@daren/code-block": "^2.2.8",
+    "@daren/form-elements": "^1.8.2",
+    "@daren/grid": "^1.1.12",
+    "@daren/layout-components": "^1.0.9",
+    "@daren/modal": "^1.2.1",
+    "@daren/navigation-list": "^1.0.9",
+    "@daren/progressive-image": "^1.0.13",
+    "@daren/review": "^1.0.9",
+    "@daren/theme": "^2.1.6",
+    "@daren/typography": "^1.4.2",
+    "@daren/utils": "^1.5.1"
   },
   "devDependencies": {
     "react": "^17.0.2"

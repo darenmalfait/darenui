@@ -1,6 +1,6 @@
 {
   "name": "@daren/review",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple review component",
   "repository": {
     "type": "git",
@@ -36,8 +36,8 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/typography": "^1.4.1",
-    "@daren/utils": "^1.5.0",
+    "@daren/typography": "^1.4.2",
+    "@daren/utils": "^1.5.1",
     "@heroicons/react": "^1.0.5"
   },
   "devDependencies": {
