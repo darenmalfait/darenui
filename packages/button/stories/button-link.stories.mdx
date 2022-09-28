@@ -1,0 +1,65 @@
+import {ButtonLink} from '../lib'
+import {Actions} from '../../../.storybook/components/actions'
+import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
+
+<Meta
+  title="Components/Button/ButtonLink"
+  component={ButtonLink}
+  argTypes={{
+    as: {
+      control: {
+        defaultValue: 'a',
+        type: 'select',
+        options: ['button', 'section', 'main', 'article', 'header', 'footer'],
+      },
+    },
+    href: {
+      control: {
+        defaultValue: 'https://github.com',
+        type: 'text',
+      },
+    },
+    external: {
+      control: {
+        defaultValue: false,
+        type: 'boolean',
+      },
+    },
+    size: {
+      control: {
+        defaultValue: 'medium',
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
+    variant: {
+      control: {
+        defaultValue: 'primary',
+        type: 'select',
+        options: ['primary', 'secondary', 'danger', 'success'],
+      },
+    },
+  }}
+/>
+
+export const Template = args => <ButtonLink {...args}>ButtonLink</ButtonLink>
+
+# ButtonLink
+
+`ButtonLink` is a link that looks like a button
+
+<Actions packageName="button" />
+
+## Import
+
+```bash
+import { ButtonLink } from '@daren/ui-components'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="usage">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="usage" />
