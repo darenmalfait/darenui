@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.12...@daren/review@1.0.13) (2022-09-28)
+
+### Bug Fixes
+
+* move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
+
 ## [1.0.12](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.10...@daren/review@1.0.12) (2022-09-28)
 
 **Note:** Version bump only for package @daren/review

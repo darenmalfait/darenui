@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/darenmalfait/darenui/compare/@daren/button@1.2.0...@daren/button@1.2.1) (2022-09-28)
+
+### Bug Fixes
+
+* move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
+
 # [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.0.0...@daren/button@1.2.0) (2022-09-28)
 
 ### Features

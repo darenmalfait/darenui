@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.13.2",
+  "version": "1.13.3",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -42,15 +42,15 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@daren/alert": "^1.1.8",
-    "@daren/button": "^1.2.0",
-    "@daren/form-elements": "^1.8.5",
+    "@daren/alert": "^1.1.9",
+    "@daren/button": "^1.2.1",
+    "@daren/form-elements": "^1.8.6",
     "@daren/grid": "^1.1.15",
     "@daren/layout-components": "^1.0.12",
-    "@daren/modal": "^1.2.4",
+    "@daren/modal": "^1.2.5",
     "@daren/navigation-list": "^1.0.12",
     "@daren/progressive-image": "^1.0.16",
-    "@daren/review": "^1.0.12",
+    "@daren/review": "^1.0.13",
     "@daren/theme": "^2.1.9",
     "@daren/typography": "^1.4.5",
     "@daren/utils": "^1.5.4"

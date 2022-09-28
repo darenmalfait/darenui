@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.1.8...@daren/alert@1.1.9) (2022-09-28)
+
+### Bug Fixes
+
+* move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
+
 ## [1.1.8](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.1.6...@daren/alert@1.1.8) (2022-09-28)
 
 **Note:** Version bump only for package @daren/alert
