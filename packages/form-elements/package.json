@@ -1,6 +1,6 @@
 {
   "name": "@daren/form-elements",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -42,7 +42,7 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@daren/utils": "^1.5.2",
+    "@daren/utils": "^1.5.3",
     "@headlessui/react": "1.6.0",
     "@heroicons/react": "^2.0.11"
   },

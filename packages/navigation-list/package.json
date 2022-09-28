@@ -1,6 +1,6 @@
 {
   "name": "@daren/navigation-list",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -42,7 +42,7 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@daren/utils": "^1.5.2",
+    "@daren/utils": "^1.5.3",
     "@heroicons/react": "^2.0.11"
   },
   "peerDependencies": {
