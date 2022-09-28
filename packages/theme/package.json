@@ -1,6 +1,6 @@
 {
   "name": "@daren/theme",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -41,7 +41,7 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@daren/utils": "^1.5.2"
+    "@daren/utils": "^1.5.4"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

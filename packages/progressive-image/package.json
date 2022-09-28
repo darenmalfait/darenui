@@ -1,6 +1,6 @@
 {
   "name": "@daren/progressive-image",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -42,7 +42,7 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@daren/utils": "^1.5.2"
+    "@daren/utils": "^1.5.4"
   },
   "peerDependencies": {
     "react": ">=17.0.2"
