@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "build-storybook": "build-storybook -c .storybook",
+    "build-storybook": "yarn build && yarn generate:css && build-storybook",
     "clean": "turbo run clean && rm -rf node_modules",
     "create:pkg": "node --loader ts-node/esm scripts/plopfile.ts",
     "dev": "yarn generate:css && start-storybook -p 6006 -c .storybook",
