@@ -38,10 +38,10 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "clsx": "^1.1.1"
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "react": "^17.0.2"
+    "clsx": "^1.1.1"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

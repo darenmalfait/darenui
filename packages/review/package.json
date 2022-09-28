@@ -40,12 +40,12 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/typography": "^1.4.3",
-    "@daren/utils": "^1.5.2",
-    "@heroicons/react": "^1.0.5"
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "react": "^17.0.2"
+    "@daren/typography": "^1.4.3",
+    "@daren/utils": "^1.5.2",
+    "@heroicons/react": "^2.0.11"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

@@ -3,8 +3,8 @@ import { Combobox, Transition } from '@headlessui/react'
 import {
   CheckIcon,
   ExclamationCircleIcon,
-  SelectorIcon,
-} from '@heroicons/react/solid'
+  ChevronUpDownIcon,
+} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 import { Label } from './misc'
@@ -46,7 +46,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
     defaultValue,
     disabled,
     inputSize,
-    icon: Icon = SelectorIcon,
+    icon: Icon = ChevronUpDownIcon,
     ...rest
   } = props
   const value = items.find(({ value: val }) => val === defaultValue)

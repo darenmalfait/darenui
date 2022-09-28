@@ -1,6 +1,6 @@
 import { cx } from '@daren/utils'
 import { RadioGroup as HeadlessRadioGroup } from '@headlessui/react'
-import { CheckCircleIcon } from '@heroicons/react/solid'
+import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 interface OptionProps {

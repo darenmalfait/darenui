@@ -39,12 +39,12 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.5.2",
-    "@heroicons/react": "^1.0.6",
-    "prism-react-renderer": "^1.2.1"
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "react": "^17.0.2"
+    "@daren/utils": "^1.5.2",
+    "@heroicons/react": "^2.0.11",
+    "prism-react-renderer": "^1.2.1"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

@@ -1,11 +1,11 @@
 import { Dialog, Transition } from '@headlessui/react'
 
 import {
-  ExclamationIcon,
+  ExclamationTriangleIcon,
   XCircleIcon,
   CheckCircleIcon,
   InformationCircleIcon,
-} from '@heroicons/react/solid'
+} from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import * as React from 'react'
 
@@ -22,7 +22,7 @@ interface ModalProps {
 
 const IconMap: Record<ModalProps['type'], React.ElementType | undefined> = {
   danger: XCircleIcon,
-  warning: ExclamationIcon,
+  warning: ExclamationTriangleIcon,
   success: CheckCircleIcon,
   info: InformationCircleIcon,
   neutral: undefined,

@@ -1,7 +1,7 @@
 import {Field} from '../lib'
 import {Actions} from '../../../.storybook/components/actions'
 import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
-import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
+import {CheckIcon, MangifyingGlassIcon} from '@heroicons/react/24/solid'
 
 <Meta
   title="Form Elements/Input/Field"
@@ -52,7 +52,7 @@ import {CheckIcon, SearchIcon} from '@heroicons/react/solid'
 
 export const Template = args => <Field label="input label" {...args} />
 export const TemplateWithIcon = args => (
-  <Field label="input label" icon={SearchIcon} {...args} />
+  <Field label="input label" icon={MangifyingGlassIcon} {...args} />
 )
 
 # Field

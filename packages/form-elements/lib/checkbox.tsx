@@ -1,5 +1,5 @@
 import { cx } from '@daren/utils'
-import { CheckIcon } from '@heroicons/react/solid'
+import { CheckIcon } from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 import { FieldProps } from './types'

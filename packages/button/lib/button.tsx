@@ -7,11 +7,12 @@ type ButtonProps = {
   children?: React.ReactNode
   variant?: 'primary' | 'secondary' | 'danger' | 'success'
   size?: 'small' | 'medium' | 'large'
+  disabled?: boolean
 }
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:opacity-50',
+    'group relative inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:cursor-not-allowed',
     className,
   )
 }
@@ -20,20 +21,22 @@ function ButtonInner({
   children,
   variant = 'primary',
   size = 'medium',
+  disabled,
 }: ButtonProps) {
   return (
     <>
       <div
         className={cx(
-          'absolute inset-0 rounded-md border-2 opacity-100 transition disabled:opacity-50',
+          'absolute inset-0 rounded-md border-2 opacity-100 transition',
           {
+            'border-gray-200 bg-gray-200 opacity-50': disabled,
             'border-daren bg-daren group-hover:brightness-110 group-focus:brightness-90':
-              variant === 'primary',
+              variant === 'primary' && !disabled,
             'border-gray-400': variant === 'secondary',
-            'border-red-400 bg-red-400 group-hover:border-red-500 group-focus:brightness-90':
-              variant === 'danger',
-            'border-green-500 bg-green-500 group-hover:bg-green-600 group-focus:brightness-90':
-              variant === 'success',
+            'border-red-200 bg-red-200 group-hover:border-red-300 group-hover:bg-red-300 group-focus:brightness-90':
+              variant === 'danger' && !disabled,
+            'border-green-200 bg-green-200 group-hover:border-green-300 group-hover:bg-green-300 group-focus:brightness-90':
+              variant === 'success' && !disabled,
           },
         )}
       />
@@ -41,9 +44,11 @@ function ButtonInner({
         className={cx(
           'relative flex h-full w-full items-center justify-center whitespace-nowrap',
           {
-            '!text-inverse': variant === 'primary',
-            '!text-gray-600': variant === 'secondary',
-            '!text-white': variant === 'danger' || variant === 'success',
+            'text-gray-800': disabled,
+            '!text-inverse': variant === 'primary' && !disabled,
+            '!text-gray-600': variant === 'secondary' && !disabled,
+            '!text-red-700': variant === 'danger' && !disabled,
+            '!text-green-700': variant === 'success' && !disabled,
             'h-9 space-x-3 py-2 px-4 text-sm': size === 'small',
             'h-12 space-x-3 py-4 px-6 text-sm': size === 'medium',
             'h-18 space-x-5 py-6 px-11': size === 'large',
@@ -61,11 +66,12 @@ function Button({
   size,
   variant,
   className,
+  disabled,
   ...props
 }: ButtonProps & JSX.IntrinsicElements['button']) {
   return (
-    <button {...props} className={getClassName(className)}>
-      <ButtonInner variant={variant} size={size}>
+    <button disabled={disabled} {...props} className={getClassName(className)}>
+      <ButtonInner variant={variant} size={size} disabled={disabled}>
         {children}
       </ButtonInner>
     </button>
@@ -95,12 +101,12 @@ const ButtonLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithRef<typeof Link> & ButtonProps
 >(function ButtonLink(
-  { children, className, variant = 'primary', size, ...rest },
+  { children, className, variant = 'primary', size, disabled, ...rest },
   ref,
 ) {
   return (
     <Link ref={ref} className={getClassName(className)} {...rest}>
-      <ButtonInner variant={variant} size={size}>
+      <ButtonInner disabled={disabled} variant={variant} size={size}>
         {children}
       </ButtonInner>
     </Link>

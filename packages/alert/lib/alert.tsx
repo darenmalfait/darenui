@@ -1,10 +1,10 @@
 import { cx } from '@daren/utils'
 import {
-  ExclamationIcon,
+  ExclamationCircleIcon,
   XCircleIcon,
   CheckCircleIcon,
   InformationCircleIcon,
-} from '@heroicons/react/solid'
+} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 interface AlertProps {
@@ -17,7 +17,7 @@ interface AlertProps {
 
 const IconMap: Record<AlertProps['type'], React.ElementType> = {
   danger: XCircleIcon,
-  warning: ExclamationIcon,
+  warning: ExclamationCircleIcon,
   success: CheckCircleIcon,
   info: InformationCircleIcon,
 }

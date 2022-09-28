@@ -1,5 +1,8 @@
 import { cx } from '@daren/utils'
-import { CheckCircleIcon, DuplicateIcon } from '@heroicons/react/solid'
+import {
+  CheckCircleIcon,
+  DocumentDuplicateIcon,
+} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 async function copyToClipboard(value: string) {
@@ -73,7 +76,7 @@ function ClipboardCopyButton({ value, className }: ClipboardCopyButtonProps) {
         {state === State.Copied ? (
           <CheckCircleIcon className="w-5 h-5" />
         ) : (
-          <DuplicateIcon className="w-5 h-5" />
+          <DocumentDuplicateIcon className="w-5 h-5" />
         )}
       </span>
     </button>

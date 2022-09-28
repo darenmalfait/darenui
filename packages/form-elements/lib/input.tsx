@@ -1,5 +1,5 @@
 import { cx } from '@daren/utils'
-import { ExclamationCircleIcon } from '@heroicons/react/solid'
+import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 import { Label } from './misc'
@@ -17,7 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
 
   if (type === 'textarea') {
     return (
-      <div className="relative flex-items-center">
+      <div className="relative w-full flex-items-center">
         {Icon && (
           <Icon
             width="20px"
@@ -40,7 +40,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   }
 
   return (
-    <div className="relative shadow-sm">
+    <div className="relative w-full shadow-sm">
       <input
         type={type}
         {...(inputProps as JSX.IntrinsicElements['input'])}

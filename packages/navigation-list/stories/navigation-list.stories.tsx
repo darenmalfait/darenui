@@ -1,4 +1,4 @@
-import { CogIcon } from '@heroicons/react/solid'
+import { CogIcon } from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 import { NavigationList, getNavigationItemClassName } from '../lib'

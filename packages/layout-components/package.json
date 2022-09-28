@@ -39,11 +39,11 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.5.2"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@daren/grid": "^1.1.13",
-    "react": "^17.0.2"
+    "@daren/utils": "^1.5.2"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

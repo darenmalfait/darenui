@@ -1,6 +1,6 @@
 import { H2, H4, Paragraph } from '@daren/typography'
 import { cx } from '@daren/utils'
-import { StarIcon } from '@heroicons/react/solid'
+import { StarIcon } from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 // date: 'May 16, 2021'
