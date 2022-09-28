@@ -23,7 +23,7 @@
 To install the component-library run the following within your project directory.
 
 ```sh
-npm i @daren/ui-core @daren/ui-components postcss tailwindcss @tailwindcss/typography
+npm i @daren/ui-core @daren/ui-components postcss tailwindcss @tailwindcss/typography @heroicons/react@2
 ```
 
 ### Configuration

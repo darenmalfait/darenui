@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import {Meta} from '@storybook/addon-docs'
 
 <Meta title="Design System/Configuration" />
 
@@ -8,29 +8,32 @@ import { Meta } from "@storybook/addon-docs";
 
 ### Installation
 
-To install the component-library run the following within your project directory.
+To install the component-library run the following within your project
+directory.
 
 ```sh
-npm i @daren/ui-core @daren/ui-components postcss tailwindcss @tailwindcss/typography
+npm i @daren/ui-core @daren/ui-components postcss tailwindcss @tailwindcss/typography @heroicons/react@2
 ```
 
 ### Configuration
 
-The theme of this library depends on the @tailwindcss/typography plugin. To use it, follow the steps on the plugin source page. https://github.com/tailwindlabs/tailwindcss-typography
+The theme of this library depends on the @tailwindcss/typography plugin. To use
+it, follow the steps on the plugin source page.
+https://github.com/tailwindlabs/tailwindcss-typography
 
 ```js
 // tailwind.config.js
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   content: [
     // ... paths that use tailwind
-    "./node_modules/@daren/**/*.{js,ts,jsx,tsx}", // path to daren
+    './node_modules/@daren/**/*.{js,ts,jsx,tsx}', // path to daren
   ],
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("@daren/ui-core")],
-};
+  plugins: [require('@tailwindcss/typography'), require('@daren/ui-core')],
+}
 ```
 
 ```js
@@ -40,7 +43,7 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
   },
-};
+}
 ```
 
 Then you need a global css file which you import at the root of the project
@@ -54,15 +57,15 @@ Then you need a global css file which you import at the root of the project
 ### Quick start
 
 ```js
-import * as React from "react";
-import { ThemeProvider, H1 } from "@daren/ui-components";
-import "@daren/theme/dist/darenui.css";
+import * as React from 'react'
+import {ThemeProvider, H1} from '@daren/ui-components'
+import '@daren/theme/dist/darenui.css'
 
 function App() {
   return (
     <ThemeProvider>
       <H1>Hello Daren</H1>
     </ThemeProvider>
-  );
+  )
 }
 ```
