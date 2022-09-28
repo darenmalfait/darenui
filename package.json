@@ -38,7 +38,6 @@
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
-    "esbuild": "^0.15.9",
     "eslint": "^8.24.0",
     "eslint-config-daren": "^3.5.1",
     "husky": "^8.0.1",
