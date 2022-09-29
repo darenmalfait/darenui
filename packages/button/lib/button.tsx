@@ -45,8 +45,8 @@ function ButtonInner({
           'relative flex h-full w-full items-center justify-center whitespace-nowrap',
           {
             'text-gray-800': disabled,
-            '!text-inverse': variant === 'primary' && !disabled,
-            '!text-gray-600': variant === 'secondary' && !disabled,
+            '!text-white': variant === 'primary' && !disabled,
+            '!text-gray-200': variant === 'secondary' && !disabled,
             '!text-red-700': variant === 'danger' && !disabled,
             '!text-green-700': variant === 'success' && !disabled,
             'h-9 space-x-3 py-2 px-4 text-sm': size === 'small',
@@ -101,7 +101,7 @@ function Button({
       </ButtonInner>
       <Drip
         colorClass={cx({
-          'fill-white': variant === 'primary' && !disabled,
+          'fill-daren brightness-90': variant === 'primary' && !disabled,
           'fill-gray-400': variant === 'secondary' && !disabled,
           'fill-red-400': variant === 'danger' && !disabled,
           'fill-green-400': variant === 'success' && !disabled,
