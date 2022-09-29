@@ -1,6 +1,6 @@
 {
   "name": "@daren/layout-components",
-  "version": "1.0.17-alpha.0",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -38,8 +38,8 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/grid": "1.1.20-alpha.0",
-    "@daren/utils": "1.5.8-alpha.0"
+    "@daren/grid": "^1.2.0",
+    "@daren/utils": "^1.6.0"
   },
   "devDependencies": {
     "react": "^18.2.0"

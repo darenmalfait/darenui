@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.5.12...@daren/ui-core@2.6.0) (2022-09-29)
+
+
+### Features
+
+* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+
+
+
+
+
 ## [2.5.12](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.5.11...@daren/ui-core@2.5.12) (2022-09-29)
 
 **Note:** Version bump only for package @daren/ui-core

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.5.6...@daren/utils@1.6.0) (2022-09-29)
+
+
+### Features
+
+* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+
+
+
+
+
 ## [1.5.6](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.5.5...@daren/utils@1.5.6) (2022-09-29)
 
 **Note:** Version bump only for package @daren/utils

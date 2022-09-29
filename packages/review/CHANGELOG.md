@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.16...@daren/review@1.1.0) (2022-09-29)
+
+
+### Features
+
+* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+
+
+
+
+
 ## [1.0.16](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.15...@daren/review@1.0.16) (2022-09-29)
 
 **Note:** Version bump only for package @daren/review

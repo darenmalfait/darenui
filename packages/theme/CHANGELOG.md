@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.1.12...@daren/theme@2.2.0) (2022-09-29)
+
+
+### Features
+
+* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+
+
+
+
+
 ## [2.1.12](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.1.11...@daren/theme@2.1.12) (2022-09-29)
 
 **Note:** Version bump only for package @daren/theme

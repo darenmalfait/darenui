@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.1.12...@daren/alert@1.2.0) (2022-09-29)
+
+
+### Features
+
+* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+
+
+
+
+
 ## [1.1.12](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.1.11...@daren/alert@1.1.12) (2022-09-29)
 
 **Note:** Version bump only for package @daren/alert

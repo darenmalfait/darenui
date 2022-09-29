@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.4.8...@daren/typography@1.5.0) (2022-09-29)
+
+
+### Features
+
+* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+
+
+
+
+
 ## [1.4.8](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.4.7...@daren/typography@1.4.8) (2022-09-29)
 
 **Note:** Version bump only for package @daren/typography
