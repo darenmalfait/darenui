@@ -12,7 +12,7 @@ type ButtonProps = {
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:cursor-not-allowed',
+    'group relative inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:cursor-not-allowed active:scale-95 rounded-md',
     className,
   )
 }
@@ -27,15 +27,15 @@ function ButtonInner({
     <>
       <div
         className={cx(
-          'absolute inset-0 rounded-md border-2 opacity-100 transition',
+          'absolute inset-0 rounded-md border-2 opacity-100 transition focus-ring set-colors-current',
           {
-            'border-gray-200 bg-gray-200 opacity-50': disabled,
-            'border-daren bg-daren group-hover:brightness-110 group-focus:brightness-90':
+            'border-gray-200 text-gray-200 bg-gray-200 opacity-50': disabled,
+            'border-daren text-daren bg-daren group-hover:brightness-110':
               variant === 'primary' && !disabled,
-            'border-gray-400': variant === 'secondary',
-            'border-red-200 bg-red-200 group-hover:border-red-300 group-hover:bg-red-300 group-focus:brightness-90':
+            'border-gray-400 text-gray-400': variant === 'secondary',
+            'border-red-200 text-red-200 bg-red-200 group-hover:border-red-300 group-hover:bg-red-300':
               variant === 'danger' && !disabled,
-            'border-green-200 bg-green-200 group-hover:border-green-300 group-hover:bg-green-300 group-focus:brightness-90':
+            'border-green-200 text-green-200 bg-green-200 group-hover:border-green-300 group-hover:bg-green-300':
               variant === 'success' && !disabled,
           },
         )}

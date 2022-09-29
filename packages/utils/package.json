@@ -7,38 +7,39 @@
     "directory": "packages/utils"
   },
   "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "unpkg": "dist/index.global.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "lib"
-  ],
-  "tsup": {
-    "entry": [
-      "lib/index.ts"
-    ],
-    "format": [
-      "esm",
-      "cjs",
-      "iife"
-    ]
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "run-s build:*",
-    "build:source": "tsup --env.NODE_ENV production --minify --sourcemap --clean --dts",
+    "build:esm": "cross-env BABEL_ENV=esm babel lib --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel lib --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "run-p lint:*",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",
     "lint:types": "tsc --noEmit",
+    "prebuild": "rimraf dist",
     "start": "nodemon --watch lib --exec yarn build -e ts,tsx",
     "test": "jest --env=jsdom --passWithNoTests",
     "test:cov": "yarn test --coverage",
     "version": "yarn build"
   },
+  "dependencies": {
+    "clsx": "^1.1.1"
+  },
   "devDependencies": {
-    "clsx": "^1.1.1",
     "react": "^18.2.0"
   },
   "peerDependencies": {
