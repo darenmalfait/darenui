@@ -19,3 +19,12 @@ packages/**/yarn.lock
 styles.output.css
 .turbo
 tsconfig.tsbuildinfo
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

@@ -97,17 +97,17 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
               displayValue={item => (item as any)?.label}
               onChange={event => setQuery(event.target.value)}
             />
-            <Combobox.Button className="flex absolute inset-y-0 right-0 items-center pr-5">
+            <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-5">
               {hasError ? (
                 <ExclamationCircleIcon
-                  className="w-5 h-5 text-red-500"
+                  className="h-5 w-5 text-red-500"
                   aria-hidden="true"
                 />
               ) : (
                 <Icon
                   width="20px"
                   height="20px"
-                  className="w-5 h-5 text-gray-300"
+                  className="h-5 w-5 text-gray-300"
                   aria-hidden="true"
                 />
               )}
@@ -120,9 +120,9 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="overflow-auto absolute z-20 py-1 mt-1 w-full max-h-60 text-base bg-white rounded-md focus:outline-none ring-1 ring-slate-200 shadow-lg sm:text-sm">
+            <Combobox.Options className="absolute z-20 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-slate-200 focus:outline-none sm:text-sm">
               {filteredItems.length === 0 && query !== '' ? (
-                <div className="relative py-2 px-4 text-gray-700 cursor-default select-none">
+                <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
                 </div>
               ) : (
@@ -153,7 +153,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
                               active ? 'text-white' : 'text-teal-600'
                             }`}
                           >
-                            <CheckIcon className="w-5 h-5" aria-hidden="true" />
+                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
                           </span>
                         ) : null}
                       </>

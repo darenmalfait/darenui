@@ -49,12 +49,12 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
         />
         <div className={cx(className, { 'pr-14': !!Icon })}>
           <div className="flex">
-            <div className="flex relative justify-center items-center text-center z-1">
-              <div className="hidden group-hover:block absolute -inset-1 group-hover:bg-white rounded-md shadow-md" />
+            <div className="z-1 relative flex items-center justify-center text-center">
+              <div className="absolute -inset-1 hidden rounded-md shadow-md group-hover:block group-hover:bg-white" />
               <select
                 name="hours"
                 onChange={onHourChange}
-                className="z-10 text-xl text-center bg-transparent outline-none appearance-none cursor-pointer"
+                className="z-10 cursor-pointer appearance-none bg-transparent text-center text-xl outline-none"
                 defaultValue={new Date(value).getHours().toString()}
               >
                 <option value="0">00</option>
@@ -84,11 +84,11 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
               </select>
             </div>
             <span className="mx-2 text-xl">:</span>
-            <div className="flex relative justify-center items-center text-center z-1">
-              <div className="hidden group-hover:block absolute -inset-1 group-hover:bg-white rounded-md shadow-md" />
+            <div className="z-1 relative flex items-center justify-center text-center">
+              <div className="absolute -inset-1 hidden rounded-md shadow-md group-hover:block group-hover:bg-white" />
               <select
                 name="minutes"
-                className="z-10 text-xl text-center bg-transparent outline-none appearance-none cursor-pointer"
+                className="z-10 cursor-pointer appearance-none bg-transparent text-center text-xl outline-none"
                 onChange={onMinuteChange}
                 defaultValue={new Date(value).getMinutes().toString()}
               >
@@ -114,9 +114,9 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
           />
         )}
         {hasError && (
-          <div className="flex absolute top-0 right-5 z-10 justify-center items-center p-0 h-full">
+          <div className="absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0">
             <ExclamationCircleIcon
-              className="w-5 h-5 text-red-500"
+              className="h-5 w-5 text-red-500"
               aria-hidden="true"
             />
           </div>

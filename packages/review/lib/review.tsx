@@ -31,7 +31,7 @@ function Review({
 }: ReviewProps) {
   return (
     <div className={cx(className, 'pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8')}>
-      <div className="lg:col-span-8 lg:col-start-5 xl:grid xl:grid-cols-3 xl:col-span-9 xl:col-start-4 xl:gap-x-8 xl:items-start">
+      <div className="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
         <div className="flex items-center xl:col-span-1">
           <div className="flex items-center">
             {rating &&
@@ -61,20 +61,20 @@ function Review({
 
           {html && (
             <div
-              className="mt-3 space-y-6 text-sm prose-sm text-secondary"
+              className="prose-sm mt-3 space-y-6 text-sm text-secondary"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           )}
         </div>
       </div>
 
-      <div className="flex items-center mt-6 text-sm lg:flex-col lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:items-start lg:mt-0 xl:col-span-3">
+      <div className="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
         <H4 as="h3" className="font-medium text-primary">
           {author}
         </H4>
         <time
           dateTime={datetime}
-          className="pl-4 ml-4 border-l lg:pl-0 lg:mt-2 lg:ml-0 lg:border-0 border-secondary text-secondary"
+          className="border-secondary ml-4 border-l pl-4 text-secondary lg:mt-2 lg:ml-0 lg:border-0 lg:pl-0"
         >
           {date}
         </time>
@@ -101,7 +101,7 @@ function ReviewGroup({
       className={cx(className, 'max-w-2xl mx-auto py-16 sm:py-24 lg:max-w-7xl')}
     >
       {title && <H2 className={titleClass}>{title}</H2>}
-      <div className="pb-10 mt-6 space-y-10 border-y divide-y divide-gray-200 border-secondary">
+      <div className="border-secondary mt-6 space-y-10 divide-y divide-gray-200 border-y pb-10">
         {children}
       </div>
     </div>

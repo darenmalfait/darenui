@@ -1,6 +1,6 @@
 {
   "name": "@daren/alert",
-  "version": "1.1.12",
+  "version": "1.1.14-alpha.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -23,12 +23,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "run-s build:*",
+    "build": "run-s 'build:*'",
     "build:esm": "cross-env BABEL_ENV=esm babel lib --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:cjs": "cross-env BABEL_ENV=cjs babel lib --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "lint": "run-p lint:*",
+    "clean": "rm -rf node_modules && rm -rf dist",
+    "lint": "run-p 'lint:*'",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",
     "lint:types": "tsc --noEmit",
     "prebuild": "rimraf dist",
@@ -38,7 +38,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "workspace:*",
+    "@daren/utils": "1.5.8-alpha.0",
     "@heroicons/react": "^2.0.11"
   },
   "devDependencies": {

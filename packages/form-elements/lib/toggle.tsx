@@ -67,7 +67,7 @@ function Toggle({
             aria-hidden="true"
           >
             <svg
-              className="w-3 h-3 text-gray-400"
+              className="h-3 w-3 text-gray-400"
               fill="none"
               viewBox="0 0 12 12"
             >

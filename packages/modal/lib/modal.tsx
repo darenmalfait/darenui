@@ -44,7 +44,7 @@ function Modal({
     <Transition.Root show={open} as={React.Fragment}>
       <Dialog
         as="div"
-        className="overflow-y-auto fixed inset-0 z-20"
+        className="fixed inset-0 z-20 overflow-y-auto"
         initialFocus={initialFocus}
         onClose={onClose}
       >
@@ -59,8 +59,8 @@ function Modal({
         >
           <div className="fixed inset-0 bg-black/25 dark:bg-white/25" />
         </Transition.Child>
-        <div className="overflow-y-auto fixed inset-0">
-          <div className="flex justify-center items-center p-4 min-h-full text-center">
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4 text-center">
             <Transition.Child
               as={React.Fragment}
               enter="ease-out duration-300"
@@ -73,14 +73,14 @@ function Modal({
               <Dialog.Panel
                 className={clsx(
                   className,
-                  'inline-block relative px-4 pt-5 pb-4 w-full text-left align-bottom rounded-lg shadow-xl transition-all sm:p-6 sm:my-8 sm:w-full sm:max-w-xl sm:align-middle bg-primary',
+                  'relative inline-block w-full rounded-lg px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all bg-primary sm:my-8 sm:w-full sm:max-w-xl sm:p-6 sm:align-middle',
                 )}
               >
                 <div className="sm:flex sm:items-start">
                   {Icon && (
                     <div
                       className={clsx(
-                        'flex shrink-0 justify-center items-center mx-auto w-12 h-12 rounded-full sm:mx-0 sm:w-10 sm:h-10',
+                        'mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10',
                         {
                           'bg-yellow-100': type === 'warning',
                           'bg-green-100': type === 'success',
@@ -90,7 +90,7 @@ function Modal({
                       )}
                     >
                       <Icon
-                        className={clsx('w-6 h-6', {
+                        className={clsx('h-6 w-6', {
                           'text-yellow-400': type === 'warning',
                           'text-green-400': type === 'success',
                           'text-blue-400': type === 'info',
@@ -118,7 +118,7 @@ function Modal({
                   </div>
                 </div>
                 {actions && (
-                  <div className="mt-6 sm:flex sm:pl-4 sm:mt-4 sm:ml-10">
+                  <div className="mt-6 sm:mt-4 sm:ml-10 sm:flex sm:pl-4">
                     <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                       {actions}
                     </div>

@@ -19,17 +19,17 @@ function PillButton({
   return (
     <span
       key={item.label}
-      className="inline-flex items-center py-1 pr-2 pl-3 m-1 text-sm font-bold text-[#008A4E] bg-green-100 rounded-md"
+      className="m-1 inline-flex items-center rounded-md bg-green-100 py-1 pr-2 pl-3 text-sm font-bold text-[#008A4E]"
     >
       <span>{item.label}</span>
       {onDelete && (
         <button
           onClick={() => onDelete(item)}
           type="button"
-          className="inline-flex shrink-0 p-0.5 ml-1 w-5 h-5 text-green-700 hover:bg-white rounded-full"
+          className="ml-1 inline-flex h-5 w-5 shrink-0 rounded-full p-0.5 text-green-700 hover:bg-white"
         >
           <span className="sr-only">remove {item.label}</span>
-          <PlusIcon className="w-full h-full rotate-45 " />
+          <PlusIcon className="h-full w-full rotate-45 " />
         </button>
       )}
     </span>
@@ -48,7 +48,7 @@ function ActiveItems({
   onItemToggle?: (item: SelectItem) => void
 }) {
   return (
-    <div className="flex flex-wrap items-center -m-1">
+    <div className="-m-1 flex flex-wrap items-center">
       {items.map(item => (
         <>
           <input type="hidden" name={name} value={JSON.stringify(item)} />

@@ -91,7 +91,7 @@ function TitleWithActions({
     >
       <div className="flex-1">{children}</div>
       {actions && (
-        <div className="flex flex-col flex-initial space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-initial flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
           {actions}
         </div>
       )}

@@ -371,6 +371,22 @@ module.exports = plugin(
               background: 'currentColor',
             },
           },
+          expand: {
+            '0%': {
+              opacity: 0,
+              transform: 'scale(0.25)',
+            },
+            '30%': {
+              opacity: 1,
+            },
+            '80%': {
+              opacity: 0.5,
+            },
+            '100%': {
+              transform: 'scale(28)',
+              opacity: 0,
+            },
+          },
         },
         animation: {
           'fade-in-down': `fade-in-down 0.2s forwards`,
@@ -381,6 +397,7 @@ module.exports = plugin(
           stroke: `stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;`,
           scale: `scale .3s ease-in-out`,
           check: `check .5s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards`,
+          expand: `350ms linear expand forwards`,
         },
       },
     },

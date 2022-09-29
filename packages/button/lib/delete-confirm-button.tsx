@@ -35,7 +35,7 @@ function DeleteConfirmButton({
         {children}
       </Button>
       {open && (
-        <div className="p-4 mt-4 space-y-2 rounded-md border">
+        <div className="mt-4 space-y-2 rounded-md border p-4">
           <H4>{title}</H4>
           <Paragraph
             dangerouslySetInnerHTML={{
@@ -45,7 +45,7 @@ function DeleteConfirmButton({
               ),
             }}
           />
-          <div className="flex space-x-2 w-full">
+          <div className="flex w-full space-x-2">
             <Input
               className="w-full"
               placeholder="App Name"

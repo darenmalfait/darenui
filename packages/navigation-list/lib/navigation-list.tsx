@@ -41,7 +41,7 @@ function Item<T>({
       className={className ?? getNavigationItemClassName({})}
       {...props}
     >
-      {Icon && <Icon className="shrink-0 mr-3 -ml-1 w-6 h-6" />}
+      {Icon && <Icon className="mr-3 -ml-1 h-6 w-6 shrink-0" />}
       <span className="truncate">{title}</span>
     </Link>
   )

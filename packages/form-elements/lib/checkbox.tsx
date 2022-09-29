@@ -33,7 +33,7 @@ function Checkbox({
       )}
     >
       <input {...props} className="peer sr-only" type="checkbox" />
-      <span className="inline-block w-full h-full text-current rounded-full border-2 border-primary-100 peer-checked:border-transparent dark:border-primary-300 transition-all duration-300 peer-checked:animate-check cursor-pointer focus-ring" />
+      <span className="inline-block h-full w-full cursor-pointer rounded-full border-2 border-primary-100 text-current transition-all duration-300 focus-ring peer-checked:animate-check peer-checked:border-transparent dark:border-primary-300" />
       <Icon
         className={cx(
           textClassName,
@@ -56,8 +56,8 @@ const CheckboxField = React.forwardRef<
 
   return (
     <div className={cx(className, 'group w-full')}>
-      <div className="flex relative items-start">
-        <div className="flex items-center h-5">
+      <div className="relative flex items-start">
+        <div className="flex h-5 items-center">
           <Checkbox ref={ref} id={inputId} name={name} {...props} />
         </div>
         <div className="ml-3 text-base">

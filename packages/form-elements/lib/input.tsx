@@ -17,7 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
 
   if (type === 'textarea') {
     return (
-      <div className="relative w-full flex-items-center">
+      <div className="flex-items-center relative w-full">
         {Icon && (
           <Icon
             width="20px"
@@ -61,9 +61,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
         />
       )}
       {hasError && (
-        <div className="flex absolute top-0 right-5 z-10 justify-center items-center p-0 h-full">
+        <div className="absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0">
           <ExclamationCircleIcon
-            className="w-5 h-5 text-red-500"
+            className="h-5 w-5 text-red-500"
             aria-hidden="true"
           />
         </div>

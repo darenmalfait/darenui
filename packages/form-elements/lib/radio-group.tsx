@@ -33,7 +33,7 @@ function Option({
       }
     >
       {({ checked }) => (
-        <div className="flex justify-between items-center w-full">
+        <div className="flex w-full items-center justify-between">
           <div className="flex items-center">
             <div className="text-sm">
               <HeadlessRadioGroup.Label
@@ -58,7 +58,7 @@ function Option({
           </div>
           {checked && (
             <div className="shrink-0 text-inverse">
-              <CheckCircleIcon className="w-6 h-6" />
+              <CheckCircleIcon className="h-6 w-6" />
             </div>
           )}
         </div>
