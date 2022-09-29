@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "run-s build:*",
-    "build:source": "tsup --env.NODE_ENV production --sourcemap --clean --dts-resolve",
+    "build:source": "tsup --env.NODE_ENV production --sourcemap --clean --dts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "run-p lint:*",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",
@@ -38,19 +38,21 @@
     "test:cov": "yarn test --coverage",
     "version": "yarn build"
   },
+  "dependencies": {
+    "@daren/alert": "workspace:*",
+    "@daren/button": "workspace:*",
+    "@daren/form-elements": "workspace:*",
+    "@daren/grid": "workspace:*",
+    "@daren/layout-components": "workspace:*",
+    "@daren/modal": "workspace:*",
+    "@daren/navigation-list": "workspace:*",
+    "@daren/progressive-image": "workspace:*",
+    "@daren/review": "workspace:*",
+    "@daren/theme": "workspace:*",
+    "@daren/typography": "workspace:*",
+    "@daren/utils": "workspace:*"
+  },
   "devDependencies": {
-    "@daren/alert": "^1.1.10",
-    "@daren/button": "^1.2.2",
-    "@daren/form-elements": "^1.8.7",
-    "@daren/grid": "^1.1.16",
-    "@daren/layout-components": "^1.0.13",
-    "@daren/modal": "^1.2.6",
-    "@daren/navigation-list": "^1.0.13",
-    "@daren/progressive-image": "^1.0.17",
-    "@daren/review": "^1.0.14",
-    "@daren/theme": "^2.1.10",
-    "@daren/typography": "^1.4.6",
-    "@daren/utils": "^1.5.5",
     "react": "^18.2.0"
   },
   "peerDependencies": {

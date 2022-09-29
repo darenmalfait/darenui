@@ -1593,6 +1593,66 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@daren/alert@workspace:*":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@daren/alert/-/alert-1.1.10.tgz#89647518601be6cf96a19e08488d23a8e0b5ab37"
+  integrity sha512-I2Y4PV15Af/+cDjxefSo0EbFDjoX5YoceRc+B69iOL2F3ygMS/aB9qZ3uZx6oSyTN5cgEqk+AUQNdXaGu0wXMg==
+
+"@daren/button@workspace:*":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@daren/button/-/button-1.2.2.tgz#875bf6dc0c36c118a5592dd90f73372e5df65929"
+  integrity sha512-24eDCXwyaCli7qa3eSpthUbNLQmz9NO3CuUgUIz+t2fHxs8TeoDQ4Gfl4g0lT49bXQJ8A0FOlFmzKUSbmW69Fw==
+
+"@daren/form-elements@workspace:*":
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/@daren/form-elements/-/form-elements-1.8.7.tgz#c2b497f5dfc4e3c2d6668ef463ff62b58cfa0247"
+  integrity sha512-SrRAL3M4LXAMtYPRTnZEZm/9x0ryVNXxyO0mnwxsSTUwPEEIWWIEwkB1Fccb1P8ph0oxj9lBh3hSGKjg+Kxxlg==
+
+"@daren/grid@workspace:*":
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/@daren/grid/-/grid-1.1.16.tgz#fd83e9aadc6c70ca4abfa46fc8a2adab693f989d"
+  integrity sha512-7PFqP4RQYCjnh/6qxKtbiP5Yb9SXfXFVC4zFWuTFUTvx21Hc0kmmXJ8VPOmGth5xsa3mEnrCLtY5a/NWXw7DSg==
+
+"@daren/layout-components@workspace:*":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@daren/layout-components/-/layout-components-1.0.13.tgz#4ae727f5bfd05242cfa42218575f45385fa5358f"
+  integrity sha512-g2viHRYrgW9tpm7DWo+p3eLWeqBzSHxcYdc+km2bA0bqXWHg9rC5P/Xi1AcKTK1g6fni+e++Bn+Qmmyjko63Nw==
+
+"@daren/modal@workspace:*":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@daren/modal/-/modal-1.2.6.tgz#9ac9dc35b15bafac2ed7fc4dbdf085e82a13e2b4"
+  integrity sha512-Zo3MUSf6feBWYz/dkgPN/skWw0eV1tOPGd1i/jz6ZYBp7qMQfkJuQZtdK84zfsIpEyXVcFIqfXh0onzH0YXZag==
+
+"@daren/navigation-list@workspace:*":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@daren/navigation-list/-/navigation-list-1.0.13.tgz#0a44a14d089f5a62abdd5df3f22475837bcc4b4b"
+  integrity sha512-SUIcasq11lg6tpyX6YTljtfaQXfqQnTra0LBadAtt2nQvzpCpmBtfgkjzvTmLoBvgpHiwsPF/dlLrYi2ADo8OQ==
+
+"@daren/progressive-image@workspace:*":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@daren/progressive-image/-/progressive-image-1.0.17.tgz#9c2589c3417b68ece7847ba5537c98d3908abf46"
+  integrity sha512-3jbhxLR0SkHgk3V5R/T3D0r39xSHrGG97FrXTarh17gZNCNQ74gnAwEXYBKpTHx05IZvRJjEXEcEnMQWKkt8Ew==
+
+"@daren/review@workspace:*":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@daren/review/-/review-1.0.14.tgz#46b59afdfb3c7c0b801520bc2816dda0cc23fd61"
+  integrity sha512-Lpxt43mPXj+d2s2PXC3Tcun2weF/YFZ4VKJvJ81JPR8X1Dk5RRpIGNafeYHO0joOSuvT6N/YevhPo8lxH3gTwg==
+
+"@daren/theme@workspace:*":
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/@daren/theme/-/theme-2.1.10.tgz#e991436c745965dd309fa80cf8680a22189ad059"
+  integrity sha512-eAbuBL+ueec5H4xadGDx7rMAzN2LkHQf1bnqU3C0YEDoQw4bsXUGy7Q5t/8fuThlnnW5b4oZ/UeGk2J5x9O98g==
+
+"@daren/typography@workspace:*":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@daren/typography/-/typography-1.4.6.tgz#7e20e5ac52718b055845115f5f0be608c5a6373a"
+  integrity sha512-WSSmbXNq4k1WlVqw8lWDYYmkU6TGmX6RluyTUyyUyw4/v68R+Egdx3Uukpmpaa6QhVIMlqO+stYAeNrcyohbWw==
+
+"@daren/utils@workspace:*":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@daren/utils/-/utils-1.5.5.tgz#c1f0decbf2e69b74414a6415e347f3d81399ace2"
+  integrity sha512-jxG5NLxHf2xv4ZNJRZTAVGr0gonZ+mxFu8I91+xpgpXFWRpLXER2DaZIQMahOw9/j2lweTSK46glYyckefwAgg==
+
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
@@ -12390,14 +12450,6 @@ react-textarea-autosize@^8.3.0:
     "@babel/runtime" "^7.10.2"
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
-
-react@^17.0.2:
-  version "17.0.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
-  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 react@^18.2.0:
   version "18.2.0"

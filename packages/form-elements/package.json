@@ -39,7 +39,7 @@
     "version": "yarn build"
   },
   "devDependencies": {
-    "@daren/utils": "^1.5.5",
+    "@daren/utils": "workspace:*",
     "@headlessui/react": "1.6.0",
     "@heroicons/react": "^2.0.11",
     "react": "^18.2.0"

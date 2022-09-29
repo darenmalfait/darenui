@@ -40,8 +40,8 @@
     "version": "yarn build"
   },
   "devDependencies": {
-    "@daren/typography": "^1.4.6",
-    "@daren/utils": "^1.5.5",
+    "@daren/typography": "workspace:*",
+    "@daren/utils": "workspace:*",
     "@heroicons/react": "^2.0.11",
     "react": "^18.2.0"
   },
