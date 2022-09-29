@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "run-s build:*",
-    "build:source": "tsup --env.NODE_ENV production --sourcemap --clean --dts-resolve --external react",
+    "build:source": "tsup --env.NODE_ENV production --sourcemap --clean --dts-resolve",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "run-p lint:*",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",
