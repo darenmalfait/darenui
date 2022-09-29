@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "run-s build:*",
-    "build:source": "tsup --env.NODE_ENV production --minify --sourcemap --clean --dts-resolve --external react",
+    "build:source": "tsup --env.NODE_ENV production --sourcemap --clean --dts-resolve --external react",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "run-p lint:*",
     "lint:lib": "eslint lib --ext .ts,.tsx --config ../../.eslintrc.js",
@@ -37,9 +37,6 @@
     "test": "jest --env=jsdom --passWithNoTests",
     "test:cov": "yarn test --coverage",
     "version": "yarn build"
-  },
-  "dependencies": {
-    "react": "^17.0.2"
   },
   "devDependencies": {
     "@daren/alert": "^1.1.9",
@@ -53,10 +50,11 @@
     "@daren/review": "^1.0.13",
     "@daren/theme": "^2.1.9",
     "@daren/typography": "^1.4.5",
-    "@daren/utils": "^1.5.4"
+    "@daren/utils": "^1.5.4",
+    "react": "^18.2.0"
   },
   "peerDependencies": {
-    "react": ">=17.0.2"
+    "react": ">=18.2.0"
   },
   "publishConfig": {
     "access": "public"
