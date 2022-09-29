@@ -1,10 +1,10 @@
-import {DeleteConfirmButton} from '../lib'
+import {ConfirmButton} from '../lib'
 import {Actions} from '../../../.storybook/components/actions'
 import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 
 <Meta
-  title="Components/Button/DeleteConfirmButton"
-  component={DeleteConfirmButton}
+  title="Components/Button/ConfirmButton"
+  component={ConfirmButton}
   argTypes={{
     confirmString: {
       defaultValue: 'app-name',
@@ -30,20 +30,20 @@ import {Meta, Story, Canvas, ArgsTable} from '@storybook/addon-docs'
 />
 
 export const Template = args => (
-  <DeleteConfirmButton {...args}>DeleteConfirmButton</DeleteConfirmButton>
+  <ConfirmButton {...args}>ConfirmButton</ConfirmButton>
 )
 
-# DeleteConfirmButton
+# ConfirmButton
 
-`DeleteConfirmButton` is a button component that requires the user to type a
-string to confirm the action.
+`ConfirmButton` is a button component that requires the user to type a string to
+confirm the action.
 
 <Actions packageName="button" />
 
 ## Import
 
 ```bash
-import { DeleteConfirmButton } from '@daren/ui-components'
+import { ConfirmButton } from '@daren/ui-components'
 ```
 
 ## Usage

@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { Button } from './button'
 
-function DeleteConfirmButton({
+function ConfirmButton({
   children,
   confirmString,
   title = 'Are you sure?',
@@ -12,6 +12,7 @@ function DeleteConfirmButton({
   confirmButtonLabel = 'Yes, Delete it',
   cancelButtonLabel = 'Cancel',
   onConfirm,
+  variant = 'danger',
   ...props
 }: React.ComponentPropsWithRef<typeof Button> & {
   onConfirm: () => void
@@ -31,7 +32,7 @@ function DeleteConfirmButton({
 
   return (
     <>
-      <Button variant="danger" {...props} onClick={() => setOpen(!open)}>
+      <Button variant={variant} {...props} onClick={() => setOpen(!open)}>
         {children}
       </Button>
       {open && (
@@ -53,7 +54,7 @@ function DeleteConfirmButton({
             />
             <Button
               onClick={handleConfirm}
-              variant="danger"
+              variant={variant}
               disabled={value !== confirmString}
             >
               {confirmButtonLabel}
@@ -68,4 +69,4 @@ function DeleteConfirmButton({
   )
 }
 
-export { DeleteConfirmButton }
+export { ConfirmButton }
