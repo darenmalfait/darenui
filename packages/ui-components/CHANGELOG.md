@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.6](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.13.5...@daren/ui-components@1.13.6) (2022-09-29)
+
+### Bug Fixes
+
+* **ui-components:** remove external react ([000fd1e](https://github.com/darenmalfait/darenui/commit/000fd1e6a8b767b1fbef5a5b4cee691b18c48d9a))
+
 ## [1.13.5](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.13.4...@daren/ui-components@1.13.5) (2022-09-29)
 
 **Note:** Version bump only for package @daren/ui-components
