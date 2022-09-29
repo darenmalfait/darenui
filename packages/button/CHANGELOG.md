@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/darenmalfait/darenui/compare/@daren/button@1.3.0...@daren/button@1.3.1) (2022-09-29)
+
+
+### Bug Fixes
+
+* **button:** add animation effect ([6b6a7b4](https://github.com/darenmalfait/darenui/commit/6b6a7b404612e706f7daf722bc956fd32acaa5b8))
+
+
+
+
+
 # [1.3.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.2.4...@daren/button@1.3.0) (2022-09-29)
 
 
