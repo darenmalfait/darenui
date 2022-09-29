@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import { cx, Drip, useDrip } from '@daren/utils'
 import * as React from 'react'
 
 import { Link } from './link'
@@ -12,7 +12,7 @@ type ButtonProps = {
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:cursor-not-allowed active:scale-95 rounded-md',
+    'group relative overflow-hidden inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:cursor-not-allowed active:scale-95 rounded-md',
     className,
   )
 }
@@ -64,16 +64,50 @@ function ButtonInner({
 function Button({
   children,
   size,
-  variant,
+  variant = 'primary',
   className,
   disabled,
+  onClick,
   ...props
 }: ButtonProps & JSX.IntrinsicElements['button']) {
+  const buttonRef = React.useRef<HTMLButtonElement>(null)
+
+  function handleDrip(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    if (buttonRef.current) {
+      onDripClickHandler(e)
+    }
+  }
+
+  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    handleDrip(e)
+    onClick?.(e)
+  }
+
+  const { onClick: onDripClickHandler, ...dripBindings } = useDrip(
+    false,
+    buttonRef,
+  )
+
   return (
-    <button disabled={disabled} {...props} className={getClassName(className)}>
+    <button
+      ref={buttonRef}
+      onClick={handleClick}
+      disabled={disabled}
+      {...props}
+      className={getClassName(className)}
+    >
       <ButtonInner variant={variant} size={size} disabled={disabled}>
         {children}
       </ButtonInner>
+      <Drip
+        colorClass={cx({
+          'fill-white': variant === 'primary' && !disabled,
+          'fill-gray-400': variant === 'secondary' && !disabled,
+          'fill-red-400': variant === 'danger' && !disabled,
+          'fill-green-400': variant === 'success' && !disabled,
+        })}
+        {...dripBindings}
+      />
     </button>
   )
 }
