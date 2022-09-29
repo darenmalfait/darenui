@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.2.7...@daren/modal@1.2.8) (2022-09-29)
+
+**Note:** Version bump only for package @daren/modal
+
 ## [1.2.7](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.2.6...@daren/modal@1.2.7) (2022-09-29)
 
 **Note:** Version bump only for package @daren/modal
