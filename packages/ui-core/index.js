@@ -32,12 +32,15 @@ module.exports = plugin(
       },
       '.set-colors-accent-danger': {
         '--colors-accent-500': 'var(--colors-danger-500)',
+        '--colors-accent-100': 'var(--colors-danger-500)',
       },
       '.set-colors-accent-success': {
         '--colors-accent-500': 'var(--colors-success-500)',
+        '--colors-accent-100': 'var(--colors-success-500)',
       },
       '.set-colors-current': {
         '--colors-accent-500': 'currentColor',
+        '--colors-accent-100': 'currentColor',
       },
       '.empty-content': {
         content: "''",
