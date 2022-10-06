@@ -12,7 +12,7 @@ type ButtonProps = {
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base font-semibold !no-underline opacity-100 transition focus:outline-none disabled:cursor-not-allowed active:scale-90 rounded-md',
+    'group relative inline-flex text-base !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:opacity-50 active:scale-90 rounded-md',
     className,
   )
 }
@@ -44,17 +44,14 @@ function ButtonInner({
     <>
       <div
         className={cx(
-          'absolute inset-0 rounded-full border-2 opacity-100 transition focus-ring set-colors-current',
+          'absolute inset-0 rounded-full border-0 opacity-100 transition focus-ring set-colors-current',
           {
-            'border-gray-200 text-gray-200 bg-gray-200 opacity-50': disabled,
             'bg-accent dark:bg-accent-100 text-accent dark:text-white':
-              variant === 'primary' && !disabled,
-            'bg-transparent text-gray-400 hover:!border-transparent':
+              variant === 'primary',
+            'bg-gray-200 dark:bg-gray-800 text-primary':
               variant === 'secondary',
-            'border-red-200 text-red-200 bg-red-200 group-hover:border-red-300 group-hover:bg-red-300':
-              variant === 'danger' && !disabled,
-            'border-green-200 text-green-200 bg-green-200 group-hover:border-green-300 group-hover:bg-green-300':
-              variant === 'success' && !disabled,
+            'text-red-500 bg-red-200 ': variant === 'danger',
+            'text-green-500 bg-green-200 ': variant === 'success',
           },
         )}
       />
@@ -62,14 +59,14 @@ function ButtonInner({
         className={cx(
           'relative flex h-full w-full items-center justify-center whitespace-nowrap',
           {
-            'text-gray-800': disabled,
-            '!text-white dark:!text-accent': variant === 'primary' && !disabled,
-            '!text-gray-400': variant === 'secondary' && !disabled,
-            '!text-red-700': variant === 'danger' && !disabled,
-            '!text-green-700': variant === 'success' && !disabled,
-            'h-9 space-x-3 py-2 px-4 text-sm': size === 'small',
-            'h-12 space-x-3 py-4 px-6 text-sm': size === 'medium',
-            'h-18 space-x-5 py-6 px-11': size === 'large',
+            'text-gray-100 opacity-50': disabled,
+            '!text-white dark:!text-accent': variant === 'primary',
+            '!text-black dark:!text-white': variant === 'secondary',
+            '!text-red-700': variant === 'danger',
+            '!text-green-700': variant === 'success',
+            'space-x-3 py-2 px-4 text-sm': size === 'small',
+            'space-x-3 py-3 px-6': size === 'medium',
+            'space-x-5 py-4 px-8': size === 'large',
           },
         )}
       >
@@ -84,7 +81,7 @@ function ButtonInner({
               colorClass={cx({
                 'fill-gray-400 dark:fill-black dark:opacity-80':
                   variant === 'primary' && !disabled,
-                'fill-gray-200 dark:fill-white dark:opacity-80':
+                'fill-gray-500 dark:fill-white dark:opacity-80':
                   variant === 'secondary' && !disabled,
                 'fill-red-400': variant === 'danger' && !disabled,
                 'fill-green-400': variant === 'success' && !disabled,

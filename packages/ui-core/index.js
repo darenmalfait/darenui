@@ -5,6 +5,17 @@ const plugin = require('tailwindcss/plugin')
 module.exports = plugin(
   ({ addBase, addUtilities }) => {
     addUtilities({
+      ':root': {
+        '--color-gray-100': '#ffffff',
+        '--color-gray-200': '#dfdfe1',
+        '--color-gray-300': '#c0c0c4',
+        '--color-gray-400': '#b8b8bc',
+        '--color-gray-500': '#99999f',
+        '--color-gray-600': '#797981',
+        '--color-gray-700': '#5c5c61',
+        '--color-gray-800': '#3e3e42',
+        '--color-gray-900': '#212123',
+      },
       '.focus-ring': {
         '@apply focus:outline-none focus-within:outline-none transition duration-300 disabled:ring-0 hover:ring-2 focus:ring-2 focus-within:ring-2 group-hover:ring-2 group-focus:ring-2 hover:ring-accent focus:ring-accent focus-within:ring-accent group-hover:ring-accent group-focus:ring-accent ring-accent ring-offset-4 dark:ring-offset-gray-900 ring-offset-white dark:hover:ring-accent-100 dark:focus:ring-accent-100 dark:focus-within:ring-accent-100 dark:group-hover:ring-accent-100 dark:group-focus:ring-accent-100 dark:ring-accent-100':
           {},
@@ -261,6 +272,17 @@ module.exports = plugin(
             100: 'var(--colors-success-100)',
             500: 'var(--colors-success-500)',
             900: 'var(--colors-success-900)',
+          },
+          gray: {
+            100: 'var(--color-gray-100)',
+            200: 'var(--color-gray-200)',
+            300: 'var(--color-gray-300)',
+            400: 'var(--color-gray-400)',
+            500: 'var(--color-gray-500)',
+            600: 'var(--color-gray-600)',
+            700: 'var(--color-gray-700)',
+            800: 'var(--color-gray-800)',
+            900: 'var(--color-gray-900)',
           },
         },
 
