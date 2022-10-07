@@ -49,7 +49,7 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
         />
         <div className={cx(className, { 'pr-14': !!Icon })}>
           <div className="flex">
-            <div className="z-1 relative flex items-center justify-center text-center">
+            <div className="z-1 relative flex items-center justify-center text-center transition-transform hover:scale-110">
               <div className="absolute -inset-1 hidden rounded-md shadow-md group-hover:block group-hover:bg-white" />
               <select
                 name="hours"
@@ -84,7 +84,7 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
               </select>
             </div>
             <span className="mx-2 text-xl">:</span>
-            <div className="z-1 relative flex items-center justify-center text-center">
+            <div className="z-1 relative flex items-center justify-center text-center transition-transform hover:scale-110">
               <div className="absolute -inset-1 hidden rounded-md shadow-md group-hover:block group-hover:bg-white" />
               <select
                 name="minutes"
