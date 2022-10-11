@@ -18,7 +18,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --ignore @daren/docs",
     "clean": "lerna run clean && rm -rf node_modules",
     "create:pkg": "node --loader ts-node/esm scripts/plopfile.ts",
     "dev": "yarn docs dev",

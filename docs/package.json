@@ -6,10 +6,10 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build:css": "npm run generate:css -- --minify",
+    "build:css": "yarn generate:css -- --minify",
     "build:remix": "remix build",
-    "build": "run-s build:*",
-    "dev:css": "npm run generate:css -- --watch",
+    "build": "cd .. && yarn build && cd docs && run-s build:*",
+    "dev:css": "yarn generate:css -- --watch",
     "dev:remix": "remix dev",
     "dev": "run-p dev:*",
     "generate:css": "postcss styles/**/*.css --base styles --dir app/styles",
