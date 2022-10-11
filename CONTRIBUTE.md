@@ -12,6 +12,7 @@
 - [Component library development](#component-library-development)
   - [Running Library](#running-library)
   - [Adding a new package](#adding-a-new-package)
+    - [Add a local scoped package:](#add-a-local-scoped-package)
   - [Adding a dependency to a specific package](#adding-a-dependency-to-a-specific-package)
   - [Installing an npm package shared between multiple packages](#installing-an-npm-package-shared-between-multiple-packages)
   - [Updating packages](#updating-packages)
@@ -36,6 +37,14 @@ yarn create:pkg
 # component-name: name of your component kebab-case
 # description: package description
 ```
+
+#### Add a local scoped package:
+
+```bash
+# adds button package to the ui-components package
+npx lerna add @daren/button packages/ui-components
+```
+
 
 ### Adding a dependency to a specific package
 
