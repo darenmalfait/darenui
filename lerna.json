@@ -6,7 +6,7 @@
   "command": {
     "version": {
       "allowBranch": "main",
-      "ignoreChanges": ["**/stories/**", "**/tests/**", "**/*.md"]
+      "ignoreChanges": ["**/stories/**", "**/tests/**", "**/*.md", "**/docs/**"]
     }
   }
 }

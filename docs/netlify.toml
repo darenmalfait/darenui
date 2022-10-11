@@ -1,9 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "yarn build"
   functions = "netlify/functions"
   publish = "public"
 
   [build.environment]
+    NETLIFY_USE_YARN = "true"
     # set TERM variable for terminal output
     TERM = "xterm"
 
