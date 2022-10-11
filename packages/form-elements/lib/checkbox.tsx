@@ -24,11 +24,11 @@ function Checkbox({
       className={cx(
         className,
         bgClassName,
-        'flex relative justify-center items-center rounded-full focus:scale-75',
+        'relative flex items-center justify-center rounded-full focus:scale-75',
         {
-          'w-6 h-6': variant === 'sm',
-          'w-8 h-8': variant === 'md',
-          'w-10 h-10': variant === 'lg',
+          'h-6 w-6': variant === 'sm',
+          'h-8 w-8': variant === 'md',
+          'h-10 w-10': variant === 'lg',
         },
       )}
     >
@@ -37,7 +37,7 @@ function Checkbox({
       <Icon
         className={cx(
           textClassName,
-          'absolute inset-0 p-1 w-full h-full  opacity-0 transition-opacity peer-checked:animate-fade-in-up pointer-events-none',
+          'pointer-events-none absolute inset-0 h-full w-full  p-1 opacity-0 transition-opacity peer-checked:animate-fade-in-up',
         )}
       />
     </label>

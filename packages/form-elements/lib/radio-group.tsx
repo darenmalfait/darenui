@@ -23,10 +23,10 @@ function Option({
       className={({ active, checked }) =>
         cx(
           className,
-          'relative rounded-lg shadow-md px-5 py-4 cursor-pointer flex focus:outline-none group',
+          'group relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none',
           checked ? 'bg-inverse text-inverse' : 'bg-secondary text-primary',
           {
-            'ring-2 ring-offset-2 ring-inverse ring-inverse ring-opacity-60':
+            'ring-inverse ring-inverse ring-2 ring-opacity-60 ring-offset-2':
               active,
           },
         )

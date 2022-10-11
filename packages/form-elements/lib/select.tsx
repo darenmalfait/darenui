@@ -130,9 +130,9 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
                   <Combobox.Option
                     key={item.id ?? item.value}
                     className={({ active }) =>
-                      `cursor-default select-none relative py-2 pl-10 pr-4 ${
+                      `relative cursor-default select-none py-2 pl-10 pr-4 ${
                         active
-                          ? 'text-primary-500 bg-gray-100'
+                          ? 'bg-gray-100 text-primary-500'
                           : 'text-primary-500'
                       }`
                     }

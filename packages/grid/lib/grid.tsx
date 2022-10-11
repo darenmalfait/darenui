@@ -37,7 +37,7 @@ function Grid({
 
       <div
         className={cx(
-          'relative grid gap-x-4 grid-cols-4 md:grid-cols-8 lg:gap-x-6 lg:grid-cols-12',
+          'relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6',
           {
             'mx-auto max-w-7xl': !nested,
             'gap-y-4 lg:gap-y-6': rowGap,

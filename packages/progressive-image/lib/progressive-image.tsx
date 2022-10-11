@@ -63,7 +63,7 @@ function ProgressiveImage({
           srcSet={!placeholder ? img.props.srcSet : undefined}
           className={cx(
             className,
-            'object-cover min-w-full min-h-full transition-opacity duration-300',
+            'min-h-full min-w-full object-cover transition-opacity duration-300',
             {
               'opacity-0': visible,
             },
@@ -72,7 +72,7 @@ function ProgressiveImage({
         />
         {placeholder && (
           <div
-            className={cx('absolute inset-0 w-full h-full', {
+            className={cx('absolute inset-0 h-full w-full', {
               'backdrop-blur-xl': !visible,
             })}
           />

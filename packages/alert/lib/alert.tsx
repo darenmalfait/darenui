@@ -33,7 +33,7 @@ function Alert({
 
   return (
     <div
-      className={cx(className, 'p-4 rounded-md', {
+      className={cx(className, 'rounded-md p-4', {
         'bg-yellow-50': type === 'warning',
         'bg-green-50': type === 'success',
         'bg-blue-50': type === 'info',
@@ -44,7 +44,7 @@ function Alert({
         {!hideIcon && (
           <div className="shrink-0">
             <Icon
-              className={cx('w-5 h-5', {
+              className={cx('h-5 w-5', {
                 'text-yellow-400': type === 'warning',
                 'text-green-400': type === 'success',
                 'text-blue-400': type === 'info',

@@ -98,7 +98,7 @@ function ReviewGroup({
 }: ReviewGroupProps) {
   return (
     <div
-      className={cx(className, 'max-w-2xl mx-auto py-16 sm:py-24 lg:max-w-7xl')}
+      className={cx(className, 'mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-7xl')}
     >
       {title && <H2 className={titleClass}>{title}</H2>}
       <div className="border-secondary mt-6 space-y-10 divide-y divide-gray-200 border-y pb-10">

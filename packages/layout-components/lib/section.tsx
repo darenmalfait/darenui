@@ -10,7 +10,7 @@ interface SectionProps {
 function Section({ as: Tag = 'section', className, ...props }: SectionProps) {
   return (
     <Tag
-      className={cx('box-border items-center w-full', className)}
+      className={cx('box-border w-full items-center', className)}
       {...props}
     />
   )

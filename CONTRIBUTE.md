@@ -10,7 +10,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Component library development](#component-library-development)
-  - [Running Storybook](#running-storybook)
+  - [Running Library](#running-library)
   - [Adding a new package](#adding-a-new-package)
   - [Adding a dependency to a specific package](#adding-a-dependency-to-a-specific-package)
   - [Installing an npm package shared between multiple packages](#installing-an-npm-package-shared-between-multiple-packages)
@@ -25,10 +25,10 @@
 
 Install node_modules with `yarn install`.
 
-### Running Storybook
+### Running Library
 
 1. Run `yarn run dev` file in the project folder.
-2. Visit `[localhost:6006](http://localhost:6006/)`
+2. Visit `[localhost:3000](http://localhost:3000/)`
 
 ### Adding a new package
 ```bash

@@ -1,0 +1,51 @@
+{
+  "plain": {
+    "color": "#FFFF05",
+    "backgroundColor": "#FFFF00"
+  },
+  "styles": [
+    {
+      "types": ["comment", "punctuation"],
+      "style": {
+        "color": "#FFFF03",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "types": ["variable", "tag", "deleted", "string"],
+      "style": {
+        "color": "#FFFF08"
+      }
+    },
+    {
+      "types": ["hexcode", "symbol", "inserted"],
+      "style": {
+        "color": "#FFFF0B"
+      }
+    },
+    {
+      "types": ["keyword", "builtin", "number", "char", "constant"],
+      "style": {
+        "color": "#FFFF09"
+      }
+    },
+    {
+      "types": ["function", "attr-name", "selector"],
+      "style": {
+        "color": "#FFFF0D"
+      }
+    },
+    {
+      "types": ["changed"],
+      "style": {
+        "color": "#FFFF0A"
+      }
+    },
+    {
+      "types": ["regex"],
+      "style": {
+        "color": "#FFFF0C"
+      }
+    }
+  ]
+}

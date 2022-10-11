@@ -85,7 +85,7 @@ function TitleWithActions({
       size={size}
       className={cx(
         className,
-        'flex flex-col space-y-1 sm:flex-row sm:justify-between sm:items-center sm:space-y-0 sm:space-x-3',
+        'flex flex-col space-y-1 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-3',
       )}
       {...rest}
     >

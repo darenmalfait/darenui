@@ -46,12 +46,12 @@ function ButtonInner({
         className={cx(
           'absolute inset-0 rounded-full border-0 opacity-100 transition focus-ring set-colors-current',
           {
-            'bg-accent dark:bg-accent-100 text-accent dark:text-white':
+            'bg-accent text-accent dark:bg-accent-100 dark:text-white':
               variant === 'primary',
-            'bg-gray-200 dark:bg-gray-800 text-primary':
+            'bg-gray-200 text-primary dark:bg-slate-800':
               variant === 'secondary',
-            'text-red-500 bg-red-200 ': variant === 'danger',
-            'text-green-500 bg-green-200 ': variant === 'success',
+            'bg-red-200 text-red-500 ': variant === 'danger',
+            'bg-green-200 text-green-500 ': variant === 'success',
           },
         )}
       />

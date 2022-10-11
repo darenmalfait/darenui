@@ -24,7 +24,7 @@ function Container({
           'lg:col-span-6 lg:col-start-4': size === 'small',
           'lg:col-span-8 lg:col-start-3': size === 'default',
           'lg:col-span-10 lg:col-start-2': size === 'medium',
-          'lg:col-span-12 lg:col-start-0': size === 'full',
+          'lg:col-start-0 lg:col-span-12': size === 'full',
         },
         className,
       )}

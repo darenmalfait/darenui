@@ -23,7 +23,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
             width="20px"
             height="20px"
             className={cx(
-              'flex absolute top-0 left-5 z-10 justify-center items-center p-0 h-full',
+              'absolute top-0 left-5 z-10 flex h-full items-center justify-center p-0',
               {
                 'text-red-500': hasError,
               },
@@ -52,7 +52,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
           width="20px"
           height="20px"
           className={cx(
-            'flex absolute top-0 right-5 z-10 justify-center items-center p-0 h-full',
+            'absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0',
             {
               'text-gray-300': !hasError,
               'text-red-500': hasError,

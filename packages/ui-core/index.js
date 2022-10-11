@@ -20,14 +20,17 @@ module.exports = plugin(
         '@apply focus:outline-none focus-within:outline-none transition duration-300 disabled:ring-0 hover:ring-2 focus:ring-2 focus-within:ring-2 group-hover:ring-2 group-focus:ring-2 hover:ring-accent focus:ring-accent focus-within:ring-accent group-hover:ring-accent group-focus:ring-accent ring-accent ring-offset-4 dark:ring-offset-gray-900 ring-offset-white dark:hover:ring-accent-100 dark:focus:ring-accent-100 dark:focus-within:ring-accent-100 dark:group-hover:ring-accent-100 dark:group-focus:ring-accent-100 dark:ring-accent-100':
           {},
       },
+      // '@apply bg-primary-500 dark:bg-gray-900' is throwing an error which I don't to find the cause of. This is a workaround.
+      '.dark': {
+        '.bg-primary': {
+          '@apply bg-gray-900': {},
+        },
+      },
       '.bg-primary': {
-        '@apply bg-primary-500 dark:bg-gray-900': {},
+        '@apply bg-primary-500': {},
       },
       '.bg-secondary': {
         '@apply bg-primary-600 dark:bg-gray-800': {},
-      },
-      '.bg-inverse': {
-        '@apply bg-gray-900 dark:bg-primary-500': {},
       },
       '.text-primary': {
         '@apply text-primary-500 dark:text-primary-50': {},
@@ -36,7 +39,7 @@ module.exports = plugin(
         '@apply text-primary-400 dark:text-primary-100': {},
       },
       '.text-inverse': {
-        '@apply text-primary-50 dark:text-primary-500': {},
+        '@apply text-primary-50': {},
       },
       '.border-primary': {
         '@apply border-primary-500 dark:border-primary-50': {},
@@ -183,7 +186,7 @@ module.exports = plugin(
               dark: {
                 css: [
                   {
-                    color: theme('colors.primary.500'),
+                    color: theme('colors.white'),
                     a: {
                       color: theme('colors.white'),
                     },
@@ -200,7 +203,7 @@ module.exports = plugin(
                       color: theme('colors.white'),
                     },
                     blockquote: {
-                      color: theme('colors.primary.500'),
+                      color: theme('colors.white'),
                       backgroundColor: theme('colors.gray.800'),
                     },
                     'thead, tbody tr': {
