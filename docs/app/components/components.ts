@@ -111,6 +111,11 @@ const other = [
     title: 'Review',
     keywords: ['review', 'rating'],
   },
+  {
+    key: 'spinner',
+    title: 'Spinner',
+    keywords: ['loading', 'rotate', 'animation'],
+  },
 ]
 
 const components = [
