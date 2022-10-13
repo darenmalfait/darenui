@@ -102,6 +102,11 @@ const other = [
     keywords: ['navigation', 'list', 'menu'],
   },
   {
+    key: 'tabs',
+    title: 'Tabs',
+    keywords: ['panel', 'card', 'tab', 'categories'],
+  },
+  {
     key: 'progressive-image',
     title: 'ProgressiveImage',
     keywords: ['progressive', 'image'],
