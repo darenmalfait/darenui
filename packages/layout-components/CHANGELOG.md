@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.0.15...@daren/layout-components@1.1.0) (2022-09-29)
-
+# [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.1.0...@daren/layout-components@1.2.0) (2022-10-13)
 
 ### Features
 
-* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+- add documentation website ([dcac6c8](https://github.com/darenmalfait/darenui/commit/dcac6c846bdb6febc3587ab6b3edb0dfdec5a63d))
 
+# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.0.15...@daren/layout-components@1.1.0) (2022-09-29)
 
+### Features
 
-
+- **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
 
 ## [1.0.15](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.0.14...@daren/layout-components@1.0.15) (2022-09-29)
 
@@ -70,10 +71,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* export package.json ([2d5e247](https://github.com/darenmalfait/darenui/commit/2d5e24797a289b7507666bf67d954fc93be33d8f))
+- export package.json ([2d5e247](https://github.com/darenmalfait/darenui/commit/2d5e24797a289b7507666bf67d954fc93be33d8f))
 
 # 1.0.0 (2022-03-01)
 
 ### Features
 
-* new layout-components package ([ca0f89b](https://github.com/darenmalfait/darenui/commit/ca0f89b74932101ca733d57901d979f818956995))
+- new layout-components package ([ca0f89b](https://github.com/darenmalfait/darenui/commit/ca0f89b74932101ca733d57901d979f818956995))

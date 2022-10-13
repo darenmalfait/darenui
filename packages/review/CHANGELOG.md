@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.16...@daren/review@1.1.0) (2022-09-29)
-
+# [1.2.0](https://github.com/darenmalfait/darenui/compare/@daren/review@1.1.0...@daren/review@1.2.0) (2022-10-13)
 
 ### Features
 
-* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+- add documentation website ([dcac6c8](https://github.com/darenmalfait/darenui/commit/dcac6c846bdb6febc3587ab6b3edb0dfdec5a63d))
 
+# [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.16...@daren/review@1.1.0) (2022-09-29)
 
+### Features
 
-
+- **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
 
 ## [1.0.16](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.15...@daren/review@1.0.16) (2022-09-29)
 
@@ -30,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
+- move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
 
 ## [1.0.12](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.10...@daren/review@1.0.12) (2022-09-28)
 
@@ -68,7 +69,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* export package.json ([2d5e247](https://github.com/darenmalfait/darenui/commit/2d5e24797a289b7507666bf67d954fc93be33d8f))
+- export package.json ([2d5e247](https://github.com/darenmalfait/darenui/commit/2d5e24797a289b7507666bf67d954fc93be33d8f))
 
 ## [1.0.2](https://github.com/darenmalfait/darenui/compare/@daren/review@1.0.1...@daren/review@1.0.2) (2022-02-20)
 
@@ -82,4 +83,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add new review component ([20d231c](https://github.com/darenmalfait/darenui/commit/20d231cc5e7ea867f53a3543e00517321be34a6a))
+- add new review component ([20d231c](https://github.com/darenmalfait/darenui/commit/20d231cc5e7ea867f53a3543e00517321be34a6a))
