@@ -5,12 +5,13 @@ import * as React from 'react'
 function Tabs({
   keys,
   children,
-}: JSX.IntrinsicElements['div'] & {
+  ...rest
+}: ExtractProps<typeof Tab.Group> & {
   keys: string[]
 }) {
   return (
     <div className="w-full space-y-8">
-      <Tab.Group>
+      <Tab.Group {...rest}>
         <Tab.List className="flex space-x-2 rounded-xl p-1 bg-secondary">
           {keys.map(key => (
             <Tab
