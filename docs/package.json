@@ -1,6 +1,6 @@
 {
   "name": "@daren/docs",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "description": "",
   "license": "",
@@ -8,11 +8,9 @@
   "scripts": {
     "build": "cd .. && yarn build && cd docs && run-s build:*",
     "build:css": "postcss 'styles/**/*' --base styles --dir app/styles",
-    "build:server": "esbuild --platform=node --format=cjs --bundle ./server.ts --outdir=build",
     "build:prod:css": "npm run build:css -- --env production",
     "build:remix": "remix build",
     "dev": "run-p dev:*",
-    "dev:build": "cross-env NODE_ENV=development npm run build:server -- --watch",
     "dev:remix": "cross-env NODE_ENV=development remix dev",
     "dev:css": "cross-env NODE_ENV=development npm run build:css -- --watch",
     "generate:css": "postcss styles/**/*.css --base styles --dir app/styles",
@@ -29,10 +27,10 @@
     "/server/build"
   ],
   "dependencies": {
-    "@daren/button": "^1.4.0",
+    "@daren/button": "^1.3.5",
     "@daren/theme": "^2.2.0",
-    "@daren/ui-components": "^1.15.0",
-    "@daren/ui-core": "^2.7.0",
+    "@daren/ui-components": "^1.14.5",
+    "@daren/ui-core": "^2.6.2",
     "@daren/utils": "^1.6.0",
     "@heroicons/react": "^2.0.12",
     "@netlify/functions": "^1.3.0",

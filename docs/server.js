@@ -9,7 +9,7 @@ import { createRequestHandler } from '@remix-run/netlify'
  *  - `netlifyGraphSignature`: a signature for subscription events. Will be
  *    present if a secret is set.
  */
-function getLoadContext(event: any) {
+function getLoadContext(event) {
   let rawAuthorizationString
   let netlifyGraphToken
 

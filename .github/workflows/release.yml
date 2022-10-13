@@ -5,7 +5,9 @@ on:
 
 jobs:
   release:
+    name: Release 🚀
     runs-on: ubuntu-latest
+
     steps:
       - name: Get Yarn cache path
         id: yarn-cache
@@ -30,12 +32,14 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install
+        run: |
+          npm install -g yarn
+          yarn install
 
-      - name: Build all packages
+      - name: Build all packages 🏗️
         run: yarn build
 
-      - name: Validate
+      - name: Validate ✅
         run: yarn validate
 
       - name: Set npm authentication
@@ -53,7 +57,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-      - name: Bump versions and publish packages
+      - name: Bump versions and publish packages 🚀
         run: |
           yarn version:ci
           yarn publish:ci
@@ -61,3 +65,12 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Deploy docs 📖
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          cd docs
+          npx netlify-cli build
+          npx netlify-cli deploy --prod
