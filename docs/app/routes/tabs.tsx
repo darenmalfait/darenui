@@ -58,11 +58,13 @@ const demoList = [
     files: [
       {
         name: 'index.tsx',
-        code: `<Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
-  <Tabs.Item>tab 1</Tabs.Item>
-  <Tabs.Item>tab 2</Tabs.Item>
-  <Tabs.Item>tab 3</Tabs.Item>
-</Tabs>`,
+        code: `<div className="p-8">
+  <Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
+    <Tabs.Item>tab 1</Tabs.Item>
+    <Tabs.Item>tab 2</Tabs.Item>
+    <Tabs.Item>tab 3</Tabs.Item>
+  </Tabs>
+</div>`,
       },
     ],
     openEditor: true,

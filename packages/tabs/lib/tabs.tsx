@@ -9,7 +9,7 @@ function Tabs({
   keys: string[]
 }) {
   return (
-    <div className="w-full max-w-md px-2 py-16 sm:px-0">
+    <div className="w-full space-y-8">
       <Tab.Group>
         <Tab.List className="flex space-x-2 rounded-xl p-1 bg-secondary">
           {keys.map(key => (
@@ -20,7 +20,7 @@ function Tabs({
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
                   'ring-opacity-60 focus:outline-none focus-ring',
                   selected
-                    ? 'bg-gray-900 dark:bg-white shadow text-inverse'
+                    ? 'bg-gray-900 dark:bg-white shadow text-white dark:text-black'
                     : 'text-primary',
                 )
               }
@@ -29,7 +29,7 @@ function Tabs({
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="mt-2">{children}</Tab.Panels>
+        <Tab.Panels>{children}</Tab.Panels>
       </Tab.Group>
     </div>
   )

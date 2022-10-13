@@ -29,7 +29,7 @@ function Ide({
 
   return (
     <Provider code={files[0]?.code} scope={scope}>
-      <div className="rounded-lg">
+      <div className="rounded-lg border border-gray-200 dark:border-gray-800">
         {!codeBlock && <Preview />}
         <Editor
           files={files}
@@ -67,7 +67,7 @@ function Editor({
 
   return (
     <div
-      className="rounded-b-lg border border-neutral-200 bg-neutral-700 dark:border-neutral-700"
+      className="rounded-b-lg"
       style={{
         background: '#0F111A',
         color: '#FFFFFF',
@@ -91,7 +91,7 @@ function Editor({
             }}
             tabIndex={0}
             className={clsx(
-              'hide-scroll relative flex items-center rounded-tr-lg border-b border-neutral-700',
+              'hide-scroll relative flex items-center rounded-tr-lg',
               !openEditor ? 'rounded-b-lg' : '',
             )}
           >
@@ -100,7 +100,7 @@ function Editor({
                 key={file.name}
                 value={file.name}
                 className={clsx(
-                  'text-smm cursor-base !my-0 -mb-px flex h-full items-center justify-center border-b-2 border-transparent px-5 py-3 font-medium text-neutral-300',
+                  'cursor-base !my-0 -mb-px flex h-full items-center justify-center border-b-2 border-transparent px-5 py-3 text-sm font-medium text-gray-300',
                   !openEditor ? 'rounded-b-lg' : 'selected:border-primary-500',
                 )}
               >
@@ -133,7 +133,7 @@ function Editor({
             }}
             value={currentFile.code || ''}
             readOnly={currentFile.readOnly}
-            className="rounded-b-lg bg-neutral-900"
+            className="rounded-b-lg bg-gray-900"
             lineNumber={lineNumber}
             showClipBoard={true}
             style={{
