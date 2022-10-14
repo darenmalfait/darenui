@@ -12,7 +12,7 @@ type ButtonProps = {
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:opacity-50 active:scale-90 rounded-md',
+    'group relative inline-flex text-base outline-none !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:opacity-50 active:scale-90 rounded-md',
     className,
   )
 }
@@ -44,7 +44,7 @@ function ButtonInner({
     <>
       <div
         className={cx(
-          'absolute inset-0 rounded-full border-0 opacity-100 transition focus-ring set-colors-current',
+          'absolute inset-0 rounded-full border-0 opacity-100 transition focus-ring set-colors-current outline-none',
           {
             'bg-accent text-accent dark:bg-accent-100 dark:text-white':
               variant === 'primary',
@@ -72,13 +72,13 @@ function ButtonInner({
       >
         {children}
         <button
-          className="absolute inset-0 overflow-hidden rounded-full"
+          className="absolute inset-0 overflow-hidden rounded-full outline-none"
           ref={buttonRef}
           onClick={handleClick}
         >
           <div className="relative">
             <Drip
-              colorClass={cx({
+              colorClass={cx('overflow-hidden rounded-full', {
                 'fill-gray-400 dark:fill-black dark:opacity-80':
                   variant === 'primary' && !disabled,
                 'fill-gray-500 dark:fill-white dark:opacity-80':
