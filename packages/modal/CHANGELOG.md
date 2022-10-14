@@ -3,16 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.3.0](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.2.8...@daren/modal@1.3.0) (2022-09-29)
-
+# [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.3.0...@daren/modal@1.4.0) (2022-10-14)
 
 ### Features
 
-* **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
+- add documentation website ([dcac6c8](https://github.com/darenmalfait/darenui/commit/dcac6c846bdb6febc3587ab6b3edb0dfdec5a63d))
+- add tabs component ([752dc16](https://github.com/darenmalfait/darenui/commit/752dc16448f0abe47af1c4f32459cf2ac741a40c))
 
+# [1.3.0](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.2.8...@daren/modal@1.3.0) (2022-09-29)
 
+### Features
 
-
+- **button:** add click animation ([4ef88dd](https://github.com/darenmalfait/darenui/commit/4ef88dd88dbcf3411b3bfdd8250323b6e7338fb7))
 
 ## [1.2.8](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.2.7...@daren/modal@1.2.8) (2022-09-29)
 
@@ -30,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
+- move dependencies ([85b3abb](https://github.com/darenmalfait/darenui/commit/85b3abb27728b5cbd404e23a8f4e6b5f5d538a58))
 
 ## [1.2.4](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.2.2...@daren/modal@1.2.4) (2022-09-28)
 
@@ -48,7 +50,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **modal:** add neutral option ([69c850e](https://github.com/darenmalfait/darenui/commit/69c850ed7094fc7b5abc6afb813c21e75df8dbde))
+- **modal:** add neutral option ([69c850e](https://github.com/darenmalfait/darenui/commit/69c850ed7094fc7b5abc6afb813c21e75df8dbde))
 
 ## [1.1.7](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.1.6...@daren/modal@1.1.7) (2022-08-24)
 
@@ -78,10 +80,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* export package.json ([2d5e247](https://github.com/darenmalfait/darenui/commit/2d5e24797a289b7507666bf67d954fc93be33d8f))
+- export package.json ([2d5e247](https://github.com/darenmalfait/darenui/commit/2d5e24797a289b7507666bf67d954fc93be33d8f))
 
 # 1.1.0 (2022-03-06)
 
 ### Features
 
-* add modal component ([8c8f811](https://github.com/darenmalfait/darenui/commit/8c8f81127a44a793317b87d458184f2bdaaa4ef6))
+- add modal component ([8c8f811](https://github.com/darenmalfait/darenui/commit/8c8f81127a44a793317b87d458184f2bdaaa4ef6))
