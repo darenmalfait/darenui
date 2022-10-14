@@ -46,7 +46,7 @@ function ConfirmButton({
               ),
             }}
           />
-          <div className="flex w-full space-x-2">
+          <div className="flex w-full flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
             <Input
               className="w-full"
               placeholder="App Name"
