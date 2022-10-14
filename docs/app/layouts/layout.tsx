@@ -80,7 +80,7 @@ function NavItems({ onClick }: { onClick: () => void }) {
         isActive ? 'text-success' : 'text-primary',
         'hover:text-success',
       ),
-      backgroundClassNames: 'bg-primary',
+      backgroundClassNames: 'bg-transparent',
       paddingClassNames: 'py-2 px-0',
     })
   }
@@ -193,7 +193,7 @@ function SidebarForMobile() {
           leaveFrom="translate-x-0"
           leaveTo="translate-x-full"
         >
-          <div className="relative flex w-full max-w-xs flex-1 flex-col pb-4 bg-primary">
+          <div className="relative flex w-full max-w-xs flex-1 flex-col overflow-y-scroll p-4 bg-secondary">
             <Transition.Child
               as={React.Fragment}
               enter="ease-in-out duration-300"
