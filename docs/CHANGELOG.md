@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.1.0...@daren/docs@0.1.1) (2022-10-14)
+
+### Bug Fixes
+
+- **mobile:** improve navigation ([c25d1de](https://github.com/darenmalfait/darenui/commit/c25d1de5411b07f394b84022b26d5fedcb0c33d1))
+
 # 0.1.0 (2022-10-14)
 
 ### Features

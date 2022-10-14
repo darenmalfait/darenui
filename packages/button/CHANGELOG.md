@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/darenmalfait/darenui/compare/@daren/button@1.5.0...@daren/button@1.5.1) (2022-10-14)
+
+### Bug Fixes
+
+- **button:** adjust outlines ([d9ade80](https://github.com/darenmalfait/darenui/commit/d9ade80afeaffbd4f288f174c8b7dfbdf69eae6c))
+- **confirm-button:** place items below each other on mobile ([3d3e693](https://github.com/darenmalfait/darenui/commit/3d3e69340a0f849819a754e5933f4bf73241230c))
+
 # [1.5.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.4.0...@daren/button@1.5.0) (2022-10-14)
 
 ### Features
