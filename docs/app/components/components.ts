@@ -123,6 +123,14 @@ const other = [
   },
 ]
 
+const utils = [
+  {
+    key: 'bionify',
+    title: 'Bionify',
+    keywords: ['bionic', 'bionify', 'bionic reading', 'bionic reading tool'],
+  },
+]
+
 const components = [
   {
     heading: 'Typography',
@@ -143,6 +151,10 @@ const components = [
   {
     heading: 'Other',
     components: other,
+  },
+  {
+    heading: 'Utils',
+    components: utils,
   },
 ]
 
