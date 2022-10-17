@@ -140,6 +140,7 @@ const demoList = [
 const component = {
   name: 'MultiSelect',
   importer: `import { MultiSelect } from '@daren/ui-components'`,
+  packageName: 'form-elements',
   demoList,
   propList,
   description,

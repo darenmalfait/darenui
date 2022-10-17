@@ -58,6 +58,7 @@ const demoList = [
 const component = {
   name: 'ProgressiveImage',
   importer: `import { ProgressiveImage } from '@daren/ui-components'`,
+  packageName: 'progressive-image',
   demoList,
   propList,
   description,

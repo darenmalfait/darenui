@@ -71,6 +71,7 @@ const demoList = [
 const component = {
   name: 'Modal',
   importer: `import { Modal } from '@daren/ui-components'`,
+  packageName: 'modal',
   demoList,
   propList,
   description,

@@ -111,6 +111,7 @@ const demoList = [
 const component = {
   name: 'NavigationList',
   importer: `import { NavigationList } from '@daren/ui-components'`,
+  packageName: 'navigation-list',
   demoList,
   propList,
   description,

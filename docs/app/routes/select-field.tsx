@@ -140,6 +140,7 @@ const demoList = [
 const component = {
   name: 'SelectField',
   importer: `import { SelectField } from '@daren/ui-components'`,
+  packageName: 'form-elements',
   demoList,
   propList,
   description,

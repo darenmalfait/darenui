@@ -77,6 +77,7 @@ const demoList = [
 const component = {
   name: 'Paragraph',
   importer: `import { Paragraph } from '@daren/ui-components'`,
+  packageName: 'typography',
   demoList,
   propList,
   description,

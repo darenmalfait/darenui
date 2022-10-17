@@ -139,6 +139,7 @@ const demoList = [
 const component = {
   name: 'TimePickerField',
   importer: `import { TimePickerField } from '@daren/ui-components'`,
+  packageName: 'form-elements',
   demoList,
   propList,
   description,

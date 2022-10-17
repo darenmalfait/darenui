@@ -49,6 +49,7 @@ const demoList = [
 const component = {
   name: 'Section',
   importer: `import { Section } from '@daren/ui-components'`,
+  packageName: 'layout-components',
   demoList,
   propList,
   description,

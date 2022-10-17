@@ -74,6 +74,7 @@ const demoList = [
 const component = {
   name: 'Tabs',
   importer: `import { Tabs } from '@daren/ui-components'`,
+  packageName: 'tabs',
   demoList,
   propList,
   description,

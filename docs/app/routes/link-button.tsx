@@ -61,6 +61,7 @@ const demoList = [
 const component = {
   name: 'LinkButton',
   importer: `import { LinkButton } from '@daren/ui-components'`,
+  packageName: 'button',
   demoList,
   propList,
   description,

@@ -1,9 +1,17 @@
 /* eslint-disable react/forbid-foreign-prop-types */
-import { H1, H2, Link, Paragraph, Tabs } from '@daren/ui-components'
+import {
+  ButtonLink,
+  H3,
+  Link,
+  Paragraph,
+  Tabs,
+  TitleWithActions,
+} from '@daren/ui-components'
 import { Link as RemixLink } from '@remix-run/react'
 import * as React from 'react'
 
 import { CodeBlock } from './code-block'
+import { GithubLogo } from './icons/github-logo'
 import { Ide } from './ide'
 import { Section } from './layout-components'
 
@@ -43,6 +51,7 @@ interface DocumentBuilderProps {
     name: string
     importer?: string
     description?: string
+    packageName?: string
     demoList: DemoItem[]
     propList?: PropItem[]
   }
@@ -52,7 +61,22 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
   return (
     <>
       <Section>
-        <H1>{component.name}</H1>
+        <TitleWithActions
+          actions={
+            <ButtonLink
+              size="small"
+              href={`https://github.com/darenmalfait/darenui/tree/main/packages/${component.packageName}`}
+              className="flex space-x-2"
+              external
+            >
+              <GithubLogo className="h-5 w-5" />
+              <span>View on Github</span>
+            </ButtonLink>
+          }
+        >
+          {component.name}
+        </TitleWithActions>
+
         {component.description && (
           <Paragraph>{component.description}</Paragraph>
         )}
@@ -76,7 +100,7 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
               <Section className="space-y-20">
                 {component.demoList.map((demo: any, idx: any) => (
                   <div key={idx} className="space-y-4">
-                    <H2>{demo.name}</H2>
+                    <H3>{demo.name}</H3>
                     <Ide files={demo.files} openEditor={demo.openEditor} />
                   </div>
                 ))}
@@ -85,7 +109,7 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
             {component.propList && (
               <Tabs.Item>
                 <div className="grow-1 prose-sm prose sticky top-0 w-full max-w-full self-start pr-0 dark:prose-invert xl:w-auto">
-                  <H2>Props</H2>
+                  <H3>Props</H3>
                   <Tabs keys={component.propList.map(({ name }) => name)}>
                     {component.propList.map(({ value, propTypes }) => (
                       <Tabs.Item key={value}>

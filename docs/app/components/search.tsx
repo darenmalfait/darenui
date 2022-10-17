@@ -24,6 +24,7 @@ function Search() {
         title: string
         category: string
         keywords: string[]
+        package: string
       }[],
     )
   }, [])

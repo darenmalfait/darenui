@@ -121,6 +121,7 @@ const demoList = [
 const component = {
   name: 'Toggle',
   importer: `import { Toggle } from '@daren/ui-components'`,
+  packageName: 'form-elements',
   demoList,
   propList,
   description,

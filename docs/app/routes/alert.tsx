@@ -82,6 +82,7 @@ const demoList = [
 const component = {
   name: 'Alert',
   importer: `import { Alert } from '@daren/ui-components'`,
+  packageName: 'alert',
   demoList,
   propList,
   description,

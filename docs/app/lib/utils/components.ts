@@ -6,6 +6,7 @@ export function filterComponents(
     title: string
     category: string
     keywords: string[]
+    package: string
   }[],
   searchString: string,
 ) {

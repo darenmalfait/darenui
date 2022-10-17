@@ -175,6 +175,7 @@ const demoList = [
 const component = {
   name: 'CheckboxField',
   importer: `import { CheckboxField } from '@daren/ui-components'`,
+  packageName: 'form-elements',
   demoList,
   propList,
   description,

@@ -72,6 +72,7 @@ const demoList = [
 const component = {
   name: 'Spinner',
   importer: `import { Spinner } from '@daren/ui-components'`,
+  packageName: 'spinner',
   demoList,
   propList,
   description,

@@ -118,6 +118,7 @@ const demoList = [
 const component = {
   name: 'Field',
   importer: `import { Field } from '@daren/ui-components'`,
+  packageName: 'form-elements',
   demoList,
   propList,
   description,

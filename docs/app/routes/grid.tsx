@@ -58,6 +58,7 @@ const demoList = [
 const component = {
   name: 'Grid',
   importer: `import { Grid } from '@daren/ui-components'`,
+  packageName: 'grid',
   demoList,
   propList,
   description,

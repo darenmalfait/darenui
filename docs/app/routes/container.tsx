@@ -86,6 +86,7 @@ const demoList = [
 const component = {
   name: 'Container',
   importer: `import { Container } from '@daren/ui-components'`,
+  packageName: 'layout-components',
   demoList,
   propList,
   description,

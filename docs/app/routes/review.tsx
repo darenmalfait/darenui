@@ -183,6 +183,7 @@ const demoList = [
 const component = {
   name: 'Review',
   importer: `import { Review, ReviewGroup } from '@daren/ui-components'`,
+  packageName: 'review',
   demoList,
   propList,
   description,

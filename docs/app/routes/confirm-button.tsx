@@ -110,6 +110,7 @@ const demoList = [
 const component = {
   name: 'ConfirmButton',
   importer: `import { ConfirmButton } from '@daren/ui-components'`,
+  packageName: 'button',
   demoList,
   propList,
   description,
