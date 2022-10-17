@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.1.1...@daren/docs@0.2.0) (2022-10-17)
+
+### Features
+
+- add bionify utility ([9bbf8ff](https://github.com/darenmalfait/darenui/commit/9bbf8ffeb05fd3200068aa0043181b8d6c5d85de))
+- **docs:** add component links to github ([17f2aa0](https://github.com/darenmalfait/darenui/commit/17f2aa0411dd16ab801d85c65dfced1c3ba29e9a))
+
 ## [0.1.1](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.1.0...@daren/docs@0.1.1) (2022-10-14)
 
 ### Bug Fixes
