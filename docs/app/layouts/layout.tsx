@@ -2,6 +2,7 @@ import {
   Container,
   getNavigationItemClassName,
   Grid,
+  Link,
   NavigationList,
 } from '@daren/ui-components'
 import { Dialog, Transition } from '@headlessui/react'
@@ -11,6 +12,7 @@ import clsx from 'clsx'
 import * as React from 'react'
 
 import components from '~/components/components'
+import { GithubLogo } from '~/components/icons/github-logo'
 import { Wrapper } from '~/components/layout-components'
 import { Logo } from '~/components/logo'
 import { Search } from '~/components/search'
@@ -57,6 +59,14 @@ function SecondaryNavigation() {
             </div>
             <Search />
             <ThemeToggle />
+            <Link
+              external
+              href="https://github.com/darenmalfait/darenui"
+              className="flex items-center justify-center rounded-full p-2 focus-ring"
+            >
+              <GithubLogo className="h-5 w-5" />
+              <div className="sr-only">Github</div>
+            </Link>
           </div>
           <button
             type="button"
