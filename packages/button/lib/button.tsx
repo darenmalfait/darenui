@@ -31,7 +31,7 @@ function ButtonInner({
           {
             'bg-accent text-accent dark:bg-accent-100 dark:text-white':
               variant === 'primary',
-            'bg-gray-200 text-primary dark:bg-slate-800':
+            'bg-gray-200 text-primary dark:bg-gray-800':
               variant === 'secondary',
             'bg-red-200 text-red-500 ': variant === 'danger',
             'bg-green-200 text-green-500 ': variant === 'success',
