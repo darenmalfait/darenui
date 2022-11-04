@@ -1,4 +1,4 @@
-import { cx, Drip, useDrip } from '@daren/utils'
+import { cx } from '@daren/utils'
 import * as React from 'react'
 
 import { Link } from './link'
@@ -23,23 +23,6 @@ function ButtonInner({
   size = 'medium',
   disabled,
 }: ButtonProps) {
-  const buttonRef = React.useRef<HTMLButtonElement>(null)
-
-  function handleDrip(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    if (buttonRef.current) {
-      onDripClickHandler(e)
-    }
-  }
-
-  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    handleDrip(e)
-  }
-
-  const { onClick: onDripClickHandler, ...dripBindings } = useDrip(
-    false,
-    buttonRef,
-  )
-
   return (
     <>
       <div
@@ -71,25 +54,6 @@ function ButtonInner({
         )}
       >
         {children}
-        <button
-          className="absolute inset-0 overflow-hidden rounded-full outline-none"
-          ref={buttonRef}
-          onClick={handleClick}
-        >
-          <div className="relative">
-            <Drip
-              colorClass={cx('overflow-hidden rounded-full', {
-                'fill-gray-400 dark:fill-black dark:opacity-80':
-                  variant === 'primary' && !disabled,
-                'fill-gray-500 dark:fill-white dark:opacity-80':
-                  variant === 'secondary' && !disabled,
-                'fill-red-400': variant === 'danger' && !disabled,
-                'fill-green-400': variant === 'success' && !disabled,
-              })}
-              {...dripBindings}
-            />
-          </div>
-        </button>
       </div>
     </>
   )
