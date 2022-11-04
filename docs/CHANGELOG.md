@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.2.0...@daren/docs@0.2.1) (2022-11-04)
+
+### Bug Fixes
+
+- **bionify:** ignore some html tags ([1b5dd0e](https://github.com/darenmalfait/darenui/commit/1b5dd0e186b188a247db5a24f42137596c7faeee))
+
 # [0.2.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.1.1...@daren/docs@0.2.0) (2022-10-17)
 
 ### Features

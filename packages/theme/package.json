@@ -1,6 +1,6 @@
 {
   "name": "@daren/theme",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -38,7 +38,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.8.0"
+    "@daren/utils": "^1.8.1"
   },
   "devDependencies": {
     "react": "^18.2.0"

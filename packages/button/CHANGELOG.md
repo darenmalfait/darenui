@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/darenmalfait/darenui/compare/@daren/button@1.5.2...@daren/button@1.5.3) (2022-11-04)
+
+### Bug Fixes
+
+- **button:** remove drip animation ([70dce52](https://github.com/darenmalfait/darenui/commit/70dce52f69daaf957cbef8380c4797d066607d04))
+
 ## [1.5.2](https://github.com/darenmalfait/darenui/compare/@daren/button@1.5.1...@daren/button@1.5.2) (2022-10-17)
 
 **Note:** Version bump only for package @daren/button
