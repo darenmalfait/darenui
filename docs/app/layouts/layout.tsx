@@ -188,7 +188,7 @@ function SidebarForMobile() {
           leaveTo="opacity-0"
         >
           <Dialog.Overlay
-            className={clsx('bg-inverse fixed inset-0', {
+            className={clsx('fixed inset-0 bg-inverse', {
               'opacity-75': sidebarOpen,
               'opacity-0': !sidebarOpen,
             })}

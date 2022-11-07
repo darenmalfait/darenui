@@ -52,6 +52,11 @@ const formElements = [
     title: 'Toggle',
     keywords: ['toggle', 'input', 'checkbox'],
   },
+  {
+    key: 'radio-group',
+    title: 'RadioGroup',
+    keywords: ['toggle', 'radio', 'input', 'checkbox'],
+  },
 ]
 
 const typography = [

@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import { cx, useControllableState } from '@daren/utils'
 import { RadioGroup as HeadlessRadioGroup } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import * as React from 'react'
@@ -23,22 +23,21 @@ function Option({
       className={({ active, checked }) =>
         cx(
           className,
-          'group relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none',
-          checked ? 'bg-inverse text-inverse' : 'bg-secondary text-primary',
-          {
-            'ring-inverse ring-inverse ring-2 ring-opacity-60 ring-offset-2':
-              active,
-          },
+          checked ? 'border-transparent' : 'border-gray-300',
+          active
+            ? 'border-gray-black dark:border-white ring-2 ring-black dark:ring-white'
+            : '',
+          'relative block cursor-pointer rounded-lg border bg-primary px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between',
         )
       }
     >
-      {({ checked }) => (
+      {({ active, checked }) => (
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center">
             <div className="text-sm">
               <HeadlessRadioGroup.Label
                 as="p"
-                className={`font-medium  ${
+                className={`font-bold  ${
                   checked ? 'text-invserse' : 'text-primary'
                 }`}
               >
@@ -48,7 +47,7 @@ function Option({
                 <HeadlessRadioGroup.Description
                   as="span"
                   className={`inline ${
-                    checked ? 'text-slate-500' : 'text-slate-400'
+                    checked ? 'text-primary' : 'text-secondary'
                   }`}
                 >
                   {description}
@@ -57,10 +56,20 @@ function Option({
             </div>
           </div>
           {checked && (
-            <div className="shrink-0 text-inverse">
+            <div className="shrink-0 text-primary">
               <CheckCircleIcon className="h-6 w-6" />
             </div>
           )}
+          <span
+            className={cx(
+              active ? 'border' : 'border-2',
+              checked
+                ? 'border-gray-800 dark:border-gray-200'
+                : 'border-transparent',
+              'pointer-events-none absolute -inset-px rounded-lg',
+            )}
+            aria-hidden="true"
+          />
         </div>
       )}
     </HeadlessRadioGroup.Option>
@@ -71,19 +80,32 @@ interface RadioGroupProps {
   name: string
   value?: any
   label?: string
-  onChange: (value: any) => void
+  onChange?: (value: any) => void
   children?: React.ReactNode
 }
 
 function RadioGroup({
   name,
-  value,
+  value: valueProp,
+  defaultValue,
   label,
   onChange,
   children,
-}: RadioGroupProps) {
+  ...props
+}: JSX.IntrinsicElements['input'] & RadioGroupProps) {
+  const [value, setValue] = useControllableState(
+    valueProp,
+    defaultValue,
+    onChange,
+  )
+
+  function handleChange(value: any) {
+    setValue(value)
+    onChange?.(value)
+  }
+
   return (
-    <HeadlessRadioGroup value={value} onChange={onChange}>
+    <HeadlessRadioGroup value={value} onChange={handleChange} {...props}>
       <input name={name} value={value} type="hidden" />
       {label && (
         <HeadlessRadioGroup.Label className="sr-only">

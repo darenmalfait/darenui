@@ -39,7 +39,10 @@ module.exports = plugin(
         '@apply text-primary-400 dark:text-primary-100': {},
       },
       '.text-inverse': {
-        '@apply text-primary-50': {},
+        '@apply text-primary-50 dark:text-primary-500': {},
+      },
+      '.bg-inverse': {
+        '@apply bg-gray-900 dark:bg-primary-500': {},
       },
       '.border-primary': {
         '@apply border-primary-500 dark:border-primary-50': {},
