@@ -10,10 +10,12 @@ function ProgressiveImage({
   img,
   className,
   placeholder,
+  isLoaded,
 }: {
   img: JSX.Element &
     React.ReactElement<React.ImgHTMLAttributes<HTMLImageElement>>
   placeholder?: string
+  isLoaded?: boolean
 } & React.HTMLAttributes<HTMLDivElement>) {
   const [visible, setVisible] = React.useState(!placeholder)
   const imgRef = React.useRef<HTMLImageElement>(null)
@@ -21,8 +23,8 @@ function ProgressiveImage({
   // make this happen asap
   // if it's alrady loaded, don't bother fading it in.
   useSafeEffect(() => {
-    if (imgRef.current?.complete) setVisible(true)
-  }, [])
+    if (imgRef.current?.complete || isLoaded) setVisible(true)
+  }, [isLoaded])
 
   React.useEffect(() => {
     if (!imgRef.current) return
