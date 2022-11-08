@@ -23,32 +23,36 @@ function Option({
       className={({ active, checked }) =>
         cx(
           className,
-          checked ? 'border-transparent' : 'border-gray-300',
-          active
-            ? 'border-gray-black dark:border-white ring-2 ring-black dark:ring-white'
-            : '',
-          'relative block cursor-pointer rounded-lg border bg-primary px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between',
+          'relative block cursor-pointer rounded-lg px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between',
+          {
+            'bg-secondary': !checked,
+            'bg-inverse': checked,
+            'border-gray-black dark:border-white ring-2 ring-success dark:ring-success':
+              active,
+          },
         )
       }
     >
-      {({ active, checked }) => (
+      {({ checked }) => (
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center">
             <div className="text-sm">
               <HeadlessRadioGroup.Label
                 as="p"
-                className={`font-bold  ${
-                  checked ? 'text-invserse' : 'text-primary'
-                }`}
+                className={cx(
+                  'font-bold',
+                  checked ? 'text-white dark:text-black' : 'text-primary',
+                )}
               >
                 {label}
               </HeadlessRadioGroup.Label>
               {description && (
                 <HeadlessRadioGroup.Description
                   as="span"
-                  className={`inline ${
-                    checked ? 'text-primary' : 'text-secondary'
-                  }`}
+                  className={cx(
+                    'inline',
+                    checked ? 'text-inverse' : 'text-secondary',
+                  )}
                 >
                   {description}
                 </HeadlessRadioGroup.Description>
@@ -56,18 +60,12 @@ function Option({
             </div>
           </div>
           {checked && (
-            <div className="shrink-0 text-primary">
+            <div className="shrink-0 text-inverse">
               <CheckCircleIcon className="h-6 w-6" />
             </div>
           )}
           <span
-            className={cx(
-              active ? 'border' : 'border-2',
-              checked
-                ? 'border-gray-800 dark:border-gray-200'
-                : 'border-transparent',
-              'pointer-events-none absolute -inset-px rounded-lg',
-            )}
+            className={cx('pointer-events-none absolute -inset-px rounded-lg')}
             aria-hidden="true"
           />
         </div>
