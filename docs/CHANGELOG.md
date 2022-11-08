@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.2.3...@daren/docs@0.2.4) (2022-11-08)
+
+**Note:** Version bump only for package @daren/docs
+
 ## [0.2.3](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.2.2...@daren/docs@0.2.3) (2022-11-07)
 
 **Note:** Version bump only for package @daren/docs
