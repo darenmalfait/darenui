@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.5.6...@daren/button@1.6.0) (2022-11-10)
+
+### Features
+
+- **button:** add double-label-link component ([7569db3](https://github.com/darenmalfait/darenui/commit/7569db36480edce6182ef05efe2ed5e508428502))
+
 ## [1.5.6](https://github.com/darenmalfait/darenui/compare/@daren/button@1.5.5...@daren/button@1.5.6) (2022-11-08)
 
 **Note:** Version bump only for package @daren/button
