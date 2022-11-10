@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/darenmalfait/darenui/compare/@daren/button@1.6.0...@daren/button@1.6.1) (2022-11-10)
+
+### Bug Fixes
+
+- **double-label-link:** add description prop ([99b17a7](https://github.com/darenmalfait/darenui/commit/99b17a768115954f4576fcbb92e1ed819ddd778f))
+
 # [1.6.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.5.6...@daren/button@1.6.0) (2022-11-10)
 
 ### Features
