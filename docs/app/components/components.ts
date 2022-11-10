@@ -10,6 +10,16 @@ const buttons = [
     keywords: ['button', 'link'],
   },
   {
+    key: 'link',
+    title: 'Link',
+    keywords: ['button', 'link'],
+  },
+  {
+    key: 'double-label-link',
+    title: 'DoubleLabelLink',
+    keywords: ['button', 'link'],
+  },
+  {
     key: 'link-button',
     title: 'LinkButton',
     keywords: ['button', 'link'],

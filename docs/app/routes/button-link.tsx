@@ -1,5 +1,4 @@
 import { MetaFunction } from '@remix-run/node'
-import * as React from 'react'
 
 import { DocumentBuilder } from '~/components/document-builder'
 
