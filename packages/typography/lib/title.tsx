@@ -13,7 +13,8 @@ type TitleProps = {
         __html: string
       }
     }
-)
+) &
+  JSX.IntrinsicElements['h1']
 
 const fontSize = {
   h1: 'leading-tight text-4xl md:text-5xl',
