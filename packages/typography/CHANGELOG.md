@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.3](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.7.2...@daren/typography@1.7.3) (2022-11-15)
+
+### Bug Fixes
+
+- **title:** add typings ([4c52c27](https://github.com/darenmalfait/darenui/commit/4c52c27cb1164fe48ca2d80a16aeeb87355f8473))
+
 ## [1.7.2](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.7.1...@daren/typography@1.7.2) (2022-11-04)
 
 **Note:** Version bump only for package @daren/typography
