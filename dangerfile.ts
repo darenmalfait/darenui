@@ -137,20 +137,20 @@ async function getMissingPackagesFromChangesets(
   changesets: string[],
   packagesWithChanges: Package[],
 ) {
-  const packagesInChangesets: Package[] = []
+  const packagesInChangesets: string[] = []
+  changesets.forEach(filePath => {
+    const fileContent = fs.readFileSync(filePath).toString()
+    packagesWithChanges.forEach(pkg => {
+      if (fileContent.match(pkg.packageJson.name)) {
+        packagesInChangesets.push(pkg.packageJson.name)
+      }
+    })
+  })
 
-  for (const path of changesets) {
-    await getFileContents(`${path}/package.json`)
-      .then(JSON.parse)
-      .then(packageJson => {
-        packagesInChangesets.push({
-          path,
-          packageJson,
-        })
-      })
-  }
-
-  return difference(packagesWithChanges, packagesInChangesets)
+  return difference(
+    packagesWithChanges.map(pkg => pkg.packageJson.name),
+    packagesInChangesets,
+  )
 }
 
 async function listMissingChangesetChanges(
@@ -168,9 +168,7 @@ async function listMissingChangesetChanges(
       'edit an existing changeset or run `yarn changeset` to create one'
     if (missingPackages.length > 0) {
       missingPackages.forEach(pkg => {
-        warn(
-          `Changesets are missing for ${pkg.packageJson.name}. Please ${idea}`,
-        )
+        warn(`Changesets are missing for ${pkg}. Please ${idea}`)
       })
     }
   }
