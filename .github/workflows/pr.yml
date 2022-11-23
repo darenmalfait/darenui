@@ -1,9 +1,10 @@
-name: 'PR'
+name: 'PR Checks'
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     branches:
-      - main
+      - '!changeset-release*'
 
 jobs:
   pr:
