@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  danger:
+  pr:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +30,6 @@ jobs:
         run: yarn build
 
       - name: Danger
-        uses: danger/danger-js@10.6.4
+        uses: danger/danger-js@11.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
