@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.11.5
+
+### Patch Changes
+
+- 2869f9b: correctly align label to checkbox
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
