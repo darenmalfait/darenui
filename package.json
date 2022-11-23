@@ -20,7 +20,7 @@
   "scripts": {
     "build": "lerna run build --ignore @daren/docs",
     "changeset": "changeset",
-    "changeset:release": "lerna publish from-package --y",
+    "changeset:release": "changeset publish",
     "changeset:version": "changeset version",
     "clean": "lerna run clean && rm -rf node_modules",
     "create:pkg": "node --loader ts-node/esm scripts/plopfile.ts",
