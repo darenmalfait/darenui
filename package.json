@@ -8,17 +8,19 @@
   },
   "author": "Daren Malfait",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "workspaces": {
     "packages": [
       "packages/*",
       "docs"
     ]
   },
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "build": "lerna run build --ignore @daren/docs",
+    "changeset:release": "lerna publish from-package --y",
+    "changeset:version": "changeset version",
     "clean": "lerna run clean && rm -rf node_modules",
     "create:pkg": "node --loader ts-node/esm scripts/plopfile.ts",
     "dev": "yarn docs dev",
@@ -26,17 +28,16 @@
     "docs:build": "yarn docs build",
     "docs:dev": "yarn docs dev",
     "docs:start": "yarn docs start",
-    "generate:css:watch": "npx tailwindcss build -i styles/styles.css -o styles/styles.output.css --watch",
     "generate:css": "npx tailwindcss build -i styles/styles.css -o styles/styles.output.css",
+    "generate:css:watch": "npx tailwindcss build -i styles/styles.css -o styles/styles.output.css --watch",
+    "preinstall": "npx only-allow yarn",
     "lint:lib": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:types": "tsc --noEmit",
-    "preinstall": "npx only-allow yarn",
     "prepare": "husky install",
-    "publish:ci": "lerna publish from-package --yes --no-verify-access",
-    "validate": "run-p 'lint:*'",
-    "version:ci": "lerna version --yes --conventional-commits --conventional-graduate=* --create-release github --message 'chore(release): publish'"
+    "validate": "run-p 'lint:*'"
   },
   "dependencies": {
+    "@changesets/cli": "^2.25.2",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@heroicons/react": "^2.0.12",
@@ -73,6 +74,7 @@
     "autoprefixer": "^10.4.12",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
+    "danger": "^11.2.0",
     "dotenv": "^16.0.3",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -88,8 +90,8 @@
     "ts-node": "^10.9.1",
     "webpack": "^5.74.0"
   },
+  "packageManager": "yarn@3.2.3",
   "engines": {
     "node": ">=14"
-  },
-  "packageManager": "yarn@3.2.3"
+  }
 }
