@@ -56,7 +56,7 @@ const CheckboxField = React.forwardRef<
 
   return (
     <div className={cx(className, 'group w-full')}>
-      <div className="relative flex items-start">
+      <div className="relative flex items-center">
         <div className="flex h-5 items-center">
           <Checkbox ref={ref} id={inputId} name={name} {...props} />
         </div>
