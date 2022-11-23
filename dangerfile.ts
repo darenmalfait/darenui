@@ -3,6 +3,9 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 import { markdown, danger, warn, message, GitHubPRDSL } from 'danger'
+import { difference } from 'lodash'
+
+const BIG_PR_TRESHOLD = 500
 
 async function getLocalFileContents(filepath: string) {
   return fs.readFileSync(path.resolve(`./${filepath}`), {
@@ -35,8 +38,6 @@ async function getFileContents(filepath: string) {
   }
 }
 
-runChecksOnPullRequest()
-
 interface Package {
   path: string
   packageJson: {
@@ -50,20 +51,6 @@ interface Package {
     dependencies?: { [key: string]: string }
     devDependencies?: { [key: string]: string }
   }
-}
-
-async function runChecksOnPullRequest() {
-  const allFiles = [
-    ...danger.git.created_files,
-    ...danger.git.deleted_files,
-    ...danger.git.modified_files,
-  ]
-
-  const modifiedPackages = await getModifiedPackages(allFiles)
-
-  modifiedPackages.forEach(pkg => checkForReadmeChanges(pkg, allFiles))
-  listTouchedPackages(modifiedPackages)
-  listTouchedWorkflows(allFiles)
 }
 
 function checkForReadmeChanges(pkg: Package, allFiles: string[]) {
@@ -88,6 +75,18 @@ function listTouchedWorkflows(allFiles: string[]) {
 
   message(`### Modified CI Scripts
 * ${touchedWorkflows.join('\n* ')}`)
+}
+
+function listGenericWarnings() {
+  if (
+    danger.github.pr.additions + danger.github.pr.deletions >
+    BIG_PR_TRESHOLD
+  ) {
+    warn(`:exclamation: Big PR`)
+    markdown(
+      `> Pull Request size seems relatively large. If Pull Request contains multiple changes, split each into separate PR will helps faster, easier review.`,
+    )
+  }
 }
 
 function listTouchedPackages(modifiedPackages: Package[]) {
@@ -127,3 +126,68 @@ async function getModifiedPackages(allFiles: string[]) {
 
   return packageList
 }
+
+function getChangesetsFromFiles(fileList: string[]) {
+  return fileList.filter(
+    filePath => filePath.includes('changeset') && filePath.includes('.md'),
+  )
+}
+
+async function getMissingPackagesFromChangesets(
+  changesets: string[],
+  packagesWithChanges: Package[],
+) {
+  const packagesInChangesets: Package[] = []
+
+  for (const path of changesets) {
+    await getFileContents(`${path}/package.json`)
+      .then(JSON.parse)
+      .then(packageJson => {
+        packagesInChangesets.push({
+          path,
+          packageJson,
+        })
+      })
+  }
+
+  return difference(packagesWithChanges, packagesInChangesets)
+}
+
+async function listMissingChangesetChanges(
+  allFiles: string[],
+  modifiedPackages: Package[],
+) {
+  const modifiedChangeSetFiles = getChangesetsFromFiles(allFiles)
+
+  if (allFiles.length > 0) {
+    const missingPackages = await getMissingPackagesFromChangesets(
+      modifiedChangeSetFiles,
+      modifiedPackages,
+    )
+    const idea =
+      'edit an existing changeset or run `yarn changeset` to create one'
+    if (missingPackages.length > 0) {
+      missingPackages.forEach(pkg => {
+        warn(
+          `Changesets are missing for ${pkg.packageJson.name}. Please ${idea}`,
+        )
+      })
+    }
+  }
+}
+
+;(async function () {
+  const allFiles = [
+    ...danger.git.created_files,
+    ...danger.git.deleted_files,
+    ...danger.git.modified_files,
+  ]
+
+  const modifiedPackages = await getModifiedPackages(allFiles)
+
+  modifiedPackages.forEach(pkg => checkForReadmeChanges(pkg, allFiles))
+  listTouchedPackages(modifiedPackages)
+  listMissingChangesetChanges(allFiles, modifiedPackages)
+  listGenericWarnings()
+  listTouchedWorkflows(allFiles)
+})()
