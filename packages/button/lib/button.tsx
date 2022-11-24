@@ -27,7 +27,7 @@ function ButtonInner({
     <>
       <div
         className={cx(
-          'absolute inset-0 rounded-full border-0 opacity-100 transition focus-ring set-colors-current outline-none',
+          'absolute inset-0 rounded-full border-0 opacity-100 outline-none transition focus-ring set-colors-current',
           {
             'bg-accent text-accent dark:bg-accent-100 dark:text-white':
               variant === 'primary',

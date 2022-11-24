@@ -27,7 +27,7 @@ function Option({
           {
             'bg-secondary': !checked,
             'bg-inverse': checked,
-            'border-gray-black dark:border-white ring-2 ring-success dark:ring-success':
+            'border-gray-black ring-2 ring-success dark:border-white dark:ring-success':
               active,
           },
         )

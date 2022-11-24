@@ -108,7 +108,7 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
             </Tabs.Item>
             {component.propList && (
               <Tabs.Item>
-                <div className="grow-1 prose-sm prose sticky top-0 w-full max-w-full self-start pr-0 dark:prose-invert xl:w-auto">
+                <div className="grow-1 prose-sm prose sticky  top-0 w-full max-w-full self-start pr-0 dark:prose-invert xl:w-auto">
                   <H3>Props</H3>
                   <Tabs keys={component.propList.map(({ name }) => name)}>
                     {component.propList.map(({ value, propTypes }) => (

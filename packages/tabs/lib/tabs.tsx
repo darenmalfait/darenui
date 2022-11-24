@@ -19,9 +19,9 @@ function Tabs({
               className={({ selected }) =>
                 cx(
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
-                  'ring-opacity-60 focus:outline-none focus-ring',
+                  'ring-opacity-60 focus-ring focus:outline-none',
                   selected
-                    ? 'bg-gray-900 dark:bg-white shadow text-white dark:text-black'
+                    ? 'bg-gray-900 text-white shadow dark:bg-white dark:text-black'
                     : 'text-primary',
                 )
               }
