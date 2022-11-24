@@ -81,7 +81,7 @@ const DoubleLabelLink = React.forwardRef<
       ref={ref}
       className={cx(
         className,
-        'group inline-flex items-center p-1 pr-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors sm:text-base lg:text-sm xl:text-base text-primary bg-secondary',
+        'group inline-flex items-center rounded-full p-1 pr-2 transition-colors bg-secondary text-primary hover:bg-gray-200 dark:hover:bg-gray-700 sm:text-base lg:text-sm xl:text-base',
       )}
       tabIndex={disabled ? -1 : undefined}
       aria-disabled={disabled}
