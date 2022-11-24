@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.2.4
+
+### Patch Changes
+
+- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
+
+- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
+  - @daren/utils@1.8.3
+
 ## 1.2.3
 
 ### Patch Changes

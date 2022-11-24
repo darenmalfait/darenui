@@ -1,5 +1,27 @@
 # Change Log
 
+## 1.16.12
+
+### Patch Changes
+
+- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
+
+- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
+  - @daren/alert@1.4.4
+  - @daren/button@1.6.5
+  - @daren/form-elements@1.11.8
+  - @daren/modal@1.4.4
+  - @daren/navigation-list@1.2.4
+  - @daren/review@1.3.5
+  - @daren/tabs@1.0.5
+  - @daren/utils@1.8.3
+  - @daren/grid@1.4.4
+  - @daren/layout-components@1.3.4
+  - @daren/progressive-image@1.4.2
+  - @daren/spinner@1.1.4
+  - @daren/theme@2.3.4
+  - @daren/typography@1.7.5
+
 ## 1.16.11
 
 ### Patch Changes
