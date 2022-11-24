@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.3.4
+
+### Patch Changes
+
+- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
+
+- Updated dependencies [[`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800)]:
+  - @daren/typography@1.7.4
+  - @daren/utils@1.8.2
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

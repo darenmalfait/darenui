@@ -1,6 +1,6 @@
 {
   "name": "@daren/tabs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -47,7 +47,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@daren/utils": "^1.8.1",
+    "@daren/utils": "^1.8.2",
     "@headlessui/react": "^1.7.3"
   }
 }
