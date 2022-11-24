@@ -6,6 +6,7 @@ const fromRoot = p => path.join(__dirname, p)
 
 module.exports = {
   content: [
+    '!**/node_modules/**',
     fromRoot('../node_modules/@daren/**/*.{js,ts,jsx,tsx}'), // path to daren
     fromRoot('./node_modules/@daren/**/*.{js,ts,jsx,tsx}'), // path to daren
     fromRoot('./app/**/*.{js,jsx,ts,tsx}'),
