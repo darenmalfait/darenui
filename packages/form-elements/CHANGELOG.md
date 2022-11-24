@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.11.6
+
+### Patch Changes
+
+- [`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
+
 ## 1.11.5
 
 ### Patch Changes
