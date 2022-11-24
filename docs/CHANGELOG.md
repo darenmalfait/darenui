@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.3.3
+
+### Patch Changes
+
+- [`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
+
+- Updated dependencies [[`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4)]:
+  - @daren/button@1.6.3
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
