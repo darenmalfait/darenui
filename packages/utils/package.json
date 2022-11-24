@@ -37,7 +37,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "clsx": "^1.1.1"
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "react": "^18.2.0"
