@@ -3,9 +3,8 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 import { markdown, danger, warn, message, GitHubPRDSL } from 'danger'
-import { difference } from 'lodash'
 
-const BIG_PR_TRESHOLD = 500
+const BIG_PR_TRESHOLD = 600
 
 async function getLocalFileContents(filepath: string) {
   return fs.readFileSync(path.resolve(`./${filepath}`), {
@@ -50,18 +49,6 @@ interface Package {
     license: string
     dependencies?: { [key: string]: string }
     devDependencies?: { [key: string]: string }
-  }
-}
-
-function checkForReadmeChanges(pkg: Package, allFiles: string[]) {
-  const packageFiles = allFiles.filter(file => file.startsWith(pkg.path))
-
-  const hasReadme = packageFiles.find(file => file.endsWith('README.md'))
-
-  if (!hasReadme) {
-    warn(
-      `\`${pkg.path}\` was modified but its README.md was not updated. Please check if any changes should be reflected in the documentation.`,
-    )
   }
 }
 
@@ -127,53 +114,6 @@ async function getModifiedPackages(allFiles: string[]) {
   return packageList
 }
 
-function getChangesetsFromFiles(fileList: string[]) {
-  return fileList.filter(
-    filePath => filePath.includes('changeset') && filePath.includes('.md'),
-  )
-}
-
-async function getMissingPackagesFromChangesets(
-  changesets: string[],
-  packagesWithChanges: Package[],
-) {
-  const packagesInChangesets: string[] = []
-  changesets.forEach(filePath => {
-    const fileContent = fs.readFileSync(filePath).toString()
-    packagesWithChanges.forEach(pkg => {
-      if (fileContent.match(pkg.packageJson.name)) {
-        packagesInChangesets.push(pkg.packageJson.name)
-      }
-    })
-  })
-
-  return difference(
-    packagesWithChanges.map(pkg => pkg.packageJson.name),
-    packagesInChangesets,
-  )
-}
-
-async function listMissingChangesetChanges(
-  allFiles: string[],
-  modifiedPackages: Package[],
-) {
-  const modifiedChangeSetFiles = getChangesetsFromFiles(allFiles)
-
-  if (allFiles.length > 0) {
-    const missingPackages = await getMissingPackagesFromChangesets(
-      modifiedChangeSetFiles,
-      modifiedPackages,
-    )
-    const idea =
-      'edit an existing changeset or run `yarn changeset` to create one'
-    if (missingPackages.length > 0) {
-      missingPackages.forEach(pkg => {
-        warn(`Changesets are missing for ${pkg}. Please ${idea}`)
-      })
-    }
-  }
-}
-
 ;(async function () {
   const allFiles = [
     ...danger.git.created_files,
@@ -183,9 +123,7 @@ async function listMissingChangesetChanges(
 
   const modifiedPackages = await getModifiedPackages(allFiles)
 
-  modifiedPackages.forEach(pkg => checkForReadmeChanges(pkg, allFiles))
   listTouchedPackages(modifiedPackages)
-  listMissingChangesetChanges(allFiles, modifiedPackages)
   listGenericWarnings()
   listTouchedWorkflows(allFiles)
 })()
