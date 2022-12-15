@@ -7,13 +7,13 @@ import {
   Tabs,
   TitleWithActions,
 } from '@daren/ui-components'
-import { Link as RemixLink } from '@remix-run/react'
+import {Link as RemixLink} from '@remix-run/react'
 import * as React from 'react'
 
-import { CodeBlock } from './code-block'
-import { GithubLogo } from './icons/github-logo'
-import { Ide } from './ide'
-import { Section } from './layout-components'
+import {CodeBlock} from './code-block'
+import {GithubLogo} from './icons/github-logo'
+import {Ide} from './ide'
+import {Section} from './layout-components'
 
 export type File = {
   name: string
@@ -57,7 +57,7 @@ interface DocumentBuilderProps {
   }
 }
 
-function DocumentBuilder({ component }: DocumentBuilderProps) {
+function DocumentBuilder({component}: DocumentBuilderProps) {
   return (
     <>
       <Section>
@@ -77,10 +77,10 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
           {component.name}
         </TitleWithActions>
 
-        {component.description && (
+        {component.description ? (
           <Paragraph>{component.description}</Paragraph>
-        )}
-        {component.importer && (
+        ) : null}
+        {component.importer ? (
           <section className="flex flex-col items-start">
             <div className="flex w-full flex-row justify-between">
               <div className="grow-1 mr-0 w-full max-w-2xl xl:mr-20">
@@ -90,7 +90,7 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
               </div>
             </div>
           </section>
-        )}
+        ) : null}
       </Section>
 
       <Section>
@@ -106,12 +106,12 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
                 ))}
               </Section>
             </Tabs.Item>
-            {component.propList && (
+            {component.propList ? (
               <Tabs.Item>
                 <div className="grow-1 prose prose-sm sticky top-0 w-full max-w-full self-start pr-0 dark:prose-invert xl:w-auto">
                   <H3>Props</H3>
-                  <Tabs keys={component.propList.map(({ name }) => name)}>
-                    {component.propList.map(({ value, propTypes }) => (
+                  <Tabs keys={component.propList.map(({name}) => name)}>
+                    {component.propList.map(({value, propTypes}) => (
                       <Tabs.Item key={value}>
                         <ul>
                           {propTypes.map((prop: any, idx: number) => {
@@ -156,7 +156,7 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
                   </Tabs>
                 </div>
               </Tabs.Item>
-            )}
+            ) : null}
           </Tabs>
         </div>
       </Section>
@@ -164,4 +164,4 @@ function DocumentBuilder({ component }: DocumentBuilderProps) {
   )
 }
 
-export { DocumentBuilder }
+export {DocumentBuilder}

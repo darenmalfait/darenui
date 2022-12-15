@@ -1,4 +1,4 @@
-import { Section as BaseSection } from '@daren/ui-components'
+import {Section as BaseSection} from '@daren/ui-components'
 import clsx from 'clsx'
 
 function Section({
@@ -13,7 +13,7 @@ function Section({
   )
 }
 
-function Wrapper({ className, ...props }: JSX.IntrinsicElements['div']) {
+function Wrapper({className, ...props}: JSX.IntrinsicElements['div']) {
   return (
     <div
       className={clsx(
@@ -25,4 +25,4 @@ function Wrapper({ className, ...props }: JSX.IntrinsicElements['div']) {
   )
 }
 
-export { Section, Wrapper }
+export {Section, Wrapper}

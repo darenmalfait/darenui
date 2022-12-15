@@ -1,6 +1,6 @@
-import { cx, useControllableState } from '@daren/utils'
-import { RadioGroup as HeadlessRadioGroup } from '@headlessui/react'
-import { CheckCircleIcon } from '@heroicons/react/24/solid'
+import {cx, useControllableState} from '@daren/utils'
+import {RadioGroup as HeadlessRadioGroup} from '@headlessui/react'
+import {CheckCircleIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 interface OptionProps {
@@ -20,7 +20,7 @@ function Option({
     <HeadlessRadioGroup.Option
       value={value}
       {...props}
-      className={({ active, checked }) =>
+      className={({active, checked}) =>
         cx(
           className,
           'relative block cursor-pointer rounded-lg px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between',
@@ -33,7 +33,7 @@ function Option({
         )
       }
     >
-      {({ checked }) => (
+      {({checked}) => (
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center">
             <div className="text-sm">
@@ -46,7 +46,7 @@ function Option({
               >
                 {label}
               </HeadlessRadioGroup.Label>
-              {description && (
+              {description ? (
                 <HeadlessRadioGroup.Description
                   as="span"
                   className={cx(
@@ -56,14 +56,14 @@ function Option({
                 >
                   {description}
                 </HeadlessRadioGroup.Description>
-              )}
+              ) : null}
             </div>
           </div>
-          {checked && (
+          {checked ? (
             <div className="shrink-0 text-inverse">
               <CheckCircleIcon className="h-6 w-6" />
             </div>
-          )}
+          ) : null}
           <span
             className={cx('pointer-events-none absolute -inset-px rounded-lg')}
             aria-hidden="true"
@@ -97,19 +97,19 @@ function RadioGroup({
     onChange,
   )
 
-  function handleChange(value: any) {
-    setValue(value)
-    onChange?.(value)
+  function handleChange(newValue: any) {
+    setValue(newValue)
+    onChange?.(newValue)
   }
 
   return (
     <HeadlessRadioGroup value={value} onChange={handleChange} {...props}>
       <input name={name} value={value} type="hidden" />
-      {label && (
+      {label ? (
         <HeadlessRadioGroup.Label className="sr-only">
           {label}
         </HeadlessRadioGroup.Label>
-      )}
+      ) : null}
       <div className="space-y-2">{children}</div>
     </HeadlessRadioGroup>
   )
@@ -117,4 +117,4 @@ function RadioGroup({
 
 RadioGroup.Option = Option
 
-export { RadioGroup }
+export {RadioGroup}

@@ -1,5 +1,5 @@
-import { cx, useControllableState } from '@daren/utils'
-import { Switch } from '@headlessui/react'
+import {cx, useControllableState} from '@daren/utils'
+import {Switch} from '@headlessui/react'
 import * as React from 'react'
 
 interface ToggleProps {
@@ -26,7 +26,7 @@ function Toggle({
 }: Omit<JSX.IntrinsicElements['input'], 'defaultValue'> & ToggleProps) {
   const [enabled, setEnabled] = useControllableState(
     value,
-    defaultValue || false,
+    defaultValue ?? false,
     onChange,
   )
 
@@ -103,4 +103,4 @@ function Toggle({
   )
 }
 
-export { Toggle }
+export {Toggle}

@@ -1,6 +1,6 @@
-import { MetaFunction } from '@remix-run/node'
+import {MetaFunction} from '@remix-run/node'
 
-import { DocumentBuilder } from '~/components/document-builder'
+import {DocumentBuilder} from '../components/document-builder'
 
 const description =
   'DoubleLabelLink are used to navigate to other pages in your app. They are a wrapper around the Link component.'

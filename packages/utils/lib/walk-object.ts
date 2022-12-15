@@ -1,4 +1,4 @@
-import { isArray, isObject } from './'
+import {isArray, isObject} from './'
 
 type WalkObjectPredicate<Leaf = unknown> = (
   value: unknown,
@@ -37,5 +37,5 @@ function walkObject<Target, LeafType>(
   return inner(target)
 }
 
-export type { WalkObjectPredicate, MappedLeavesObject }
-export { walkObject }
+export type {WalkObjectPredicate, MappedLeavesObject}
+export {walkObject}

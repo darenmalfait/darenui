@@ -1,4 +1,4 @@
-import { Colors } from './types'
+import {Colors} from './types'
 
 export const colors: Colors = {
   daren: '#ea4673',

@@ -11,4 +11,4 @@ const scope = {
   React,
 }
 
-export { scope }
+export {scope}

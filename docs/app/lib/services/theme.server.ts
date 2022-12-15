@@ -1,7 +1,7 @@
-import { createCookieSessionStorage } from '@remix-run/node'
+import {createCookieSessionStorage} from '@remix-run/node'
 import invariant from 'tiny-invariant'
 
-import { isTheme, Theme } from '~/context/theme-provider'
+import {isTheme, Theme} from '../../context/theme-provider'
 
 const sessionSecret = process.env.SESSION_SECRET
 
@@ -34,4 +34,4 @@ async function getThemeSession(request: Request) {
   }
 }
 
-export { getThemeSession }
+export {getThemeSession}

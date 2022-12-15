@@ -1,10 +1,9 @@
-import { H1, H2, Paragraph } from '@daren/ui-components'
-import { MetaFunction } from '@remix-run/node'
+import {H1, H2, Paragraph} from '@daren/ui-components'
+import {MetaFunction} from '@remix-run/node'
 
-import { CodeBlock } from '~/components/code-block'
-import { Ide } from '~/components/ide'
-
-import { Section } from '~/components/layout-components'
+import {CodeBlock} from '../components/code-block'
+import {Ide} from '../components/ide'
+import {Section} from '../components/layout-components'
 
 export const meta: MetaFunction = () => {
   return {

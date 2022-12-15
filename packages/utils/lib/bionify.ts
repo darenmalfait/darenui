@@ -45,7 +45,7 @@ function isHtmlTag(text: string) {
   const reversedHtmlTagRangeList = htmlTagRangeList.reverse()
 
   return (match: RegExpMatchArray) => {
-    const startIndex = match.index!
+    const startIndex = match.index ?? 0
     const tagRange = reversedHtmlTagRangeList.find(
       ([rangeStart]) => startIndex > rangeStart,
     )
@@ -64,16 +64,16 @@ function getHtmlTagRangeList(
   htmlTagMatchList: IterableIterator<RegExpMatchArray>,
 ) {
   return [...htmlTagMatchList].map(htmlTagMatch => {
-    const startIndex = htmlTagMatch.index!
+    const startIndex = htmlTagMatch.index ?? 0
     const [tag] = htmlTagMatch
-    const { length: tagLength } = tag
+    const {length: tagLength} = tag
 
     return [startIndex, startIndex + tagLength - 1]
   })
 }
 
 function getFixationLength(word: string) {
-  const { length: wordLength } = word
+  const {length: wordLength} = word
   const fixationBoundary =
     FIXATION_BOUNDARY_LIST[0] ?? FIXATION_BOUNDARY_LIST[0]
 
@@ -99,7 +99,7 @@ function getHighlightedText(text: string, seperator: string | string[]) {
 }
 
 function bionify(textToBionify: string, options: BionifyOptions = {}): string {
-  const { seperator } = { ...defaultOptions, ...options }
+  const {seperator} = {...defaultOptions, ...options}
 
   const convertibleMatchList = textToBionify.matchAll(CONVERTIBLE_REGEX)
   const checkIsHtmlTag = isHtmlTag(textToBionify)
@@ -109,9 +109,9 @@ function bionify(textToBionify: string, options: BionifyOptions = {}): string {
 
   let skipping: string | undefined
   for (const match of convertibleMatchList) {
-    const isHtmlTag = checkIsHtmlTag(match)
+    const htmlTag = checkIsHtmlTag(match)
 
-    if (isHtmlTag) {
+    if (htmlTag) {
       if (ELEMENTS_TO_SKIP.includes(match[0].toUpperCase())) {
         if (skipping) {
           skipping = undefined
@@ -124,9 +124,11 @@ function bionify(textToBionify: string, options: BionifyOptions = {}): string {
     }
 
     const [matchedWord] = match
-    const startIndex = match.index!
+    const startIndex = match.index ?? 0
     const endIndex = startIndex + getFixationLength(matchedWord)
-    if (!skipping) {
+    if (skipping) {
+      result += textToBionify.slice(lastMatchedIndex, endIndex)
+    } else {
       const plainText = textToBionify.slice(lastMatchedIndex, startIndex)
       result += plainText
 
@@ -136,8 +138,6 @@ function bionify(textToBionify: string, options: BionifyOptions = {}): string {
           seperator,
         )
       }
-    } else {
-      result += textToBionify.slice(lastMatchedIndex, endIndex)
     }
 
     lastMatchedIndex = endIndex
@@ -147,4 +147,4 @@ function bionify(textToBionify: string, options: BionifyOptions = {}): string {
   return result + remainText
 }
 
-export { bionify }
+export {bionify}

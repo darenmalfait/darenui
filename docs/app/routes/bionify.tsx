@@ -1,7 +1,7 @@
-import { MetaFunction } from '@remix-run/node'
+import {MetaFunction} from '@remix-run/node'
 import * as React from 'react'
 
-import { DocumentBuilder } from '~/components/document-builder'
+import {DocumentBuilder} from '../components/document-builder'
 
 const description =
   'Bionify is a utility to convert a string to a bionified string.'

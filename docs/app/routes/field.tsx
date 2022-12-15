@@ -1,7 +1,7 @@
-import { MetaFunction } from '@remix-run/node'
+import {MetaFunction} from '@remix-run/node'
 import * as React from 'react'
 
-import { DocumentBuilder } from '~/components/document-builder'
+import {DocumentBuilder} from '../components/document-builder'
 
 const description =
   'Field is a form control that allows users to enter text with a label and description.'

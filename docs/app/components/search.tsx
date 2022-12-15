@@ -1,36 +1,35 @@
-import { Combobox, Dialog, Transition } from '@headlessui/react'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+import {Combobox, Dialog, Transition} from '@headlessui/react'
+import {MagnifyingGlassIcon} from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import * as React from 'react'
 
-import components from './components'
+import {filterComponents} from '../lib/utils/components'
 
-import { filterComponents } from '~/lib/utils/components'
+import components from './components'
 
 function Search() {
   const [open, setOpen] = React.useState(false)
   const [query, setQuery] = React.useState('')
 
   const allComponents = React.useMemo(() => {
-    return components.reduce(
-      (acc, curr) => {
-        return [
-          ...acc,
-          ...curr.components.map(c => ({ ...c, category: curr.heading })),
-        ]
-      },
-      [] as {
+    return components.reduce<
+      {
         key: string
         title: string
         category: string
         keywords: string[]
         package: string
-      }[],
-    )
+      }[]
+    >((acc: any[], curr: any) => {
+      return [
+        ...acc,
+        ...curr.components.map((c: any) => ({...c, category: curr.heading})),
+      ]
+    }, [])
   }, [])
 
   const filteredComponents = React.useMemo(() => {
-    return filterComponents(allComponents, query)
+    return filterComponents(allComponents as any, query)
   }, [allComponents, query])
 
   React.useEffect(() => {
@@ -116,16 +115,16 @@ function Search() {
                     />
                   </div>
 
-                  {filteredComponents.length > 0 && query != '' && (
+                  {filteredComponents.length > 0 && query != '' ? (
                     <Combobox.Options
                       static
                       className="max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-primary"
                     >
-                      {filteredComponents.map(component => (
+                      {filteredComponents.map((component: any) => (
                         <Combobox.Option
                           key={component.key}
                           value={component}
-                          className={({ active }) =>
+                          className={({active}) =>
                             clsx(
                               'flex items-center justify-between p-4',
                               active && 'bg-primary',
@@ -141,13 +140,13 @@ function Search() {
                         </Combobox.Option>
                       ))}
                     </Combobox.Options>
-                  )}
+                  ) : null}
 
-                  {query !== '' && filteredComponents.length === 0 && (
+                  {query !== '' && filteredComponents.length === 0 ? (
                     <p className="p-4 text-sm text-gray-500">
                       No components found.
                     </p>
-                  )}
+                  ) : null}
                 </Combobox>
               </Dialog.Panel>
             </Transition.Child>
@@ -158,4 +157,4 @@ function Search() {
   )
 }
 
-export { Search }
+export {Search}

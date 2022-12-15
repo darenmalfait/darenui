@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
 type ParagraphProps = {
@@ -6,10 +6,7 @@ type ParagraphProps = {
   prose?: boolean
   textColorClassName?: string
   as?: React.ElementType
-} & (
-  | { children: React.ReactNode }
-  | { dangerouslySetInnerHTML: { __html: string } }
-)
+} & ({children: React.ReactNode} | {dangerouslySetInnerHTML: {__html: string}})
 
 function Paragraph({
   className,
@@ -27,4 +24,4 @@ function Paragraph({
   })
 }
 
-export { Paragraph }
+export {Paragraph}

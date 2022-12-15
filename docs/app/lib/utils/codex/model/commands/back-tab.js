@@ -32,4 +32,4 @@ function backTab(textEditor, tabCharacter) {
   }
 }
 
-export { backTab }
+export {backTab}

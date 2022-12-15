@@ -1,14 +1,14 @@
-import { ChevronUpIcon } from '@heroicons/react/24/outline'
+import {ChevronUpIcon} from '@heroicons/react/24/outline'
 import * as Tabs from '@radix-ui/react-tabs'
 import clsx from 'clsx'
 import * as React from 'react'
-import { LiveProvider, LiveContext, LiveError } from 'react-live'
+import {LiveProvider, LiveContext, LiveError} from 'react-live'
 
-import { Code } from './code'
+import {Code} from './code'
 
-import { File } from './document-builder'
-import { Preview } from './preview'
-import { scope } from './scope'
+import {File} from './document-builder'
+import {Preview} from './preview'
+import {scope} from './scope'
 
 interface IDEProps {
   files: File[]
@@ -30,12 +30,12 @@ function Ide({
   return (
     <Provider code={files[0]?.code} scope={scope}>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800">
-        {!codeBlock && <Preview />}
+        {codeBlock ? null : <Preview />}
         <Editor
           files={files}
           lineNumber={lineNumber}
           showTab={showTab}
-          openEditor={!codeBlock ? openEditor : true}
+          openEditor={codeBlock ? true : openEditor}
         />
       </div>
       <LiveError className="mt-2 block whitespace-pre-wrap rounded-md bg-red-50 p-4 text-left font-mono text-sm font-medium text-red-700" />
@@ -62,7 +62,7 @@ function Editor({
   const handleTabsChange = (name: string) => {
     setTabKey(name)
   }
-  const { onChange } = React.useContext(LiveContext) as any
+  const {onChange} = React.useContext(LiveContext) as any
   const currentFile = files.find((file: File) => file.name === tabKey) as File
 
   return (
@@ -73,11 +73,11 @@ function Editor({
         color: '#FFFFFF',
       }}
     >
-      {showTab && (
+      {showTab ? (
         <Tabs.Root
           value={tabKey}
           onValueChange={handleTabsChange}
-          className={clsx('relative', !openEditor ? 'rounded-b-lg' : '')}
+          className={clsx('relative', openEditor ? '' : 'rounded-b-lg')}
         >
           <Tabs.List
             onClick={e => {
@@ -92,7 +92,7 @@ function Editor({
             tabIndex={0}
             className={clsx(
               'hide-scroll relative flex items-center rounded-tr-lg',
-              !openEditor ? 'rounded-b-lg' : '',
+              openEditor ? '' : 'rounded-b-lg',
             )}
           >
             {files.map((file: File) => (
@@ -101,7 +101,7 @@ function Editor({
                 value={file.name}
                 className={clsx(
                   'cursor-base !my-0 -mb-px flex h-full items-center justify-center border-b-2 border-transparent px-5 py-3 text-sm font-medium text-gray-300',
-                  !openEditor ? 'rounded-b-lg' : 'selected:border-primary-500',
+                  openEditor ? 'selected:border-primary-500' : 'rounded-b-lg',
                 )}
               >
                 {file.name}
@@ -122,9 +122,9 @@ function Editor({
             </span>
           </Tabs.List>
         </Tabs.Root>
-      )}
+      ) : null}
 
-      {openEditor && (
+      {openEditor ? (
         <div className="max-h-96 overflow-auto">
           <Code
             onChange={(editor: any) => {
@@ -143,9 +143,9 @@ function Editor({
             }}
           />
         </div>
-      )}
+      ) : null}
     </div>
   )
 }
 
-export { Ide }
+export {Ide}

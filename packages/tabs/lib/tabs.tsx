@@ -1,5 +1,5 @@
-import { cx, ExtractProps } from '@daren/utils'
-import { Tab } from '@headlessui/react'
+import {cx, ExtractProps} from '@daren/utils'
+import {Tab} from '@headlessui/react'
 import * as React from 'react'
 
 function Tabs({
@@ -16,7 +16,7 @@ function Tabs({
           {keys.map(key => (
             <Tab
               key={key}
-              className={({ selected }) =>
+              className={({selected}) =>
                 cx(
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
                   'ring-opacity-60 focus-ring focus:outline-none',
@@ -36,11 +36,7 @@ function Tabs({
   )
 }
 
-function Item({
-  children,
-  className,
-  ...rest
-}: ExtractProps<typeof Tab.Panel>) {
+function Item({children, className, ...rest}: ExtractProps<typeof Tab.Panel>) {
   return (
     <Tab.Panel className={cx('outline-none', className)} {...rest}>
       {children}
@@ -50,4 +46,4 @@ function Item({
 
 Tabs.Item = Item
 
-export { Tabs, Item }
+export {Tabs, Item}

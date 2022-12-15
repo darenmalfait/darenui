@@ -1,7 +1,7 @@
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+import {MoonIcon, SunIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
-import { Theme, useTheme } from '~/context/theme-provider'
+import {Theme, useTheme} from '../context/theme-provider'
 
 function ThemeToggle() {
   const [theme, setTheme] = useTheme()
@@ -12,7 +12,9 @@ function ThemeToggle() {
       type="button"
       className="flex items-center justify-center rounded-full p-2 focus-ring"
       onClick={() =>
-        setTheme(prev => (prev === Theme.DARK ? Theme.LIGHT : Theme.DARK))
+        setTheme((prev: any) =>
+          prev === Theme.DARK ? Theme.LIGHT : Theme.DARK,
+        )
       }
     >
       {isDarkMode ? <SunIcon className="w-5" /> : <MoonIcon className="w-5" />}
@@ -21,4 +23,4 @@ function ThemeToggle() {
   )
 }
 
-export { ThemeToggle }
+export {ThemeToggle}

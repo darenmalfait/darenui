@@ -1,11 +1,11 @@
-import { Transition } from '@headlessui/react'
-import { Squares2X2Icon } from '@heroicons/react/24/outline'
+import {Transition} from '@headlessui/react'
+import {Squares2X2Icon} from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import components from './components'
-import { NavLink } from './nav-link'
-import { useNavigation } from './navigation-provider'
+import {NavLink} from './nav-link'
+import {useNavigation} from './navigation-provider'
 
 export const mainNavigation = [
   {
@@ -22,7 +22,7 @@ export const mainNavigation = [
 ]
 
 export function Navigation() {
-  const { open, slideMode, setOpen, navRef } = useNavigation()
+  const {open, slideMode, setOpen, navRef} = useNavigation()
 
   return (
     <nav ref={navRef} className="min-h-full">
@@ -36,7 +36,7 @@ export function Navigation() {
           aria-modal="true"
         >
           <div className="relative h-full">
-            {slideMode && (
+            {slideMode ? (
               <div className="absolute top-0 right-0 -mr-8 flex pt-0 pl-2 sm:-mr-10 sm:pl-4">
                 <button
                   className="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
@@ -60,7 +60,7 @@ export function Navigation() {
                   </svg>
                 </button>
               </div>
-            )}
+            ) : null}
             <div className="flex h-full flex-col overflow-hidden">
               <div className="flex flex-1 flex-col overflow-auto px-2 py-4">
                 <div className="mb-6 space-y-1">

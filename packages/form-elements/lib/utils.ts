@@ -1,11 +1,11 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 
-type inputSize = 'sm' | 'md' | 'lg'
+type InputSize = 'sm' | 'md' | 'lg'
 
 function getInputClassName(
   className?: string,
   hasError?: boolean,
-  inputSize: inputSize = 'md',
+  inputSize: InputSize = 'md',
 ) {
   return cx(
     className,
@@ -20,5 +20,5 @@ function getInputClassName(
   )
 }
 
-export { getInputClassName }
-export type { inputSize }
+export {getInputClassName}
+export type {InputSize}

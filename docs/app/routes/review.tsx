@@ -1,7 +1,7 @@
-import { MetaFunction } from '@remix-run/node'
+import {MetaFunction} from '@remix-run/node'
 import * as React from 'react'
 
-import { DocumentBuilder } from '~/components/document-builder'
+import {DocumentBuilder} from '../components/document-builder'
 
 const description = 'Review is a simple component that render a review.'
 

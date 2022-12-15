@@ -1,8 +1,8 @@
-import { Dict, WithCSSVar } from '@daren/utils'
+import {Dict, WithCSSVar} from '@daren/utils'
 import * as React from 'react'
 
-import { colors } from './colors'
-import { toCSSVar } from './to-css-var'
+import {colors} from './colors'
+import {toCSSVar} from './to-css-var'
 
 const ThemeContext = React.createContext<
   | {
@@ -15,7 +15,7 @@ interface ThemeProviderProps {
   children: React.ReactNode
 }
 
-function ThemeProvider({ children }: ThemeProviderProps) {
+function ThemeProvider({children}: ThemeProviderProps) {
   const theme = toCSSVar({
     colors,
   })
@@ -43,5 +43,5 @@ function useTheme<T extends Record<string, unknown> = Dict>() {
   return theme as WithCSSVar<T>
 }
 
-export { ThemeContext, ThemeProvider, useTheme }
-export type { ThemeProviderProps }
+export {ThemeContext, ThemeProvider, useTheme}
+export type {ThemeProviderProps}

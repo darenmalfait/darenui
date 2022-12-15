@@ -1,7 +1,7 @@
-import { MetaFunction } from '@remix-run/node'
+import {MetaFunction} from '@remix-run/node'
 import * as React from 'react'
 
-import { DocumentBuilder } from '~/components/document-builder'
+import {DocumentBuilder} from '../components/document-builder'
 
 const description =
   'Buttons trigger an action such as submitting a form or showing/hiding an interface component.'

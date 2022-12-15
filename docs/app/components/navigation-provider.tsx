@@ -1,7 +1,7 @@
-import { isBrowser } from '@daren/utils'
+import {isBrowser} from '@daren/utils'
 import * as React from 'react'
 
-import { isMatchMedia, LG } from '~/utils/media-query'
+import {isMatchMedia, LG} from '../utils/media-query'
 
 interface NavigationContextProps {
   open: boolean
@@ -21,7 +21,7 @@ interface NavigationProviderProps {
 
 // import { NavigationProvider } from "path-to-context/NavigationContext"
 // use <NavigationProvider> as a wrapper around the part you need the context for
-function NavigationProvider({ children }: NavigationProviderProps) {
+function NavigationProvider({children}: NavigationProviderProps) {
   const [open, setOpen] = React.useState(false)
   const [largeScreen, setLargeScreen] = React.useState(false)
   const prevOpen = React.useRef(open)
@@ -45,16 +45,16 @@ function NavigationProvider({ children }: NavigationProviderProps) {
     function handleResize(e: any) {
       const large = isMatchMedia(LG)
       const first = !e
-      let open = false
+      let isOpen = false
 
       if (first) {
-        open = !large
+        isOpen = !large
       } else {
-        open = !(large && !prevOpen.current)
+        isOpen = !(large && !prevOpen.current)
       }
       setLargeScreen(large)
-      setOpen(open)
-      prevOpen.current = open
+      setOpen(isOpen)
+      prevOpen.current = isOpen
     }
 
     if (isBrowser) {
@@ -101,4 +101,4 @@ function useNavigation(): NavigationContextProps {
   return context
 }
 
-export { NavigationProvider, useNavigation }
+export {NavigationProvider, useNavigation}

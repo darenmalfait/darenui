@@ -1,6 +1,8 @@
 class TextEditorEdit {
-  _collectedEdits = []
-  _finalized = false
+  constructor() {
+    this._collectedEdits = []
+    this._finalized = false
+  }
 
   finalize() {
     this._finalized = true
@@ -37,4 +39,4 @@ class TextEditorEdit {
   }
 }
 
-export { TextEditorEdit }
+export {TextEditorEdit}

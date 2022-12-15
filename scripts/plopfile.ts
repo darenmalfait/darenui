@@ -1,9 +1,7 @@
 import camelCase from 'lodash/camelCase'
 import capitalize from 'lodash/capitalize'
-import nodePlop, { ActionType } from 'node-plop'
+import nodePlop, {ActionType, NodePlopAPI} from 'node-plop'
 import shell from 'shelljs'
-
-const plop = nodePlop('plop-templates/plopfile.hbs')
 
 const workspaces = ['packages'] as const
 
@@ -15,7 +13,7 @@ interface Answers {
   outDir: Workspace
 }
 
-async function createPackage() {
+async function createPackage(plop: NodePlopAPI) {
   plop.setHelper('capitalize', text => {
     return capitalize(camelCase(text))
   })
@@ -46,14 +44,14 @@ async function createPackage() {
 
       if (!answers) return actions
 
-      const { componentName, description, outDir } = answers as Answers
+      const {componentName, description, outDir} = answers as Answers
 
       actions.push({
         type: 'addMany',
         templateFiles: 'component/**',
         destination: `../${outDir}/{{dashCase componentName}}`,
         base: 'component/',
-        data: { description, componentName },
+        data: {description, componentName},
         abortOnFail: true,
       })
 
@@ -61,15 +59,17 @@ async function createPackage() {
     },
   })
 
-  const { runPrompts, runActions } = plop.getGenerator('component')
+  const {runPrompts, runActions} = plop.getGenerator('component')
 
   const answers = await runPrompts()
   await runActions(answers)
 }
 
 async function run() {
-  await createPackage()
+  const plop = await nodePlop('plop-templates/plopfile.hbs')
+
+  await createPackage(plop)
   shell.exec('yarn')
 }
 
-run()
+run

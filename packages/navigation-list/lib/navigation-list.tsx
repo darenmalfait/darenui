@@ -1,8 +1,8 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
 type NavigationItemProps = {
-  className?: string | ((props: { isActive: boolean }) => string | undefined)
+  className?: string | ((props: {isActive: boolean}) => string | undefined)
   title: string
   href?: string
   to?: string
@@ -41,7 +41,7 @@ function Item<T>({
       className={className ?? getNavigationItemClassName({})}
       {...props}
     >
-      {Icon && <Icon className="mr-3 -ml-1 h-6 w-6 shrink-0" />}
+      {Icon ? <Icon className="mr-3 -ml-1 h-6 w-6 shrink-0" /> : null}
       <span className="truncate">{title}</span>
     </Link>
   )
@@ -61,4 +61,4 @@ function NavigationList({
 
 NavigationList.Item = Item
 
-export { NavigationList, getNavigationItemClassName }
+export {NavigationList, getNavigationItemClassName}

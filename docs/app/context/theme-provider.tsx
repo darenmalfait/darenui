@@ -1,4 +1,4 @@
-import { useFetcher } from '@remix-run/react'
+import {useFetcher} from '@remix-run/react'
 import * as React from 'react'
 
 enum Theme {
@@ -45,7 +45,7 @@ const clientThemeCode = `
 })();
 `
 
-function PreventFlashOnWrongTheme({ ssrTheme }: { ssrTheme: boolean }) {
+function PreventFlashOnWrongTheme({ssrTheme}: {ssrTheme: boolean}) {
   const [theme] = useTheme()
 
   return (
@@ -68,7 +68,7 @@ function PreventFlashOnWrongTheme({ ssrTheme }: { ssrTheme: boolean }) {
           // the script "defer". That doesn't work for us because we need
           // this script to run synchronously before the rest of the document
           // is finished loading.
-          dangerouslySetInnerHTML={{ __html: clientThemeCode }}
+          dangerouslySetInnerHTML={{__html: clientThemeCode}}
         />
       )}
     </>
@@ -88,7 +88,7 @@ interface ThemeProviderProps {
 
 // import { ThemeProvider } from "path-to-context/ThemeContext"
 // use <ThemeProvider> as a wrapper around the part you need the context for
-function ThemeProvider({ children, specifiedTheme }: ThemeProviderProps) {
+function ThemeProvider({children, specifiedTheme}: ThemeProviderProps) {
   const [theme, setTheme] = React.useState<Theme | null>(() => {
     // On the server, if we don't have a specified theme then we should
     // return null and the clientThemeCode will set the theme for us
@@ -136,8 +136,8 @@ function ThemeProvider({ children, specifiedTheme }: ThemeProviderProps) {
     }
 
     persistThemeRef.current.submit(
-      { theme },
-      { action: 'actions/set-theme', method: 'post' },
+      {theme},
+      {action: 'actions/set-theme', method: 'post'},
     )
   }, [theme])
 
@@ -170,4 +170,4 @@ function useTheme(): ThemeContextProps {
   return context
 }
 
-export { isTheme, PreventFlashOnWrongTheme, Theme, ThemeProvider, useTheme }
+export {isTheme, PreventFlashOnWrongTheme, Theme, ThemeProvider, useTheme}

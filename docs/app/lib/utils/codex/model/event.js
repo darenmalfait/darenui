@@ -18,6 +18,7 @@ export function off(emitter, type, f) {
     const map = emitter._handlers
     const handlers = map && map[type]
     if (handlers) {
+      // eslint-disable-next-line no-bitwise
       map[type] = handlers.splice(handlers.indexOf(f) >>> 0, 1)
     }
   }

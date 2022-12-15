@@ -1,4 +1,4 @@
-import { cx, __DEV__ } from '@daren/utils'
+import {cx, __DEV__} from '@daren/utils'
 import * as React from 'react'
 
 interface GridProps {
@@ -62,7 +62,7 @@ function GridLines() {
   return (
     <div className="pointer-events-none fixed inset-0 z-10 select-none">
       <Grid>
-        {Array.from({ length: 12 }).map((_, idx) => (
+        {Array.from({length: 12}).map((_, idx) => (
           <div
             key={idx}
             className="flex h-screen items-start bg-black text-black opacity-10"
@@ -77,4 +77,4 @@ function GridLines() {
   )
 }
 
-export { Grid, GridLines }
+export {Grid, GridLines}

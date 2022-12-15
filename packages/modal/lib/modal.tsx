@@ -1,4 +1,5 @@
-import { Dialog, Transition } from '@headlessui/react'
+import {cx} from '@daren/utils'
+import {Dialog, Transition} from '@headlessui/react'
 
 import {
   ExclamationTriangleIcon,
@@ -6,7 +7,6 @@ import {
   CheckCircleIcon,
   InformationCircleIcon,
 } from '@heroicons/react/24/solid'
-import clsx from 'clsx'
 import * as React from 'react'
 
 interface ModalProps {
@@ -71,15 +71,15 @@ function Modal({
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel
-                className={clsx(
+                className={cx(
                   className,
                   'relative inline-block w-full rounded-lg px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all bg-primary sm:my-8 sm:w-full sm:max-w-xl sm:p-6 sm:align-middle',
                 )}
               >
                 <div className="sm:flex sm:items-start">
-                  {Icon && (
+                  {Icon ? (
                     <div
-                      className={clsx(
+                      className={cx(
                         'mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10',
                         {
                           'bg-yellow-100': type === 'warning',
@@ -90,7 +90,7 @@ function Modal({
                       )}
                     >
                       <Icon
-                        className={clsx('h-6 w-6', {
+                        className={cx('h-6 w-6', {
                           'text-yellow-400': type === 'warning',
                           'text-green-400': type === 'success',
                           'text-blue-400': type === 'info',
@@ -99,11 +99,11 @@ function Modal({
                         aria-hidden="true"
                       />
                     </div>
-                  )}
+                  ) : null}
                   <div className="mt-3 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <Dialog.Title
                       as="h3"
-                      className={clsx('text-lg font-medium leading-6', {
+                      className={cx('text-lg font-medium leading-6', {
                         'text-yellow-400': type === 'warning',
                         'text-green-400': type === 'success',
                         'text-blue-400': type === 'info',
@@ -117,13 +117,13 @@ function Modal({
                     </div>
                   </div>
                 </div>
-                {actions && (
+                {actions ? (
                   <div className="mt-6 sm:mt-4 sm:ml-10 sm:flex sm:pl-4">
                     <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                       {actions}
                     </div>
                   </div>
-                )}
+                ) : null}
               </Dialog.Panel>
             </Transition.Child>
           </div>
@@ -133,4 +133,4 @@ function Modal({
   )
 }
 
-export { Modal }
+export {Modal}

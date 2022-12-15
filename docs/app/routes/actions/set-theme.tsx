@@ -1,10 +1,10 @@
-import { ActionArgs, json, redirect } from '@remix-run/node'
+import {ActionArgs, json, redirect} from '@remix-run/node'
 import * as React from 'react'
 
-import { isTheme } from '~/context/theme-provider'
-import { getThemeSession } from '~/lib/services/theme.server'
+import {isTheme} from '../../context/theme-provider'
+import {getThemeSession} from '../../lib/services/theme.server'
 
-export async function action({ request }: ActionArgs) {
+export async function action({request}: ActionArgs) {
   const themeSession = await getThemeSession(request)
   const requestText = await request.text()
   const form = new URLSearchParams(requestText)
@@ -19,13 +19,13 @@ export async function action({ request }: ActionArgs) {
 
   themeSession.setTheme(theme)
   return json(
-    { success: true },
-    { headers: { 'Set-Cookie': await themeSession.commit() } },
+    {success: true},
+    {headers: {'Set-Cookie': await themeSession.commit()}},
   )
 }
 
 export async function loader() {
-  return redirect('/', { status: 404 })
+  return redirect('/', {status: 404})
 }
 
 export default function SetThemeRoute() {

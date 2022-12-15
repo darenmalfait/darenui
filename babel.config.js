@@ -2,7 +2,7 @@ const BABEL_ENV = process.env.BABEL_ENV
 const isCommonJS = BABEL_ENV !== undefined && BABEL_ENV === 'cjs'
 const isESM = BABEL_ENV !== undefined && BABEL_ENV === 'esm'
 
-module.exports = function (api) {
+module.exports = function babel(api) {
   api.cache(true)
 
   const presets = [
@@ -20,7 +20,7 @@ module.exports = function (api) {
     '@babel/preset-react',
   ]
 
-  const plugins = [['@babel/plugin-proposal-class-properties', { loose: true }]]
+  const plugins = [['@babel/plugin-proposal-class-properties', {loose: true}]]
 
   return {
     presets,

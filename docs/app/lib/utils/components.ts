@@ -1,4 +1,4 @@
-import { matchSorter, rankings as matchSorterRankings } from 'match-sorter'
+import {matchSorter, rankings as matchSorterRankings} from 'match-sorter'
 
 export function filterComponents(
   components: {

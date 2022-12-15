@@ -1,7 +1,7 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
-import { Link, LinkFn, LinkProps } from './link'
+import {Link, LinkFn, LinkProps} from './link'
 
 type ButtonProps = {
   children?: React.ReactNode
@@ -80,7 +80,7 @@ function LinkButton({
   className,
   underlined,
   ...buttonProps
-}: { underlined?: boolean } & JSX.IntrinsicElements['button']) {
+}: {underlined?: boolean} & JSX.IntrinsicElements['button']) {
   return (
     <button
       {...buttonProps}
@@ -99,7 +99,7 @@ const ButtonLink = React.forwardRef<
   HTMLAnchorElement,
   LinkProps<any> & ButtonProps
 >(function ButtonLink(
-  { children, className, variant = 'primary', size, disabled, ...rest },
+  {children, className, variant = 'primary', size, disabled, ...rest},
   ref,
 ) {
   return (
@@ -111,5 +111,5 @@ const ButtonLink = React.forwardRef<
   )
 }) as typeof LinkFn
 
-export type { ButtonProps }
-export { Button, ButtonLink, LinkButton }
+export type {ButtonProps}
+export {Button, ButtonLink, LinkButton}

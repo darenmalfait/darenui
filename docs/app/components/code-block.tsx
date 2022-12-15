@@ -1,4 +1,4 @@
-import { Highlight } from './highlight'
+import {Highlight} from './highlight'
 
 function getLanguage(language: string) {
   const map: any = {
@@ -11,7 +11,7 @@ function getLanguage(language: string) {
   return map[language] || 'text'
 }
 
-export function CodeBlock({ children, showClipBoard = true }: any) {
+export function CodeBlock({children, showClipBoard = true}: any) {
   const language = getLanguage(
     children?.props?.className?.replace('language-', '') || '',
   )

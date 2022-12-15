@@ -1,5 +1,5 @@
-import { isObject } from './assertion'
-import type { Dict } from './types'
+import {isObject} from './assertion'
+import type {Dict} from './types'
 
 function omit<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
   const result: Dict = {}
@@ -13,7 +13,7 @@ function omit<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
 }
 
 function pick<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
-  const result = {} as { [P in K]: T[P] }
+  const result = {} as {[P in K]: T[P]}
 
   keys.forEach(key => {
     if (key in object) {
@@ -27,9 +27,9 @@ function pick<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
 function deepmerge<T1, T2>(
   target: Partial<T1>,
   source: Partial<T2>,
-  options: { clone: boolean } = { clone: false },
+  options: {clone: boolean} = {clone: false},
 ) {
-  const output = options.clone ? { ...target } : target
+  const output = options.clone ? {...target} : target
 
   if (isObject(target) && isObject(source)) {
     Object.keys(source).forEach(key => {
@@ -50,4 +50,4 @@ function deepmerge<T1, T2>(
   return output
 }
 
-export { omit, pick, deepmerge }
+export {omit, pick, deepmerge}

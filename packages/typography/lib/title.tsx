@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
 type TitleProps = {
@@ -7,7 +7,7 @@ type TitleProps = {
   className?: string
   id?: string
 } & (
-  | { children: React.ReactNode }
+  | {children: React.ReactNode}
   | {
       dangerouslySetInnerHTML: {
         __html: string
@@ -36,7 +36,7 @@ function Title({
   as,
   className,
   ...rest
-}: TitleProps & { size: keyof typeof fontSize }) {
+}: TitleProps & {size: keyof typeof fontSize}) {
   const Tag = as ?? size
   return (
     <Tag
@@ -91,13 +91,13 @@ function TitleWithActions({
       {...rest}
     >
       <div className="flex-1">{children}</div>
-      {actions && (
+      {actions ? (
         <div className="flex flex-initial flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
           {actions}
         </div>
-      )}
+      ) : null}
     </Title>
   )
 }
 
-export { H1, H2, H3, H4, H5, H6, TitleWithActions }
+export {H1, H2, H3, H4, H5, H6, TitleWithActions}

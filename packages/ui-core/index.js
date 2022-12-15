@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = plugin(
-  ({ addBase, addUtilities }) => {
+  ({addBase, addUtilities}) => {
     addUtilities({
       ':root': {
         '--color-gray-100': '#ffffff',

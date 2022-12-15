@@ -6,4 +6,4 @@ function roundToNearest15(date = new Date()) {
   return new Date(Math.round(date.getTime() / ms) * ms)
 }
 
-export { roundToNearest15 }
+export {roundToNearest15}

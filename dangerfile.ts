@@ -1,8 +1,8 @@
-import { Buffer } from 'buffer'
+import {Buffer} from 'buffer'
 import * as fs from 'fs'
 import * as path from 'path'
 
-import { markdown, danger, warn, message, GitHubPRDSL } from 'danger'
+import {markdown, danger, warn, message, GitHubPRDSL} from 'danger'
 
 const BIG_PR_TRESHOLD = 600
 
@@ -20,7 +20,7 @@ async function getRemoteFileContents(filepath: string) {
   const octokit = danger.github.api
   const pr = danger.github.pr as GithubDraftablePRDSL
   const refType = pr.draft ? 'head' : 'merge'
-  const { data }: any = await octokit.repos.getContent({
+  const {data}: any = await octokit.repos.getContent({
     owner: 'darenmalfait',
     repo: 'darenui',
     path: filepath,
@@ -30,11 +30,10 @@ async function getRemoteFileContents(filepath: string) {
 }
 
 async function getFileContents(filepath: string) {
-  if (!(danger as any).github) {
-    return getLocalFileContents(filepath)
-  } else {
+  if ((danger as any)?.github) {
     return getRemoteFileContents(filepath)
   }
+  return getLocalFileContents(filepath)
 }
 
 interface Package {
@@ -47,8 +46,8 @@ interface Package {
       watch: string
     }
     license: string
-    dependencies?: { [key: string]: string }
-    devDependencies?: { [key: string]: string }
+    dependencies?: {[key: string]: string}
+    devDependencies?: {[key: string]: string}
   }
 }
 
@@ -81,7 +80,7 @@ function listTouchedPackages(modifiedPackages: Package[]) {
   markdown(`### Modified Packages
 The following packages were modified by this pull request:
 * ${modifiedPackages
-    .map(({ packageJson }) => `\`${packageJson.name}\``)
+    .map(({packageJson}) => `\`${packageJson.name}\``)
     .join('\n* ')}`)
 }
 
@@ -96,25 +95,30 @@ async function getModifiedPackages(allFiles: string[]) {
   )
 
   const pathArray = Array.from(paths)
-  for (const path of pathArray) {
+  const results = []
+  for (const p of pathArray) {
     try {
-      await getFileContents(`${path}/package.json`)
-        .then(JSON.parse)
-        .then(packageJson => {
-          packageList.push({
-            path,
-            packageJson,
-          })
-        })
+      results.push(
+        getFileContents(`${p}/package.json`)
+          .then(JSON.parse)
+          .then(packageJson => {
+            packageList.push({
+              path: p,
+              packageJson,
+            })
+          }),
+      )
     } catch (e: any) {
-      warn(`Could not find package: ${path}: ${e.message}`)
+      warn(`Could not find package: ${p}: ${e.message}`)
     }
   }
+
+  await Promise.all(results)
 
   return packageList
 }
 
-;(async function () {
+;(async function getfiles() {
   const allFiles = [
     ...danger.git.created_files,
     ...danger.git.deleted_files,
@@ -126,4 +130,7 @@ async function getModifiedPackages(allFiles: string[]) {
   listTouchedPackages(modifiedPackages)
   listGenericWarnings()
   listTouchedWorkflows(allFiles)
-})()
+})().catch(e => {
+  console.error(e)
+  throw e
+})

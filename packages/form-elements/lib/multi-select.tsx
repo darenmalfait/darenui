@@ -1,10 +1,10 @@
-import type { ExtractProps } from '@daren/utils'
-import { PlusIcon } from '@heroicons/react/24/solid'
+import type {ExtractProps} from '@daren/utils'
+import {PlusIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
-import { Label } from './misc'
+import {Label} from './misc'
 
-import { Select, SelectField, SelectItem } from './select'
+import {Select, SelectField, SelectItem} from './select'
 
 function PillButton({
   item,
@@ -14,7 +14,7 @@ function PillButton({
     value: string
     label: string
   }
-  onDelete?(item: { value: string; label: string }): void
+  onDelete?(item: {value: string; label: string}): void
 }) {
   return (
     <span
@@ -22,7 +22,7 @@ function PillButton({
       className="m-1 inline-flex items-center rounded-md bg-green-100 py-1 pr-2 pl-3 text-sm font-bold text-[#008A4E]"
     >
       <span>{item.label}</span>
-      {onDelete && (
+      {onDelete ? (
         <button
           onClick={() => onDelete(item)}
           type="button"
@@ -31,7 +31,7 @@ function PillButton({
           <span className="sr-only">remove {item.label}</span>
           <PlusIcon className="h-full w-full rotate-45 " />
         </button>
-      )}
+      ) : null}
     </span>
   )
 }
@@ -55,7 +55,7 @@ function ActiveItems({
           <PillButton
             key={item.value}
             item={item}
-            onDelete={!disabled ? onItemToggle : undefined}
+            onDelete={disabled ? undefined : onItemToggle}
           />
         </>
       ))}
@@ -88,14 +88,14 @@ function MultiSelect({
   ...props
 }: MultiSelectProps) {
   const [selected, setSelected] = React.useState<SelectItem[]>(
-    defaultValue || [],
+    defaultValue ?? [],
   )
 
-  function handleAdd(value: string) {
+  function handleAdd(addValue: string) {
     if (disabled) return
-    const selectedItem = items.find(item => item.value === value)
+    const selectedItem = items.find(item => item.value === addValue)
 
-    if (!selectedItem || selected.find(item => item.value === value)) return
+    if (!selectedItem || selected.find(item => item.value === addValue)) return
 
     const newSelected = [...selected, selectedItem]
     setSelected(newSelected)
@@ -105,7 +105,9 @@ function MultiSelect({
 
   function handleRemove(item: SelectItem) {
     if (disabled) return
-    const newSelected = selected.filter(({ value }) => item.value !== value)
+    const newSelected = selected.filter(
+      ({value: currentValue}) => item.value !== currentValue,
+    )
     setSelected(newSelected)
 
     if (onChange) onChange(newSelected)
@@ -121,28 +123,28 @@ function MultiSelect({
 
   return (
     <div className="flex flex-col">
-      {label && (
+      {label ? (
         <div className="flex justify-between">
           <Label htmlFor={inputId} className="mb-2">
             {label}
           </Label>
-          {description && (
+          {description ? (
             <span className="text-sm text-slate-400" id={descriptionId}>
               {description}
             </span>
-          )}
+          ) : null}
         </div>
-      )}
+      ) : null}
       <div className="flex flex-col space-y-2">
-        {selected.length > 0 && (
+        {selected.length > 0 ? (
           <ActiveItems
             disabled={disabled}
             name={name}
             onItemToggle={handleRemove}
             items={selected}
           />
-        )}
-        {!disabled && (
+        ) : null}
+        {disabled ? null : (
           <Select
             name=""
             items={availableItems}
@@ -154,13 +156,13 @@ function MultiSelect({
           />
         )}
       </div>
-      {error && (
+      {error ? (
         <p className="mt-2 text-sm text-red-600" id={errorId}>
           {error}
         </p>
-      )}
+      ) : null}
     </div>
   )
 }
 
-export { MultiSelect }
+export {MultiSelect}

@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import {
   ExclamationCircleIcon,
   XCircleIcon,
@@ -41,7 +41,7 @@ function Alert({
       })}
     >
       <div className="flex">
-        {!hideIcon && (
+        {hideIcon ? null : (
           <div className="shrink-0">
             <Icon
               className={cx('h-5 w-5', {
@@ -55,7 +55,7 @@ function Alert({
           </div>
         )}
         <div className="ml-3">
-          {title && (
+          {title ? (
             <h3
               className={cx('text-sm font-medium', {
                 'text-yellow-800': type === 'warning',
@@ -66,8 +66,8 @@ function Alert({
             >
               {title}
             </h3>
-          )}
-          {description && (
+          ) : null}
+          {description ? (
             <div
               className={cx('text-sm', {
                 'mt-2': title,
@@ -79,11 +79,11 @@ function Alert({
             >
               {description}
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </div>
   )
 }
 
-export { Alert }
+export {Alert}

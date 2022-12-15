@@ -17,16 +17,16 @@ import {
 } from '@remix-run/react'
 import clsx from 'clsx'
 
-import { AppProviders } from './context/app-providers'
-import { PreventFlashOnWrongTheme, useTheme } from './context/theme-provider'
-import { Layout } from './layouts/layout'
+import {AppProviders} from './context/app-providers'
+import {PreventFlashOnWrongTheme, useTheme} from './context/theme-provider'
+import {Layout} from './layouts/layout'
 
-import { getThemeSession } from './lib/services/theme.server'
+import {getThemeSession} from './lib/services/theme.server'
 
 import tailwindStylesheetUrl from './styles/tailwind.css'
 
 export const meta: MetaFunction = () => {
-  return { title: 'Darenui' }
+  return {title: 'Darenui'}
 }
 
 const fonts = [
@@ -59,13 +59,13 @@ export const links: LinksFunction = () => {
       // this is giving an typescript error, but why?? Hence the as any
       crossOrigin: 'anonymous' as any,
     })),
-    { rel: 'stylesheet', href: tailwindStylesheetUrl },
-    { rel: 'stylesheet', href: darenStyles },
+    {rel: 'stylesheet', href: tailwindStylesheetUrl},
+    {rel: 'stylesheet', href: darenStyles},
   ]
 }
 
-export async function loader({ request }: LoaderArgs) {
-  const { getTheme } = await getThemeSession(request)
+export async function loader({request}: LoaderArgs) {
+  const {getTheme} = await getThemeSession(request)
 
   return json({
     theme: getTheme(),
@@ -75,7 +75,7 @@ export async function loader({ request }: LoaderArgs) {
 function Document({
   children,
   theme: ssrTheme,
-}: SerializeFrom<typeof loader> & { children: React.ReactNode }) {
+}: SerializeFrom<typeof loader> & {children: React.ReactNode}) {
   const [theme] = useTheme()
 
   return (

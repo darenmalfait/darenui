@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
 interface SectionProps {
@@ -7,7 +7,7 @@ interface SectionProps {
   className?: string
 }
 
-function Section({ as: Tag = 'section', className, ...props }: SectionProps) {
+function Section({as: Tag = 'section', className, ...props}: SectionProps) {
   return (
     <Tag
       className={cx('box-border w-full items-center', className)}
@@ -16,4 +16,4 @@ function Section({ as: Tag = 'section', className, ...props }: SectionProps) {
   )
 }
 
-export { Section }
+export {Section}

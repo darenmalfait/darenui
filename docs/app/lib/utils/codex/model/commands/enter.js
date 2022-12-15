@@ -17,4 +17,4 @@ function enter(textEditor, e) {
   }
 }
 
-export { enter }
+export {enter}

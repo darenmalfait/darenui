@@ -1,24 +1,24 @@
-import { cx } from '@daren/utils'
-import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
+import {cx} from '@daren/utils'
+import {ExclamationCircleIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
-import { Label } from './misc'
+import {Label} from './misc'
 
-import { InputProps } from './types'
-import { getInputClassName } from './utils'
+import {InputProps} from './types'
+import {getInputClassName} from './utils'
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   props,
   ref,
 ) {
-  const { type, hasError, inputSize, icon: Icon, ...inputProps } = props
+  const {type, hasError, inputSize, icon: Icon, ...inputProps} = props
 
   const className = getInputClassName(props.className, hasError, inputSize)
 
   if (type === 'textarea') {
     return (
       <div className="flex-items-center relative w-full">
-        {Icon && (
+        {Icon ? (
           <Icon
             width="20px"
             height="20px"
@@ -29,11 +29,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
               },
             )}
           />
-        )}
+        ) : null}
         <textarea
           {...(inputProps as JSX.IntrinsicElements['textarea'])}
           aria-invalid={hasError}
-          className={cx('h-36', className, { 'pl-14': !!Icon })}
+          className={cx('h-36', className, {'pl-14': !!Icon})}
         />
       </div>
     )
@@ -44,10 +44,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
       <input
         type={type}
         {...(inputProps as JSX.IntrinsicElements['input'])}
-        className={cx(className, { 'pr-14': !!Icon })}
+        className={cx(className, {'pr-14': !!Icon})}
         ref={ref}
       />
-      {Icon && !hasError && (
+      {Icon && !hasError ? (
         <Icon
           width="20px"
           height="20px"
@@ -59,15 +59,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
             },
           )}
         />
-      )}
-      {hasError && (
+      ) : null}
+      {hasError ? (
         <div className="absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0">
           <ExclamationCircleIcon
             className="h-5 w-5 text-red-500"
             aria-hidden="true"
           />
         </div>
-      )}
+      ) : null}
     </div>
   )
 })
@@ -77,7 +77,7 @@ interface InputErrorProps {
   children?: string | null
 }
 
-function InputError({ children, id }: InputErrorProps) {
+function InputError({children, id}: InputErrorProps) {
   if (!children) {
     return null
   }
@@ -100,7 +100,7 @@ type FieldProps = {
 
 const Field = React.forwardRef<HTMLInputElement, FieldProps & InputProps>(
   function Field(
-    { defaultValue, error, name, label, className, description, id, ...props },
+    {defaultValue, error, name, label, className, description, id, ...props},
     ref,
   ) {
     const inputId = id ?? name
@@ -109,18 +109,18 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps & InputProps>(
 
     return (
       <div className="w-full">
-        {label && (
+        {label ? (
           <div className="flex justify-between">
             <Label htmlFor={inputId} className="mb-2">
               {label}
             </Label>
-            {description && (
+            {description ? (
               <span className="text-sm text-slate-400" id={descriptionId}>
                 {description}
               </span>
-            )}
+            ) : null}
           </div>
-        )}
+        ) : null}
 
         <Input
           hasError={!!error}
@@ -136,14 +136,14 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps & InputProps>(
           }
         />
 
-        {error && (
+        {error ? (
           <p className="mt-2 text-sm text-red-600" id={errorId}>
             {error}
           </p>
-        )}
+        ) : null}
       </div>
     )
   },
 )
 
-export { Input, Field, InputError }
+export {Input, Field, InputError}

@@ -1,7 +1,7 @@
-import { colors } from './colors'
-import { toCSSVar } from './to-css-var'
+import fs from 'fs'
 
-const fs = require('fs')
+import {colors} from './colors'
+import {toCSSVar} from './to-css-var'
 
 function createGlobalCssVars() {
   const theme = toCSSVar({
@@ -21,7 +21,6 @@ function createGlobalCssVars() {
   fs.writeFile('./dist/darenui.css', content, (err: any) => {
     if (err) {
       console.error(err)
-      return
     }
     // file written successfully
   })

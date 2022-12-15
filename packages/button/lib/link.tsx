@@ -1,5 +1,5 @@
-import { cx, ExtractProps } from '@daren/utils'
-import { ChevronRightIcon } from '@heroicons/react/24/solid'
+import {cx, ExtractProps} from '@daren/utils'
+import {ChevronRightIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 type LinkProps<T extends React.ElementType> = React.DetailedHTMLProps<
@@ -31,16 +31,9 @@ const Link = React.forwardRef<HTMLElement, LinkProps<any>>(function Link(
   props,
   ref,
 ) {
-  const {
-    disabled,
-    external,
-    onClick,
-    className,
-    as: Tag = 'a',
-    ...rest
-  } = props
+  const {disabled, external, onClick, className, as: Tag = 'a', ...rest} = props
   const externalProps = external
-    ? { target: '_blank', rel: 'noopener noreferrer' }
+    ? {target: '_blank', rel: 'noopener noreferrer'}
     : null
 
   return (
@@ -73,7 +66,7 @@ const DoubleLabelLink = React.forwardRef<
     ...rest
   } = props
   const externalProps = external
-    ? { target: '_blank', rel: 'noopener noreferrer' }
+    ? {target: '_blank', rel: 'noopener noreferrer'}
     : null
 
   return (
@@ -89,13 +82,13 @@ const DoubleLabelLink = React.forwardRef<
       {...externalProps}
       {...rest}
     >
-      {children && (
+      {children ? (
         <span className="rounded-full py-0.5 px-3 text-xs font-semibold uppercase leading-5 tracking-wide transition-colors text-inverse bg-inverse">
           {children}
         </span>
-      )}
+      ) : null}
 
-      {description && <span className="ml-4 text-sm">{description}</span>}
+      {description ? <span className="ml-4 text-sm">{description}</span> : null}
       <ChevronRightIcon
         className="ml-2 h-5 w-5 text-gray-500"
         aria-hidden="true"
@@ -104,5 +97,5 @@ const DoubleLabelLink = React.forwardRef<
   )
 }) as typeof LinkFn
 
-export type { LinkProps }
-export { Link, DoubleLabelLink, LinkFn }
+export type {LinkProps}
+export {Link, DoubleLabelLink, LinkFn}

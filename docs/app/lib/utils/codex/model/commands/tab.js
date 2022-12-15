@@ -2,7 +2,11 @@ function tab(textEditor, tabCharacter) {
   const [from, to] = textEditor.getRange()
   const value = textEditor.getValue()
 
-  if (from !== to) {
+  if (from === to) {
+    textEditor.edit(editBuilder => {
+      editBuilder.insert(tabCharacter, from)
+    })
+  } else {
     const linesBeforeCaret = textEditor.constructor._getLines(value, from)
     const startLine = linesBeforeCaret.length - 1
     const endLine = textEditor.constructor._getLines(value, to).length - 1
@@ -28,11 +32,7 @@ function tab(textEditor, tabCharacter) {
           to + tabCharacter.length * (endLine - startLine + 1),
         )
       })
-  } else {
-    textEditor.edit(editBuilder => {
-      editBuilder.insert(tabCharacter, from)
-    })
   }
 }
 
-export { tab }
+export {tab}

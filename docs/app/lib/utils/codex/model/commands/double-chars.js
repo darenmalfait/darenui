@@ -2,7 +2,15 @@ function doubleChars(textEditor, chars) {
   const [from, to] = textEditor.getRange()
   const value = textEditor.getValue()
 
-  if (from !== to) {
+  if (from === to) {
+    textEditor
+      .edit(editBuilder => {
+        editBuilder.insert(chars.join(''), from)
+      })
+      .then(() => {
+        textEditor.putCursorTo(from + 1)
+      })
+  } else {
     const newVal =
       value.substring(0, from) +
       chars[0] +
@@ -17,15 +25,7 @@ function doubleChars(textEditor, chars) {
       .then(() => {
         textEditor.select(from + 1, to + 1)
       })
-  } else {
-    textEditor
-      .edit(editBuilder => {
-        editBuilder.insert(chars.join(''), from)
-      })
-      .then(() => {
-        textEditor.putCursorTo(from + 1)
-      })
   }
 }
 
-export { doubleChars }
+export {doubleChars}

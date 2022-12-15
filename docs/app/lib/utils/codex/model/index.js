@@ -1,13 +1,14 @@
-import { backTab } from './commands/back-tab'
-import { backspace } from './commands/backspace'
-import { doubleChars } from './commands/double-chars'
-import { enter } from './commands/enter'
-import { tab } from './commands/tab'
-import { config } from './config'
-import { TextEditorEdit } from './edit'
-import { on, off, emit, getHandlers } from './event'
-import { History } from './history'
-import { getDefaultKeyBinding } from './key-binding'
+/* eslint-disable complexity */
+import {backTab} from './commands/back-tab'
+import {backspace} from './commands/backspace'
+import {doubleChars} from './commands/double-chars'
+import {enter} from './commands/enter'
+import {tab} from './commands/tab'
+import {config} from './config'
+import {TextEditorEdit} from './edit'
+import {on, off, emit, getHandlers} from './event'
+import {History} from './history'
+import {getDefaultKeyBinding} from './key-binding'
 
 // commands
 
@@ -21,12 +22,20 @@ const chars = {
 }
 
 export default class Codex {
-  _dispose = false
-  _previousValue = ''
-  textarea = null
-  history = null
   constructor(target, options = {}) {
     this.textarea = target
+    this._dispose = false
+    this._previousValue = ''
+    this.history = null
+
+    this._onInput = this._onInput.bind(this)
+    this._onKeyDown = this._onKeyDown.bind(this)
+    this._onScroll = this._onScroll.bind(this)
+    this.on = this.on.bind(this)
+    this.off = this.off.bind(this)
+    this._applyEdit = this._applyEdit.bind(this)
+    this.updateHistory = this.updateHistory.bind(this)
+    this._forceEdit = this._forceEdit.bind(this)
 
     this.history = new History({
       limit: 100,
@@ -56,15 +65,15 @@ export default class Codex {
     this._dispose = true
   }
 
-  _onInput = () => {
+  _onInput() {
     this.updateHistory()
 
     emit(this, 'change', this, this)
   }
 
-  _onKeyDown = e => {
+  _onKeyDown(e) {
     const options = this.getOptions()
-    const { keyBindingFn, insertSpaces, tabSize } = options
+    const {keyBindingFn, insertSpaces, tabSize} = options
     const command = keyBindingFn(e) || getDefaultKeyBinding(e)
     if (command == null || command === '') return
     if (command === 'undo') {
@@ -116,7 +125,7 @@ export default class Codex {
     }
   }
 
-  _onScroll = () => {
+  _onScroll() {
     emit(this, 'scroll', this, this)
   }
 
@@ -135,25 +144,25 @@ export default class Codex {
   }
 
   /** *********************** Textarea controller ***********************/
-  on = (...args) => {
+  on(...args) {
     on(this, ...args)
   }
 
-  off = (...args) => {
+  off(...args) {
     off(this, ...args)
   }
 
-  replaceText({ text, from, to }) {
+  replaceText({text, from, to}) {
     const textLeft = this.textarea.value.substring(0, from)
     const textRight = this.textarea.value.substring(to)
     this.textarea.value = `${textLeft}${text}${textRight}`
     this.textarea.selectionEnd = from + text.length
-    this._onInput({ target: this.textarea })
+    this._onInput({target: this.textarea})
   }
 
   forceUpdate(value) {
     this.textarea.value = value
-    this._onInput({ target: this.textarea })
+    this._onInput({target: this.textarea})
   }
 
   select(from, to, length) {
@@ -177,16 +186,16 @@ export default class Codex {
     return this._applyEdit(edit)
   }
 
-  _applyEdit = editBuilder => {
+  _applyEdit(editBuilder) {
     const editData = editBuilder.finalize()
     editData.edits.forEach(edit => {
       const [from, to] = edit.range
-      this.replaceText({ text: edit.text, from, to })
+      this.replaceText({text: edit.text, from, to})
     })
     return Promise.resolve(null)
   }
 
-  updateHistory = () => {
+  updateHistory() {
     const value = this.getValue()
     const difference = Codex._getDifference(this._previousValue, value)
     const lastVersionIndex = this.history.count()
@@ -209,11 +218,11 @@ export default class Codex {
     this._previousValue = value
   }
 
-  _forceEdit = record => {
+  _forceEdit(record) {
     this.textarea.value = record.value
     this.textarea.selectionStart = record.from
     this.textarea.selectionEnd = record.to
-    emit(this, 'change', this, { force: true })
+    emit(this, 'change', this, {force: true})
   }
 
   /** *********************** Util methods ***********************/
@@ -240,7 +249,7 @@ export default class Codex {
 }
 
 config.defineOptions(Codex.prototype, {
-  insertSpaces: { initialValue: true },
-  tabSize: { initialValue: 2 },
-  keyBindingFn: { initialValue: () => null },
+  insertSpaces: {initialValue: true},
+  tabSize: {initialValue: 2},
+  keyBindingFn: {initialValue: () => null},
 })

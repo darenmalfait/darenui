@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
 type SizeValue = 'small' | 'default' | 'medium' | 'full'
@@ -34,5 +34,5 @@ function Container({
   )
 }
 
-export { Container }
-export type { SizeValue }
+export {Container}
+export type {SizeValue}

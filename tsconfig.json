@@ -20,9 +20,10 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "allowJs": true
   },
-  "include": ["packages", "scripts", "dangerfile.ts"],
+  "include": ["packages", "scripts", "dangerfile.ts", "docs"],
   "exclude": ["node_modules"],
   "ts-node": {
     "compilerOptions": {

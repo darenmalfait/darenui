@@ -3,7 +3,7 @@
   More info: https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
 */
 
-import { isBrowser } from '@daren/utils'
+import {isBrowser} from '@daren/utils'
 
 export const LG = '1024px'
 

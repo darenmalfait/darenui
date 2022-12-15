@@ -1,11 +1,11 @@
-import { cx, roundToNearest15 } from '@daren/utils'
-import { ClockIcon, ExclamationCircleIcon } from '@heroicons/react/24/solid'
+import {cx, roundToNearest15} from '@daren/utils'
+import {ClockIcon, ExclamationCircleIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
-import { Label } from './misc'
+import {Label} from './misc'
 
-import { FieldProps, InputProps } from './types'
-import { getInputClassName } from './utils'
+import {FieldProps, InputProps} from './types'
+import {getInputClassName} from './utils'
 
 const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
   function TimePicker(props, ref) {
@@ -18,8 +18,8 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
       ...inputProps
     } = props
     const [value, setValue] = React.useState<string>(
-      valueProp?.toString() ||
-        defaultValue?.toString() ||
+      valueProp?.toString() ??
+        defaultValue?.toString() ??
         roundToNearest15(new Date()).toISOString(),
     )
 
@@ -47,7 +47,7 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           type="hidden"
         />
-        <div className={cx(className, { 'pr-14': !!Icon })}>
+        <div className={cx(className, {'pr-14': !!Icon})}>
           <div className="flex">
             <div className="z-1 relative flex items-center justify-center text-center transition-transform hover:scale-110">
               <div className="absolute -inset-1 hidden rounded-md shadow-md group-hover:block group-hover:bg-white" />
@@ -100,7 +100,7 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
             </div>
           </div>
         </div>
-        {!hasError && (
+        {hasError ? null : (
           <Icon
             width="20px"
             height="20px"
@@ -113,14 +113,14 @@ const TimePicker = React.forwardRef<HTMLInputElement, InputProps>(
             )}
           />
         )}
-        {hasError && (
+        {hasError ? (
           <div className="absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0">
             <ExclamationCircleIcon
               className="h-5 w-5 text-red-500"
               aria-hidden="true"
             />
           </div>
-        )}
+        ) : null}
       </div>
     )
   },
@@ -130,7 +130,7 @@ const TimePickerField = React.forwardRef<
   HTMLInputElement,
   InputProps & FieldProps
 >(function TimePickerField(
-  { error, name, label, description, id, className, defaultValue, ...props },
+  {error, name, label, description, id, className, defaultValue, ...props},
   ref,
 ) {
   const inputId = id ?? name
@@ -139,18 +139,18 @@ const TimePickerField = React.forwardRef<
 
   return (
     <div className={cx(className, 'w-full')}>
-      {label && (
+      {label ? (
         <div className="flex justify-between">
           <Label htmlFor={inputId} className="mb-2">
             {label}
           </Label>
-          {description && (
+          {description ? (
             <span className="text-sm text-slate-400" id={descriptionId}>
               {description}
             </span>
-          )}
+          ) : null}
         </div>
-      )}
+      ) : null}
 
       <TimePicker
         hasError={!!error}
@@ -159,20 +159,20 @@ const TimePickerField = React.forwardRef<
         name={name}
         id={inputId}
         defaultValue={
-          defaultValue || roundToNearest15(new Date()).toISOString()
+          defaultValue ?? roundToNearest15(new Date()).toISOString()
         }
         aria-describedby={
           error ? errorId : description ? descriptionId : undefined
         }
       />
 
-      {error && (
+      {error ? (
         <p className="mt-2 text-sm text-red-600" id={errorId}>
           {error}
         </p>
-      )}
+      ) : null}
     </div>
   )
 })
 
-export { TimePicker, TimePickerField }
+export {TimePicker, TimePickerField}

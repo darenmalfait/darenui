@@ -1,11 +1,12 @@
 class History {
-  position = -1
-  stack = []
-  limit = 0
-  wait = 0
   constructor(options = {}) {
     this.initialValue = null
     this.clear()
+
+    this.position = -1
+    this.stack = []
+    this.limit = 0
+    this.wait = 0
 
     this.limit = options.limit || 30
     this.wait = options.wait || 3000
@@ -13,7 +14,7 @@ class History {
 
   initialize(value) {
     const timestamp = Date.now()
-    const initialValue = { ...value, timestamp }
+    const initialValue = {...value, timestamp}
     this.stack[0] = initialValue
     this.initialValue = initialValue
   }
@@ -62,7 +63,7 @@ class History {
         if (previous && current && current[1].startsWith(previous[1])) {
           // The last word of the previous line and current line match
           // Overwrite previous entry so that undo will remove whole word
-          this.stack[this.position] = { ...record, timestamp }
+          this.stack[this.position] = {...record, timestamp}
 
           return
         }
@@ -70,7 +71,7 @@ class History {
     }
 
     // Add the new operation to the stack
-    this.stack.push({ ...record, timestamp })
+    this.stack.push({...record, timestamp})
     this.position++
   }
 
@@ -111,4 +112,4 @@ class History {
   }
 }
 
-export { History }
+export {History}

@@ -1,9 +1,9 @@
-import Prism, { defaultProps } from 'prism-react-renderer'
+import Prism, {defaultProps} from 'prism-react-renderer'
 import * as React from 'react'
 
-import { ClipboardCopyButton } from './clipboard-copy-button'
+import theme from '../lib/utils/prism/prism-theme.json'
 
-import theme from '~/lib/utils/prism/prism-theme.json'
+import {ClipboardCopyButton} from './clipboard-copy-button'
 
 export function Highlight({
   code,
@@ -20,27 +20,27 @@ export function Highlight({
       <Prism
         {...defaultProps}
         theme={theme as any}
-        code={code || ''}
+        code={code ?? ''}
         language={(language as any) || 'tsx'}
       >
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={{ ...style }}>
+        {({className, style, tokens, getLineProps, getTokenProps}) => (
+          <pre className={className} style={{...style}}>
             {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line, key: i })}>
+              <div key={i} {...getLineProps({line, key: i})}>
                 {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
+                  <span key={key} {...getTokenProps({token, key})} />
                 ))}
               </div>
             ))}
           </pre>
         )}
       </Prism>
-      {showClipBoard && (
+      {showClipBoard ? (
         <ClipboardCopyButton
-          value={code || ''}
+          value={code ?? ''}
           className="absolute -top-1 -right-4 z-10 opacity-0 group-hover:opacity-100"
         />
-      )}
+      ) : null}
     </div>
   )
 }

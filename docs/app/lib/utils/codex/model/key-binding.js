@@ -31,4 +31,4 @@ function getDefaultKeyBinding(e) {
   }
 }
 
-export { getDefaultKeyBinding }
+export {getDefaultKeyBinding}

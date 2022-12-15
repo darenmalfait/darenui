@@ -1,4 +1,4 @@
-import { Dict } from './types'
+import {Dict} from './types'
 
 // Array assertions
 function isArray<T>(value: any): value is Array<T> {
@@ -17,4 +17,4 @@ function isObject(value: any): value is Dict {
 
 const __DEV__ = process.env.NODE_ENV !== 'production'
 
-export { __DEV__, isArray, isObject }
+export {__DEV__, isArray, isObject}

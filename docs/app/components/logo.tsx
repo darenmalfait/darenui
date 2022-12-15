@@ -4,7 +4,7 @@ interface LogoProps {
   className?: string
 }
 
-function Logo({ className }: LogoProps) {
+function Logo({className}: LogoProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +28,4 @@ function Logo({ className }: LogoProps) {
   )
 }
 
-export { Logo }
+export {Logo}

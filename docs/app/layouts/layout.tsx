@@ -5,18 +5,18 @@ import {
   Link,
   NavigationList,
 } from '@daren/ui-components'
-import { Dialog, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
-import { NavLink } from '@remix-run/react'
+import {Dialog, Transition} from '@headlessui/react'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/solid'
+import {NavLink} from '@remix-run/react'
 import clsx from 'clsx'
 import * as React from 'react'
 
-import components from '~/components/components'
-import { GithubLogo } from '~/components/icons/github-logo'
-import { Wrapper } from '~/components/layout-components'
-import { Logo } from '~/components/logo'
-import { Search } from '~/components/search'
-import { ThemeToggle } from '~/components/theme-toggle'
+import components from '../components/components'
+import {GithubLogo} from '../components/icons/github-logo'
+import {Wrapper} from '../components/layout-components'
+import {Logo} from '../components/logo'
+import {Search} from '../components/search'
+import {ThemeToggle} from '../components/theme-toggle'
 
 type NavContextType = {
   sidebarOpen?: boolean
@@ -40,7 +40,9 @@ function useNav() {
 // }
 
 function SecondaryNavigation() {
-  const { setSidebarOpen } = useNav()
+  // TODO: What am I doing wrong here?
+  // eslint-disable-next-line @typescript-eslint/unbound-method
+  const {setSidebarOpen} = useNav()
 
   return (
     <Grid nested>
@@ -82,8 +84,8 @@ function SecondaryNavigation() {
   )
 }
 
-function NavItems({ onClick }: { onClick: () => void }) {
-  function getNavigationListItemClassName({ isActive }: { isActive: boolean }) {
+function NavItems({onClick}: {onClick: () => void}) {
+  function getNavigationListItemClassName({isActive}: {isActive: boolean}) {
     return getNavigationItemClassName({
       textClassNames: clsx(
         'font-normal capitalize',
@@ -124,7 +126,7 @@ function NavItems({ onClick }: { onClick: () => void }) {
             </div>
           </div>
           <div className="space-y-4 py-3">
-            {components.map((comp, idx) => (
+            {components.map((comp: any, idx: number) => (
               <div key={idx}>
                 <div className="relative">
                   <NavigationList.Item
@@ -135,7 +137,7 @@ function NavItems({ onClick }: { onClick: () => void }) {
                     )}
                   />
                 </div>
-                {comp.components.map(c => (
+                {comp.components.map((c: any) => (
                   <div className="relative" key={c.key}>
                     <NavigationList.Item
                       as={NavLink}
@@ -155,7 +157,7 @@ function NavItems({ onClick }: { onClick: () => void }) {
   )
 }
 
-function SidebarForDesktop({ onClick }: { onClick: () => void }) {
+function SidebarForDesktop({onClick}: {onClick: () => void}) {
   return (
     <div className="hidden lg:flex lg:w-72 lg:flex-col">
       <div className="flex grow flex-col overflow-y-auto pb-4">
@@ -166,7 +168,8 @@ function SidebarForDesktop({ onClick }: { onClick: () => void }) {
 }
 
 function SidebarForMobile() {
-  const { sidebarOpen, setSidebarOpen } = useNav()
+  // eslint-disable-next-line @typescript-eslint/unbound-method
+  const {sidebarOpen, setSidebarOpen} = useNav()
 
   return (
     <Transition.Root show={sidebarOpen} as={React.Fragment}>
@@ -239,12 +242,12 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-function Layout({ children }: LayoutProps) {
+function Layout({children}: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
 
   return (
     <div className="min-h-full">
-      <NavContext.Provider value={{ sidebarOpen, setSidebarOpen }}>
+      <NavContext.Provider value={{sidebarOpen, setSidebarOpen}}>
         <SidebarForMobile />
         <Grid>
           <Container size="full">
@@ -269,4 +272,4 @@ function Layout({ children }: LayoutProps) {
   )
 }
 
-export { Layout }
+export {Layout}

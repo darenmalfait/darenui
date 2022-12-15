@@ -1,4 +1,4 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
 const sizes = {
@@ -40,4 +40,4 @@ function Spinner({
   )
 }
 
-export { Spinner }
+export {Spinner}

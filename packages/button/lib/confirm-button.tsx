@@ -1,8 +1,8 @@
-import { Input } from '@daren/form-elements'
-import { H4, Paragraph } from '@daren/typography'
+import {Input} from '@daren/form-elements'
+import {H4, Paragraph} from '@daren/typography'
 import * as React from 'react'
 
-import { Button } from './button'
+import {Button} from './button'
 
 function ConfirmButton({
   children,
@@ -35,7 +35,7 @@ function ConfirmButton({
       <Button variant={variant} {...props} onClick={() => setOpen(!open)}>
         {children}
       </Button>
-      {open && (
+      {open ? (
         <div className="mt-4 space-y-2 rounded-md border p-4">
           <H4>{title}</H4>
           <Paragraph
@@ -64,9 +64,9 @@ function ConfirmButton({
             </Button>
           </div>
         </div>
-      )}
+      ) : null}
     </>
   )
 }
 
-export { ConfirmButton }
+export {ConfirmButton}

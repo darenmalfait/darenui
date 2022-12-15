@@ -1,5 +1,5 @@
-import { cx } from '@daren/utils'
-import { Combobox, Transition } from '@headlessui/react'
+import {cx} from '@daren/utils'
+import {Combobox, Transition} from '@headlessui/react'
 import {
   CheckIcon,
   ExclamationCircleIcon,
@@ -7,10 +7,10 @@ import {
 } from '@heroicons/react/24/solid'
 import * as React from 'react'
 
-import { Label } from './misc'
-import { FieldProps } from './types'
+import {Label} from './misc'
+import {FieldProps} from './types'
 
-import { getInputClassName, inputSize } from './utils'
+import {getInputClassName, InputSize} from './utils'
 
 type SelectItem = {
   id?: string
@@ -29,7 +29,7 @@ interface SelectProps {
   icon?: React.ElementType
   className?: string
   defaultValue?: string
-  inputSize?: inputSize
+  inputSize?: InputSize
   disabled?: boolean
 }
 
@@ -37,19 +37,22 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
   props,
   ref,
 ) {
+  // Not sure why this is throwing an error on OnChange
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   const {
     id,
     items,
     name,
-    onChange,
     hasError,
+    onChange,
     defaultValue,
     disabled,
     inputSize,
     icon: Icon = ChevronUpDownIcon,
     ...rest
   } = props
-  const value = items.find(({ value: val }) => val === defaultValue)
+
+  const value = items.find(({value: val}) => val === defaultValue)
 
   const [selected, setSelected] = React.useState(value)
   const [query, setQuery] = React.useState('')
@@ -129,7 +132,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
                 filteredItems.map(item => (
                   <Combobox.Option
                     key={item.id ?? item.value}
-                    className={({ active }) =>
+                    className={({active}) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 ${
                         active
                           ? 'bg-gray-100 text-primary-500'
@@ -138,16 +141,16 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
                     }
                     value={item}
                   >
-                    {({ selected, active }) => (
+                    {({selected: isSelected, active}) => (
                       <>
                         <span
                           className={`block truncate ${
-                            selected ? 'font-medium' : 'font-normal'
+                            isSelected ? 'font-medium' : 'font-normal'
                           }`}
                         >
                           {item.label}
                         </span>
-                        {selected ? (
+                        {isSelected ? (
                           <span
                             className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
                               active ? 'text-white' : 'text-teal-600'
@@ -192,18 +195,18 @@ const SelectField = React.forwardRef<
 
   return (
     <div className={cx(className, 'w-full')}>
-      {label && (
+      {label ? (
         <div className="flex justify-between">
           <Label htmlFor={inputId} className="mb-2">
             {label}
           </Label>
-          {description && (
+          {description ? (
             <span className="text-sm text-slate-400" id={descriptionId}>
               {description}
             </span>
-          )}
+          ) : null}
         </div>
-      )}
+      ) : null}
 
       <Select
         hasError={!!error}
@@ -218,14 +221,14 @@ const SelectField = React.forwardRef<
         }
       />
 
-      {error && (
+      {error ? (
         <p className="mt-2 text-sm text-red-600" id={errorId}>
           {error}
         </p>
-      )}
+      ) : null}
     </div>
   )
 })
 
-export { Select, SelectField }
-export type { SelectProps, SelectItem }
+export {Select, SelectField}
+export type {SelectProps, SelectItem}

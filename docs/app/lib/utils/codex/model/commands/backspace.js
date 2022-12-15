@@ -24,4 +24,4 @@ function backspace(textEditor, tabCharacter, e) {
   }
 }
 
-export { backspace }
+export {backspace}

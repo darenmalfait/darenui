@@ -1,8 +1,8 @@
-import { cx } from '@daren/utils'
-import { CheckIcon } from '@heroicons/react/24/solid'
+import {cx} from '@daren/utils'
+import {CheckIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
-import { FieldProps } from './types'
+import {FieldProps} from './types'
 
 type CheckboxProps = JSX.IntrinsicElements['input'] & {
   variant?: 'sm' | 'md' | 'lg'
@@ -48,7 +48,7 @@ const CheckboxField = React.forwardRef<
   HTMLInputElement,
   FieldProps & CheckboxProps
 >(function DropdownField(
-  { error, name, label, id, className, defaultValue, ...props },
+  {error, name, label, id, className, defaultValue, ...props},
   ref,
 ) {
   const inputId = id ?? name
@@ -67,14 +67,14 @@ const CheckboxField = React.forwardRef<
         </div>
       </div>
 
-      {error && (
+      {error ? (
         <p className="mt-2 text-sm text-red-600" id={errorId}>
           {error}
         </p>
-      )}
+      ) : null}
     </div>
   )
 })
 
-export { Checkbox, CheckboxField }
-export type { CheckboxProps }
+export {Checkbox, CheckboxField}
+export type {CheckboxProps}

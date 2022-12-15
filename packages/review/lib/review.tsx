@@ -1,6 +1,6 @@
-import { H2, H4, Paragraph } from '@daren/typography'
-import { cx } from '@daren/utils'
-import { StarIcon } from '@heroicons/react/24/solid'
+import {H2, H4, Paragraph} from '@daren/typography'
+import {cx} from '@daren/utils'
+import {StarIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
 
 // date: 'May 16, 2021'
@@ -34,19 +34,20 @@ function Review({
       <div className="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
         <div className="flex items-center xl:col-span-1">
           <div className="flex items-center">
-            {rating &&
-              [0, 1, 2, 3, 4].map(star => (
-                <StarIcon
-                  key={rating}
-                  className={cx(
-                    rating > star
-                      ? activeStarColorClass
-                      : inactiveStarColorClass,
-                    'h-5 w-5 flex-shrink-0',
-                  )}
-                  aria-hidden="true"
-                />
-              ))}
+            {rating
+              ? [0, 1, 2, 3, 4].map(star => (
+                  <StarIcon
+                    key={rating}
+                    className={cx(
+                      rating > star
+                        ? activeStarColorClass
+                        : inactiveStarColorClass,
+                      'h-5 w-5 flex-shrink-0',
+                    )}
+                    aria-hidden="true"
+                  />
+                ))
+              : null}
           </div>
           <Paragraph className="ml-3 text-sm text-secondary">
             {rating}
@@ -59,12 +60,12 @@ function Review({
             {title}
           </H4>
 
-          {html && (
+          {html ? (
             <div
               className="prose-sm mt-3 space-y-6 text-sm text-secondary"
-              dangerouslySetInnerHTML={{ __html: html }}
+              dangerouslySetInnerHTML={{__html: html}}
             />
-          )}
+          ) : null}
         </div>
       </div>
 
@@ -100,7 +101,7 @@ function ReviewGroup({
     <div
       className={cx(className, 'mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-7xl')}
     >
-      {title && <H2 className={titleClass}>{title}</H2>}
+      {title ? <H2 className={titleClass}>{title}</H2> : null}
       <div className="border-secondary mt-6 space-y-10 divide-y divide-gray-200 border-y pb-10">
         {children}
       </div>
@@ -108,4 +109,4 @@ function ReviewGroup({
   )
 }
 
-export { Review, ReviewGroup }
+export {Review, ReviewGroup}

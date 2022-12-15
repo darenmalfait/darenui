@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { cx } from '.'
+import {cx} from '.'
 
 interface Props {
   visible: boolean
@@ -51,7 +51,7 @@ function Drip({
       <svg
         className="absolute animate-expand"
         height="20"
-        style={{ top, left }}
+        style={{top, left}}
         viewBox="0 0 20 20"
         width="20"
       >
@@ -103,5 +103,5 @@ const useDrip = (
   }
 }
 
-export type { DripProps }
-export { useDrip, Drip }
+export type {DripProps}
+export {useDrip, Drip}

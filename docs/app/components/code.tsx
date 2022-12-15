@@ -1,11 +1,11 @@
 import clsx from 'clsx'
 import * as React from 'react'
 
-import { Highlight } from './highlight'
+import Editor from '../lib/utils/react-codex'
 
-import Editor from '~/lib/utils/react-codex'
+import {Highlight} from './highlight'
 
-export function Code({ className, ...rest }: any) {
+export function Code({className, ...rest}: any) {
   return (
     <Editor
       tabSize={2}

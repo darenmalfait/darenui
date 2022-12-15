@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { inputSize } from './utils'
+import {InputSize} from './utils'
 
 type InputProps = {
   hasError?: boolean
   icon?: React.ElementType
-  inputSize?: inputSize
+  inputSize?: InputSize
 } & (
-  | ({ type: 'textarea' } & JSX.IntrinsicElements['textarea'])
+  | ({type: 'textarea'} & JSX.IntrinsicElements['textarea'])
   | JSX.IntrinsicElements['input']
 )
 type FieldProps = {
@@ -19,4 +19,4 @@ type FieldProps = {
   description?: React.ReactNode
 }
 
-export type { InputProps, FieldProps }
+export type {InputProps, FieldProps}

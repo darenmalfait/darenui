@@ -6,3 +6,4 @@ remix.env.d.ts
 .cache
 .netlify
 .turbo
+.eslintrc.js

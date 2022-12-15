@@ -1,11 +1,7 @@
-import { cx } from '@daren/utils'
+import {cx} from '@daren/utils'
 import * as React from 'react'
 
-function Label({
-  className,
-  htmlFor,
-  ...props
-}: JSX.IntrinsicElements['label']) {
+function Label({className, htmlFor, ...props}: JSX.IntrinsicElements['label']) {
   return (
     <label
       htmlFor={htmlFor}
@@ -15,7 +11,7 @@ function Label({
   )
 }
 
-function ButtonGroup({ className, ...props }: JSX.IntrinsicElements['div']) {
+function ButtonGroup({className, ...props}: JSX.IntrinsicElements['div']) {
   return (
     <div
       className={cx(
@@ -27,10 +23,10 @@ function ButtonGroup({ className, ...props }: JSX.IntrinsicElements['div']) {
   )
 }
 
-function FormHelperText({ className, ...props }: JSX.IntrinsicElements['div']) {
+function FormHelperText({className, ...props}: JSX.IntrinsicElements['div']) {
   return (
     <div className={cx('text-sm text-primary-400', className)} {...props} />
   )
 }
 
-export { Label, FormHelperText, ButtonGroup }
+export {Label, FormHelperText, ButtonGroup}

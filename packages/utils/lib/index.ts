@@ -10,4 +10,4 @@ export * from './object'
 export * from './types'
 export * from './walk-object'
 
-export { cx }
+export {cx}

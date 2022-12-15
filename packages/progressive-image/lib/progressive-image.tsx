@@ -1,9 +1,9 @@
-import { cx, useSafeEffect } from '@daren/utils'
+import {cx, useSafeEffect} from '@daren/utils'
 import * as React from 'react'
 
 export type ResponsiveProps = {
   maxWidth?: number
-  size: { width: number; height?: number }
+  size: {width: number; height?: number}
 }
 
 function ProgressiveImage({
@@ -61,8 +61,8 @@ function ProgressiveImage({
       <div className="relative h-full w-full overflow-hidden">
         <img
           key={placeholder}
-          src={placeholder || img.props.src}
-          srcSet={!placeholder ? img.props.srcSet : undefined}
+          src={placeholder ?? img.props.src}
+          srcSet={placeholder ? undefined : img.props.srcSet}
           className={cx(
             className,
             'min-h-full min-w-full object-cover transition-opacity duration-300',
@@ -72,17 +72,17 @@ function ProgressiveImage({
           )}
           alt={img.props.alt}
         />
-        {placeholder && (
+        {placeholder ? (
           <div
             className={cx('absolute inset-0 h-full w-full', {
               'backdrop-blur-xl': !visible,
             })}
           />
-        )}
+        ) : null}
         {imgElement}
       </div>
     </div>
   )
 }
 
-export { ProgressiveImage }
+export {ProgressiveImage}

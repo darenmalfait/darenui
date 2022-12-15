@@ -1,4 +1,4 @@
-import { Breakpoints } from './types'
+import {Breakpoints} from './types'
 
 export const breakpoints: Breakpoints = {
   xsm: '430px',
