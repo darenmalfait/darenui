@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-core",
-  "version": "2.7.6",
+  "version": "2.7.7",
   "description": "",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "author": "Daren Malfait",
   "main": "./index.js",
   "devDependencies": {
-    "@daren/theme": "^2.3.4",
+    "@daren/theme": "^2.3.5",
     "tailwindcss": "3.2.4"
   },
   "peerDependencies": {
