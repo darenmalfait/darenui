@@ -1,5 +1,18 @@
 # Change Log
 
+## 0.3.6
+
+### Patch Changes
+
+- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
+  - @daren/button@1.6.6
+  - @daren/theme@2.3.5
+  - @daren/ui-components@1.16.13
+  - @daren/ui-core@2.7.7
+  - @daren/utils@1.8.4
+
 ## 0.3.5
 
 ### Patch Changes

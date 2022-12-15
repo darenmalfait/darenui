@@ -1,6 +1,6 @@
 {
   "name": "@daren/modal",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -38,7 +38,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.8.3",
+    "@daren/utils": "^1.8.4",
     "@headlessui/react": "1.7.6",
     "@heroicons/react": "^2.0.13"
   },

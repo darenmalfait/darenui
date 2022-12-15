@@ -1,5 +1,27 @@
 # Change Log
 
+## 1.16.13
+
+### Patch Changes
+
+- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
+  - @daren/form-elements@1.11.9
+  - @daren/modal@1.4.5
+  - @daren/tabs@1.0.6
+  - @daren/alert@1.4.5
+  - @daren/button@1.6.6
+  - @daren/grid@1.4.5
+  - @daren/layout-components@1.3.5
+  - @daren/navigation-list@1.2.5
+  - @daren/progressive-image@1.4.3
+  - @daren/review@1.3.6
+  - @daren/spinner@1.1.5
+  - @daren/theme@2.3.5
+  - @daren/typography@1.7.6
+  - @daren/utils@1.8.4
+
 ## 1.16.12
 
 ### Patch Changes

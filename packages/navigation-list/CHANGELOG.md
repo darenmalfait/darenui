@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.2.5
+
+### Patch Changes
+
+- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
+  - @daren/utils@1.8.4
+
 ## 1.2.4
 
 ### Patch Changes
