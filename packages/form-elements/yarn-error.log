@@ -25,7 +25,7 @@ npm manifest:
       "url": "git@github.com:darenmalfait/darenui.git",
       "directory": "packages/form-elements"
     },
-    "author": "Daren Malfait <github@daren.be>",
+    "author": "Daren Malfait <me@daren.be> (https://daren.be)",
     "sideEffects": false,
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",

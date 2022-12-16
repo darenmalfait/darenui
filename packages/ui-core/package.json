@@ -8,7 +8,7 @@
     "directory": "packages/ui-core"
   },
   "license": "ISC",
-  "author": "Daren Malfait",
+  "author": "Daren Malfait <me@daren.be> (https://daren.be)",
   "main": "./index.js",
   "devDependencies": {
     "@daren/theme": "^2.3.5",

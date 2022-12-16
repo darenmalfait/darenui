@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/darenmalfait/darenui.git"
   },
-  "author": "Daren Malfait",
+  "author": "Daren Malfait <me@daren.be> (https://daren.be)",
   "main": "index.js",
   "directories": {
     "doc": "docs"
