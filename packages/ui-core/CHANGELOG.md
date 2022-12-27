@@ -1,5 +1,15 @@
 # Change Log
 
+## 2.8.0
+
+### Minor Changes
+
+- [#13](https://github.com/darenmalfait/darenui/pull/13) [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update styling
+
+### Patch Changes
+
+- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
 ## 2.7.7
 
 ### Patch Changes

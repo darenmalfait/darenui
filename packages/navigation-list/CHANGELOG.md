@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.2.6
+
+### Patch Changes
+
+- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c)]:
+  - @daren/utils@1.8.5
+
 ## 1.2.5
 
 ### Patch Changes
