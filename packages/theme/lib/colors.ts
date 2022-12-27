@@ -1,7 +1,11 @@
 import {Colors} from './types'
 
 export const colors: Colors = {
-  daren: '#ea4673',
+  daren: {
+    100: '#e98bd4',
+    500: '#a48deb',
+    900: '#5bbdf4',
+  },
   accent: {
     100: '#ffffff',
     400: '#5c5f61',

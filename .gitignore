@@ -28,5 +28,6 @@ tsconfig.tsbuildinfo
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+yarn-error.log
 # Local Netlify folder
 .netlify
