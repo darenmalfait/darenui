@@ -24,7 +24,7 @@
     "allowJs": true
   },
   "include": ["packages", "scripts", "dangerfile.ts", "docs"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "**/**/dist", "docs/public"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",
