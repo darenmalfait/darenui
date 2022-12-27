@@ -84,6 +84,7 @@
     "lerna": "^6.1.0",
     "lodash": "^4.17.21",
     "node-plop": "^0.31.0",
+    "nodemon": "^2.0.20",
     "plop": "^2.7.6",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",

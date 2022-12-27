@@ -21,6 +21,13 @@ const titlePropTypes = [
     description: 'Controls title appearance',
   },
   {
+    property: 'gradient',
+    type: ['boolean'],
+    default: 'false',
+    values: ['true', 'false'],
+    description: 'Gives the title a gradient style',
+  },
+  {
     property: 'children',
     type: ['React.ReactNode'],
     default: '',
@@ -63,6 +70,7 @@ const demoList = [
         code: `<div className="p-8 space-y-2">
   <H2 variant="primary">Primary</H2>
   <H2 variant="secondary">Secondary</H2>
+  <H2 variant="special">Special</H2>
 </div>`,
       },
     ],
