@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.3.7
+
+### Patch Changes
+
+- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c), [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34)]:
+  - @daren/typography@1.8.0
+  - @daren/utils@1.8.5
+
 ## 1.3.6
 
 ### Patch Changes

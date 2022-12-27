@@ -1,5 +1,22 @@
 # Change Log
 
+## 0.3.7
+
+### Patch Changes
+
+- [#18](https://github.com/darenmalfait/darenui/pull/18) [`1dda505`](https://github.com/darenmalfait/darenui/commit/1dda505c282ae570c4993cc147a120206905f2e3) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency shiki to ^0.12.0
+
+- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- [#13](https://github.com/darenmalfait/darenui/pull/13) [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update styling
+
+- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c), [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34)]:
+  - @daren/button@1.6.7
+  - @daren/theme@2.3.6
+  - @daren/ui-components@1.16.14
+  - @daren/ui-core@2.8.0
+  - @daren/utils@1.8.5
+
 ## 0.3.6
 
 ### Patch Changes

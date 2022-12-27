@@ -1,5 +1,29 @@
 # Change Log
 
+## 1.16.14
+
+### Patch Changes
+
+- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
+
+- [#13](https://github.com/darenmalfait/darenui/pull/13) [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update styling
+
+- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c), [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34)]:
+  - @daren/alert@1.4.6
+  - @daren/button@1.6.7
+  - @daren/form-elements@1.11.10
+  - @daren/grid@1.4.6
+  - @daren/layout-components@1.3.6
+  - @daren/modal@1.4.6
+  - @daren/navigation-list@1.2.6
+  - @daren/progressive-image@1.4.4
+  - @daren/review@1.3.7
+  - @daren/spinner@1.1.6
+  - @daren/tabs@1.0.7
+  - @daren/theme@2.3.6
+  - @daren/typography@1.8.0
+  - @daren/utils@1.8.5
+
 ## 1.16.13
 
 ### Patch Changes
