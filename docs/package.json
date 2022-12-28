@@ -1,6 +1,6 @@
 {
   "name": "@daren/docs",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "private": true,
   "description": "",
   "license": "",
@@ -27,10 +27,10 @@
     "/server/build"
   ],
   "dependencies": {
-    "@daren/button": "^1.6.7",
+    "@daren/button": "^1.6.8",
     "@daren/theme": "^2.3.6",
-    "@daren/ui-components": "^1.16.14",
-    "@daren/ui-core": "^2.8.0",
+    "@daren/ui-components": "^1.16.15",
+    "@daren/ui-core": "^2.9.0",
     "@daren/utils": "^1.8.5",
     "@headlessui/react": "^1.7.6",
     "@heroicons/react": "^2.0.13",

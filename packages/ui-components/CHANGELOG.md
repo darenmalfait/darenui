@@ -1,5 +1,25 @@
 # Change Log
 
+## 1.16.15
+
+### Patch Changes
+
+- [`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169) Thanks [@darenmalfait](https://github.com/darenmalfait)! - add not allowed cursor when disabled
+
+- Updated dependencies [[`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169)]:
+  - @daren/button@1.6.8
+  - @daren/alert@1.4.7
+  - @daren/form-elements@1.11.11
+  - @daren/grid@1.4.7
+  - @daren/layout-components@1.3.7
+  - @daren/modal@1.4.7
+  - @daren/navigation-list@1.2.7
+  - @daren/progressive-image@1.4.5
+  - @daren/review@1.3.8
+  - @daren/spinner@1.1.7
+  - @daren/tabs@1.0.8
+  - @daren/typography@1.8.1
+
 ## 1.16.14
 
 ### Patch Changes

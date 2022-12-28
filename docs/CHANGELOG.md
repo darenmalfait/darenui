@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.3.8
+
+### Patch Changes
+
+- [`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169) Thanks [@darenmalfait](https://github.com/darenmalfait)! - add not allowed cursor when disabled
+
+- Updated dependencies [[`1ccc99f`](https://github.com/darenmalfait/darenui/commit/1ccc99f9662e4984d457c926474034915ffcb18b), [`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169)]:
+  - @daren/ui-core@2.9.0
+  - @daren/button@1.6.8
+  - @daren/ui-components@1.16.15
+
 ## 0.3.7
 
 ### Patch Changes

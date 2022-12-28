@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.9.0
+
+### Minor Changes
+
+- [#22](https://github.com/darenmalfait/darenui/pull/22) [`1ccc99f`](https://github.com/darenmalfait/darenui/commit/1ccc99f9662e4984d457c926474034915ffcb18b) Thanks [@darenmalfait](https://github.com/darenmalfait)! - add shadow-outline utility class
+
 ## 2.8.0
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.8
+
+### Patch Changes
+
+- [`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169) Thanks [@darenmalfait](https://github.com/darenmalfait)! - add not allowed cursor when disabled
+
+- Updated dependencies [[`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169)]:
+  - @daren/typography@1.8.1
+
 ## 1.3.7
 
 ### Patch Changes

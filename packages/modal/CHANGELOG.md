@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.7
+
+### Patch Changes
+
+- [`37f2ffd`](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169) Thanks [@darenmalfait](https://github.com/darenmalfait)! - add not allowed cursor when disabled
+
 ## 1.4.6
 
 ### Patch Changes
