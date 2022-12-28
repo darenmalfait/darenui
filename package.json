@@ -32,7 +32,7 @@
     "lint:types": "tsc --noEmit",
     "preinstall": "npx only-allow yarn",
     "prepare": "husky install",
-    "publish:ci": "lerna publish from-package --yes --no-verify-access",
+    "publish:ci": "lerna publish from-package --yes",
     "validate": "run-p 'lint:*'",
     "version:ci": "lerna version --yes --conventional-commits --conventional-graduate=* --create-release github --message 'chore(release): publish'"
   },
