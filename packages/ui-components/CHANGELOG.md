@@ -1,97 +1,11 @@
 # Change Log
 
-## 1.16.14
-
-### Patch Changes
-
-- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- [#13](https://github.com/darenmalfait/darenui/pull/13) [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update styling
-
-- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c), [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34)]:
-  - @daren/alert@1.4.6
-  - @daren/button@1.6.7
-  - @daren/form-elements@1.11.10
-  - @daren/grid@1.4.6
-  - @daren/layout-components@1.3.6
-  - @daren/modal@1.4.6
-  - @daren/navigation-list@1.2.6
-  - @daren/progressive-image@1.4.4
-  - @daren/review@1.3.7
-  - @daren/spinner@1.1.6
-  - @daren/tabs@1.0.7
-  - @daren/theme@2.3.6
-  - @daren/typography@1.8.0
-  - @daren/utils@1.8.5
-
-## 1.16.13
-
-### Patch Changes
-
-- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
-  - @daren/form-elements@1.11.9
-  - @daren/modal@1.4.5
-  - @daren/tabs@1.0.6
-  - @daren/alert@1.4.5
-  - @daren/button@1.6.6
-  - @daren/grid@1.4.5
-  - @daren/layout-components@1.3.5
-  - @daren/navigation-list@1.2.5
-  - @daren/progressive-image@1.4.3
-  - @daren/review@1.3.6
-  - @daren/spinner@1.1.5
-  - @daren/theme@2.3.5
-  - @daren/typography@1.7.6
-  - @daren/utils@1.8.4
-
-## 1.16.12
-
-### Patch Changes
-
-- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
-  - @daren/alert@1.4.4
-  - @daren/button@1.6.5
-  - @daren/form-elements@1.11.8
-  - @daren/modal@1.4.4
-  - @daren/navigation-list@1.2.4
-  - @daren/review@1.3.5
-  - @daren/tabs@1.0.5
-  - @daren/utils@1.8.3
-  - @daren/grid@1.4.4
-  - @daren/layout-components@1.3.4
-  - @daren/progressive-image@1.4.2
-  - @daren/spinner@1.1.4
-  - @daren/theme@2.3.4
-  - @daren/typography@1.7.5
-
-## 1.16.11
-
-### Patch Changes
-
-- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
-
-- Updated dependencies [[`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800)]:
-  - @daren/alert@1.4.3
-  - @daren/button@1.6.4
-  - @daren/form-elements@1.11.7
-  - @daren/grid@1.4.3
-  - @daren/layout-components@1.3.3
-  - @daren/modal@1.4.3
-  - @daren/navigation-list@1.2.3
-  - @daren/progressive-image@1.4.1
-  - @daren/review@1.3.4
-  - @daren/spinner@1.1.3
-  - @daren/tabs@1.0.4
-  - @daren/theme@2.3.3
-  - @daren/typography@1.7.4
-  - @daren/utils@1.8.2
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.16.15](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.16.14...@daren/ui-components@1.16.15) (2022-12-28)
+
+**Note:** Version bump only for package @daren/ui-components
 
 ## [1.16.10](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.16.9...@daren/ui-components@1.16.10) (2022-11-15)
 

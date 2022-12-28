@@ -1,60 +1,13 @@
 # Change Log
 
-## 1.6.7
-
-### Patch Changes
-
-- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c), [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34)]:
-  - @daren/form-elements@1.11.10
-  - @daren/typography@1.8.0
-  - @daren/utils@1.8.5
-
-## 1.6.6
-
-### Patch Changes
-
-- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
-  - @daren/form-elements@1.11.9
-  - @daren/typography@1.7.6
-  - @daren/utils@1.8.4
-
-## 1.6.5
-
-### Patch Changes
-
-- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
-  - @daren/form-elements@1.11.8
-  - @daren/utils@1.8.3
-  - @daren/typography@1.7.5
-
-## 1.6.4
-
-### Patch Changes
-
-- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
-
-- Updated dependencies [[`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800)]:
-  - @daren/form-elements@1.11.7
-  - @daren/typography@1.7.4
-  - @daren/utils@1.8.2
-
-## 1.6.3
-
-### Patch Changes
-
-- [`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4)]:
-  - @daren/form-elements@1.11.6
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.6.8](https://github.com/darenmalfait/darenui/compare/@daren/button@1.6.7...@daren/button@1.6.8) (2022-12-28)
+
+### Bug Fixes
+
+- **button:** add not allowed ([37f2ffd](https://github.com/darenmalfait/darenui/commit/37f2ffd601d6515e64b9f108dc1582fd68d34169)), closes [#10](https://github.com/darenmalfait/darenui/issues/10)
 
 ## [1.6.2](https://github.com/darenmalfait/darenui/compare/@daren/button@1.6.1...@daren/button@1.6.2) (2022-11-15)
 

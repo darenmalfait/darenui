@@ -1,72 +1,13 @@
 # Change Log
 
-## 0.3.7
-
-### Patch Changes
-
-- [#18](https://github.com/darenmalfait/darenui/pull/18) [`1dda505`](https://github.com/darenmalfait/darenui/commit/1dda505c282ae570c4993cc147a120206905f2e3) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency shiki to ^0.12.0
-
-- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- [#13](https://github.com/darenmalfait/darenui/pull/13) [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update styling
-
-- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c), [`faa3198`](https://github.com/darenmalfait/darenui/commit/faa319893f031ab84b0448104f32e0bc75177b34)]:
-  - @daren/button@1.6.7
-  - @daren/theme@2.3.6
-  - @daren/ui-components@1.16.14
-  - @daren/ui-core@2.8.0
-  - @daren/utils@1.8.5
-
-## 0.3.6
-
-### Patch Changes
-
-- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
-  - @daren/button@1.6.6
-  - @daren/theme@2.3.5
-  - @daren/ui-components@1.16.13
-  - @daren/ui-core@2.7.7
-  - @daren/utils@1.8.4
-
-## 0.3.5
-
-### Patch Changes
-
-- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
-  - @daren/button@1.6.5
-  - @daren/ui-core@2.7.6
-  - @daren/utils@1.8.3
-  - @daren/theme@2.3.4
-  - @daren/ui-components@1.16.12
-
-## 0.3.4
-
-### Patch Changes
-
-- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
-
-- Updated dependencies [[`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800)]:
-  - @daren/button@1.6.4
-  - @daren/theme@2.3.3
-  - @daren/ui-components@1.16.11
-  - @daren/ui-core@2.7.5
-  - @daren/utils@1.8.2
-
-## 0.3.3
-
-### Patch Changes
-
-- [`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4)]:
-  - @daren/button@1.6.3
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.3.8](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.2...@daren/docs@0.3.8) (2022-12-28)
+
+### Bug Fixes
+
+- **docs:** explicit ignore of node_modules ([d2aafdb](https://github.com/darenmalfait/darenui/commit/d2aafdb497168d84827db2f2791749c312011b64))
 
 ## [0.3.2](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.1...@daren/docs@0.3.2) (2022-11-15)
 
