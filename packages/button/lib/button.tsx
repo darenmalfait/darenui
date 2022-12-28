@@ -12,7 +12,7 @@ type ButtonProps = {
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base outline-none !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:opacity-50 active:scale-90 rounded-md',
+    'group relative inline-flex text-base outline-none !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 active:scale-90 rounded-md',
     className,
   )
 }
@@ -42,7 +42,7 @@ function ButtonInner({
         className={cx(
           'relative flex h-full w-full items-center justify-center whitespace-nowrap',
           {
-            'text-gray-100 opacity-50': disabled,
+            'cursor-not-allowed text-gray-100 opacity-50': disabled,
             '!text-white dark:!text-accent': variant === 'primary',
             '!text-black dark:!text-white': variant === 'secondary',
             '!text-red-700': variant === 'danger',
