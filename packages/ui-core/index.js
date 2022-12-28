@@ -59,6 +59,9 @@ module.exports = plugin(
         '--colors-accent-500': 'currentColor',
         '--colors-accent-100': 'currentColor',
       },
+      '.shadow-outline': {
+        '@apply ring-1 ring-gray-100 dark:ring-gray-700': {},
+      },
       '.empty-content': {
         content: "''",
       },
