@@ -1,22 +1,76 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:js-lib",
-    "schedule:monthly",
-    ":semanticCommitTypeAll(chore)",
-    ":preserveSemverRanges"
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests"
   ],
-  "timezone": "Europe/Paris",
+  "automerge": false,
+  "dependencyDashboard": true,
+  "rebaseWhen": "conflicted",
+  "ignoreDeps": [],
+  "labels": ["dependencies"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "before 6:00am on the first day of the month"
+  },
   "packageRules": [
     {
-      "packagePatterns": ["^@types"],
-      "depTypeList": ["devDependencies"],
-      "rangeStrategy": "replace"
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
     },
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true,
-      "automergeType": "branch"
+      "groupName": "babel",
+      "matchPackagePatterns": "@babel/*"
+    },
+    {
+      "groupName": "postcss",
+      "matchPackagePatterns": ["postcss*"]
+    },
+    {
+      "groupName": "commitlint",
+      "matchPackagePatterns": ["@commitlint/*", "husky"]
+    },
+    {
+      "groupName": "tailwind",
+      "matchPackagePatterns": ["@tailwind/*", "tailwindcss"]
+    },
+    {
+      "groupName": "heroicons",
+      "matchPackagePatterns": "@heroicons/*"
+    },
+    {
+      "groupName": "react",
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom"
+      ]
+    },
+    {
+      "groupName": "eslint",
+      "matchPackageNames": ["eslint*", "@typescript-eslint/*"],
+      "allowedVersions": "<= 5.14.0"
+    },
+    {
+      "groupName": "node",
+      "matchPackageNames": ["node"],
+      "enabled": false
+    },
+    {
+      "matchDepTypes": ["action"],
+      "pinDigests": true
+    },
+    {
+      "groupName": "github actions",
+      "matchManagers": ["github-actions"]
     }
-  ]
+  ],
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "prConcurrentLimit": 30,
+  "prHourlyLimit": 0,
+  "rangeStrategy": "bump",
+  "schedule": "on sunday before 6:00am",
+  "timezone": "Europe/Paris"
 }
