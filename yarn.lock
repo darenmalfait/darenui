@@ -1739,7 +1739,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.8
     "@types/lodash": ^4.14.191
     "@types/react": ^18.0.26
-    "@types/react-dom": ^18.0.9
+    "@types/react-dom": ^18.0.10
     "@types/shelljs": ^0.8.11
     "@typescript-eslint/eslint-plugin": ^5.46.1
     "@typescript-eslint/parser": ^5.46.1
@@ -1802,7 +1802,7 @@ __metadata:
     "@types/bcryptjs": ^2.4.2
     "@types/eslint": ^8.4.10
     "@types/react": ^18.0.26
-    "@types/react-dom": ^18.0.9
+    "@types/react-dom": ^18.0.10
     autoprefixer: ^10.4.13
     bcryptjs: ^2.4.3
     clsx: ^1.2.1
@@ -4792,7 +4792,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.9":
+"@types/react-dom@npm:^18.0.10":
   version: 18.0.10
   resolution: "@types/react-dom@npm:18.0.10"
   dependencies:

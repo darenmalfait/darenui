@@ -63,7 +63,7 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/eslint": "^8.4.10",
     "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
+    "@types/react-dom": "^18.0.10",
     "cross-env": "^7.0.3",
     "eslint": "^8.29.0",
     "nodenv": "^0.1.0",
