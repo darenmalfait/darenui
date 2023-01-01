@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "@daren/utils": "^1.8.5",
-    "@headlessui/react": "^1.7.6"
+    "@headlessui/react": "^1.7.7"
   }
 }
