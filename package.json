@@ -77,7 +77,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fast-glob": "^3.2.12",
-    "lerna": "^6.1.0",
+    "lerna": "^6.3.0",
     "lodash": "^4.17.21",
     "node-plop": "^0.31.0",
     "nodemon": "^2.0.20",
