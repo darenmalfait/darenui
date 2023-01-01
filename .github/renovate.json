@@ -46,8 +46,7 @@
     },
     {
       "groupName": "eslint",
-      "matchPackagePatterns": ["eslint*", "@typescript-eslint/*"],
-      "allowedVersions": "<= 5.14.0"
+      "matchPackagePatterns": ["eslint*", "@typescript-eslint/*"]
     },
     {
       "groupName": "node",
