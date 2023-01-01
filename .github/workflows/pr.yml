@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3
 
       - name: Enable node
         uses: actions/setup-node@master
@@ -32,6 +32,6 @@ jobs:
         run: yarn validate
 
       - name: Danger
-        uses: danger/danger-js@11.2.0
+        uses: danger/danger-js@ad3c5426620eb4f72eae0b19fff203c006d82626 # 11.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
