@@ -1706,11 +1706,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daren/button@^1.6.8, @daren/button@workspace:packages/button":
+"@daren/button@^1.6.9, @daren/button@workspace:packages/button":
   version: 0.0.0-use.local
   resolution: "@daren/button@workspace:packages/button"
   dependencies:
-    "@daren/form-elements": ^1.11.10
+    "@daren/form-elements": ^1.11.11
     "@daren/typography": ^1.8.0
     "@daren/utils": ^1.8.5
     "@heroicons/react": ^2.0.13
@@ -1781,9 +1781,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@daren/docs@workspace:docs"
   dependencies:
-    "@daren/button": ^1.6.8
+    "@daren/button": ^1.6.9
     "@daren/theme": ^2.3.6
-    "@daren/ui-components": ^1.16.15
+    "@daren/ui-components": ^1.16.16
     "@daren/ui-core": ^2.9.0
     "@daren/utils": ^1.8.5
     "@headlessui/react": ^1.7.7
@@ -1827,7 +1827,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daren/form-elements@^1.11.10, @daren/form-elements@workspace:packages/form-elements":
+"@daren/form-elements@^1.11.11, @daren/form-elements@workspace:packages/form-elements":
   version: 0.0.0-use.local
   resolution: "@daren/form-elements@workspace:packages/form-elements"
   dependencies:
@@ -1863,7 +1863,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daren/modal@^1.4.6, @daren/modal@workspace:packages/modal":
+"@daren/modal@^1.4.7, @daren/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@daren/modal@workspace:packages/modal"
   dependencies:
@@ -1923,7 +1923,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daren/tabs@^1.0.7, @daren/tabs@workspace:packages/tabs":
+"@daren/tabs@^1.0.8, @daren/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
   resolution: "@daren/tabs@workspace:packages/tabs"
   dependencies:
@@ -1957,21 +1957,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daren/ui-components@^1.16.15, @daren/ui-components@workspace:packages/ui-components":
+"@daren/ui-components@^1.16.16, @daren/ui-components@workspace:packages/ui-components":
   version: 0.0.0-use.local
   resolution: "@daren/ui-components@workspace:packages/ui-components"
   dependencies:
     "@daren/alert": ^1.4.6
-    "@daren/button": ^1.6.8
-    "@daren/form-elements": ^1.11.10
+    "@daren/button": ^1.6.9
+    "@daren/form-elements": ^1.11.11
     "@daren/grid": ^1.4.6
     "@daren/layout-components": ^1.3.6
-    "@daren/modal": ^1.4.6
+    "@daren/modal": ^1.4.7
     "@daren/navigation-list": ^1.2.6
     "@daren/progressive-image": ^1.4.4
     "@daren/review": ^1.3.7
     "@daren/spinner": ^1.1.6
-    "@daren/tabs": ^1.0.7
+    "@daren/tabs": ^1.0.8
     "@daren/theme": ^2.3.6
     "@daren/typography": ^1.8.0
     "@daren/utils": ^1.8.5
@@ -15399,14 +15399,14 @@ __metadata:
   linkType: hard
 
 "readable-stream@npm:^4.1.0":
-  version: 4.2.0
-  resolution: "readable-stream@npm:4.2.0"
+  version: 4.3.0
+  resolution: "readable-stream@npm:4.3.0"
   dependencies:
     abort-controller: ^3.0.0
     buffer: ^6.0.3
     events: ^3.3.0
     process: ^0.11.10
-  checksum: aa8447f781e6df90af78f6b0b9b9a77da2816dcf6c8220e7021c4de36e04f8129fed7ead81eac0baad2f42098209f9e7d7cd43169e1c156efcd2613828a37439
+  checksum: 5f8d5fc1eb0c6eb47771ad4537881126d6280666e1f10ba1e2262a670a0352c36f59e6a04d17c9a6f7c888218984836dc67f55e95a77de8bfdf06fb75f00f670
   languageName: node
   linkType: hard
 
