@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.10](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.8...@daren/docs@0.3.10) (2023-01-01)
+
+### Bug Fixes
+
+- **deps:** update dependency @headlessui/react to v1.7.7 ([#30](https://github.com/darenmalfait/darenui/issues/30)) ([d416020](https://github.com/darenmalfait/darenui/commit/d416020095c0ce61b8283f1ea651803def526522))
+- **deps:** update dependency @types/react-dom to ^18.0.10 ([#35](https://github.com/darenmalfait/darenui/issues/35)) ([b9f376e](https://github.com/darenmalfait/darenui/commit/b9f376e5cf78bb2863f907b5e747cdc24b1d41f8))
+- **deps:** update dependency react-live to ^3.1.1 ([#39](https://github.com/darenmalfait/darenui/issues/39)) ([98873bc](https://github.com/darenmalfait/darenui/commit/98873bc5ba2afafaf23cf69ae4e994f6b5140286))
+- **deps:** update dependency shiki to ^0.12.1 ([#40](https://github.com/darenmalfait/darenui/issues/40)) ([45ca190](https://github.com/darenmalfait/darenui/commit/45ca190064b02595147ffa5f5697fc2603660746))
+
 ## [0.3.9](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.8...@daren/docs@0.3.9) (2023-01-01)
 
 ### Bug Fixes

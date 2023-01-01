@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.12](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.11.10...@daren/form-elements@1.11.12) (2023-01-01)
+
+### Bug Fixes
+
+- **deps:** update dependency @headlessui/react to v1.7.7 ([#30](https://github.com/darenmalfait/darenui/issues/30)) ([d416020](https://github.com/darenmalfait/darenui/commit/d416020095c0ce61b8283f1ea651803def526522))
+
 ## [1.11.11](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.11.10...@daren/form-elements@1.11.11) (2023-01-01)
 
 ### Bug Fixes

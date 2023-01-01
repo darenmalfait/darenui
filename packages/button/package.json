@@ -1,6 +1,6 @@
 {
   "name": "@daren/button",
-  "version": "1.6.9",
+  "version": "1.6.10",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -38,7 +38,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/form-elements": "^1.11.11",
+    "@daren/form-elements": "^1.11.12",
     "@daren/typography": "^1.8.0",
     "@daren/utils": "^1.8.5",
     "@heroicons/react": "^2.0.13"
