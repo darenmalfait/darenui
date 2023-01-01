@@ -1786,7 +1786,7 @@ __metadata:
     "@daren/ui-components": ^1.16.15
     "@daren/ui-core": ^2.9.0
     "@daren/utils": ^1.8.5
-    "@headlessui/react": ^1.7.6
+    "@headlessui/react": ^1.7.7
     "@heroicons/react": ^2.0.13
     "@netlify/functions": ^1.3.0
     "@radix-ui/react-tabs": ^1.0.1
@@ -1832,7 +1832,7 @@ __metadata:
   resolution: "@daren/form-elements@workspace:packages/form-elements"
   dependencies:
     "@daren/utils": ^1.8.5
-    "@headlessui/react": 1.7.6
+    "@headlessui/react": 1.7.7
     "@heroicons/react": ^2.0.13
     react: ^18.2.0
   peerDependencies:
@@ -1868,7 +1868,7 @@ __metadata:
   resolution: "@daren/modal@workspace:packages/modal"
   dependencies:
     "@daren/utils": ^1.8.5
-    "@headlessui/react": 1.7.6
+    "@headlessui/react": 1.7.7
     "@heroicons/react": ^2.0.13
     react: ^18.2.0
   peerDependencies:
@@ -1928,7 +1928,7 @@ __metadata:
   resolution: "@daren/tabs@workspace:packages/tabs"
   dependencies:
     "@daren/utils": ^1.8.5
-    "@headlessui/react": ^1.7.6
+    "@headlessui/react": ^1.7.7
     react: ^18.2.0
   peerDependencies:
     react: ">=18.2.0"
@@ -2229,19 +2229,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:1.7.6":
-  version: 1.7.6
-  resolution: "@headlessui/react@npm:1.7.6"
-  dependencies:
-    client-only: ^0.0.1
-  peerDependencies:
-    react: ^16 || ^17 || ^18
-    react-dom: ^16 || ^17 || ^18
-  checksum: 46ba928e27926b4a53550830e0878a9497187368be6a7efecb11f391013156d5b820dae454f9b09b33e955937eefa5dbffc431dba9b53a63bdedf3aaa693f401
-  languageName: node
-  linkType: hard
-
-"@headlessui/react@npm:^1.7.6":
+"@headlessui/react@npm:1.7.7, @headlessui/react@npm:^1.7.7":
   version: 1.7.7
   resolution: "@headlessui/react@npm:1.7.7"
   dependencies:
