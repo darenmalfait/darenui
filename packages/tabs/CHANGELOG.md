@@ -1,49 +1,13 @@
 # Change Log
 
-## 1.0.7
-
-### Patch Changes
-
-- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c)]:
-  - @daren/utils@1.8.5
-
-## 1.0.6
-
-### Patch Changes
-
-- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
-  - @daren/utils@1.8.4
-
-## 1.0.5
-
-### Patch Changes
-
-- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
-  - @daren/utils@1.8.3
-
-## 1.0.4
-
-### Patch Changes
-
-- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
-
-- Updated dependencies [[`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800)]:
-  - @daren/utils@1.8.2
-
-## 1.0.3
-
-### Patch Changes
-
-- [`e29d0e6`](https://github.com/darenmalfait/darenui/commit/e29d0e6f82b5ac22e73d7a1fbd06cba64e9df0d4) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.8](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.7...@daren/tabs@1.0.8) (2023-01-01)
+
+### Bug Fixes
+
+- **deps:** update dependency @headlessui/react to v1.7.7 ([#30](https://github.com/darenmalfait/darenui/issues/30)) ([d416020](https://github.com/darenmalfait/darenui/commit/d416020095c0ce61b8283f1ea651803def526522))
 
 ## [1.0.2](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.1...@daren/tabs@1.0.2) (2022-11-04)
 
