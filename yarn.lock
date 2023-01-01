@@ -1754,7 +1754,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     fast-glob: ^3.2.12
     husky: ^8.0.2
-    lerna: ^6.1.0
+    lerna: ^6.3.0
     lodash: ^4.17.21
     match-sorter: ^6.3.1
     node-plop: ^0.31.0
@@ -11323,7 +11323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lerna@npm:^6.1.0":
+"lerna@npm:^6.3.0":
   version: 6.3.0
   resolution: "lerna@npm:6.3.0"
   dependencies:
