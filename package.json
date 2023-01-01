@@ -46,7 +46,7 @@
     "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
-    "eslint": "^8.29.0",
+    "eslint": "^8.31.0",
     "eslint-config-daren": "^3.7.1",
     "husky": "^8.0.2",
     "match-sorter": "^6.3.1",
