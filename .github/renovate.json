@@ -1,14 +1,17 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    ":dependencyDashboard",
-    ":semanticPrefixFixDepsChoreOthers",
-    ":ignoreModulesAndTests"
-  ],
-  "automerge": false,
-  "dependencyDashboard": true,
+  "extends": ["config:base"],
+  "ignorePresets": [":prHourlyLimit2"],
+  "rangeStrategy": "update-lockfile",
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "schedule": ["every weekend"],
+  "semanticCommits": "enabled",
   "rebaseWhen": "conflicted",
-  "ignoreDeps": [],
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -24,7 +27,7 @@
       "matchPackagePatterns": ["postcss*"]
     },
     {
-      "groupName": "commitlint",
+      "groupName": "commit hooks",
       "matchPackagePatterns": ["@commitlint/*", "husky"]
     },
     {
@@ -67,9 +70,5 @@
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"],
-  "prConcurrentLimit": 30,
-  "prHourlyLimit": 0,
-  "rangeStrategy": "bump",
-  "schedule": "on sunday before 6:00am",
   "timezone": "Europe/Paris"
 }
