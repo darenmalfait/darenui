@@ -5,7 +5,7 @@ import shell from 'shelljs'
 
 const workspaces = ['packages'] as const
 
-type Workspace = typeof workspaces[number]
+type Workspace = (typeof workspaces)[number]
 
 interface Answers {
   componentName: string

@@ -37,13 +37,13 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
   props,
   ref,
 ) {
-  // Not sure why this is throwing an error on OnChange
-  // eslint-disable-next-line @typescript-eslint/unbound-method
   const {
     id,
     items,
     name,
     hasError,
+    // Not sure why this is throwing an error on OnChange
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     onChange,
     defaultValue,
     disabled,
