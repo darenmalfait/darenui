@@ -2,7 +2,7 @@ import {WithCSSVar, Dict, pick, walkObject} from '@daren/utils'
 
 const tokens = ['colors'] as const
 
-type ThemeProps = typeof tokens[number]
+type ThemeProps = (typeof tokens)[number]
 
 function replaceWhiteSpace(value: string, replaceValue = '-') {
   return value.replace(/\s+/g, replaceValue)
