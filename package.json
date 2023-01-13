@@ -20,7 +20,8 @@
   "scripts": {
     "build": "lerna run build --ignore @daren/docs",
     "clean": "lerna run clean && rm -rf node_modules",
-    "create:pkg": "node --loader ts-node/esm scripts/plopfile.ts",
+    "compile-scripts": "cross-env BABEL_ENV=cjs babel scripts --root-mode upward --extensions .ts,.tsx -d scripts",
+    "create:pkg": "plop component",
     "dev": "yarn docs dev",
     "docs:build": "yarn docs build",
     "docs:dev": "yarn docs dev",

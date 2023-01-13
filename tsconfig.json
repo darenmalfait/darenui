@@ -23,7 +23,7 @@
     "declarationMap": true,
     "allowJs": true
   },
-  "include": ["packages", "scripts", "dangerfile.ts", "docs"],
+  "include": ["packages", "scripts", "dangerfile.ts", "docs", "plopfile.js"],
   "exclude": ["node_modules", "**/**/dist", "docs/public"],
   "ts-node": {
     "compilerOptions": {
