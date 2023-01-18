@@ -30,6 +30,14 @@ jobs:
       - name: Validate
         run: yarn validate
 
+      - name: Build docs 📖
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          cd docs
+          npx netlify-cli build
+
       - name: Set npm authentication
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
@@ -60,5 +68,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           cd docs
-          npx netlify-cli build
           npx netlify-cli deploy --prod
