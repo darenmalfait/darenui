@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.0...@daren/docs@0.4.1) (2023-01-18)
+
+
+### Bug Fixes
+
+* **docs:** add netlify deploy settings ([ec7019c](https://github.com/darenmalfait/darenui/commit/ec7019c3c9ed975d5edb6d0fc613837f1a49dd36))
+* **docs:** add social links ([48345fe](https://github.com/darenmalfait/darenui/commit/48345fe571c8ecc43b2861f693f9d577b05fd689))
+
+
+
+
+
 # [0.4.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.10...@daren/docs@0.4.0) (2023-01-18)
 
 

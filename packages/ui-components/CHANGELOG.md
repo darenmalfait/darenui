@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.17.0...@daren/ui-components@1.17.1) (2023-01-18)
+
+**Note:** Version bump only for package @daren/ui-components
+
+
+
+
+
 # [1.17.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.16.17...@daren/ui-components@1.17.0) (2023-01-18)
 
 

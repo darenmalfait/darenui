@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.9.0...@daren/utils@1.9.1) (2023-01-18)
+
+
+### Bug Fixes
+
+* **utils:** remove bionify ([dc1bee4](https://github.com/darenmalfait/darenui/commit/dc1bee49d775961d3176447f6f808133424892c0))
+
+
+
+
+
 # [1.9.0](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.8.5...@daren/utils@1.9.0) (2023-01-18)
 
 
