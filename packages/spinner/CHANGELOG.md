@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://github.com/darenmalfait/darenui/compare/@daren/spinner@1.1.10...@daren/spinner@1.1.11) (2023-01-18)
+
+
+### Bug Fixes
+
+* add missing types ([9995fb3](https://github.com/darenmalfait/darenui/commit/9995fb35e1e6a95a4b33be2ee140ec3fc7486b8d))
+
+
+
+
+
 ## [1.1.10](https://github.com/darenmalfait/darenui/compare/@daren/spinner@1.1.8...@daren/spinner@1.1.10) (2023-01-18)
 
 
