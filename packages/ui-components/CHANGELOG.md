@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.2](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.17.1...@daren/ui-components@1.17.2) (2023-01-18)
+
+
+### Bug Fixes
+
+* **utils:** export types ([7b444b6](https://github.com/darenmalfait/darenui/commit/7b444b687f7c16145d27575853440e67d9f952e5))
+
+
+
+
+
 ## [1.17.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.17.0...@daren/ui-components@1.17.1) (2023-01-18)
 
 **Note:** Version bump only for package @daren/ui-components
