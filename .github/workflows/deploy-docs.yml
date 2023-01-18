@@ -1,11 +1,11 @@
-name: Release 🚀
+name: Deploy docs 📖
 
 on:
   workflow_dispatch:
 
 jobs:
   release:
-    name: Release 🚀
+    name: Deploy docs 📖
     runs-on: ubuntu-latest
 
     steps:
