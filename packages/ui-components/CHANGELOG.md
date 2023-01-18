@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.16.17...@daren/ui-components@1.17.0) (2023-01-18)
+
+
+### Features
+
+* **docs:** new website ([#66](https://github.com/darenmalfait/darenui/issues/66)) ([5d42210](https://github.com/darenmalfait/darenui/commit/5d42210b72e68561a03b891fec5c255fbba5f274))
+
+
+
+
+
 ## [1.16.17](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.16.15...@daren/ui-components@1.16.17) (2023-01-01)
 
 **Note:** Version bump only for package @daren/ui-components

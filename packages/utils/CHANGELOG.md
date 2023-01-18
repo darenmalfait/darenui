@@ -1,31 +1,18 @@
 # Change Log
 
-## 1.8.5
-
-### Patch Changes
-
-- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-## 1.8.4
-
-### Patch Changes
-
-- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-## 1.8.3
-
-### Patch Changes
-
-- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-## 1.8.2
-
-### Patch Changes
-
-- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [1.9.0](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.8.5...@daren/utils@1.9.0) (2023-01-18)
+
+
+### Features
+
+* **docs:** new website ([#66](https://github.com/darenmalfait/darenui/issues/66)) ([5d42210](https://github.com/darenmalfait/darenui/commit/5d42210b72e68561a03b891fec5c255fbba5f274))
+
+
+
+
 
 ## [1.8.1](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.8.0...@daren/utils@1.8.1) (2022-11-04)
 

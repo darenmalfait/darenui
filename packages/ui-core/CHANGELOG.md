@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.9.0...@daren/ui-core@2.10.0) (2023-01-18)
+
+
+### Features
+
+* **docs:** new website ([#66](https://github.com/darenmalfait/darenui/issues/66)) ([5d42210](https://github.com/darenmalfait/darenui/commit/5d42210b72e68561a03b891fec5c255fbba5f274))
+
+
+
+
+
 # [2.9.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.8.0...@daren/ui-core@2.9.0) (2022-12-28)
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "@daren/docs",
-  "version": "0.3.10",
+  "version": "0.4.0",
   "private": true,
   "description": "",
   "license": "",
@@ -15,9 +15,9 @@
     "validate": "run-s lint:*"
   },
   "dependencies": {
-    "@daren/theme": "^2.3.6",
-    "@daren/ui-components": "^1.16.17",
-    "@daren/ui-core": "^2.9.0",
+    "@daren/theme": "^2.4.0",
+    "@daren/ui-components": "^1.17.0",
+    "@daren/ui-core": "^2.10.0",
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
     "@mdx-js/loader": "^2.2.1",

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.10...@daren/docs@0.4.0) (2023-01-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @remix-run/express to v1.9.0 ([#54](https://github.com/darenmalfait/darenui/issues/54)) ([31a1b2c](https://github.com/darenmalfait/darenui/commit/31a1b2cda4412116e46dec2ffb1dcd4abf4b5f2d))
+
+
+### Features
+
+* **docs:** new website ([#66](https://github.com/darenmalfait/darenui/issues/66)) ([5d42210](https://github.com/darenmalfait/darenui/commit/5d42210b72e68561a03b891fec5c255fbba5f274))
+
+
+
+
+
 ## [0.3.10](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.3.8...@daren/docs@0.3.10) (2023-01-01)
 
 ### Bug Fixes

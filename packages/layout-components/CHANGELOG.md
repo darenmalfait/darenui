@@ -1,47 +1,15 @@
 # Change Log
 
-## 1.3.6
-
-### Patch Changes
-
-- [`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`c958306`](https://github.com/darenmalfait/darenui/commit/c958306faa10fdce91f7ce80d505db63c0a2206c)]:
-  - @daren/grid@1.4.6
-  - @daren/utils@1.8.5
-
-## 1.3.5
-
-### Patch Changes
-
-- [`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update packages
-
-- Updated dependencies [[`f4445a3`](https://github.com/darenmalfait/darenui/commit/f4445a32ed44d0726d408d3f33606cff708f1eb8)]:
-  - @daren/grid@1.4.5
-  - @daren/utils@1.8.4
-
-## 1.3.4
-
-### Patch Changes
-
-- [#8](https://github.com/darenmalfait/darenui/pull/8) [`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update dependencies
-
-- Updated dependencies [[`61de8fc`](https://github.com/darenmalfait/darenui/commit/61de8fc492873cfedd117b4d6a43424568a6b393)]:
-  - @daren/utils@1.8.3
-  - @daren/grid@1.4.4
-
-## 1.3.3
-
-### Patch Changes
-
-- [`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800) Thanks [@darenmalfait](https://github.com/darenmalfait)! - update internal dependencies
-
-- Updated dependencies [[`eaedf7e`](https://github.com/darenmalfait/darenui/commit/eaedf7e6a4e0d73281befbd871815c169a4a6800)]:
-  - @daren/grid@1.4.3
-  - @daren/utils@1.8.2
-
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.3.7](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.3.6...@daren/layout-components@1.3.7) (2023-01-18)
+
+**Note:** Version bump only for package @daren/layout-components
+
+
+
+
 
 ## [1.3.2](https://github.com/darenmalfait/darenui/compare/@daren/layout-components@1.3.1...@daren/layout-components@1.3.2) (2022-11-04)
 
