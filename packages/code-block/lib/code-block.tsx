@@ -39,7 +39,7 @@ function CopyButton({code}: {code: string}) {
       className={cx(
         'group/button absolute top-3.5 right-4 z-10 overflow-hidden rounded-full py-1 pl-2 pr-3 text-xs font-medium opacity-0 backdrop-blur transition text-primary focus:opacity-100 group-hover:opacity-100',
         copied
-          ? 'bg-emerald-400/10 ring-1 ring-inset ring-emerald-400/20'
+          ? 'bg-green-400/10 ring-1 ring-inset ring-green-400/20'
           : 'bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10',
       )}
       onClick={async () => {
@@ -61,7 +61,7 @@ function CopyButton({code}: {code: string}) {
       <span
         aria-hidden={!copied}
         className={cx(
-          'pointer-events-none absolute inset-0 flex items-center justify-center text-emerald-400 transition duration-300',
+          'pointer-events-none absolute inset-0 flex items-center justify-center text-green-400 transition duration-300',
           !copied && 'translate-y-1.5 opacity-0',
         )}
       >
@@ -72,12 +72,12 @@ function CopyButton({code}: {code: string}) {
 }
 
 function CodeBlock({
-  code = ``,
+  code,
   language = 'typescript',
   showLineNumbers,
   showLanguage,
   theme,
-  darkMode = true,
+  darkMode,
   className: classNameProp,
 }: {
   code?: string
@@ -92,7 +92,7 @@ function CodeBlock({
     <div className="group relative">
       <Highlight
         {...defaultProps}
-        code={code}
+        code={code ?? ''}
         language={language}
         theme={
           theme ?? darkMode
@@ -112,7 +112,7 @@ function CodeBlock({
               <div className="mr-2 h-3 w-3 rounded-full bg-yellow-500" />
               <div className="h-3 w-3 rounded-full bg-green-500" />
             </div>
-            <CopyButton code={code} />
+            <CopyButton code={code ?? ''} />
             <pre
               className={cx(
                 className,

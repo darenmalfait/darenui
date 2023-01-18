@@ -71,12 +71,19 @@ module.exports = plugin(
       html: {
         '@apply text-primary antialiased font-sans': {},
       },
+      code: {
+        '@apply text-sm text-gray-900 shadow-outline bg-transparent rounded-lg px-2 py-1 !text-2xs':
+          {},
+      },
     })
   },
   {
     mode: 'jit',
     theme: {
       extend: {
+        fontSize: {
+          '2xs': ['0.75rem', {lineHeight: '1.25rem'}],
+        },
         fontFamily: {
           title: [...defaultTheme.fontFamily.sans],
           sans: [...defaultTheme.fontFamily.sans],
@@ -146,8 +153,6 @@ module.exports = plugin(
                   marginBottom: theme('spacing.8'),
                 },
                 'h1, h2, h3, h4, h5, h6': {
-                  marginTop: 0,
-                  marginBottom: 0,
                   fontWeight: theme('fontWeight.normal'),
 
                   [`@media (min-width: ${theme('screens.lg')})`]: {
@@ -155,7 +160,17 @@ module.exports = plugin(
                   },
                 },
                 // tailwind doesn't stick to this property order, so we can't make 'h3' overrule 'h2, h3, h4'
-                'h1, h2': {
+                h1: {
+                  // https://github.com/tailwindlabs/tailwindcss-typography/issues/14#issuecomment-658261095
+                  fontFamily: `${theme('fontFamily.title')}`,
+                  fontSize: fontSize('2xl'),
+                  marginBottom: theme('spacing.10'),
+
+                  [`@media (min-width: ${theme('screens.lg')})`]: {
+                    fontSize: fontSize('3xl'),
+                  },
+                },
+                h2: {
                   // https://github.com/tailwindlabs/tailwindcss-typography/issues/14#issuecomment-658261095
                   fontFamily: `${theme('fontFamily.title')}`,
                   fontSize: fontSize('2xl'),
@@ -182,11 +197,28 @@ module.exports = plugin(
                     fontSize: fontSize('xl'),
                   },
                 },
+                'code::before': {
+                  content: '',
+                },
+                'code::after': {
+                  content: '',
+                },
                 img: {
                   // images are wrapped in <p>, which already has margin
                   marginTop: 0,
                   marginBottom: 0,
                   borderRadius: theme('borderRadius.lg'),
+                },
+
+                // Overrides
+                ':is(h1, h2, h3) + *': {
+                  marginTop: '0',
+                },
+                '> :first-child': {
+                  marginTop: '0 !important',
+                },
+                '> :last-child': {
+                  marginBottom: '0 !important',
                 },
               },
               dark: {
@@ -201,9 +233,6 @@ module.exports = plugin(
                     },
                     hr: {
                       borderColor: theme('colors.gray.600'),
-                    },
-                    code: {
-                      color: theme('colors.gray.100'),
                     },
                     'h1, h2, h3, h4, h5, h6': {
                       color: theme('colors.white'),

@@ -1,0 +1,34 @@
+export const metaTitle = 'Tabs'
+export const description = 'Tabs component of DarenUI'
+export const pkg = 'tabs'
+export const path = 'tabs'
+
+# Tabs
+
+Tabs is a component that allows you to switch between different views.
+
+<Code code={`import { Tabs } from '@daren/ui-components'`} />
+
+---
+
+## Preview
+
+<Preview direction="vertical">
+  <div className="p-8">
+    <Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
+      <Tabs.Item>tab 1</Tabs.Item>
+      <Tabs.Item>tab 2</Tabs.Item>
+      <Tabs.Item>tab 3</Tabs.Item>
+    </Tabs>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="children" type="[React.ReactNode, Tabs.Item]" required>
+    The content of the component.
+  </Property>
+</Properties>

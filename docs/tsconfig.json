@@ -1,24 +1,19 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "public"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mdx"],
   "compilerOptions": {
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "target": "es2019",
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
-    "isolatedModules": true,
+    "allowJs": true,
+    "strict": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "jsx": "preserve",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "target": "ES2019",
-    "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
-    "skipLibCheck": true,
-    // Remix takes care of building everything in `remix build`.
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true
-  }
+    "noEmit": true
+  },
+  "exclude": ["node_modules"]
 }

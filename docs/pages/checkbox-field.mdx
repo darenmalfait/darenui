@@ -1,0 +1,55 @@
+export const metaTitle = 'CheckboxField'
+export const description = 'CheckboxField component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'checkbox-field'
+
+# CheckboxField
+
+CheckboxField is an [Checkbox](/checkbox) with a label, description, and error
+message.
+
+<Code code={`import { CheckboxField } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <CheckboxField name="preview-field" label="label" />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="name" type="string" required>
+    The identifier of the checkbox.
+  </Property>
+  <Property name="label" type="string">
+    The label of the checkbox.
+  </Property>
+  <Property name="error" type="string">
+    The error message of the checkbox.
+  </Property>
+</Properties>
+
+---
+
+## label
+
+<Preview>
+  <div className="space-y-2">
+    <CheckboxField label="example label" />
+  </div>
+</Preview>
+
+## error
+
+When defining an error, the checkbox will be marked as invalid.
+
+<Preview>
+  <div className="space-y-2">
+    <CheckboxField label="example label" error="this is an example error" />
+  </div>
+</Preview>

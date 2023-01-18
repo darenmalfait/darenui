@@ -1,0 +1,35 @@
+export const metaTitle = 'Hooks'
+export const description = 'hooks functions in DarenUI'
+export const pkg = 'utils'
+export const path = 'hooks'
+
+# Hooks
+
+This page contains a list of all the hooks functions in DarenUI.
+
+## useControllableState
+
+useControllableState is a utility function that is used to create a state that
+can be controlled or uncontrolled.
+
+<Code code={`import { useControllableState } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code
+  code={`const [value, setValue] = useControllableState({ value: props.value, defaultValue: props.defaultValue, onChange: props.onChange })`}
+/>
+
+## useSafeEffect
+
+useSafeEffect is a utility function that is used to create a safe effect.
+
+<Code code={`import { useSafeEffect } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code
+  code={`useSafeEffect(() => {
+  // do something
+}, [props.value])`}
+/>

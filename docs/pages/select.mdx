@@ -1,0 +1,44 @@
+export const metaTitle = 'Select'
+export const description = 'Select component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'select'
+
+# Select
+
+Select is an [Field](/field) component that allows the user to select multiple
+options. [SelectField](/select-field) is a wrapper around the Select component.
+
+<Code code={`import { Select } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Select
+      name="select-basic"
+      label="Select label"
+      description="Select description"
+      items={[
+        {label: 'Item 1', value: '1'},
+        {label: 'Item 2', value: '2'},
+      ]}
+    />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property
+    name="items"
+    type="{
+  id?: string
+  label: string
+  value: string
+}[]"
+  >
+    The items to be displayed in the select.
+  </Property>
+</Properties>

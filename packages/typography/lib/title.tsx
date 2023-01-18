@@ -6,7 +6,6 @@ type TitleProps = {
   as?: React.ElementType
   className?: string
   id?: string
-  gradient?: boolean
 } & (
   | {children: React.ReactNode}
   | {

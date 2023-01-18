@@ -1,0 +1,57 @@
+export const metaTitle = 'Field'
+export const description = 'Field component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'field'
+
+# Field
+
+Field is an [Input](/input) with a label, description, and error message.
+
+<Code code={`import { Field } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Field name="preview-field" label="label" description="description field" />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="name" type="string" required>
+    The identifier of the input.
+  </Property>
+  <Property name="label" type="string">
+    The label of the input.
+  </Property>
+  <Property name="description" type="string">
+    The description of the input.
+  </Property>
+  <Property name="error" type="string">
+    The error message of the input.
+  </Property>
+</Properties>
+
+---
+
+## label
+
+<Preview>
+  <div className="space-y-2">
+    <Field label="example label" />
+  </div>
+</Preview>
+
+## error
+
+When defining an error, the input will be marked as invalid.
+
+<Preview>
+  <div className="space-y-2">
+    <Field label="example label" error="this is an example error" />
+  </div>
+</Preview>

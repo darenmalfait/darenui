@@ -1,0 +1,64 @@
+export const metaTitle = 'Container'
+export const description = 'Container component of DarenUI'
+export const pkg = 'layout-components'
+export const path = 'container'
+
+# Container
+
+Container is a container that can be used to group content. Works best as a
+child of Grid.
+
+<Code code={`import { Container } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Grid nested>
+      <Container>
+        <div>Hello world</div>
+        <div>Hello world</div>
+      </Container>
+    </Grid>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="size" type="[small, default, medium, full]">
+    The width of the container.
+  </Property>
+  <Property name="children" type="React.ReactNode" required>
+    The content of the container.
+  </Property>
+</Properties>
+
+---
+
+## Size
+
+There are different preset widths available for the container.
+
+<Preview>
+  <Grid nested>
+    <Container size="small">
+      <div>Hello world</div>
+      <div>Hello world</div>
+    </Container>
+    <Container size="default">
+      <div>Hello world</div>
+      <div>Hello world</div>
+    </Container>
+    <Container size="medium">
+      <div>Hello world</div>
+      <div>Hello world</div>
+    </Container>
+    <Container size="fill">
+      <div>Hello world</div>
+      <div>Hello world</div>
+    </Container>
+  </Grid>
+</Preview>

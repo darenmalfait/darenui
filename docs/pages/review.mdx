@@ -1,0 +1,90 @@
+export const metaTitle = 'Review'
+export const description = 'Review component of DarenUI'
+export const pkg = 'review'
+export const path = 'review'
+
+# Review
+
+Review is a component displays review information with a rating.
+
+<Code code={`import { Review } from '@daren/ui-components'`} />
+
+---
+
+## Preview
+
+<Preview direction="vertical">
+  <div className="p-8">
+    <Review
+      rating={4}
+      title="this is a title"
+      html="<p>this is the content in html</p>"
+      author="auhor"
+      date="jan 2020"
+      datetime="2020-01-01T00:00:00.000Z"
+    />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="rating" type="number">
+    The rating of the review. (1-5)
+  </Property>
+  <Property name="title" type="string">
+    The title of the review.
+  </Property>
+  <Property name="html" type="string">
+    The content of the review in html.
+  </Property>
+  <Property name="author" type="string">
+    The author of the review.
+  </Property>
+  <Property name="date" type="string">
+    The date of the review. (e.g. Jan 2020)
+  </Property>
+  <Property name="datetime" type="string">
+    The datetime of the review. (e.g. 2020-01-01T00:00:00.000Z)
+  </Property>
+</Properties>
+
+---
+
+## ReviewGroup
+
+<Preview direction="vertical">
+  <div className="p-8">
+    <ReviewGroup
+      title="Recent reviews"
+      titleClass="text-lg font-medium text-primary"
+    >
+      <Review
+        rating={4}
+        title="this is a title"
+        html="<p>this is the content in html</p>"
+        author="auhor"
+        date="jan 2020"
+        datetime="2020-01-01T00:00:00.000Z"
+      />
+      <Review
+        rating={4}
+        title="this is a title"
+        html="<p>this is the content in html</p>"
+        author="auhor"
+        date="jan 2020"
+        datetime="2020-01-01T00:00:00.000Z"
+      />
+      <Review
+        rating={4}
+        title="this is a title"
+        html="<p>this is the content in html</p>"
+        author="auhor"
+        date="jan 2020"
+        datetime="2020-01-01T00:00:00.000Z"
+      />
+    </ReviewGroup>
+  </div>
+</Preview>

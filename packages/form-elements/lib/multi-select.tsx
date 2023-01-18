@@ -19,14 +19,14 @@ function PillButton({
   return (
     <span
       key={item.label}
-      className="m-1 inline-flex items-center rounded-md bg-green-100 py-1 pr-2 pl-3 text-sm font-bold text-[#008A4E]"
+      className="m-1 inline-flex items-center rounded-md py-1 pr-2 pl-3 text-sm font-bold bg-primary text-primary shadow-outline"
     >
       <span>{item.label}</span>
       {onDelete ? (
         <button
           onClick={() => onDelete(item)}
           type="button"
-          className="ml-1 inline-flex h-5 w-5 shrink-0 rounded-full p-0.5 text-green-700 hover:bg-white"
+          className="ml-1 inline-flex h-5 w-5 shrink-0 rounded-full p-0.5 text-primary"
         >
           <span className="sr-only">remove {item.label}</span>
           <PlusIcon className="h-full w-full rotate-45 " />
@@ -152,6 +152,7 @@ function MultiSelect({
             onChange={handleAdd}
             disabled={disabled}
             hasError={!!error}
+            clearOnSelect
             {...props}
           />
         )}

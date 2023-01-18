@@ -19,7 +19,7 @@ function getNavigationItemClassName({
     textClassNames,
     backgroundClassNames,
     paddingClassNames,
-    'group flex items-center text-sm font-bold rounded-md',
+    'group flex w-full items-center text-sm font-bold rounded-md',
   )
 }
 

@@ -5,6 +5,10 @@ node_modules/
 packages/*/dist
 build
 
+# next.js
+/.next/
+/out/
+
 # Optional npm cache directory
 .npm
 
@@ -29,5 +33,9 @@ tsconfig.tsbuildinfo
 !.yarn/sdks
 !.yarn/versions
 yarn-error.log
+
 # Local Netlify folder
 .netlify
+
+# vercel
+.vercel

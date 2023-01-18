@@ -1,0 +1,63 @@
+export const metaTitle = 'Alert'
+export const description = 'Alert component of DarenUI'
+export const pkg = 'alert'
+export const path = 'alert'
+
+# Alert
+
+Alert is a component that can be used to display a message to the user.
+
+<Code code={`import { Alert } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Alert title="example" description="example description" />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="type" type={['danger', 'warning', 'success', 'info']}>
+    Preset color scheme for the alert. Defaults to `info`.
+  </Property>
+  <Property name="title" type="string">
+    Title of the alert.
+  </Property>
+  <Property name="description" type="React.ReactNode">
+    Description of the alert.
+  </Property>
+  <Property name="hideIcon" type="boolean">
+    Hide the icon of the alert.
+  </Property>
+</Properties>
+
+---
+
+## type
+
+<Preview>
+  <div className="flex w-full flex-col space-y-4">
+    <Alert type="danger" title="example" description="example description" />
+    <Alert type="warning" title="example" description="example description" />
+    <Alert type="success" title="example" description="example description" />
+    <Alert type="info" title="example" description="example description" />
+  </div>
+</Preview>
+
+## hideIcon
+
+<Preview>
+  <div className="flex w-full flex-col space-y-4">
+    <Alert
+      hideIcon
+      type="info"
+      title="example"
+      description="example description"
+    />
+  </div>
+</Preview>

@@ -8,5 +8,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/naming-convention': 'off',
     'react/react-in-jsx-scope': 'off',
+    'import/no-relative-packages': 'off',
   },
 }
