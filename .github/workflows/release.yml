@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g yarn
-          yarn install
+          yarn install --ignore-scripts
 
       - name: Build packages 🏗️
         run: yarn build
