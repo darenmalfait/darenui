@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.11](https://github.com/darenmalfait/darenui/compare/@daren/review@1.3.9...@daren/review@1.3.11) (2023-01-18)
+
+
+### Bug Fixes
+
+* **utils:** export types ([bbdadac](https://github.com/darenmalfait/darenui/commit/bbdadace754fa21cae5ed7e7fe4e249ab7143bc6))
+
+
+
+
+
 ## [1.3.9](https://github.com/darenmalfait/darenui/compare/@daren/review@1.3.8...@daren/review@1.3.9) (2023-01-18)
 
 **Note:** Version bump only for package @daren/review

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.3](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.1...@daren/typography@1.9.3) (2023-01-18)
+
+
+### Bug Fixes
+
+* **utils:** export types ([bbdadac](https://github.com/darenmalfait/darenui/commit/bbdadace754fa21cae5ed7e7fe4e249ab7143bc6))
+
+
+
+
+
 ## [1.9.1](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.0...@daren/typography@1.9.1) (2023-01-18)
 
 **Note:** Version bump only for package @daren/typography

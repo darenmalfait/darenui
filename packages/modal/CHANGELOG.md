@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.12](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.10...@daren/modal@1.4.12) (2023-01-18)
+
+
+### Bug Fixes
+
+* **utils:** export types ([bbdadac](https://github.com/darenmalfait/darenui/commit/bbdadace754fa21cae5ed7e7fe4e249ab7143bc6))
+
+
+
+
+
 ## [1.4.10](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.9...@daren/modal@1.4.10) (2023-01-18)
 
 **Note:** Version bump only for package @daren/modal

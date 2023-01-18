@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.11...@daren/tabs@1.0.13) (2023-01-18)
+
+
+### Bug Fixes
+
+* **utils:** export types ([bbdadac](https://github.com/darenmalfait/darenui/commit/bbdadace754fa21cae5ed7e7fe4e249ab7143bc6))
+
+
+
+
+
 ## [1.0.11](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.10...@daren/tabs@1.0.11) (2023-01-18)
 
 **Note:** Version bump only for package @daren/tabs
