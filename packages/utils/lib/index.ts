@@ -1,5 +1,4 @@
 export * from './assertion'
-export * from './bionify'
 export * from './date'
 export * from './hooks'
 export * from './misc'
