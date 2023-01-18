@@ -9,9 +9,12 @@ module.exports = {
     '!**/node_modules/**',
     fromRoot('../node_modules/@daren/**/*.{js,ts,jsx,tsx}'), // path to daren
     fromRoot('./node_modules/@daren/**/*.{js,ts,jsx,tsx}'), // path to daren
-    fromRoot('./app/**/*.{js,jsx,ts,tsx,mdx}'),
+    './components/**/*.{js,jsx,ts,tsx}',
+    './context/**/*.{js,jsx,ts,tsx}',
+    './styles/**/*.{js,jsx,ts,tsx}',
+    './pages/**/*.{js,jsx,ts,tsx,mdx}',
+    './mdx/**/*.{js,jsx,ts,tsx}',
   ],
-
   darkMode: 'class',
   theme: {
     extend: {
