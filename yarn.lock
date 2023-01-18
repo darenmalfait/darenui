@@ -3902,12 +3902,7 @@ camelcase@^6.2.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001426:
-  version "1.0.30001442"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001442.tgz#40337f1cf3be7c637b061e2f78582dc1daec0614"
-  integrity sha512-239m03Pqy0hwxYPYR5JwOIxRJfLTWtle9FV8zosfV5pHg+/51uD4nxcUlM8+mWWGfwKtt8lJNHnD3cWw9VZ6ow==
-
-caniuse-lite@^1.0.30001406:
+caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001426:
   version "1.0.30001444"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001444.tgz#c0a530776eb44d933b493de1d05346f2527b30fc"
   integrity sha512-ecER9xgJQVMqcrxThKptsW0pPxSae8R2RB87LNa+ivW9ppNWRHEplXcDzkCOP4LYWGj8hunXLqaiC41iBATNyg==
@@ -5599,9 +5594,9 @@ fraction.js@^4.2.0:
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
 framer-motion@^8.4.3:
-  version "8.4.3"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-8.4.3.tgz#382bc016c1a957b4144eeed1bb186410b0d821fc"
-  integrity sha512-UMfJ8hEOlIObdJgI+U/VgaSSKY+W9/E0YtnFHPDsIE9rNPglaFZ+oycB0gj8ERuRBInGaIgNCFsil8iaJHZFgA==
+  version "8.4.7"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-8.4.7.tgz#82c1f614b82a02c3f14cc52dd1214f2aba98fa28"
+  integrity sha512-+uQRQ4bC4hCyrfxM0xQ/AP+O7g0iNG65MoKzdc2gLU9FDm19wWrafCYPunyP7HYLMQxjoiJh1fKUCxpfyQo6Mg==
   dependencies:
     "@motionone/dom" "^10.15.3"
     hey-listen "^1.0.8"
