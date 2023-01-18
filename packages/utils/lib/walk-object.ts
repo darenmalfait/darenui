@@ -1,17 +1,4 @@
-import {isArray, isObject} from './'
-
-type WalkObjectPredicate<Leaf = unknown> = (
-  value: unknown,
-  path: string[],
-) => Leaf
-
-type MappedLeavesObject<Obj, LeafType> = {
-  [Prop in keyof Obj]: Obj[Prop] extends Array<any>
-    ? MappedLeavesObject<Obj[Prop][number], LeafType>[]
-    : Obj[Prop] extends Record<string, unknown>
-    ? MappedLeavesObject<Obj[Prop], LeafType>
-    : LeafType
-}
+import {isArray, isObject, MappedLeavesObject, WalkObjectPredicate} from './'
 
 function walkObject<Target, LeafType>(
   target: Target,
@@ -37,5 +24,4 @@ function walkObject<Target, LeafType>(
   return inner(target)
 }
 
-export type {WalkObjectPredicate, MappedLeavesObject}
 export {walkObject}

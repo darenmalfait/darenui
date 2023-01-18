@@ -31,6 +31,14 @@ jobs:
       - name: Validate ✅
         run: yarn validate
 
+      - name: Build docs 📖
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          cd docs
+          npx netlify-cli build
+
       - name: Danger
         uses: danger/danger-js@c9c62a61516ef5da34bb05425038b43f12140aeb # 11.2.2
         env:

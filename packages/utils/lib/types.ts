@@ -13,4 +13,25 @@ type DeepPartial<T> = {
 
 type ExtractProps<T> = T extends React.ComponentType<infer P> ? P : T
 
-export type {Dict, CSSMap, WithCSSVar, DeepPartial, ExtractProps}
+type WalkObjectPredicate<Leaf = unknown> = (
+  value: unknown,
+  path: string[],
+) => Leaf
+
+type MappedLeavesObject<Obj, LeafType> = {
+  [Prop in keyof Obj]: Obj[Prop] extends Array<any>
+    ? MappedLeavesObject<Obj[Prop][number], LeafType>[]
+    : Obj[Prop] extends Record<string, unknown>
+    ? MappedLeavesObject<Obj[Prop], LeafType>
+    : LeafType
+}
+
+export type {
+  Dict,
+  CSSMap,
+  WithCSSVar,
+  DeepPartial,
+  ExtractProps,
+  MappedLeavesObject,
+  WalkObjectPredicate,
+}

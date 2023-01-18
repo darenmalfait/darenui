@@ -27,6 +27,9 @@ jobs:
       - name: Build packages 🏗️
         run: yarn build
 
+      - name: Validate
+        run: yarn validate
+
       - name: Set npm authentication
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
