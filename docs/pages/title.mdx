@@ -1,0 +1,53 @@
+export const metaTitle = 'Title'
+export const description = 'Title component of DarenUI'
+export const pkg = 'typography'
+export const path = 'title'
+
+# Title
+
+A title component is used to display a title. It can be used to display a title
+of a page or a section.
+
+<Code code={`import { H1, H2, H3, H4, H5, H6 } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <H1>Heading 1</H1>
+    <H2>Heading 2</H2>
+    <H3>Heading 3</H3>
+    <H4>Heading 4</H4>
+    <H5>Heading 5</H5>
+    <H6>Heading 6</H6>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="variant" type="[primary, secondary, special]">
+    The variant of the title.
+  </Property>
+  <Property name="children" type="React.ReactNode" required>
+    The content of the title.
+  </Property>
+</Properties>
+
+---
+
+## Variant
+
+There are some default styles for the title. You can change the variant to
+change the style.
+
+<Preview>
+  <div className="flex flex-col">
+    <H2>Default</H2>
+    <H2 variant="primary">Primary</H2>
+    <H2 variant="secondary">Secondary</H2>
+    <H2 variant="special">Special</H2>
+  </div>
+</Preview>

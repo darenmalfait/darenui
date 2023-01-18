@@ -6,15 +6,13 @@ function useControllableState<T>(
   changeHandler?: Dispatch<SetStateAction<T | undefined>>,
 ): [T | undefined, (value: T) => void] {
   const [stateValue, setState] = useState<T>(initialValue)
-  const value = propValue ? stateValue : undefined
+  const value = propValue ?? stateValue
 
   return [
     value,
     (newValue: T) => {
       setState(newValue)
-      if (changeHandler) {
-        changeHandler(newValue)
-      }
+      changeHandler?.(newValue)
     },
   ]
 }

@@ -1,0 +1,67 @@
+export const metaTitle = 'Utils'
+export const description = 'utility function in DarenUI'
+export const pkg = 'utils'
+export const path = 'utils'
+
+# Utils
+
+Utils is a collection of utility functions that are used in DarenUI.
+
+## cx
+
+cx is a utility function that is used to combine multiple class names into one
+string. It's a combination of `clsx` and `twMerge`.
+
+<Code code={`import { cx } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code code={`const className = cx('bg-red-500', 'text-white', 'p-2')`} />
+
+## isBrowser
+
+isBrowser is a utility function that is used to check if the code is running in
+a browser.
+
+<Code code={`import { isBrowser } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code
+  code={`if (isBrowser) {
+  // do something
+}`}
+/>
+
+## isArray
+
+isArray is a utility function that is used to check if the given value is an
+array.
+
+<Code code={`import { isArray } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code code={`isArray([1, 2, 3]) // true`} />
+
+## isObject
+
+isObject is a utility function that is used to check if the given value is an
+object.
+
+<Code code={`import { isObject } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code code={`isObject({ a: 1, b: 2 }) // true`} />
+
+## ExtractProps
+
+ExtractProps is a type-utility function that is used to extract the props from a
+given component.
+
+<Code code={`import { ExtractProps } from '@daren/ui-components'`} />
+
+### Usage
+
+<Code code={`type ButtonProps = ExtractProps<typeof Button>`} />

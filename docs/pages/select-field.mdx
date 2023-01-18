@@ -1,0 +1,79 @@
+export const metaTitle = 'SelectField'
+export const description = 'SelectField component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'select-field'
+
+# SelectField
+
+SelectField is an [Select](/select) with a label, description, and error
+message. [MultiSelect](/select-field) is a SelectField with multiple options.
+
+<Code code={`import { SelectField } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <SelectField
+      name="select-field-basic"
+      label="Select label"
+      description="Select description"
+      items={[
+        {label: 'Item 1', value: '1'},
+        {label: 'Item 2', value: '2'},
+      ]}
+    />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="name" type="string" required>
+    The identifier of the input.
+  </Property>
+  <Property name="label" type="string">
+    The label of the input.
+  </Property>
+  <Property name="description" type="string">
+    The description of the input.
+  </Property>
+  <Property name="error" type="string">
+    The error message of the input.
+  </Property>
+</Properties>
+
+---
+
+## label
+
+<Preview>
+  <div className="space-y-2">
+    <SelectField
+      items={[
+        {label: 'Item 1', value: '1'},
+        {label: 'Item 2', value: '2'},
+      ]}
+      label="example label"
+    />
+  </div>
+</Preview>
+
+## error
+
+When defining an error, the input will be marked as invalid.
+
+<Preview>
+  <div className="space-y-2">
+    <SelectField
+      items={[
+        {label: 'Item 1', value: '1'},
+        {label: 'Item 2', value: '2'},
+      ]}
+      label="example label"
+      error="this is an example error"
+    />
+  </div>
+</Preview>

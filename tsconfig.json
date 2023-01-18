@@ -15,15 +15,26 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "declarationMap": true,
-    "allowJs": true
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true
   },
-  "include": ["packages", "scripts", "dangerfile.ts", "docs"],
+  "include": [
+    "packages",
+    "scripts",
+    "dangerfile.ts",
+    "pages",
+    "lib",
+    "components",
+    "docs",
+    "plopfile.js"
+  ],
   "exclude": ["node_modules", "**/**/dist", "docs/public"],
   "ts-node": {
     "compilerOptions": {

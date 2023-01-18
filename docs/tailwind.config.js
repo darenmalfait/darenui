@@ -9,7 +9,7 @@ module.exports = {
     '!**/node_modules/**',
     fromRoot('../node_modules/@daren/**/*.{js,ts,jsx,tsx}'), // path to daren
     fromRoot('./node_modules/@daren/**/*.{js,ts,jsx,tsx}'), // path to daren
-    fromRoot('./app/**/*.{js,jsx,ts,tsx}'),
+    fromRoot('./app/**/*.{js,jsx,ts,tsx,mdx}'),
   ],
 
   darkMode: 'class',
@@ -22,6 +22,16 @@ module.exports = {
       },
     },
   },
+  typography: theme => ({
+    DEFAULT: {
+      css: {
+        h1: {
+          ...theme('fontSize.2xl')[1],
+          marginBottom: theme('spacing.2'),
+        },
+      },
+    },
+  }),
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),

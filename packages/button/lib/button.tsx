@@ -31,7 +31,7 @@ function ButtonInner({
           {
             'bg-accent text-accent dark:bg-accent-100 dark:text-white':
               variant === 'primary',
-            'bg-gray-200 text-primary dark:bg-gray-800':
+            'bg-gray-100 text-primary dark:bg-gray-800':
               variant === 'secondary',
             'bg-red-200 text-red-500 ': variant === 'danger',
             'bg-green-200 text-green-500 ': variant === 'success',
@@ -40,7 +40,7 @@ function ButtonInner({
       />
       <div
         className={cx(
-          'relative flex h-full w-full items-center justify-center whitespace-nowrap',
+          'not-prose relative flex h-full w-full items-center justify-center whitespace-nowrap',
           {
             'cursor-not-allowed text-gray-100 opacity-50': disabled,
             '!text-white dark:!text-accent': variant === 'primary',

@@ -1,0 +1,62 @@
+export const metaTitle = 'Button'
+export const description = 'Button component of DarenUI'
+export const pkg = 'button'
+export const path = 'button'
+
+# Button
+
+Button is a component that is used to trigger an action or event, such as
+submitting a form, opening a dialog, canceling an action, or performing a delete
+operation. If you want a link that looks like a button, go to
+[ButtonLink](/button-link).
+
+<Code code={`import { Button } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Button>Click me</Button>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="children" type="string">
+    The text to be displayed on the button.
+  </Property>
+  <Property name="variant" type={['primary', 'secondary', 'danger', 'success']}>
+    styling preset for the button.
+  </Property>
+  <Property name="size" type={['small', 'medium', 'large']}>
+    The size of the button.
+  </Property>
+</Properties>
+
+---
+
+## variant
+
+<Preview>
+  <div className="flex w-full flex-wrap gap-2 p-8">
+    <Button>Button</Button>
+    <Button variant="primary">Button</Button>
+    <Button variant="secondary">Button</Button>
+    <Button variant="success">Button</Button>
+    <Button variant="danger">Button</Button>
+  </div>
+</Preview>
+
+## size
+
+<Preview>
+  <div className="flex w-full flex-wrap gap-2 p-8">
+    <Button>Button</Button>
+    <Button size="small">Button</Button>
+    <Button size="medium">Button</Button>
+    <Button size="large">Button</Button>
+  </div>
+</Preview>

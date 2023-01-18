@@ -1,0 +1,31 @@
+export const metaTitle = 'Section'
+export const description = 'Section component of DarenUI'
+export const pkg = 'layout-components'
+export const path = 'section'
+
+# Section
+
+Section is a layout component that allows you to wrap content in a section.
+
+<Code code={`import { Section } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Section>
+      <div>Hello world</div>
+      <div>Hello world</div>
+    </Section>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="children" type="React.ReactNode" required>
+    The content of the section.
+  </Property>
+</Properties>

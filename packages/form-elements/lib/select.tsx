@@ -1,7 +1,6 @@
 import {cx} from '@daren/utils'
 import {Combobox, Transition} from '@headlessui/react'
 import {
-  CheckIcon,
   ExclamationCircleIcon,
   ChevronUpDownIcon,
 } from '@heroicons/react/24/solid'
@@ -31,6 +30,7 @@ interface SelectProps {
   defaultValue?: string
   inputSize?: InputSize
   disabled?: boolean
+  clearOnSelect?: boolean
 }
 
 const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
@@ -42,6 +42,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
     items,
     name,
     hasError,
+    clearOnSelect,
     // Not sure why this is throwing an error on OnChange
     // eslint-disable-next-line @typescript-eslint/unbound-method
     onChange,
@@ -71,8 +72,12 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
     (val: typeof value) => {
       setSelected(val)
       if (onChange) onChange(val?.value)
+      if (clearOnSelect) {
+        setQuery('')
+        setSelected(undefined)
+      }
     },
-    [onChange],
+    [clearOnSelect, onChange],
   )
 
   return (
@@ -97,7 +102,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
                 hasError,
                 inputSize,
               )}
-              displayValue={item => (item as any)?.label}
+              displayValue={item => (clearOnSelect ? '' : (item as any)?.label)}
               onChange={event => setQuery(event.target.value)}
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-5">
@@ -133,33 +138,20 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
                   <Combobox.Option
                     key={item.id ?? item.value}
                     className={({active}) =>
-                      `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                        active
-                          ? 'bg-gray-100 text-primary-500'
-                          : 'text-primary-500'
+                      `relative cursor-default select-none py-2 px-4 ${
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
                       }`
                     }
                     value={item}
                   >
-                    {({selected: isSelected, active}) => (
-                      <>
-                        <span
-                          className={`block truncate ${
-                            isSelected ? 'font-medium' : 'font-normal'
-                          }`}
-                        >
-                          {item.label}
-                        </span>
-                        {isSelected ? (
-                          <span
-                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                              active ? 'text-white' : 'text-teal-600'
-                            }`}
-                          >
-                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                          </span>
-                        ) : null}
-                      </>
+                    {({selected: isSelected}) => (
+                      <span
+                        className={`block truncate ${
+                          isSelected ? 'font-medium' : 'font-normal'
+                        }`}
+                      >
+                        {item.label}
+                      </span>
                     )}
                   </Combobox.Option>
                 ))

@@ -1,0 +1,33 @@
+export const metaTitle = 'DoubleLabelLink'
+export const description = 'DoubleLabelLink component of DarenUI'
+export const pkg = 'button'
+export const path = 'link'
+
+# DoubleLabelLink
+
+DoubleLabelLink is a [Link](/link) component with a double label.
+
+<Code code={`import { DoubleLabelLink } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <DoubleLabelLink description="label 2" href="https://www.daren.be">
+      label 1
+    </DoubleLabelLink>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="description" type="string">
+    one of the labels
+  </Property>
+  <Property name="children" type="string">
+    one of the labels
+  </Property>
+</Properties>

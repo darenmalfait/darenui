@@ -1,0 +1,31 @@
+export const metaTitle = 'Link'
+export const description = 'Link component of DarenUI'
+export const pkg = 'button'
+export const path = 'link'
+
+# Link
+
+Link is a component that allows you to create a link to another page or another
+resource.
+
+<Code code={`import { Link } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Link href="https://www.daren.be" external>
+      Click me
+    </Link>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="external" type="boolean">
+    If true, the link will open in a new tab.
+  </Property>
+</Properties>

@@ -1,0 +1,47 @@
+export const metaTitle = 'RadioGroup'
+export const description = 'RadioGroup component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'radio-group'
+
+# RadioGroup
+
+RadioGroup is an [Field](/field) component that renders an input with time
+selection.
+
+<Code code={`import { RadioGroup } from '@daren/ui-components'`} />
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="children" type="RadioGroup.Option" required>
+    The options of the radio group.
+  </Property>
+</Properties>
+
+---
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <RadioGroup name="radio-group-name">
+      <RadioGroup.Option
+        value="first"
+        label="first option"
+        description="Description of the first option"
+      />
+      <RadioGroup.Option
+        value="second"
+        label="second option"
+        description="Description of the second option"
+      />
+      <RadioGroup.Option
+        value="third"
+        label="third option"
+        description="Description of the third option"
+      />
+    </RadioGroup>
+  </div>
+</Preview>

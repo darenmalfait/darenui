@@ -1,0 +1,55 @@
+export const metaTitle = 'Toggle'
+export const description = 'Toggle component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'toggle'
+
+# Toggle
+
+Toggle is a form component that allows the user to toggle between two states.
+
+<Code code={`import { Toggle } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Toggle defaultValue={true} />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="name" type="string">
+    The name of the toggle.
+  </Property>
+  <Property name="label" type="string">
+    The label of the toggle.
+  </Property>
+  <Property name="onChange" type="React.ChangeEventHandler<HTMLInputElement>">
+    toggle change event handler.
+  </Property>
+  <Property name="activeColorClass" type="string">
+    The color of the toggle when it is active.
+  </Property>
+  <Property name="inactiveColorClass" type="string">
+    The color of the toggle when it is inactive.
+  </Property>
+</Properties>
+
+---
+
+## activeColorClass/inactiveColorClass
+
+<Preview>
+  <div className="space-y-2">
+    <Toggle
+      defaultValue={true}
+      label="example label"
+      activeColorClass="bg-red-500"
+      inactiveColorClass="bg-yellow-500"
+    />
+  </div>
+</Preview>

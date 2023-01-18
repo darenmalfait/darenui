@@ -1,0 +1,47 @@
+export const metaTitle = 'Spinner'
+export const description = 'Spinner component of DarenUI'
+export const pkg = 'spinner'
+export const path = 'spinner'
+
+# Spinner
+
+Spinner is a loading animation component.
+
+<Code code={`import { Spinner } from '@daren/ui-components'`} />
+
+---
+
+## Preview
+
+You can use the `className` property to customize the spinner.
+
+<Preview>
+  <div className="flex w-full flex-wrap space-x-2 p-8">
+    <Spinner />
+    <Spinner className="text-green-400" />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="size" type="[xs, sm, md, lg, xl]">
+    The size of the spinner.
+  </Property>
+</Properties>
+
+---
+
+## Size
+
+<Preview>
+  <div className="flex w-full flex-wrap space-x-2 p-8">
+    <Spinner size="xs" />
+    <Spinner size="sm" />
+    <Spinner size="md" />
+    <Spinner size="lg" />
+    <Spinner size="xl" />
+  </div>
+</Preview>

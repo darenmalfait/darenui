@@ -1,0 +1,75 @@
+export const metaTitle = 'Modal'
+export const description = 'Modal component of DarenUI'
+export const pkg = 'modal'
+export const path = 'modal'
+
+# Modal
+
+Modal is a component that can be used to display a message to the user.
+
+<Code code={`import { Modal } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="p-8">
+    <Modal
+      type="info"
+      open={true || false}
+      onClose={() => setIsOpen(false)}
+      title="open modal"
+      description="modal description"
+    />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="type" type={['danger', 'warning', 'success', 'info']}>
+    Preset color scheme for the modal. Defaults to `info`.
+  </Property>
+  <Property name="title" type="string">
+    Title of the modal.
+  </Property>
+  <Property name="description" type="React.ReactNode">
+    Description of the modal.
+  </Property>
+</Properties>
+
+## Type
+
+<Preview>
+  <div className="flex flex-wrap gap-2 p-8">
+    <Modal
+      type="danger"
+      open={true || false}
+      onClose={() => setIsOpen(false)}
+      title="open danger"
+      description="danger description"
+    />
+    <Modal
+      type="warning"
+      open={true || false}
+      onClose={() => setIsOpen(false)}
+      title="open warning"
+      description="warning description"
+    />
+    <Modal
+      type="success"
+      open={true || false}
+      onClose={() => setIsOpen(false)}
+      title="open success"
+      description="success description"
+    />
+    <Modal
+      type="info"
+      open={true || false}
+      onClose={() => setIsOpen(false)}
+      title="open info"
+      description="info description"
+    />
+  </div>
+</Preview>

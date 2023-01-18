@@ -1,0 +1,74 @@
+export const metaTitle = 'Input'
+export const description = 'Input component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'input'
+
+import {
+  MagnifyingGlassIcon,
+  GifIcon,
+  MapPinIcon,
+} from '@heroicons/react/24/solid'
+
+# Input
+
+Input is a form component that allows users to enter data. [Field](/field) is an
+input field with label, desscription and error fields.
+
+<Code code={`import { Input } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Input />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="hasError" type="boolean">
+    Whether the input has an error.
+  </Property>
+  <Property name="icon" type="React.ReactElement">
+    An icon to be displayed on the right side of the input.
+  </Property>
+  <Property name="inputSize" type={['sm' | 'md' | 'lg']}>
+    The size of the input.
+  </Property>
+</Properties>
+
+---
+
+## inputSize
+
+<Preview>
+  <div className="space-y-2">
+    <Input inputSize="sm" />
+    <Input inputSize="md" />
+    <Input inputSize="lg" />
+  </div>
+</Preview>
+
+## icon
+
+<Preview>
+  <div className="space-y-2">
+    <Input icon={MagnifyingGlassIcon} />
+    <Input icon={MapPinIcon} />
+    <Input icon={GifIcon} />
+  </div>
+</Preview>
+
+## hasError
+
+hasError is a boolean that indicates whether the input has an error.
+
+<Preview>
+  <div className="space-y-2">
+    <Input hasError={true} />
+    <Input hasError={false} />
+  </div>
+</Preview>

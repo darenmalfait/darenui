@@ -1,0 +1,89 @@
+export const metaTitle = 'Checkbox'
+export const description = 'Checkbox component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'checkbox'
+
+import {
+  MagnifyingGlassIcon,
+  GifIcon,
+  MapPinIcon,
+} from '@heroicons/react/24/solid'
+
+# Checkbox
+
+Checkbox is a component that allows a user to select an option. It is used to
+select one or more options from a list. [CheckboxField](/checkbox-field) is a
+wrapper component that provides a label and error message.
+
+<Code code={`import { Checkbox } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview>
+  <div className="space-y-2">
+    <Checkbox />
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="icon" type="React.ReactElement">
+    You can change the icon by passing the icon prop.
+  </Property>
+  <Property name="bgClassName" type="string">
+    You can change the background color by passing the bgClassName prop.
+  </Property>
+  <Property name="textClassName" type="string">
+    You can change the text color by passing the textClassName prop.
+  </Property>
+  <Property name="variant" type={['sm' | 'md' | 'lg']}>
+    You can change the size by passing the variant prop.
+  </Property>
+</Properties>
+
+---
+
+## inputSize
+
+<Preview>
+  <div className="flex flex-row items-center space-x-2">
+    <Checkbox variant="sm" />
+    <Checkbox variant="md" />
+    <Checkbox variant="lg" />
+  </div>
+</Preview>
+
+## icon
+
+<Preview>
+  <div className="flex flex-row space-x-2">
+    <Checkbox defaultChecked icon={MagnifyingGlassIcon} />
+    <Checkbox defaultChecked icon={MapPinIcon} />
+    <Checkbox defaultChecked icon={GifIcon} />
+  </div>
+</Preview>
+
+## bgClassName
+
+<Preview>
+  <div className="flex flex-row space-x-2">
+    <Checkbox defaultChecked bgClassName="text-red-500" />
+    <Checkbox defaultChecked bgClassName="text-yellow-400" />
+    <Checkbox defaultChecked bgClassName="text-blue-400" />
+  </div>
+</Preview>
+
+## textClassName
+
+<Preview>
+  <div className="flex flex-row space-x-2">
+    <Checkbox
+      defaultChecked
+      bgClassName="text-yellow-400"
+      textClassName="text-black"
+    />
+  </div>
+</Preview>
