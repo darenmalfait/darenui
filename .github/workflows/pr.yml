@@ -32,6 +32,6 @@ jobs:
         run: yarn validate
 
       - name: Danger
-        uses: danger/danger-js@54f7f7af44288b077fd3f8a29b9865a2d515dc91 # 11.2.1
+        uses: danger/danger-js@c9c62a61516ef5da34bb05425038b43f12140aeb # 11.2.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
