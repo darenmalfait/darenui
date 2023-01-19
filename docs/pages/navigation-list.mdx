@@ -19,6 +19,45 @@ predefined styles.
 
 <Preview>
   <NavigationList>
+    <div className="space-y-4">
+      <div className="py-1">
+        <NavigationList.Item href="https://www.daren.be" title="Item 1" />
+        <NavigationList.Item
+          as="button"
+          onClick={() => console.log('click')}
+          title="Item 2"
+        />
+        <NavigationList.Item title="Item 3" />
+      </div>
+      <div className="py-1">
+        <NavigationList.Item title="Item 3" />
+        <NavigationList.Item title="Item 4" />
+        <NavigationList.Item title="Item 5" />
+      </div>
+    </div>
+  </NavigationList>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property
+    name="children"
+    type="[React.ReactNode, NavigationList.Option]"
+    required
+  >
+    The content of the component.
+  </Property>
+</Properties>
+
+---
+
+## Icon
+
+<Preview>
+  <NavigationList>
     <div className="divide-y divide-gray-300">
       <div className="py-1">
         <NavigationList.Item
@@ -43,29 +82,29 @@ predefined styles.
   </NavigationList>
 </Preview>
 
----
-
-## Properties
-
-<Properties>
-  <Property
-    name="children"
-    type="[React.ReactNode, NavigationList.Option]"
-    required
-  >
-    The content of the component.
-  </Property>
-</Properties>
-
----
-
 ## Advanced
 
 <Preview>
   <NavigationList>
-    <div className="divide-y divide-gray-300">
+    <div className="space-y-4">
       <div className="py-1">
         <NavigationList.Item icon={CogIcon} title="Item 1" />
+        <NavigationList.Item
+          href="/item-2"
+          title="Item 2"
+          className={getNavigationItemClassName()}
+        />
+        <NavigationList.Item title="Item 3" />
+      </div>
+      <div className="py-1">
+        <span
+          className={getNavigationItemClassName({
+            className: '!bg-transparent pb-4 text-xl',
+          })}
+        >
+          Category
+        </span>
+        <NavigationList.Item title="Item 1" />
         <NavigationList.Item
           href="/item-2"
           title="Item 2"
