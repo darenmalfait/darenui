@@ -10,16 +10,10 @@ type NavigationItemProps = {
   icon?: React.ElementType
 }
 
-function getNavigationItemClassName({
-  textClassNames = 'text-primary hover:text-slate-800',
-  paddingClassNames = 'px-3 py-2',
-  backgroundClassNames = 'bg-primary hover:bg-gray-50',
-} = {}) {
+function getNavigationItemClassName({className}: {className?: string} = {}) {
   return cx(
-    textClassNames,
-    backgroundClassNames,
-    paddingClassNames,
-    'group flex w-full items-center text-sm font-bold rounded-md',
+    'flex w-full items-center gap-x-2 px-3 py-2 text-primary rounded-lg bg-black/0 transition hover:bg-black/5 dark:bg-white/0 dark:hover:bg-white/5',
+    className,
   )
 }
 
