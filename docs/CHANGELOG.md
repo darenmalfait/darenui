@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.4...@daren/docs@0.4.5) (2023-01-19)
+
+
+### Bug Fixes
+
+* **navigation-list:** improve general styling ([#73](https://github.com/darenmalfait/darenui/issues/73)) ([cd82e67](https://github.com/darenmalfait/darenui/commit/cd82e67e8b18806c5c666ac2732fd8d168b343cd))
+
+
+
+
+
 ## [0.4.4](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.3...@daren/docs@0.4.4) (2023-01-18)
 
 **Note:** Version bump only for package @daren/docs
