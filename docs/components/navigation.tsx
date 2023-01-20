@@ -13,14 +13,15 @@ import {Tag} from './tag'
 function TopLevelNavItem({
   href,
   children,
-}: {
+  target,
+}: Pick<JSX.IntrinsicElements['a'], 'children' | 'target'> & {
   href: string
-  children: React.ReactNode
 }) {
   return (
     <li className="md:hidden">
       <Link
         href={href}
+        target={target}
         className="block py-1 text-sm transition text-primary hover:text-gray-900 dark:hover:text-white"
       >
         {children}
@@ -288,9 +289,10 @@ export function Navigation(props: JSX.IntrinsicElements['nav']) {
   return (
     <nav {...props}>
       <ul>
-        <TopLevelNavItem href="/">API</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="#">Support</TopLevelNavItem>
+        <TopLevelNavItem href="/">Documentation</TopLevelNavItem>
+        <TopLevelNavItem href="https://www.daren.be" target="_blank">
+          Daren
+        </TopLevelNavItem>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
