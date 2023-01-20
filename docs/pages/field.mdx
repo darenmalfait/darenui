@@ -11,7 +11,9 @@ Field is an [Input](/input) with a label, description, and error message.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<Field name="preview-field" label="label" description="description field" />`}
+>
   <div className="space-y-2">
     <Field name="preview-field" label="label" description="description field" />
   </div>
@@ -40,7 +42,7 @@ Field is an [Input](/input) with a label, description, and error message.
 
 ## label
 
-<Preview>
+<Preview code={`<Field label="example label" />`}>
   <div className="space-y-2">
     <Field label="example label" />
   </div>
@@ -50,7 +52,9 @@ Field is an [Input](/input) with a label, description, and error message.
 
 When defining an error, the input will be marked as invalid.
 
-<Preview>
+<Preview
+  code={`<Field label="example label" error="this is an example error" />`}
+>
   <div className="space-y-2">
     <Field label="example label" error="this is an example error" />
   </div>

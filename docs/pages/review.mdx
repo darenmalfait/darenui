@@ -13,7 +13,17 @@ Review is a component displays review information with a rating.
 
 ## Preview
 
-<Preview direction="vertical">
+<Preview
+  direction="vertical"
+  code={` <Review
+  rating={4}
+  title="this is a title"
+  html="<p>this is the content in html</p>"
+  author="auhor"
+  date="jan 2020"
+  datetime="2020-01-01T00:00:00.000Z"
+/>`}
+>
   <div className="p-8">
     <Review
       rating={4}
@@ -55,7 +65,38 @@ Review is a component displays review information with a rating.
 
 ## ReviewGroup
 
-<Preview direction="vertical">
+<Preview
+  direction="vertical"
+  code={`<ReviewGroup
+  title="Recent reviews"
+  titleClass="text-lg font-medium text-primary"
+>
+  <Review
+    rating={4}
+    title="this is a title"
+    html="<p>this is the content in html</p>"
+    author="auhor"
+    date="jan 2020"
+    datetime="2020-01-01T00:00:00.000Z"
+  />
+  <Review
+    rating={4}
+    title="this is a title"
+    html="<p>this is the content in html</p>"
+    author="auhor"
+    date="jan 2020"
+    datetime="2020-01-01T00:00:00.000Z"
+  />
+  <Review
+    rating={4}
+    title="this is a title"
+    html="<p>this is the content in html</p>"
+    author="auhor"
+    date="jan 2020"
+    datetime="2020-01-01T00:00:00.000Z"
+  />
+</ReviewGroup>`}
+>
   <div className="p-8">
     <ReviewGroup
       title="Recent reviews"

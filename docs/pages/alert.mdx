@@ -11,7 +11,7 @@ Alert is a component that can be used to display a message to the user.
 
 ## Preview
 
-<Preview>
+<Preview code={`<Alert title="example" description="example description" />`}>
   <div className="space-y-2">
     <Alert title="example" description="example description" />
   </div>
@@ -40,7 +40,12 @@ Alert is a component that can be used to display a message to the user.
 
 ## type
 
-<Preview>
+<Preview
+  code={`<Alert type="danger" title="example" description="example description" />
+<Alert type="warning" title="example" description="example description" />
+<Alert type="success" title="example" description="example description" />
+<Alert type="info" title="example" description="example description" />`}
+>
   <div className="flex w-full flex-col space-y-4">
     <Alert type="danger" title="example" description="example description" />
     <Alert type="warning" title="example" description="example description" />
@@ -51,7 +56,14 @@ Alert is a component that can be used to display a message to the user.
 
 ## hideIcon
 
-<Preview>
+<Preview
+  code={`<Alert
+  hideIcon
+  type="info"
+  title="example"
+  description="example description"
+/>`}
+>
   <div className="flex w-full flex-col space-y-4">
     <Alert
       hideIcon

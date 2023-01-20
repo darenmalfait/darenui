@@ -12,7 +12,17 @@ options. [SelectField](/select-field) is a wrapper around the Select component.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<Select
+  name="select-basic"
+  label="Select label"
+  description="Select description"
+  items={[
+    {label: 'Item 1', value: '1'},
+    {label: 'Item 2', value: '2'},
+  ]}
+/>`}
+>
   <div className="space-y-2">
     <Select
       name="select-basic"

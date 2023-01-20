@@ -12,7 +12,17 @@ message. [MultiSelect](/select-field) is a SelectField with multiple options.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<SelectField
+  name="select-field-basic"
+  label="Select label"
+  description="Select description"
+  items={[
+    {label: 'Item 1', value: '1'},
+    {label: 'Item 2', value: '2'},
+  ]}
+/>`}
+>
   <div className="space-y-2">
     <SelectField
       name="select-field-basic"
@@ -49,7 +59,15 @@ message. [MultiSelect](/select-field) is a SelectField with multiple options.
 
 ## label
 
-<Preview>
+<Preview
+  code={`<SelectField
+  items={[
+    {label: 'Item 1', value: '1'},
+    {label: 'Item 2', value: '2'},
+  ]}
+  label="example label"
+/>`}
+>
   <div className="space-y-2">
     <SelectField
       items={[
@@ -65,7 +83,16 @@ message. [MultiSelect](/select-field) is a SelectField with multiple options.
 
 When defining an error, the input will be marked as invalid.
 
-<Preview>
+<Preview
+  code={`<SelectField
+  items={[
+    {label: 'Item 1', value: '1'},
+    {label: 'Item 2', value: '2'},
+  ]}
+  label="example label"
+  error="this is an example error"
+/>`}
+>
   <div className="space-y-2">
     <SelectField
       items={[

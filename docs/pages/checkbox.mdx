@@ -19,7 +19,7 @@ wrapper component that provides a label and error message.
 
 ## Preview
 
-<Preview>
+<Preview code={`<Checkbox />`}>
   <div className="space-y-2">
     <Checkbox />
   </div>
@@ -48,7 +48,11 @@ wrapper component that provides a label and error message.
 
 ## inputSize
 
-<Preview>
+<Preview
+  code={`<Checkbox variant="sm" />
+<Checkbox variant="md" />
+<Checkbox variant="lg" />`}
+>
   <div className="flex flex-row items-center space-x-2">
     <Checkbox variant="sm" />
     <Checkbox variant="md" />
@@ -58,7 +62,11 @@ wrapper component that provides a label and error message.
 
 ## icon
 
-<Preview>
+<Preview
+  code={`<Checkbox defaultChecked icon={MagnifyingGlassIcon} />
+<Checkbox defaultChecked icon={MapPinIcon} />
+<Checkbox defaultChecked icon={GifIcon} />`}
+>
   <div className="flex flex-row space-x-2">
     <Checkbox defaultChecked icon={MagnifyingGlassIcon} />
     <Checkbox defaultChecked icon={MapPinIcon} />
@@ -68,7 +76,11 @@ wrapper component that provides a label and error message.
 
 ## bgClassName
 
-<Preview>
+<Preview
+  code={`<Checkbox defaultChecked bgClassName="text-red-500" />
+<Checkbox defaultChecked bgClassName="text-yellow-400" />
+<Checkbox defaultChecked bgClassName="text-blue-400" />`}
+>
   <div className="flex flex-row space-x-2">
     <Checkbox defaultChecked bgClassName="text-red-500" />
     <Checkbox defaultChecked bgClassName="text-yellow-400" />
@@ -78,7 +90,13 @@ wrapper component that provides a label and error message.
 
 ## textClassName
 
-<Preview>
+<Preview
+  code={`<Checkbox
+  defaultChecked
+  bgClassName="text-yellow-400"
+  textClassName="text-black"
+/>`}
+>
   <div className="flex flex-row space-x-2">
     <Checkbox
       defaultChecked

@@ -11,7 +11,7 @@ Toggle is a form component that allows the user to toggle between two states.
 
 ## Preview
 
-<Preview>
+<Preview code={`<Toggle defaultValue={true} />`}>
   <div className="space-y-2">
     <Toggle defaultValue={true} />
   </div>
@@ -43,7 +43,14 @@ Toggle is a form component that allows the user to toggle between two states.
 
 ## activeColorClass/inactiveColorClass
 
-<Preview>
+<Preview
+  code={`<Toggle
+  defaultValue={true}
+  label="example label"
+  activeColorClass="bg-red-500"
+  inactiveColorClass="bg-yellow-500"
+/>`}
+>
   <div className="space-y-2">
     <Toggle
       defaultValue={true}

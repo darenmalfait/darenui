@@ -17,7 +17,26 @@ predefined styles.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<NavigationList>
+  <div className="space-y-4">
+    <div className="py-1">
+      <NavigationList.Item href="https://www.daren.be" title="Item 1" />
+      <NavigationList.Item
+        as="button"
+        onClick={() => console.log('click')}
+        title="Item 2"
+      />
+      <NavigationList.Item title="Item 3" />
+    </div>
+    <div className="py-1">
+      <NavigationList.Item title="Item 3" />
+      <NavigationList.Item title="Item 4" />
+      <NavigationList.Item title="Item 5" />
+    </div>
+  </div>
+</NavigationList>`}
+>
   <NavigationList>
     <div className="space-y-4">
       <div className="py-1">

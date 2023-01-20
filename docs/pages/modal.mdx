@@ -11,7 +11,15 @@ Modal is a component that can be used to display a message to the user.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<Modal
+  type="info"
+  open={true || false}
+  onClose={() => setIsOpen(false)}
+  title="open modal"
+  description="modal description"
+/>`}
+>
   <div className="p-8">
     <Modal
       type="info"
@@ -41,7 +49,36 @@ Modal is a component that can be used to display a message to the user.
 
 ## Type
 
-<Preview>
+<Preview
+  code={`<Modal
+  type="danger"
+  open={true || false}
+  onClose={() => setIsOpen(false)}
+  title="open danger"
+  description="danger description"
+/>
+<Modal
+  type="warning"
+  open={true || false}
+  onClose={() => setIsOpen(false)}
+  title="open warning"
+  description="warning description"
+/>
+<Modal
+  type="success"
+  open={true || false}
+  onClose={() => setIsOpen(false)}
+  title="open success"
+  description="success description"
+/>
+<Modal
+  type="info"
+  open={true || false}
+  onClose={() => setIsOpen(false)}
+  title="open info"
+  description="info description"
+/>`}
+>
   <div className="flex flex-wrap gap-2 p-8">
     <Modal
       type="danger"

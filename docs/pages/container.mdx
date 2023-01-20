@@ -12,7 +12,14 @@ child of Grid.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<Grid nested>
+  <Container>
+    <div>Hello world</div>
+    <div>Hello world</div>
+  </Container>
+</Grid>`}
+>
   <div className="space-y-2">
     <Grid nested>
       <Container>
@@ -42,7 +49,26 @@ child of Grid.
 
 There are different preset widths available for the container.
 
-<Preview>
+<Preview
+  code={`<Grid nested>
+  <Container size="small">
+    <div>Hello world</div>
+    <div>Hello world</div>
+  </Container>
+  <Container size="default">
+    <div>Hello world</div>
+    <div>Hello world</div>
+  </Container>
+  <Container size="medium">
+    <div>Hello world</div>
+    <div>Hello world</div>
+  </Container>
+  <Container size="fill">
+    <div>Hello world</div>
+    <div>Hello world</div>
+  </Container>
+</Grid>`}
+>
   <Grid nested>
     <Container size="small">
       <div>Hello world</div>

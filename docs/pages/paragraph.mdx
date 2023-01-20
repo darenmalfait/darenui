@@ -11,7 +11,16 @@ Paragraph is a text element. It is used to display a paragraph of text.
 
 ## Preview
 
-<Preview>
+<Preview
+  code={`<Paragraph>
+  Once upon a time, there was a React component named SelfTest. SelfTest was
+  special because it had the ability to test itself. Every time the
+  component rendered, it would run a series of tests to ensure that it was
+  working properly. The tests were thorough and covered all of the
+  component's functionality. SelfTest was proud of its ability to test
+  itself and never failed a single test.
+</Paragraph>`}
+>
   <div className="space-y-2">
     <Paragraph>
       Once upon a time, there was a React component named SelfTest. SelfTest was
@@ -44,7 +53,24 @@ Paragraph is a text element. It is used to display a paragraph of text.
 There are some default styles for the paragraph. You can change the variant to
 change the style.
 
-<Preview>
+<Preview
+  code={`<Paragraph variant="primary">
+  Once upon a time, there was a React component named SelfTest. SelfTest was
+  special because it had the ability to test itself. Every time the
+  component rendered, it would run a series of tests to ensure that it was
+  working properly. The tests were thorough and covered all of the
+  component's functionality. SelfTest was proud of its ability to test
+  itself and never failed a single test.
+</Paragraph>
+<Paragraph variant="secondary">
+  Once upon a time, there was a React component named SelfTest. SelfTest was
+  special because it had the ability to test itself. Every time the
+  component rendered, it would run a series of tests to ensure that it was
+  working properly. The tests were thorough and covered all of the
+  component's functionality. SelfTest was proud of its ability to test
+  itself and never failed a single test.
+</Paragraph>`}
+>
   <div className="flex flex-col">
     <Paragraph variant="primary">
       Once upon a time, there was a React component named SelfTest. SelfTest was

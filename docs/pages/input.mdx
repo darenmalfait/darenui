@@ -18,7 +18,7 @@ input field with label, desscription and error fields.
 
 ## Preview
 
-<Preview>
+<Preview code={`<Input />`}>
   <div className="space-y-2">
     <Input />
   </div>
@@ -44,7 +44,11 @@ input field with label, desscription and error fields.
 
 ## inputSize
 
-<Preview>
+<Preview
+  code={`<Input inputSize="sm" />
+<Input inputSize="md" />
+<Input inputSize="lg" />`}
+>
   <div className="space-y-2">
     <Input inputSize="sm" />
     <Input inputSize="md" />
@@ -54,7 +58,11 @@ input field with label, desscription and error fields.
 
 ## icon
 
-<Preview>
+<Preview
+  code={`<Input icon={MagnifyingGlassIcon} />
+<Input icon={MapPinIcon} />
+<Input icon={GifIcon} />`}
+>
   <div className="space-y-2">
     <Input icon={MagnifyingGlassIcon} />
     <Input icon={MapPinIcon} />
@@ -66,7 +74,10 @@ input field with label, desscription and error fields.
 
 hasError is a boolean that indicates whether the input has an error.
 
-<Preview>
+<Preview
+  code={`<Input hasError={true} />
+<Input hasError={false} />`}
+>
   <div className="space-y-2">
     <Input hasError={true} />
     <Input hasError={false} />

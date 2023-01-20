@@ -12,19 +12,27 @@ selection.
 
 ---
 
-## Properties
-
-<Properties>
-  <Property name="children" type="RadioGroup.Option" required>
-    The options of the radio group.
-  </Property>
-</Properties>
-
----
-
 ## Preview
 
-<Preview>
+<Preview
+  code={`<RadioGroup name="radio-group-name">
+  <RadioGroup.Option
+    value="first"
+    label="first option"
+    description="Description of the first option"
+  />
+  <RadioGroup.Option
+    value="second"
+    label="second option"
+    description="Description of the second option"
+  />
+  <RadioGroup.Option
+    value="third"
+    label="third option"
+    description="Description of the third option"
+  />
+</RadioGroup>`}
+>
   <div className="space-y-2">
     <RadioGroup name="radio-group-name">
       <RadioGroup.Option
@@ -45,3 +53,13 @@ selection.
     </RadioGroup>
   </div>
 </Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="children" type="RadioGroup.Option" required>
+    The options of the radio group.
+  </Property>
+</Properties>

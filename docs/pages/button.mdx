@@ -14,7 +14,7 @@ operation. If you want a link that looks like a button, go to
 
 ## Preview
 
-<Preview>
+<Preview code={`<Button>Click me</Button>`}>
   <div className="space-y-2">
     <Button>Click me</Button>
   </div>
@@ -40,7 +40,13 @@ operation. If you want a link that looks like a button, go to
 
 ## variant
 
-<Preview>
+<Preview
+  code={`<Button>Button</Button>
+<Button variant="primary">Button</Button>
+<Button variant="secondary">Button</Button>
+<Button variant="success">Button</Button>
+<Button variant="danger">Button</Button>`}
+>
   <div className="flex w-full flex-wrap gap-2 p-8">
     <Button>Button</Button>
     <Button variant="primary">Button</Button>
@@ -52,7 +58,12 @@ operation. If you want a link that looks like a button, go to
 
 ## size
 
-<Preview>
+<Preview
+  code={`<Button>Button</Button>
+<Button size="small">Button</Button>
+<Button size="medium">Button</Button>
+<Button size="large">Button</Button>`}
+>
   <div className="flex w-full flex-wrap gap-2 p-8">
     <Button>Button</Button>
     <Button size="small">Button</Button>

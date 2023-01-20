@@ -13,7 +13,14 @@ Tabs is a component that allows you to switch between different views.
 
 ## Preview
 
-<Preview direction="vertical">
+<Preview
+  direction="vertical"
+  code={`<Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
+  <Tabs.Item>tab 1</Tabs.Item>
+  <Tabs.Item>tab 2</Tabs.Item>
+  <Tabs.Item>tab 3</Tabs.Item>
+</Tabs>`}
+>
   <div className="p-8">
     <Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
       <Tabs.Item>tab 1</Tabs.Item>

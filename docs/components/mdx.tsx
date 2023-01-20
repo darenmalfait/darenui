@@ -5,7 +5,6 @@ import {
   CodeBlock,
   Modal as DefaultModal,
 } from '@daren/ui-components'
-import jsxToString from 'jsx-to-string'
 import Link from 'next/link'
 import * as React from 'react'
 
@@ -31,8 +30,10 @@ export function Modal(props: ExtractProps<typeof DefaultModal>) {
 export function Preview({
   children,
   direction = 'horizontal',
+  code,
   ...props
 }: JSX.IntrinsicElements['div'] & {
+  code?: string
   direction: 'vertical' | 'horizontal'
 }) {
   if (direction === 'vertical') {
@@ -41,7 +42,7 @@ export function Preview({
         <div className="relative flex w-full flex-col space-y-4 rounded p-8 shadow-outline">
           {children}
         </div>
-        <Code code={jsxToString(children)} />
+        <Code code={code} />
       </div>
     )
   }
@@ -55,7 +56,7 @@ export function Preview({
           </div>
         </Col>
         <Col sticky>
-          <Code code={jsxToString(children)} />
+          <Code code={code} />
         </Col>
       </Row>
     </div>

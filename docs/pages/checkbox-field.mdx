@@ -12,7 +12,7 @@ message.
 
 ## Preview
 
-<Preview>
+<Preview code={`<CheckboxField name="preview-field" label="label" />`}>
   <div className="space-y-2">
     <CheckboxField name="preview-field" label="label" />
   </div>
@@ -38,7 +38,7 @@ message.
 
 ## label
 
-<Preview>
+<Preview code={`<CheckboxField label="example label" />`}>
   <div className="space-y-2">
     <CheckboxField label="example label" />
   </div>
@@ -48,7 +48,9 @@ message.
 
 When defining an error, the checkbox will be marked as invalid.
 
-<Preview>
+<Preview
+  code={`<CheckboxField label="example label" error="this is an example error" />`}
+>
   <div className="space-y-2">
     <CheckboxField label="example label" error="this is an example error" />
   </div>
