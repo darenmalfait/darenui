@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.6](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.5...@daren/docs@0.4.6) (2023-01-20)
+
+
+### Bug Fixes
+
+* **docs:** replace jsx-to-string with manual code examples ([543754f](https://github.com/darenmalfait/darenui/commit/543754f0c102df8537c355c7627d8f182335161a))
+* **mobile-nav:** add correct navitems ([564104d](https://github.com/darenmalfait/darenui/commit/564104db3410d7fedf1e1de23cd2310b0b1c9d0b))
+
+
+
+
+
 ## [0.4.5](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.4...@daren/docs@0.4.5) (2023-01-19)
 
 

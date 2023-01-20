@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.5](https://github.com/darenmalfait/darenui/compare/@daren/button@1.7.4...@daren/button@1.7.5) (2023-01-20)
+
+
+### Bug Fixes
+
+* **button:** adjust secondary color ([533d928](https://github.com/darenmalfait/darenui/commit/533d928d765f96d2dea4834c920b6fdd2528c4e9))
+
+
+
+
+
 ## [1.7.4](https://github.com/darenmalfait/darenui/compare/@daren/button@1.7.3...@daren/button@1.7.4) (2023-01-18)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.12](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.11...@daren/alert@1.4.12) (2023-01-20)
+
+
+### Bug Fixes
+
+* **alert:** change color scheme ([040b674](https://github.com/darenmalfait/darenui/commit/040b674f11d37a664c357e5611407623d6eb71a6))
+
+
+
+
+
 ## [1.4.11](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.10...@daren/alert@1.4.11) (2023-01-18)
 
 

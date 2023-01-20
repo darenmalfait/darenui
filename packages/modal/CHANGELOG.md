@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.14](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.13...@daren/modal@1.4.14) (2023-01-20)
+
+
+### Bug Fixes
+
+* **modal:** change color scheme ([da01270](https://github.com/darenmalfait/darenui/commit/da012702e39140c062f9eca578a1617f47ba8511))
+
+
+
+
+
 ## [1.4.13](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.12...@daren/modal@1.4.13) (2023-01-18)
 
 

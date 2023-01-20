@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.5](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.12.4...@daren/form-elements@1.12.5) (2023-01-20)
+
+
+### Bug Fixes
+
+* **input:** add themes ([7fe410a](https://github.com/darenmalfait/darenui/commit/7fe410a75874308981f5a39d14b5b3b2b886317d))
+
+
+
+
+
 ## [1.12.4](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.12.3...@daren/form-elements@1.12.4) (2023-01-18)
 
 
