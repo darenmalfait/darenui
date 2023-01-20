@@ -33,11 +33,15 @@ function Alert({
 
   return (
     <div
-      className={cx(className, 'rounded-md p-4', {
-        'bg-yellow-50': type === 'warning',
-        'bg-green-50': type === 'success',
-        'bg-blue-50': type === 'info',
-        'bg-red-50': type === 'danger',
+      className={cx(className, 'rounded-lg p-4', {
+        'border border-orange-100 bg-orange-50 dark:border-orange-200 dark:border-orange-200/20 dark:bg-orange-500/10':
+          type === 'warning',
+        'border border-green-100 bg-green-50 dark:border-green-200 dark:border-green-200/20 dark:bg-green-500/10':
+          type === 'success',
+        'border border-blue-100 bg-blue-50 dark:border-blue-200 dark:border-blue-200/20 dark:bg-blue-500/10':
+          type === 'info',
+        'border border-red-100 bg-red-50 dark:border-red-200 dark:border-red-200/20 dark:bg-red-500/10':
+          type === 'danger',
       })}
     >
       <div className="flex">
@@ -45,10 +49,10 @@ function Alert({
           <div className="shrink-0">
             <Icon
               className={cx('h-5 w-5', {
-                'text-yellow-400': type === 'warning',
-                'text-green-400': type === 'success',
-                'text-blue-400': type === 'info',
-                'text-red-400': type === 'danger',
+                'text-orange-900 dark:text-orange-200': type === 'warning',
+                'text-green-900 dark:text-green-200': type === 'success',
+                'text-blue-900 dark:text-blue-200': type === 'info',
+                'text-red-900 dark:text-red-200': type === 'danger',
               })}
               aria-hidden="true"
             />
@@ -57,11 +61,11 @@ function Alert({
         <div className="ml-3">
           {title ? (
             <h3
-              className={cx('text-sm font-medium', {
-                'text-yellow-800': type === 'warning',
-                'text-green-800': type === 'success',
-                'text-blue-800': type === 'info',
-                'text-red-800': type === 'danger',
+              className={cx('text-sm font-bold', {
+                'text-orange-900 dark:text-orange-200': type === 'warning',
+                'text-green-900 dark:text-green-200': type === 'success',
+                'text-blue-900 dark:text-blue-200': type === 'info',
+                'text-red-900 dark:text-red-200': type === 'danger',
               })}
             >
               {title}
@@ -71,10 +75,10 @@ function Alert({
             <div
               className={cx('text-sm', {
                 'mt-2': title,
-                'text-yellow-700': type === 'warning',
-                'text-green-700': type === 'success',
-                'text-blue-700': type === 'info',
-                'text-red-700': type === 'danger',
+                'text-orange-900 dark:text-orange-200': type === 'warning',
+                'text-green-900 dark:text-green-200': type === 'success',
+                'text-blue-900 dark:text-blue-200': type === 'info',
+                'text-red-900 dark:text-red-200': type === 'danger',
               })}
             >
               {description}
