@@ -82,19 +82,25 @@ function Modal({
                       className={cx(
                         'mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10',
                         {
-                          'bg-yellow-100': type === 'warning',
-                          'bg-green-100': type === 'success',
-                          'bg-blue-100': type === 'info',
-                          'bg-red-100': type === 'danger',
+                          'border border-orange-100 bg-orange-50 dark:border-orange-200 dark:border-orange-200/20 dark:bg-orange-500/10':
+                            type === 'warning',
+                          'border border-green-100 bg-green-50 dark:border-green-200 dark:border-green-200/20 dark:bg-green-500/10':
+                            type === 'success',
+                          'border border-blue-100 bg-blue-50 dark:border-blue-200 dark:border-blue-200/20 dark:bg-blue-500/10':
+                            type === 'info',
+                          'border border-red-100 bg-red-50 dark:border-red-200 dark:border-red-200/20 dark:bg-red-500/10':
+                            type === 'danger',
                         },
                       )}
                     >
                       <Icon
                         className={cx('h-6 w-6', {
-                          'text-yellow-400': type === 'warning',
-                          'text-green-400': type === 'success',
-                          'text-blue-400': type === 'info',
-                          'text-red-400': type === 'danger',
+                          'text-orange-900 dark:text-orange-200':
+                            type === 'warning',
+                          'text-green-900 dark:text-green-200':
+                            type === 'success',
+                          'text-blue-900 dark:text-blue-200': type === 'info',
+                          'text-red-900 dark:text-red-200': type === 'danger',
                         })}
                         aria-hidden="true"
                       />
@@ -103,11 +109,13 @@ function Modal({
                   <div className="mt-3 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <Dialog.Title
                       as="h3"
-                      className={cx('text-lg font-medium leading-6', {
-                        'text-yellow-400': type === 'warning',
-                        'text-green-400': type === 'success',
-                        'text-blue-400': type === 'info',
-                        'text-red-400': type === 'danger',
+                      className={cx('text-lg font-bold leading-6', {
+                        'text-orange-900 dark:text-orange-200':
+                          type === 'warning',
+                        'text-green-900 dark:text-green-200':
+                          type === 'success',
+                        'text-blue-900 dark:text-blue-200': type === 'info',
+                        'text-red-900 dark:text-red-200': type === 'danger',
                       })}
                     >
                       {title}
