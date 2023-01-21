@@ -44,7 +44,7 @@ function Modal({
     <Transition.Root show={open} as={React.Fragment}>
       <Dialog
         as="div"
-        className="fixed inset-0 z-20 overflow-y-auto"
+        className="fixed inset-0 z-20 overflow-y-auto font-sans"
         initialFocus={initialFocus}
         onClose={onClose}
       >
