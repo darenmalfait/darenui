@@ -30,14 +30,6 @@ jobs:
       - name: Validate
         run: yarn validate
 
-      - name: Build docs 📖
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          cd docs
-          npx netlify-cli build
-
       - name: Set npm authentication
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
@@ -61,11 +53,3 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Deploy docs 📖
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          cd docs
-          npx netlify-cli deploy --prod
