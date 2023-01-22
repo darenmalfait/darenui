@@ -19,9 +19,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        title: ['var(--font-cal)', ...defaultTheme.fontFamily.sans],
-        sans: ['var(--font-cal)', ...defaultTheme.fontFamily.sans],
-        serif: ['Lora', ...defaultTheme.fontFamily.serif],
+        title: ['var(--font-cal)', 'Cal Sans', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'var(--font-inter)',
+          'Inter var',
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
     },
   },

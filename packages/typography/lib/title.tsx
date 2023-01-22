@@ -17,10 +17,10 @@ type TitleProps = {
   JSX.IntrinsicElements['h1']
 
 const fontSize = {
-  h1: '!leading-tights text-4xl md:text-5xl tracking-tight',
-  h2: '!leading-tights text-3xl md:text-4xl tracking-tight',
-  h3: 'text-2xl font-bold md:text-3xl',
-  h4: 'text-xl font-bold md:text-2xl',
+  h1: 'text-4xl font-black tracking-tight md:text-6xl lg:text-8xl font-title',
+  h2: 'text-3xl font-black tracking-tight md:text-5xl lg:text-6xl font-title',
+  h3: 'text-2xl font-bold md:text-3xl font-title',
+  h4: 'text-xl font-bold md:text-2xl font-title',
   h5: 'text-lg font-bold md:text-xl',
   h6: 'text-lg font-bold',
 }

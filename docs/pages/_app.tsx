@@ -1,3 +1,4 @@
+import {Inter as interFont} from '@next/font/google'
 import localFont from '@next/font/local'
 
 import {LazyMotion, domAnimation} from 'framer-motion'
@@ -15,6 +16,11 @@ const cal = localFont({
   variable: '--font-cal',
 })
 
+const inter = interFont({
+  variable: '--font-inter',
+  subsets: ['latin'],
+})
+
 const App = ({
   Component,
   pageProps,
@@ -28,7 +34,7 @@ const App = ({
   return (
     <AppProviders sections={pageProps.sections ?? []}>
       <LazyMotion features={domAnimation}>
-        <main className={`${cal.variable} font-sans`}>
+        <main className={`${inter.variable} ${cal.variable} font-sans`}>
           <Layout {...pageProps}>
             <Component {...pageProps} />
           </Layout>
