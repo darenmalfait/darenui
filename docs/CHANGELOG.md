@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.7](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.6...@daren/docs@0.4.7) (2023-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies to ^13.1.4 ([#74](https://github.com/darenmalfait/darenui/issues/74)) ([659af1d](https://github.com/darenmalfait/darenui/commit/659af1d0aa8834f43a2435904f4c36829551cb6f))
+* **typography:** adjust font sizing ([556213b](https://github.com/darenmalfait/darenui/commit/556213bce1924372075bd409adbf8407acf76f40))
+
+
+
+
+
 ## [0.4.6](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.5...@daren/docs@0.4.6) (2023-01-20)
 
 

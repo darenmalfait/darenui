@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.5](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.4...@daren/typography@1.9.5) (2023-01-22)
+
+
+### Bug Fixes
+
+* **typography:** adjust font sizing ([556213b](https://github.com/darenmalfait/darenui/commit/556213bce1924372075bd409adbf8407acf76f40))
+
+
+
+
+
 ## [1.9.4](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.3...@daren/typography@1.9.4) (2023-01-18)
 
 
