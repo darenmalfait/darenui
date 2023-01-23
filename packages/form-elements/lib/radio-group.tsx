@@ -25,8 +25,8 @@ function Option({
           className,
           'relative block cursor-pointer rounded-lg px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between',
           {
-            'bg-secondary': !checked,
-            'bg-inverse': checked,
+            'bg-black/10 dark:bg-white/10': !checked,
+            'bg-gray-900 dark:bg-gray-100': checked,
             'border-gray-black ring-2 ring-success dark:border-white dark:ring-success':
               active,
           },
@@ -41,7 +41,9 @@ function Option({
                 as="p"
                 className={cx(
                   'font-bold',
-                  checked ? 'text-white dark:text-black' : 'text-primary',
+                  checked
+                    ? 'text-white dark:text-black'
+                    : 'text-black dark:text-white',
                 )}
               >
                 {label}
