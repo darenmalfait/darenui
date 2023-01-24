@@ -72,7 +72,7 @@ module.exports = plugin(
         '@apply text-primary antialiased font-sans': {},
       },
       code: {
-        '@apply text-sm text-gray-900 shadow-outline bg-transparent rounded-lg px-2 py-1 !text-2xs':
+        '@apply text-primary shadow-outline bg-transparent rounded-lg px-2 py-1 !text-2xs':
           {},
       },
     })
