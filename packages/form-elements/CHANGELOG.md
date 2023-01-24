@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.6](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.12.5...@daren/form-elements@1.12.6) (2023-01-24)
+
+
+### Bug Fixes
+
+* **radio-group:** add background transparency ([5ec7655](https://github.com/darenmalfait/darenui/commit/5ec765548c6d84148c77a8a3ac3f5b304205229d))
+
+
+
+
+
 ## [1.12.5](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.12.4...@daren/form-elements@1.12.5) (2023-01-20)
 
 

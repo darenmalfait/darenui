@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.14...@daren/tabs@2.0.0) (2023-01-24)
+
+
+### Features
+
+* **tabs:** switch to radix primitives ([811b23d](https://github.com/darenmalfait/darenui/commit/811b23d8549fa477c9ce39cd631cde001748de45))
+
+
+### BREAKING CHANGES
+
+* **tabs:** totally different way of using the tabs
+
+
+
+
+
 ## [1.0.14](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.13...@daren/tabs@1.0.14) (2023-01-18)
 
 
