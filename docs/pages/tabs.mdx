@@ -7,7 +7,9 @@ export const path = 'tabs'
 
 Tabs is a component that allows you to switch between different views.
 
-<Code code={`import { Tabs } from '@daren/ui-components'`} />
+<Code
+  code={`import { Tabs, TabsContent, TabsList, TabsTrigger } from '@daren/ui-components'`}
+/>
 
 ---
 
@@ -15,17 +17,35 @@ Tabs is a component that allows you to switch between different views.
 
 <Preview
   direction="vertical"
-  code={`<Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
-  <Tabs.Item>tab 1</Tabs.Item>
-  <Tabs.Item>tab 2</Tabs.Item>
-  <Tabs.Item>tab 3</Tabs.Item>
+  code={`<Tabs defaultValue="general" className="w-[400px]">
+  <TabsList>
+    <TabsTrigger value="general">General</TabsTrigger>
+    <TabsTrigger value="privacy">Privacy</TabsTrigger>
+  </TabsList>
+  <TabsContent value="general">
+    <p className="text-sm text-primary">
+      General settings tab
+    </p>
+  </TabsContent>
+  <TabsContent value="privacy">
+    <p className="text-sm text-primary">
+      Privacy settings tab
+    </p>
+  </TabsContent>
 </Tabs>`}
 >
   <div className="p-8">
-    <Tabs keys={['tab 1', 'tab 2', 'tab 3']}>
-      <Tabs.Item>tab 1</Tabs.Item>
-      <Tabs.Item>tab 2</Tabs.Item>
-      <Tabs.Item>tab 3</Tabs.Item>
+    <Tabs defaultValue="general" className="w-[400px]">
+      <TabsList>
+        <TabsTrigger value="general">General</TabsTrigger>
+        <TabsTrigger value="privacy">Privacy</TabsTrigger>
+      </TabsList>
+      <TabsContent value="general">
+        <p className="text-sm text-primary">General settings tab</p>
+      </TabsContent>
+      <TabsContent value="privacy">
+        <p className="text-sm text-primary">Privacy settings tab</p>
+      </TabsContent>
     </Tabs>
   </div>
 </Preview>
@@ -35,7 +55,11 @@ Tabs is a component that allows you to switch between different views.
 ## Properties
 
 <Properties>
-  <Property name="children" type="[React.ReactNode, Tabs.Item]" required>
+  <Property
+    name="children"
+    type="[React.ReactNode, Tabs, TabsContent, TabsList, TabsTrigger]"
+    required
+  >
     The content of the component.
   </Property>
 </Properties>

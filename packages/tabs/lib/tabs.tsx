@@ -1,49 +1,54 @@
-import {cx, ExtractProps} from '@daren/utils'
-import {Tab} from '@headlessui/react'
+'use client'
+
+import {cx} from '@daren/utils'
+import * as TabsPrimivite from '@radix-ui/react-tabs'
 import * as React from 'react'
 
-function Tabs({
-  keys,
-  children,
-  ...rest
-}: ExtractProps<typeof Tab.Group> & {
-  keys: string[]
-}) {
-  return (
-    <div className="w-full space-y-8">
-      <Tab.Group {...rest}>
-        <Tab.List className="flex space-x-2 rounded-xl p-1 bg-secondary">
-          {keys.map(key => (
-            <Tab
-              key={key}
-              className={({selected}) =>
-                cx(
-                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
-                  'ring-opacity-60 focus-ring focus:outline-none',
-                  selected
-                    ? 'bg-gray-900 text-white shadow dark:bg-white dark:text-black'
-                    : 'text-primary',
-                )
-              }
-            >
-              {key}
-            </Tab>
-          ))}
-        </Tab.List>
-        <Tab.Panels>{children}</Tab.Panels>
-      </Tab.Group>
-    </div>
-  )
-}
+const Tabs = TabsPrimivite.Root
 
-function Item({children, className, ...rest}: ExtractProps<typeof Tab.Panel>) {
-  return (
-    <Tab.Panel className={cx('outline-none', className)} {...rest}>
-      {children}
-    </Tab.Panel>
-  )
-}
+const TabsList = React.forwardRef<
+  React.ElementRef<typeof TabsPrimivite.List>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimivite.List>
+>(({className, ...props}, ref) => (
+  <TabsPrimivite.List
+    ref={ref}
+    className={cx(
+      'inline-flex items-center justify-center rounded-md bg-gray-100 p-1 dark:bg-gray-800',
+      className,
+    )}
+    {...props}
+  />
+))
+TabsList.displayName = TabsPrimivite.List.displayName
 
-Tabs.Item = Item
+const TabsTrigger = React.forwardRef<
+  React.ElementRef<typeof TabsPrimivite.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimivite.Trigger>
+>(({className, ...props}, ref) => (
+  <TabsPrimivite.Trigger
+    className={cx(
+      'inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5  text-sm font-medium text-gray-700 transition-all  disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm dark:text-gray-200 dark:data-[state=active]:bg-gray-900',
+      className,
+    )}
+    {...props}
+    ref={ref}
+  />
+))
+TabsTrigger.displayName = TabsPrimivite.Trigger.displayName
 
-export {Tabs, Item}
+const TabsContent = React.forwardRef<
+  React.ElementRef<typeof TabsPrimivite.Content>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimivite.Content>
+>(({className, ...props}, ref) => (
+  <TabsPrimivite.Content
+    className={cx(
+      'mt-2 rounded-md border border-gray-200 p-6 dark:border-gray-700',
+      className,
+    )}
+    {...props}
+    ref={ref}
+  />
+))
+TabsContent.displayName = TabsPrimivite.Content.displayName
+
+export {Tabs, TabsList, TabsTrigger, TabsContent}
