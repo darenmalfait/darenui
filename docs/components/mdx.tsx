@@ -34,12 +34,14 @@ export function Modal(props: ExtractProps<typeof DefaultModal>) {
 export function Preview({
   children,
   code,
+  prose = false,
   ...props
 }: JSX.IntrinsicElements['div'] & {
   code?: string
+  prose?: boolean
 }) {
   return (
-    <div className="not-prose" {...props}>
+    <div className={cx({'not-prose': !prose})} {...props}>
       <Tabs defaultValue="preview">
         <TabsList>
           <TabsTrigger value="preview">Preview</TabsTrigger>
