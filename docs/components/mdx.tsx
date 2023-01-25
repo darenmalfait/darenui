@@ -42,23 +42,27 @@ export function Preview({
         <div className="relative flex w-full flex-col space-y-4 rounded p-8 shadow-outline">
           {children}
         </div>
-        <Code code={code} />
+        {code ? <Code code={code} /> : null}
       </div>
     )
   }
 
+  const Element = code ? Row : 'div'
+
   return (
     <div className="not-prose" {...props}>
-      <Row>
+      <Element>
         <Col>
           <div className="relative flex w-full flex-col space-y-4 rounded p-8 shadow-outline">
             {children}
           </div>
         </Col>
-        <Col sticky>
-          <Code code={code} />
-        </Col>
-      </Row>
+        {code ? (
+          <Col sticky>
+            <Code code={code} />
+          </Col>
+        ) : null}
+      </Element>
     </div>
   )
 }

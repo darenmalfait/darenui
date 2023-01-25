@@ -229,13 +229,7 @@ export const navigation = [
       {title: 'Quickstart', href: '/quickstart'},
       {title: 'Utils', href: '/utils'},
       {title: 'Hooks', href: '/hooks'},
-    ],
-  },
-  {
-    title: 'Typography',
-    links: [
-      {title: 'Title', href: '/title'},
-      {title: 'Paragraph', href: '/paragraph'},
+      {title: 'Typography', href: '/typography'},
     ],
   },
   {
