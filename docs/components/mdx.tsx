@@ -4,6 +4,10 @@ import {
   ExtractProps,
   CodeBlock,
   Modal as DefaultModal,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
 } from '@daren/ui-components'
 import Link from 'next/link'
 import * as React from 'react'
@@ -29,40 +33,25 @@ export function Modal(props: ExtractProps<typeof DefaultModal>) {
 
 export function Preview({
   children,
-  direction = 'horizontal',
   code,
   ...props
 }: JSX.IntrinsicElements['div'] & {
   code?: string
-  direction: 'vertical' | 'horizontal'
 }) {
-  if (direction === 'vertical') {
-    return (
-      <div className="not-prose flex flex-col space-y-4" {...props}>
-        <div className="relative flex w-full flex-col space-y-4 rounded p-8 shadow-outline">
-          {children}
-        </div>
-        {code ? <Code code={code} /> : null}
-      </div>
-    )
-  }
-
-  const Element = code ? Row : 'div'
-
   return (
     <div className="not-prose" {...props}>
-      <Element>
-        <Col>
-          <div className="relative flex w-full flex-col space-y-4 rounded p-8 shadow-outline">
-            {children}
-          </div>
-        </Col>
+      <Tabs defaultValue="preview">
+        <TabsList>
+          <TabsTrigger value="preview">Preview</TabsTrigger>
+          {code ? <TabsTrigger value="code">Code</TabsTrigger> : null}
+        </TabsList>
+        <TabsContent value="preview">{children}</TabsContent>
         {code ? (
-          <Col sticky>
+          <TabsContent value="code">
             <Code code={code} />
-          </Col>
+          </TabsContent>
         ) : null}
-      </Element>
+      </Tabs>
     </div>
   )
 }
