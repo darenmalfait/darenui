@@ -1,4 +1,5 @@
 import {ButtonLink} from '@daren/ui-components'
+import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import * as React from 'react'
@@ -16,25 +17,18 @@ function PageLink({
   previous?: boolean
 }) {
   return (
-    <>
-      <ButtonLink
-        size="small"
-        href={page.href}
-        aria-label={`${label}: ${page.title}`}
-        variant="secondary"
-        arrow={previous ? 'left' : 'right'}
-      >
-        {label}
-      </ButtonLink>
-      <Link
-        href={page.href}
-        tabIndex={-1}
-        aria-hidden="true"
-        className="text-base font-semibold transition text-primary hover:text-gray-600 dark:hover:text-gray-300"
-      >
-        {page.title}
-      </Link>
-    </>
+    <ButtonLink
+      size="small"
+      href={page.href}
+      aria-label={`${label}: ${page.title}`}
+      variant="secondary"
+      arrow={previous ? 'left' : 'right'}
+      className="flex space-x-2"
+    >
+      {previous ? <ArrowLeftIcon className="h-3 w-3" /> : null}
+      <span>{page.title}</span>
+      {!previous ? <ArrowRightIcon className="h-3 w-3" /> : null}
+    </ButtonLink>
   )
 }
 
