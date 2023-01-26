@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.7](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.6...@daren/ui-core@2.10.7) (2023-01-26)
+
+
+### Bug Fixes
+
+* **core-ui:** don't remove all margin ([d9a5d2e](https://github.com/darenmalfait/darenui/commit/d9a5d2e0e623be5d18e21f91d19da952f782d352))
+
+
+
+
+
 ## [2.10.6](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.5...@daren/ui-core@2.10.6) (2023-01-26)
 
 
