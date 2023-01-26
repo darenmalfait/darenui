@@ -38,7 +38,7 @@
     "version:ci": "lerna version --yes --conventional-commits --conventional-graduate=* --create-release github --message 'chore(release): publish'"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.13",
+    "@heroicons/react": "^2.0.14",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "match-sorter": "^6.3.1",
@@ -62,12 +62,10 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/shelljs": "^0.8.11",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "cross-env": "^7.0.3",
-    "danger": "^11.2.2",
+    "danger": "^11.2.3",
     "dotenv": "^16.0.3",
     "eslint": "^8.32.0",
     "eslint-config-daren": "^3.9.0",

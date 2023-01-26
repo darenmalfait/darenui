@@ -41,7 +41,7 @@
   "dependencies": {
     "@daren/typography": "^1.9.5",
     "@daren/utils": "^1.9.3",
-    "@heroicons/react": "^2.0.13"
+    "@heroicons/react": "^2.0.14"
   },
   "devDependencies": {
     "react": "^18.2.0"
