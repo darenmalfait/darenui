@@ -65,6 +65,12 @@ module.exports = plugin(
       '.empty-content': {
         content: "''",
       },
+      '* > :first-child': {
+        marginTop: 0,
+      },
+      '* > :last-child': {
+        marginBottom: 0,
+      },
     })
 
     addBase({
@@ -95,12 +101,6 @@ module.exports = plugin(
             return Array.isArray(result) ? result[0] : result
           }
 
-          const breakout = {
-            marginLeft: 0,
-            marginRight: 0,
-            gridColumn: '2 / span 10',
-          }
-
           return {
             DEFAULT: {
               css: {
@@ -111,91 +111,16 @@ module.exports = plugin(
                     gridColumn: '3 / span 8',
                   },
                 },
-                p: {
-                  marginTop: 0,
-                  marginBottom: theme('spacing.8'),
-                  fontSize: fontSize('lg'),
-                },
                 '> div': {
                   marginTop: 0,
                   marginBottom: theme('spacing.8'),
                   fontSize: fontSize('lg'),
                 },
-                strong: {
-                  fontWeight: theme('fontWeight.medium'),
-                  fontSize: fontSize('lg'),
-                },
-                hr: {
-                  marginTop: theme('spacing.8'),
-                  marginBottom: theme('spacing.16'),
-                },
-                pre: {
-                  color: 'var(--base05)',
-                  backgroundColor: 'var(--base00)',
-                  marginTop: 0,
-                  marginBottom: theme('spacing.8'),
-                  marginLeft: `-${theme('spacing.10vw')}`,
-                  marginRight: `-${theme('spacing.10vw')}`,
-                  padding: theme('spacing.8'),
-                  borderRadius: 0,
-
-                  [`@media (min-width: ${theme('screens.lg')})`]: {
-                    borderRadius: theme('borderRadius.lg'),
-                    ...breakout,
-                  },
-                },
-                ul: {
-                  marginTop: 0,
-                  marginBottom: theme('spacing.8'),
-                },
-                ol: {
-                  marginTop: 0,
-                  marginBottom: theme('spacing.8'),
-                },
-                'h1, h2, h3, h4, h5, h6': {
-                  fontWeight: theme('fontWeight.normal'),
-
-                  [`@media (min-width: ${theme('screens.lg')})`]: {
-                    fontWeight: theme('fontWeight.medium'),
-                  },
-                },
-                // tailwind doesn't stick to this property order, so we can't make 'h3' overrule 'h2, h3, h4'
                 h1: {
-                  // https://github.com/tailwindlabs/tailwindcss-typography/issues/14#issuecomment-658261095
                   fontFamily: `${theme('fontFamily.title')}`,
-                  fontSize: fontSize('2xl'),
-                  marginBottom: theme('spacing.10'),
-
-                  [`@media (min-width: ${theme('screens.lg')})`]: {
-                    fontSize: fontSize('3xl'),
-                  },
                 },
                 h2: {
-                  // https://github.com/tailwindlabs/tailwindcss-typography/issues/14#issuecomment-658261095
                   fontFamily: `${theme('fontFamily.title')}`,
-                  fontSize: fontSize('2xl'),
-                  marginTop: theme('spacing.20'),
-                  marginBottom: theme('spacing.10'),
-
-                  [`@media (min-width: ${theme('screens.lg')})`]: {
-                    fontSize: fontSize('3xl'),
-                  },
-                },
-                h3: {
-                  fontSize: fontSize('xl'),
-                  marginTop: theme('spacing.16'),
-                  marginBottom: theme('spacing.10'),
-
-                  [`@media (min-width: ${theme('screens.lg')})`]: {
-                    fontSize: fontSize('2xl'),
-                  },
-                },
-                'h4, h5, h6': {
-                  fontSize: fontSize('lg'),
-
-                  [`@media (min-width: ${theme('screens.lg')})`]: {
-                    fontSize: fontSize('xl'),
-                  },
                 },
                 'code::before': {
                   content: '',
@@ -208,17 +133,6 @@ module.exports = plugin(
                   marginTop: 0,
                   marginBottom: 0,
                   borderRadius: theme('borderRadius.lg'),
-                },
-
-                // Overrides
-                ':is(h1, h2, h3) + *': {
-                  marginTop: '0',
-                },
-                '> :first-child': {
-                  marginTop: '0 !important',
-                },
-                '> :last-child': {
-                  marginBottom: '0 !important',
                 },
               },
               dark: {
