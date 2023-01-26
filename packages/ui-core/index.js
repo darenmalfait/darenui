@@ -65,11 +65,11 @@ module.exports = plugin(
       '.empty-content': {
         content: "''",
       },
-      '* > :first-child': {
-        marginTop: 0,
+      '> :first-child': {
+        marginTop: '0 !important',
       },
-      '* > :last-child': {
-        marginBottom: 0,
+      '> :last-child': {
+        marginBottom: '0 !important',
       },
     })
 
