@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.5.0...@daren/docs@0.6.0) (2023-01-26)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#77](https://github.com/darenmalfait/darenui/issues/77)) ([69d44ef](https://github.com/darenmalfait/darenui/commit/69d44ef9d89e649d145e5094702d19d992c00277))
+* **docs:** add arrows to previous and next buttons ([e153d78](https://github.com/darenmalfait/darenui/commit/e153d78343c59c66dd6e383ea8198ddf723e1562))
+* **docs:** enable prose for typography example ([51c5e76](https://github.com/darenmalfait/darenui/commit/51c5e76649b4ee934549678cc17323d0bbf3bbc1))
+* **docs:** replace preview cols with tabs ([24011f4](https://github.com/darenmalfait/darenui/commit/24011f47959dda1878a714450826f5885344817f))
+
+
+### Features
+
+* **docs:** add typography section ([b9d92c8](https://github.com/darenmalfait/darenui/commit/b9d92c86dbc2ca21b4d92746154f24963011a00c))
+
+
+
+
+
 # [0.5.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.4.7...@daren/docs@0.5.0) (2023-01-24)
 
 

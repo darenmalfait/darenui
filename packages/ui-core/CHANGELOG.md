@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.6](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.5...@daren/ui-core@2.10.6) (2023-01-26)
+
+
+### Bug Fixes
+
+* **core-ui:** improve readability typography ([225073b](https://github.com/darenmalfait/darenui/commit/225073b8126ffea1c0685427c36b5fb29f2ec2dc))
+
+
+
+
+
 ## [2.10.5](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.4...@daren/ui-core@2.10.5) (2023-01-24)
 
 
