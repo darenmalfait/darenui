@@ -1,6 +1,6 @@
 {
   "name": "@daren/ui-components",
-  "version": "1.17.9",
+  "version": "1.17.10",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@daren/alert": "^1.4.13",
-    "@daren/button": "^1.7.8",
+    "@daren/button": "^1.8.0",
     "@daren/code-block": "^3.0.5",
     "@daren/form-elements": "^1.12.7",
     "@daren/grid": "^1.4.11",

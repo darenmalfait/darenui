@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.6.1...@daren/docs@0.7.0) (2023-01-27)
+
+
+### Features
+
+* **button:** update styling ([0fd1791](https://github.com/darenmalfait/darenui/commit/0fd1791644c049ea5de8a98fc0b7dd8a846b548b))
+
+
+
+
+
 ## [0.6.1](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.6.0...@daren/docs@0.6.1) (2023-01-26)
 
 **Note:** Version bump only for package @daren/docs
