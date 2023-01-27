@@ -1,5 +1,5 @@
-import {Dict, WithCSSVar} from '@daren/utils'
 import * as React from 'react'
+import {Dict, WithCSSVar} from '@daren/utils'
 
 import {colors} from './colors'
 import {toCSSVar} from './to-css-var'

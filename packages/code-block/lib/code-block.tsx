@@ -1,12 +1,11 @@
+import * as React from 'react'
 import {cx} from '@daren/utils'
 import {ClipboardDocumentListIcon} from '@heroicons/react/24/solid'
 import Highlight, {
-  defaultProps,
   Language,
   PrismTheme,
+  defaultProps,
 } from 'prism-react-renderer'
-
-import * as React from 'react'
 
 import darkTheme from './vscode-dark'
 import lightTheme from './vscode-light'

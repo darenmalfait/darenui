@@ -1,6 +1,6 @@
+import * as React from 'react'
 import {cx, useControllableState} from '@daren/utils'
 import {Switch} from '@headlessui/react'
-import * as React from 'react'
 
 interface ToggleProps {
   name: string

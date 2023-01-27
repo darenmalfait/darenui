@@ -3,7 +3,6 @@ import {ExtractProps} from '@daren/ui-components'
 import {MDXProvider} from '@mdx-js/react'
 
 import * as mdxComponents from '../components/mdx'
-
 import {MobileNavProvider} from './mobile-nav-provider'
 import {SectionProvider} from './section-provider'
 import {ThemeProvider} from './theme-provider'

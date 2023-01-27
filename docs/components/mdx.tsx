@@ -1,19 +1,18 @@
+import * as React from 'react'
+import Link from 'next/link'
 import {
-  cx,
   Button,
-  ExtractProps,
   CodeBlock,
   Modal as DefaultModal,
+  ExtractProps,
   Tabs,
+  TabsContent,
   TabsList,
   TabsTrigger,
-  TabsContent,
+  cx,
 } from '@daren/ui-components'
-import Link from 'next/link'
-import * as React from 'react'
 
 import {useTheme} from '../context/theme-provider'
-
 import {Heading} from './heading'
 
 export * from '@daren/ui-components'

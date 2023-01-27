@@ -1,9 +1,8 @@
+import * as React from 'react'
 import {Dialog, Transition} from '@headlessui/react'
 import {motion} from 'framer-motion'
-import * as React from 'react'
 
 import {useMobileNav} from '../context/mobile-nav-provider'
-
 import {Navigation} from './navigation'
 
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {

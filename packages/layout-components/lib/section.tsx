@@ -1,5 +1,5 @@
-import {cx} from '@daren/utils'
 import * as React from 'react'
+import {cx} from '@daren/utils'
 
 interface SectionProps {
   children: React.ReactNode

@@ -1,9 +1,8 @@
+import * as React from 'react'
 import type {ExtractProps} from '@daren/utils'
 import {PlusIcon} from '@heroicons/react/24/solid'
-import * as React from 'react'
 
 import {Label} from './misc'
-
 import {Select, SelectField, SelectItem} from './select'
 
 function PillButton({

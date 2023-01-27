@@ -1,11 +1,11 @@
+import * as React from 'react'
 import {cx} from '@daren/utils'
 import {
-  ExclamationCircleIcon,
-  XCircleIcon,
   CheckCircleIcon,
+  ExclamationCircleIcon,
   InformationCircleIcon,
+  XCircleIcon,
 } from '@heroicons/react/24/solid'
-import * as React from 'react'
 
 interface AlertProps {
   type: 'danger' | 'warning' | 'success' | 'info'

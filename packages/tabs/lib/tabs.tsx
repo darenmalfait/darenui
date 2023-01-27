@@ -1,8 +1,8 @@
 'use client'
 
+import * as React from 'react'
 import {cx} from '@daren/utils'
 import * as TabsPrimivite from '@radix-ui/react-tabs'
-import * as React from 'react'
 
 const Tabs = TabsPrimivite.Root
 

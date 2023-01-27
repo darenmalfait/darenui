@@ -1,4 +1,4 @@
-import {WithCSSVar, Dict, pick, walkObject} from '@daren/utils'
+import {Dict, WithCSSVar, pick, walkObject} from '@daren/utils'
 
 const tokens = ['colors'] as const
 

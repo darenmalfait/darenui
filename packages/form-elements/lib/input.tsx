@@ -1,9 +1,8 @@
+import * as React from 'react'
 import {cx} from '@daren/utils'
 import {ExclamationCircleIcon} from '@heroicons/react/24/solid'
-import * as React from 'react'
 
 import {Label} from './misc'
-
 import {InputProps} from './types'
 import {getInputClassName} from './utils'
 
