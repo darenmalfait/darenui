@@ -12,7 +12,7 @@ type ButtonProps = {
 
 function getClassName(className?: string) {
   return cx(
-    'group relative inline-flex text-base outline-none !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 active:scale-90 rounded-md',
+    'group relative inline-flex text-base font-title outline-none !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 active:scale-90 rounded-md',
     className,
   )
 }
@@ -46,9 +46,9 @@ function ButtonInner({
             '!text-black dark:!text-white': variant === 'secondary',
             '!text-red-700': variant === 'danger',
             '!text-green-700': variant === 'success',
-            'space-x-3 py-2 px-4 text-sm': size === 'small',
-            'space-x-3 py-3 px-6': size === 'medium',
-            'space-x-5 py-4 px-8': size === 'large',
+            'space-x-3 py-2 px-6 text-xs': size === 'small',
+            'space-x-3 py-2 px-8': size === 'medium',
+            'space-x-5 py-3 px-10': size === 'large',
           },
         )}
       >

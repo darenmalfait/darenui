@@ -18,7 +18,6 @@ function PageLink({
 }) {
   return (
     <ButtonLink
-      size="small"
       href={page.href}
       aria-label={`${label}: ${page.title}`}
       variant="secondary"
