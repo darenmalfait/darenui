@@ -1,6 +1,6 @@
-import {cx, ExtractProps} from '@daren/utils'
-import {ChevronRightIcon} from '@heroicons/react/24/solid'
 import * as React from 'react'
+import {ExtractProps, cx} from '@daren/utils'
+import {ChevronRightIcon} from '@heroicons/react/24/solid'
 
 type LinkProps<T extends React.ElementType> = React.DetailedHTMLProps<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,

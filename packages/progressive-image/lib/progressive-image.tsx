@@ -1,5 +1,5 @@
-import {cx, useSafeEffect} from '@daren/utils'
 import * as React from 'react'
+import {cx, useSafeEffect} from '@daren/utils'
 
 export type ResponsiveProps = {
   maxWidth?: number

@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import * as React from 'react'
+import Head from 'next/head'
 
 import {getDomainUrl} from '../lib/utils/misc'
 import {stripPreSlash, stripTrailingSlash} from '../lib/utils/string'

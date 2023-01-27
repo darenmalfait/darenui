@@ -1,8 +1,7 @@
-import {cx, H1, H2, H3, H4} from '@daren/ui-components'
 import * as React from 'react'
+import {H1, H2, H3, H4, cx} from '@daren/ui-components'
 
 import {useSections} from '../context/section-provider'
-
 import {Tag} from './tag'
 
 function Eyebrow({tag, label}: {tag?: string; label?: string}) {

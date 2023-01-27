@@ -1,5 +1,5 @@
-import {cx} from '@daren/utils'
 import * as React from 'react'
+import {cx} from '@daren/utils'
 
 const sizes = {
   xs: 'w-3 h-3',

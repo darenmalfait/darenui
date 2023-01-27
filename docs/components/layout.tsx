@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import {ButtonLink} from '@daren/ui-components'
 import {motion} from 'framer-motion'
-import Link from 'next/link'
 
 import {Footer} from './footer'
 import {Header} from './header'

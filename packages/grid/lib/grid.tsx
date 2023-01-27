@@ -1,5 +1,5 @@
-import {cx, __DEV__} from '@daren/utils'
 import * as React from 'react'
+import {__DEV__, cx} from '@daren/utils'
 
 interface GridProps {
   style?: React.CSSProperties

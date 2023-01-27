@@ -1,13 +1,12 @@
-import {cx} from '@daren/ui-components'
-import {AnimatePresence, motion, useIsPresent} from 'framer-motion'
+import * as React from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import * as React from 'react'
+import {cx} from '@daren/ui-components'
+import {AnimatePresence, motion, useIsPresent} from 'framer-motion'
 
 import {useMobileNav} from '../context/mobile-nav-provider'
 import {useSections} from '../context/section-provider'
 import {remToPx} from '../lib/utils/rem-to-px'
-
 import {Tag} from './tag'
 
 function TopLevelNavItem({

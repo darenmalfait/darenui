@@ -1,13 +1,12 @@
+import * as React from 'react'
 import {cx} from '@daren/utils'
 import {Dialog, Transition} from '@headlessui/react'
-
 import {
-  ExclamationTriangleIcon,
-  XCircleIcon,
   CheckCircleIcon,
+  ExclamationTriangleIcon,
   InformationCircleIcon,
+  XCircleIcon,
 } from '@heroicons/react/24/solid'
-import * as React from 'react'
 
 interface ModalProps {
   type: 'danger' | 'warning' | 'success' | 'info' | 'neutral'

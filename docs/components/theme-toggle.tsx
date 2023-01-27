@@ -1,7 +1,6 @@
+import * as React from 'react'
 import {cx} from '@daren/ui-components'
 import {MoonIcon, SunIcon} from '@heroicons/react/24/solid'
-
-import * as React from 'react'
 
 import {useTheme} from '../context/theme-provider'
 

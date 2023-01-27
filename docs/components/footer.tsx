@@ -1,8 +1,8 @@
-import {ButtonLink} from '@daren/ui-components'
-import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/24/solid'
+import * as React from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import * as React from 'react'
+import {ButtonLink} from '@daren/ui-components'
+import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/24/solid'
 
 import {GithubLogo} from './icons/github-logo'
 import {navigation} from './navigation'

@@ -1,9 +1,8 @@
+import * as React from 'react'
 import {cx, roundToNearest15} from '@daren/utils'
 import {ClockIcon, ExclamationCircleIcon} from '@heroicons/react/24/solid'
-import * as React from 'react'
 
 import {Label} from './misc'
-
 import {FieldProps, InputProps} from './types'
 import {getInputClassName} from './utils'
 

@@ -1,10 +1,9 @@
+import * as React from 'react'
+import Link from 'next/link'
 import {cx} from '@daren/ui-components'
 import {motion} from 'framer-motion'
-import Link from 'next/link'
-import * as React from 'react'
 
 import {useMobileNav} from '../context/mobile-nav-provider'
-
 import {Logo} from './logo'
 import {MobileNavigation} from './mobile-navigation'
 import {ThemeToggle} from './theme-toggle'

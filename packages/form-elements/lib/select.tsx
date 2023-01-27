@@ -1,15 +1,14 @@
+import * as React from 'react'
 import {cx} from '@daren/utils'
 import {Combobox, Transition} from '@headlessui/react'
 import {
-  ExclamationCircleIcon,
   ChevronUpDownIcon,
+  ExclamationCircleIcon,
 } from '@heroicons/react/24/solid'
-import * as React from 'react'
 
 import {Label} from './misc'
 import {FieldProps} from './types'
-
-import {getInputClassName, InputSize} from './utils'
+import {InputSize, getInputClassName} from './utils'
 
 type SelectItem = {
   id?: string

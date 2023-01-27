@@ -2,7 +2,7 @@ import {Buffer} from 'buffer'
 import * as fs from 'fs'
 import * as path from 'path'
 
-import {markdown, danger, warn, message, GitHubPRDSL} from 'danger'
+import {GitHubPRDSL, danger, markdown, message, warn} from 'danger'
 
 const BIG_PR_TRESHOLD = 600
 
