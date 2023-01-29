@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.1](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.11.0...@daren/ui-core@2.11.1) (2023-01-29)
+
+
+### Bug Fixes
+
+* **typography:** increase h1 font size ([915f9b7](https://github.com/darenmalfait/darenui/commit/915f9b7606e0c7ce5cd1e7660c2a6ba1001e4c3f))
+
+
+
+
+
 # [2.11.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.7...@daren/ui-core@2.11.0) (2023-01-29)
 
 
