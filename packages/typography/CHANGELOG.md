@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.8](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.7...@daren/typography@1.9.8) (2023-01-29)
+
+
+### Bug Fixes
+
+* **title:** make custom classname overrule defaults ([eb918ab](https://github.com/darenmalfait/darenui/commit/eb918ab495a9a3ac3adb64d679572a68b36166ca))
+
+
+
+
+
 ## [1.9.7](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.6...@daren/typography@1.9.7) (2023-01-29)
 
 

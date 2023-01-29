@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/darenmalfait/darenui/compare/@daren/toast@1.0.0...@daren/toast@1.0.1) (2023-01-29)
+
+
+### Bug Fixes
+
+* **toast:** add fixed bg color behind transparent colors ([717f0d0](https://github.com/darenmalfait/darenui/commit/717f0d087658a2e31de86626bd8ff994a2b10a94))
+
+
+
+
+
 # 1.0.0 (2023-01-29)
 
 
