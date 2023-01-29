@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.17](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.16...@daren/modal@1.4.17) (2023-01-29)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#79](https://github.com/darenmalfait/darenui/issues/79)) ([7af20e0](https://github.com/darenmalfait/darenui/commit/7af20e03279787fad3b962ca7ec0dadcebd4ffd4))
+
+
+
+
+
 ## [1.4.16](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.15...@daren/modal@1.4.16) (2023-01-26)
 
 

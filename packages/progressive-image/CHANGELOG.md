@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.10](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.9...@daren/progressive-image@1.4.10) (2023-01-29)
+
+**Note:** Version bump only for package @daren/progressive-image
+
+
+
+
+
 ## [1.4.9](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.8...@daren/progressive-image@1.4.9) (2023-01-18)
 
 

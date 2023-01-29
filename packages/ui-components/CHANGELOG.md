@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.17.10...@daren/ui-components@1.18.0) (2023-01-29)
+
+
+### Features
+
+* add new toast component ([a3be9ac](https://github.com/darenmalfait/darenui/commit/a3be9ac900441e111475c171257e70438d3e5350))
+
+
+
+
+
 ## [1.17.10](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.17.9...@daren/ui-components@1.17.10) (2023-01-27)
 
 **Note:** Version bump only for package @daren/ui-components

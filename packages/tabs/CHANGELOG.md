@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/darenmalfait/darenui/compare/@daren/tabs@2.0.0...@daren/tabs@2.0.1) (2023-01-29)
+
+**Note:** Version bump only for package @daren/tabs
+
+
+
+
+
 # [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/tabs@1.0.14...@daren/tabs@2.0.0) (2023-01-24)
 
 

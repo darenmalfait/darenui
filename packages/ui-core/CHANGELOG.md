@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.7...@daren/ui-core@2.11.0) (2023-01-29)
+
+
+### Bug Fixes
+
+* **typography:** add not-prose check ([2c7cf5f](https://github.com/darenmalfait/darenui/commit/2c7cf5f7abf072b32e3f4a4204501d089a7dbedf))
+* **typography:** adjust font-size and spacing ([1e21f13](https://github.com/darenmalfait/darenui/commit/1e21f136596ee476ba4f894fcab56e94127b2a74))
+
+
+### Features
+
+* add new toast component ([a3be9ac](https://github.com/darenmalfait/darenui/commit/a3be9ac900441e111475c171257e70438d3e5350))
+
+
+
+
+
 ## [2.10.7](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.10.6...@daren/ui-core@2.10.7) (2023-01-26)
 
 
