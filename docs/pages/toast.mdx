@@ -27,16 +27,40 @@ display a message to the user.
 ## Properties
 
 <Properties>
+  <Property name="title" type="string" required>
+    The title of the toast.
+  </Property>
   <Property
-    name="children"
-    type="[React.ReactNode, Toast, ToastContent, ToastList, ToastTrigger]"
+    name="type"
+    type="[default, warning, danger, success, info]"
     required
   >
+    The type of the toast.
+  </Property>
+  <Property name="children" type="[React.ReactNode]" required>
     The content of the component.
   </Property>
 </Properties>
 
 ---
+
+## Configuration
+
+### ToastProvider
+
+This needs to be wrapped around the root component of your application.
+
+<Code
+  code={`<ToastProvider>
+  <App />
+</ToastProvider>`}
+/>
+
+### ToastViewport
+
+This needs to be placed in the root component of your application.
+
+<Code code={`<ToastViewport />`} />
 
 ## Type
 
