@@ -16,7 +16,7 @@ function Paragraph({
   ...rest
 }: ParagraphProps) {
   return React.createElement(as, {
-    className: cx('max-w-full text-lg', className, {
+    className: cx('max-w-full leading-7 mt-6 first:mt-0', className, {
       'prose prose-light dark:prose-invert': prose,
       [textColorClassName]: !prose,
     }),

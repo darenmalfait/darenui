@@ -65,12 +65,6 @@ module.exports = plugin(
       '.empty-content': {
         content: "''",
       },
-      '> :first-child': {
-        marginTop: '0 !important',
-      },
-      '> :last-child': {
-        marginBottom: '0 !important',
-      },
     })
 
     addBase({
@@ -80,6 +74,42 @@ module.exports = plugin(
       code: {
         '@apply text-primary shadow-outline bg-transparent rounded-lg px-2 py-1 !text-2xs':
           {},
+      },
+      // keep these styles in sync with the ones in packages/ui-core/src/components/typography/
+      '.prose h1': {
+        '@apply scroll-m-20 font-title text-4xl font-extrabold lg:text-5xl !leading-normal':
+          {},
+      },
+      '.prose h2': {
+        '@apply mt-10 first:mt-0 scroll-m-20 font-title text-3xl !leading-normal':
+          {},
+      },
+      '.prose h3': {
+        '@apply mt-8 first:mt-0 scroll-m-20 text-2xl font-semibold tracking-tight':
+          {},
+      },
+      '.prose h4': {
+        '@apply mt-8 first:mt-0 scroll-m-20 text-xl font-semibold tracking-tight':
+          {},
+      },
+      '.prose p': {
+        '@apply leading-7 mt-6 first:mt-0': {},
+      },
+      '.prose blockquote': {
+        '@apply mt-6 first:mt-0 border-gray-300 italic text-gray-700 dark:border-gray-700 dark:text-gray-400 ltr:border-l-2 ltr:pl-6 rtl:border-r-2 rtl:pr-6':
+          {},
+      },
+      '.prose ul': {
+        '@apply list-disc first:mt-0 ltr:ml-6 rtl:mr-6': {},
+      },
+      '.prose ol': {
+        '@apply list-decimal first:mt-0 ltr:ml-6 rtl:mr-6': {},
+      },
+      '.prose ol li, .prose ul li': {
+        '@apply my-2': {},
+      },
+      '.prose > div': {
+        '@apply mt-6 first:mt-0': {},
       },
     })
   },
@@ -96,11 +126,6 @@ module.exports = plugin(
           serif: [...defaultTheme.fontFamily.serif],
         },
         typography: theme => {
-          const fontSize = size => {
-            const result = theme(`fontSize.${size}`)
-            return Array.isArray(result) ? result[0] : result
-          }
-
           return {
             DEFAULT: {
               css: {
@@ -111,16 +136,9 @@ module.exports = plugin(
                     gridColumn: '3 / span 8',
                   },
                 },
-                '> div': {
-                  marginTop: 0,
-                  marginBottom: theme('spacing.8'),
-                  fontSize: fontSize('lg'),
-                },
-                h1: {
-                  fontFamily: `${theme('fontFamily.title')}`,
-                },
-                h2: {
-                  fontFamily: `${theme('fontFamily.title')}`,
+                'h1, h2, h3, h4': {
+                  marginTop: theme('spacing.0'),
+                  marginBottom: theme('spacing.0'),
                 },
                 'code::before': {
                   content: '',
@@ -136,31 +154,35 @@ module.exports = plugin(
                 },
               },
               dark: {
-                css: [
-                  {
-                    color: theme('colors.white'),
-                    a: {
-                      color: theme('colors.white'),
-                    },
-                    strong: {
-                      color: theme('colors.white'),
-                    },
-                    hr: {
-                      borderColor: theme('colors.gray.600'),
-                    },
-                    'h1, h2, h3, h4, h5, h6': {
-                      color: theme('colors.white'),
-                    },
-                    blockquote: {
-                      color: theme('colors.white'),
-                      backgroundColor: theme('colors.gray.800'),
-                    },
-                    'thead, tbody tr': {
-                      color: theme('colors.white'),
-                      borderBottomColor: theme('colors.gray.600'),
-                    },
+                css: {
+                  color: theme('colors.gray[300]'),
+                  '[class~="lead"]': {color: theme('colors.gray[400]')},
+                  a: {color: theme('colors.gray[100]')},
+                  strong: {color: theme('colors.gray[100]')},
+                  'ul > li::before': {
+                    backgroundColor: theme('colors.gray[700]'),
                   },
-                ],
+                  hr: {borderColor: theme('colors.gray[800]')},
+                  blockquote: {
+                    color: theme('colors.gray[100]'),
+                    borderLeftColor: theme('colors.gray[800]'),
+                  },
+                  h1: {color: theme('colors.gray[100]')},
+                  h2: {color: theme('colors.gray[100]')},
+                  h3: {color: theme('colors.gray[100]')},
+                  h4: {color: theme('colors.gray[100]')},
+                  code: {color: theme('colors.gray[100]')},
+                  'a code': {color: theme('colors.gray[100]')},
+                  pre: {
+                    color: theme('colors.gray[200]'),
+                    backgroundColor: theme('colors.gray[800]'),
+                  },
+                  thead: {
+                    color: theme('colors.gray[100]'),
+                    borderBottomColor: theme('colors.gray[700]'),
+                  },
+                  'tbody tr': {borderBottomColor: theme('colors.gray[800]')},
+                },
               },
             },
           }

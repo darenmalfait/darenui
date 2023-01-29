@@ -17,12 +17,13 @@ type TitleProps = {
   JSX.IntrinsicElements['h1']
 
 const fontSize = {
-  h1: 'text-4xl font-black tracking-tight md:text-6xl lg:text-8xl font-title',
-  h2: 'text-3xl font-black tracking-tight md:text-5xl lg:text-6xl font-title',
-  h3: 'text-2xl font-bold md:text-3xl font-title',
-  h4: 'text-xl font-bold md:text-2xl font-title',
-  h5: 'text-lg font-bold md:text-xl',
-  h6: 'text-lg font-bold',
+  // Keep this the same to the prose styles in styles.css
+  h1: 'scroll-m-20 font-title text-4xl font-extrabold lg:text-5xl !leading-normal',
+  h2: 'mt-10 first:mt-0 scroll-m-20 font-title text-3xl font-extrabold lg:text-4xl !leading-normal',
+  h3: 'mt-8 first:mt-0 scroll-m-20 text-2xl font-semibold tracking-tight',
+  h4: 'mt-8 first:mt-0 scroll-m-20 text-xl font-semibold tracking-tight',
+  h5: 'mt-8 first:mt-0 text-lg font-bold md:text-xl',
+  h6: 'mt-8 first:mt-0 text-lg font-bold',
 }
 
 const titleColors = {
@@ -32,7 +33,7 @@ const titleColors = {
 }
 
 const specialClassName =
-  'relative bg-gradient-to-r from-[var(--colors-daren-100)] via-[var(--colors-daren-500)] to-[var(--colors-daren-900)] bg-clip-text font-bold'
+  'relative bg-gradient-to-r from-[var(--colors-daren-100)] via-[var(--colors-daren-500)] to-[var(--colors-daren-900)] bg-clip-text'
 
 function Title({
   size,
