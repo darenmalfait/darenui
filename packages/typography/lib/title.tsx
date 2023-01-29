@@ -47,7 +47,7 @@ function Title({
   return (
     <Tag className={cx(fontSize[size], titleColors[variant])} {...rest}>
       <span
-        className={cx(className, variant === 'special' && specialClassName)}
+        className={cx(variant === 'special' && specialClassName, className)}
       >
         {children}
       </span>
