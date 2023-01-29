@@ -32,16 +32,16 @@ const Toast = React.forwardRef<
     <ToastPrimitive.Root
       {...props}
       className={cx(
-        'pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg p-4 bg-secondary shadow-lg not-prose data-[state=open]:animate-fade-in-up data-[state=closed]:animate-slide-right transform data-[swipe=move]:ml-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:ml-0 data-[swipe=end]:animate-slide-right',
+        'pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg p-4 dark:bg-gray-900 bg-secondary shadow-lg not-prose data-[state=open]:animate-fade-in-up data-[state=closed]:animate-slide-right transform data-[swipe=move]:ml-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:ml-0 data-[swipe=end]:animate-slide-right',
         {
           'shadow-outline': type === 'default',
-          'border border-orange-100 bg-orange-50 dark:border-orange-200 dark:border-orange-200/20 dark:bg-orange-500/10':
+          'border border-orange-100 dark:border-orange-200 dark:border-orange-200/20':
             type === 'warning',
-          'border border-green-100 bg-green-50 dark:border-green-200 dark:border-green-200/20 dark:bg-green-500/10':
+          'border border-green-100 dark:border-green-200 dark:border-green-200/20':
             type === 'success',
-          'border border-blue-100 bg-blue-50 dark:border-blue-200 dark:border-blue-200/20 dark:bg-blue-500/10':
+          'border border-blue-100 dark:border-blue-200 dark:border-blue-200/20':
             type === 'info',
-          'border border-red-100 bg-red-50 dark:border-red-200 dark:border-red-200/20 dark:bg-red-500/10':
+          'border border-red-100 dark:border-red-200 dark:border-red-200/20':
             type === 'danger',
         },
         className,
@@ -49,6 +49,14 @@ const Toast = React.forwardRef<
       open={open}
       ref={ref}
     >
+      <div
+        className={cx('absolute inset-0 -z-10', {
+          'bg-orange-50 dark:bg-orange-500/10': type === 'warning',
+          'bg-green-50 dark:bg-green-500/10': type === 'success',
+          'bg-blue-50 dark:bg-blue-500/10': type === 'info',
+          'bg-red-50 dark:bg-red-500/10': type === 'danger',
+        })}
+      />
       <div className="flex items-start">
         <div className="flex-shrink-0">
           {type !== 'default' ? (
@@ -107,7 +115,7 @@ const ToastViewport = React.forwardRef<
     <ToastPrimitive.ToastViewport
       {...props}
       className={cx(
-        'fixed bottom-0 right-0 md:bottom-4 md:right-4 flex flex-col gap-2 w-full max-w-sm m-0 list-none z-50 outline-none',
+        'fixed right-0 bottom-4 sm:right-4 flex flex-col gap-2 w-full max-w-sm m-0 list-none z-50 outline-none',
         className,
       )}
       ref={ref}
