@@ -79,7 +79,7 @@ module.exports = plugin(
       // not .not-prose prose
 
       '.prose h1:not(:where([class~="not-prose"] *))': {
-        '@apply scroll-m-20 font-title text-4xl font-extrabold lg:text-5xl !leading-normal':
+        '@apply scroll-m-20 font-title text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]':
           {},
       },
       '.prose h2:not(:where([class~="not-prose"] *))': {
