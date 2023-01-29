@@ -1,0 +1,79 @@
+export const metaTitle = 'Toast'
+export const description = 'Toast component of DarenUI'
+export const pkg = 'toast'
+export const path = 'toast'
+
+# Toast
+
+Toast is a message that is displayed temporarily on the screen. It is used to
+display a message to the user.
+
+<Code
+  code={`import { Toast, ToastViewport, ToastProvider } from '@daren/ui-components'`}
+/>
+
+---
+
+## Preview
+
+<Preview code={`<Toast title="example title">Content of the toast</Toast>`}>
+  <div className="p-8">
+    <Toast title="example title">Content of the toast</Toast>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property
+    name="children"
+    type="[React.ReactNode, Toast, ToastContent, ToastList, ToastTrigger]"
+    required
+  >
+    The content of the component.
+  </Property>
+</Properties>
+
+---
+
+## Type
+
+<Preview
+  code={`<Toast type="default" title="example title">
+  Content of the toast
+</Toast>
+<Toast type="success" title="Success Example">
+  Content of the toast
+</Toast>
+<Toast type="warning" title="Warning Example">
+  Content of the toast
+</Toast>
+<Toast type="info" title="Info Example">
+  Content of the toast
+</Toast>
+<Toast type="danger" title="Danger Example">
+  Content of the toast
+</Toast>`}
+>
+  <div className="flex flex-wrap gap-3 p-8">
+    <Toast type="default" title="example title">
+      Content of the toast
+    </Toast>
+    <Toast type="success" title="Success Example">
+      Content of the toast
+    </Toast>
+    <Toast type="warning" title="Warning Example">
+      Content of the toast
+    </Toast>
+    <Toast type="info" title="Info Example">
+      Content of the toast
+    </Toast>
+    <Toast type="danger" title="Danger Example">
+      Content of the toast
+    </Toast>
+  </div>
+</Preview>
+
+---

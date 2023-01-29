@@ -369,6 +369,14 @@ module.exports = plugin(
               opacity: 0,
             },
           },
+          'slide-right': {
+            '0%': {
+              transform: 'translateX(var(--radix-toast-swipe-end-x))',
+            },
+            '100%': {
+              transform: 'translateX(100%)',
+            },
+          },
         },
         animation: {
           'fade-in-down': `fade-in-down 0.2s forwards`,
@@ -379,6 +387,7 @@ module.exports = plugin(
           stroke: `stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;`,
           scale: `scale .3s ease-in-out`,
           check: `check .5s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards`,
+          'slide-right': `slide-right 0.3s ease-out forwards`,
           expand: `350ms linear expand forwards`,
         },
       },

@@ -1,5 +1,5 @@
 import {ThemeProvider as DarenThemeProvider} from '@daren/theme'
-import {ExtractProps} from '@daren/ui-components'
+import {ExtractProps, ToastProvider} from '@daren/ui-components'
 import {MDXProvider} from '@mdx-js/react'
 
 import * as mdxComponents from '../components/mdx'
@@ -16,9 +16,11 @@ function AppProviders({children, sections}: AppProvidersProps) {
     <ThemeProvider>
       <DarenThemeProvider>
         <MobileNavProvider>
-          <MDXProvider components={mdxComponents as any}>
-            <SectionProvider sections={sections}>{children}</SectionProvider>
-          </MDXProvider>
+          <ToastProvider>
+            <MDXProvider components={mdxComponents as any}>
+              <SectionProvider sections={sections}>{children}</SectionProvider>
+            </MDXProvider>
+          </ToastProvider>
         </MobileNavProvider>
       </DarenThemeProvider>
     </ThemeProvider>

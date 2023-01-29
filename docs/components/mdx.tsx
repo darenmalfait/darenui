@@ -4,6 +4,7 @@ import {
   Button,
   CodeBlock,
   Modal as DefaultModal,
+  Toast as DefaultToast,
   ExtractProps,
   Tabs,
   TabsContent,
@@ -18,6 +19,22 @@ import {Heading} from './heading'
 export * from '@daren/ui-components'
 
 export const a = Link
+
+export function Toast(props: ExtractProps<typeof DefaultToast>) {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>{props.title}</Button>
+      <DefaultToast
+        {...props}
+        open={isOpen}
+        onOpenChange={open => setIsOpen(open)}
+        duration={3000}
+      />
+    </>
+  )
+}
 
 export function Modal(props: ExtractProps<typeof DefaultModal>) {
   const [isOpen, setIsOpen] = React.useState<boolean>(false)

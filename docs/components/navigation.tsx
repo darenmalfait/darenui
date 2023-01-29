@@ -274,6 +274,7 @@ export const navigation = [
       {title: 'ProgressiveImage', href: '/progressive-image'},
       {title: 'Review', href: '/review'},
       {title: 'Spinner', href: '/spinner'},
+      {title: 'Toast', href: '/toast'},
     ],
   },
 ]

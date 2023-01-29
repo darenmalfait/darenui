@@ -8,6 +8,7 @@ import {AppProviders} from '../context/app-providers'
 
 import '@daren/theme/dist/darenui.css'
 import '../styles/styles.css'
+import {ToastViewport} from '@daren/ui-components'
 
 const cal = localFont({
   src: '../public/fonts/CalSans-SemiBold.woff2',
@@ -35,6 +36,7 @@ const App = ({
         <main className={`${inter.variable} ${cal.variable} font-sans`}>
           <Layout {...pageProps}>
             <Component {...pageProps} />
+            <ToastViewport />
           </Layout>
         </main>
       </LazyMotion>
