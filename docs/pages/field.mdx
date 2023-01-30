@@ -59,3 +59,54 @@ When defining an error, the input will be marked as invalid.
     <Field label="example label" error="this is an example error" />
   </div>
 </Preview>
+
+## children
+
+children can be passed to the input to add additional elements to the input.
+Example: a button.
+
+<Preview
+  code={`<Field
+  label="example label"
+  description="example description"
+  error="example error"
+>
+  <Button size="small">Browse</Button>
+</Field>`}
+>
+  <div className="space-y-2">
+    <Field
+      label="example label"
+      description="example description"
+      error="example error"
+    >
+      <Button size="small">Browse</Button>
+    </Field>
+  </div>
+</Preview>
+
+## TextArea
+
+TextArea is a textarea input.
+
+<Preview
+  code={`<Field
+  type="textarea"
+  label="example label"
+  description="example description"
+  error="example error"
+>
+  <Button size="small">Browse</Button>
+</Field>`}
+>
+  <div className="space-y-2">
+    <Field
+      type="textarea"
+      label="example label"
+      description="example description"
+      error="example error"
+    >
+      <Button size="small">Browse</Button>
+    </Field>
+  </div>
+</Preview>

@@ -1,13 +1,13 @@
-export const metaTitle = 'Input'
-export const description = 'Input component of DarenUI'
-export const pkg = 'form-elements'
-export const path = 'input'
-
 import {
   MagnifyingGlassIcon,
   GifIcon,
   MapPinIcon,
 } from '@heroicons/react/24/solid'
+
+export const metaTitle = 'Input'
+export const description = 'Input component of DarenUI'
+export const pkg = 'form-elements'
+export const path = 'input'
 
 # Input
 
@@ -81,5 +81,32 @@ hasError is a boolean that indicates whether the input has an error.
   <div className="space-y-2">
     <Input hasError={true} />
     <Input hasError={false} />
+  </div>
+</Preview>
+
+## children
+
+children can be passed to the input to add additional elements to the input.
+Example: a button.
+
+<Preview
+  code={`<Input>
+  <Button size="small">Browse</Button>
+</Input>`}
+>
+  <div className="space-y-2">
+    <Input>
+      <Button size="small">Browse</Button>
+    </Input>
+  </div>
+</Preview>
+
+## TextArea
+
+TextArea is a textarea input.
+
+<Preview code={`<Input type="textarea" icon={GifIcon} />`}>
+  <div className="space-y-2">
+    <Input type="textarea" icon={GifIcon} />
   </div>
 </Preview>

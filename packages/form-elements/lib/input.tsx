@@ -10,19 +10,19 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   props,
   ref,
 ) {
-  const {type, hasError, inputSize, icon: Icon, ...inputProps} = props
+  const {type, hasError, children, inputSize, icon: Icon, ...inputProps} = props
 
   const className = getInputClassName(props.className, hasError, inputSize)
 
   if (type === 'textarea') {
     return (
-      <div className="flex-items-center relative w-full">
+      <div className="flex items-center space-x-2 relative w-full">
         {Icon ? (
           <Icon
             width="20px"
             height="20px"
             className={cx(
-              'absolute top-0 left-5 z-10 flex h-full items-center justify-center p-0',
+              'absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0',
               {
                 'text-red-500': hasError,
               },
@@ -32,41 +32,45 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
         <textarea
           {...(inputProps as JSX.IntrinsicElements['textarea'])}
           aria-invalid={hasError}
-          className={cx('h-36', className, {'pl-14': !!Icon})}
+          className={cx('h-36', className, {'pr-14': !!Icon})}
         />
+        {children ? <div className="flex flex-1">{children}</div> : null}
       </div>
     )
   }
 
   return (
-    <div className="relative w-full shadow-sm">
-      <input
-        type={type}
-        {...(inputProps as JSX.IntrinsicElements['input'])}
-        className={cx(className, {'pr-14': !!Icon})}
-        ref={ref}
-      />
-      {Icon && !hasError ? (
-        <Icon
-          width="20px"
-          height="20px"
-          className={cx(
-            'absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0',
-            {
-              'text-gray-300': !hasError,
-              'text-red-500': hasError,
-            },
-          )}
+    <div className="flex space-x-2 flex-nowrap">
+      <div className="relative w-full shadow-sm">
+        <input
+          type={type}
+          {...(inputProps as JSX.IntrinsicElements['input'])}
+          className={cx(className, {'pr-14': !!Icon})}
+          ref={ref}
         />
-      ) : null}
-      {hasError ? (
-        <div className="absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0">
-          <ExclamationCircleIcon
-            className="h-5 w-5 text-red-500"
-            aria-hidden="true"
+        {Icon && !hasError ? (
+          <Icon
+            width="20px"
+            height="20px"
+            className={cx(
+              'absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0',
+              {
+                'text-gray-300': !hasError,
+                'text-red-500': hasError,
+              },
+            )}
           />
-        </div>
-      ) : null}
+        ) : null}
+        {hasError ? (
+          <div className="absolute top-0 right-5 z-10 flex h-full items-center justify-center p-0">
+            <ExclamationCircleIcon
+              className="h-5 w-5 text-red-500"
+              aria-hidden="true"
+            />
+          </div>
+        ) : null}
+      </div>
+      {children ? <div className="flex flex-1">{children}</div> : null}
     </div>
   )
 })
@@ -136,7 +140,7 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps & InputProps>(
         />
 
         {error ? (
-          <p className="mt-2 text-sm text-red-600" id={errorId}>
+          <p className="mt-2 text-sm text-left text-red-600" id={errorId}>
             {error}
           </p>
         ) : null}

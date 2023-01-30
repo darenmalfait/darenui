@@ -6,6 +6,7 @@ type InputProps = {
   hasError?: boolean
   icon?: React.ElementType
   inputSize?: InputSize
+  action?: () => void
 } & (
   | ({type: 'textarea'} & JSX.IntrinsicElements['textarea'])
   | JSX.IntrinsicElements['input']
