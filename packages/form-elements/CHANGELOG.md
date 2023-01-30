@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.12.8...@daren/form-elements@1.13.0) (2023-01-30)
+
+
+### Features
+
+* **form-elements:** add children to input and field ([4c3cddc](https://github.com/darenmalfait/darenui/commit/4c3cddc1cc602e7184b81542e47dd0cd74146836))
+
+
+
+
+
 ## [1.12.8](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.12.7...@daren/form-elements@1.12.8) (2023-01-29)
 
 

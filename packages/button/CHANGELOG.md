@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/darenmalfait/darenui/compare/@daren/button@1.8.3...@daren/button@1.8.4) (2023-01-30)
+
+**Note:** Version bump only for package @daren/button
+
+
+
+
+
 ## [1.8.3](https://github.com/darenmalfait/darenui/compare/@daren/button@1.8.2...@daren/button@1.8.3) (2023-01-29)
 
 **Note:** Version bump only for package @daren/button

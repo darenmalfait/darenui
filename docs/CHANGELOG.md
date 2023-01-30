@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.8.2...@daren/docs@0.9.0) (2023-01-30)
+
+
+### Features
+
+* **form-elements:** add children to input and field ([4c3cddc](https://github.com/darenmalfait/darenui/commit/4c3cddc1cc602e7184b81542e47dd0cd74146836))
+
+
+
+
+
 ## [0.8.2](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.8.1...@daren/docs@0.8.2) (2023-01-29)
 
 **Note:** Version bump only for package @daren/docs

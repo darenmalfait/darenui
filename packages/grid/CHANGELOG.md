@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.13](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.4.12...@daren/grid@1.4.13) (2023-01-30)
+
+**Note:** Version bump only for package @daren/grid
+
+
+
+
+
 ## [1.4.12](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.4.11...@daren/grid@1.4.12) (2023-01-29)
 
 **Note:** Version bump only for package @daren/grid

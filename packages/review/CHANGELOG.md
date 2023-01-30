@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.18](https://github.com/darenmalfait/darenui/compare/@daren/review@1.3.17...@daren/review@1.3.18) (2023-01-30)
+
+**Note:** Version bump only for package @daren/review
+
+
+
+
+
 ## [1.3.17](https://github.com/darenmalfait/darenui/compare/@daren/review@1.3.16...@daren/review@1.3.17) (2023-01-29)
 
 **Note:** Version bump only for package @daren/review
