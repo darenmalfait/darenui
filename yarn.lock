@@ -5593,10 +5593,10 @@ escape-string-regexp@^5.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz#4683126b500b61762f2dbebace1806e8be31b1c8"
   integrity sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==
 
-eslint-config-daren@^3.10.3:
-  version "3.10.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-daren/-/eslint-config-daren-3.10.3.tgz#990ac3e2c9f1d364e426f3d531f8783749fe88da"
-  integrity sha512-U6DSmTmJ1OV1K0yib8fcH8kzueRcmP9sKTd5fN1eiXryLXt/spHGUIhm8aooxU3EW3PzqGf7F5wLf3Z4TI5I8w==
+eslint-config-daren@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-daren/-/eslint-config-daren-4.0.0.tgz#9d84825ff3a33032909fdb2280a8cf1f98fed3a2"
+  integrity sha512-JIImVmbFEnI/B5VYsbaDJnGiJ4+QY7MazSZxd6NOwcbGt4XVb2hn3tXDQ16eHRMt9ktsAoeepTYVMlT2EDYFIQ==
   dependencies:
     "@ianvs/prettier-plugin-sort-imports" "^3.7.1"
     "@rushstack/eslint-patch" "^1.2.0"
@@ -5614,7 +5614,6 @@ eslint-config-daren@^3.10.3:
     eslint-plugin-react-hooks "^4.6.0"
     eslint-plugin-tailwindcss "^3.8.2"
     prettier "^2.8.3"
-    prettier-plugin-tailwindcss "^0.2.2"
     read-pkg-up "^7.0.1"
     typescript "^4.9.4"
 
@@ -9879,11 +9878,6 @@ prettier-linter-helpers@^1.0.0:
   integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
   dependencies:
     fast-diff "^1.1.2"
-
-prettier-plugin-tailwindcss@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.2.2.tgz#61f4437936c79c8cc2915f31b4bd512605177239"
-  integrity sha512-5RjUbWRe305pUpc48MosoIp6uxZvZxrM6GyOgsbGLTce+ehePKNm7ziW2dLG2air9aXbGuXlHVSQQw4Lbosq3w==
 
 prettier@^2.8.3:
   version "2.8.3"

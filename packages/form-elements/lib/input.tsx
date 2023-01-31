@@ -16,7 +16,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
 
   if (type === 'textarea') {
     return (
-      <div className="flex items-center space-x-2 relative w-full">
+      <div className="relative flex w-full items-center space-x-2">
         {Icon ? (
           <Icon
             width="20px"
@@ -40,7 +40,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   }
 
   return (
-    <div className="flex space-x-2 flex-nowrap">
+    <div className="flex flex-nowrap space-x-2">
       <div className="relative w-full shadow-sm">
         <input
           type={type}
@@ -140,7 +140,7 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps & InputProps>(
         />
 
         {error ? (
-          <p className="mt-2 text-sm text-left text-red-600" id={errorId}>
+          <p className="mt-2 text-left text-sm text-red-600" id={errorId}>
             {error}
           </p>
         ) : null}
