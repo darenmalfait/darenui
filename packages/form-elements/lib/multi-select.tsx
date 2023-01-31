@@ -157,7 +157,7 @@ function MultiSelect({
         )}
       </div>
       {error ? (
-        <p className="mt-2 text-sm text-left text-red-600" id={errorId}>
+        <p className="mt-2 text-left text-sm text-red-600" id={errorId}>
           {error}
         </p>
       ) : null}
