@@ -2328,10 +2328,10 @@
     ufo "^1.0.0"
     unstorage "^1.0.0"
 
-"@netlify/plugin-nextjs@^4.30.2":
-  version "4.30.2"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-4.30.2.tgz#c783ecb0eb080a1f124fc331360c6403378fca68"
-  integrity sha512-hqvdHlQEMfpTXh+fM0jwvtKla/gUS4gVKEZeQEkJlCzAJO+8XT2bTFAGrusNHLQ53L081nLXVXx1c+HUo0LFfQ==
+"@netlify/plugin-nextjs@^4.30.3":
+  version "4.30.3"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-4.30.3.tgz#2cde50132f5751b3b3ef6f0cf4015567a496822b"
+  integrity sha512-3dUQd9qbjoqvQLSR7Uq3KwHQb/ffiJwLYvr0fap5kPpnRzKl4NPPMJjkOruIshBAMnRieqsJnZAOvIQpDH7Yvg==
   dependencies:
     "@netlify/esbuild" "0.14.39"
     "@netlify/functions" "^1.4.0"
@@ -3030,10 +3030,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@sindresorhus/slugify@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-2.1.1.tgz#3076b0e95dd2cd05e5da2dd8efa38fe153a0cfe0"
-  integrity sha512-XokPHZ+q6FtQGEi1hnfvARVJJVPEhwHQTPHPPuNHaN6zcHjzYNynhhHMopa1wNPqLAFOwpsbintunEqWecXJMg==
+"@sindresorhus/slugify@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-2.2.0.tgz#42738974ff19a9a306d3523a8595152998cc758e"
+  integrity sha512-9Vybc/qX8Kj6pxJaapjkFbiUJPk7MAkCh/GFCxIBnnsuYCFPIXKvnLidG8xlepht3i24L5XemUmGtrJ3UWrl6w==
   dependencies:
     "@sindresorhus/transliterate" "^1.0.0"
     escape-string-regexp "^5.0.0"
@@ -5593,10 +5593,10 @@ escape-string-regexp@^5.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz#4683126b500b61762f2dbebace1806e8be31b1c8"
   integrity sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==
 
-eslint-config-daren@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-daren/-/eslint-config-daren-4.0.0.tgz#9d84825ff3a33032909fdb2280a8cf1f98fed3a2"
-  integrity sha512-JIImVmbFEnI/B5VYsbaDJnGiJ4+QY7MazSZxd6NOwcbGt4XVb2hn3tXDQ16eHRMt9ktsAoeepTYVMlT2EDYFIQ==
+eslint-config-daren@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-daren/-/eslint-config-daren-4.0.1.tgz#7f9b0008d72edafd5f9b5c1a2fb886e858988953"
+  integrity sha512-Q6Z7T+AKZA6+l6gpHcrajY9Y5LBb7W2NvcZQxsneS/0ytmF5bEOkh5EOHm5LWfjqEDdRY31+yphtjuw3mBCy8A==
   dependencies:
     "@ianvs/prettier-plugin-sort-imports" "^3.7.1"
     "@rushstack/eslint-patch" "^1.2.0"
@@ -5615,7 +5615,6 @@ eslint-config-daren@^4.0.0:
     eslint-plugin-tailwindcss "^3.8.2"
     prettier "^2.8.3"
     read-pkg-up "^7.0.1"
-    typescript "^4.9.4"
 
 eslint-config-prettier@^8.6.0:
   version "8.6.0"
@@ -6193,10 +6192,10 @@ fraction.js@^4.2.0:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
-framer-motion@^8.5.4:
-  version "8.5.4"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-8.5.4.tgz#aa6d88f2af8d7aa1b58ca8e53b7ccce0d8c4089b"
-  integrity sha512-xBVovXUIdpKvRvIPsrSTiyXZUYyct9zarzdVeyzv+V6DFsDpHIuppyOjDO8VM1fBspDn+rUU4ZFZ5yJxLmzebQ==
+framer-motion@^8.5.5:
+  version "8.5.5"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-8.5.5.tgz#e30e9087bfc9b3367459f83b4d9fe7efd5acade6"
+  integrity sha512-5IDx5bxkjWHWUF3CVJoSyUVOtrbAxtzYBBowRE2uYI/6VYhkEBD+rbTHEGuUmbGHRj6YqqSfoG7Aa1cLyWCrBA==
   dependencies:
     "@motionone/dom" "^10.15.3"
     hey-listen "^1.0.8"
@@ -9794,10 +9793,10 @@ postcss-nested@6.0.0:
   dependencies:
     postcss-selector-parser "^6.0.10"
 
-postcss-nesting@^11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-11.0.1.tgz#9eca3dfea03ae8b9450493c4640e1fed8b24d82d"
-  integrity sha512-p/XiegrifL9CBwBiuJtFuUUvp8AgmxdyjNagmIjLEyJDUuo0JwbEgUsnQ99SzE7TRRXqXml7BFXkZpRhonE8rQ==
+postcss-nesting@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-11.1.0.tgz#f7c5cd61de639df35653dcb987d99d018720399a"
+  integrity sha512-TVBCeKlUmMyX3sNeSg10yATb2XmAoosp0E1zdlpjrD+L2FrQPmrRTxlRFQh/R0Y4WlQ0butfDwRhzlYuj7y/TA==
   dependencies:
     "@csstools/selector-specificity" "^2.0.0"
     postcss-selector-parser "^6.0.10"
@@ -11406,10 +11405,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-"typescript@^3 || ^4", typescript@^4.6.4, typescript@^4.9.4:
+"typescript@^3 || ^4", typescript@^4.6.4:
   version "4.9.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
+
+typescript@^4.9.5:
+  version "4.9.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
+  integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 ufo@^0.8.5, ufo@^0.8.6:
   version "0.8.6"
