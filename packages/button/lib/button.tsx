@@ -16,7 +16,7 @@ const variants = {
     'bg-gray-100 text-primary hover:bg-gray-200 dark:bg-gray-700  focus-ring',
   ghost:
     'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-100 dark:hover:text-gray-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent',
-  link: 'bg-transparent underline-offset-4 hover:underline text-primary hover:bg-transparent dark:hover:bg-transparent',
+  link: 'bg-transparent hover:underline text-primary hover:bg-transparent dark:hover:bg-transparent',
 }
 
 const sizes = {
