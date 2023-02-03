@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.19](https://github.com/darenmalfait/darenui/compare/@daren/review@1.3.18...@daren/review@1.3.19) (2023-02-03)
+
+
+### Bug Fixes
+
+* **review:** remove margin on score ([0e89a78](https://github.com/darenmalfait/darenui/commit/0e89a7829c1b6803e68b6c949d24cb49cde52c22))
+
+
+
+
+
 ## [1.3.18](https://github.com/darenmalfait/darenui/compare/@daren/review@1.3.17...@daren/review@1.3.18) (2023-01-30)
 
 **Note:** Version bump only for package @daren/review

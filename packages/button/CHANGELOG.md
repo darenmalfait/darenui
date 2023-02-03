@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.8.4...@daren/button@2.0.0) (2023-02-03)
+
+
+### Features
+
+* **button:** introduce new button variants ([8dddec6](https://github.com/darenmalfait/darenui/commit/8dddec65bdb6a89f653ea4c4cf491bff1e843482))
+
+
+### BREAKING CHANGES
+
+* **button:** replaced variants and replaced LinkButton with the link variant.
+
+
+
+
+
 ## [1.8.4](https://github.com/darenmalfait/darenui/compare/@daren/button@1.8.3...@daren/button@1.8.4) (2023-01-30)
 
 **Note:** Version bump only for package @daren/button

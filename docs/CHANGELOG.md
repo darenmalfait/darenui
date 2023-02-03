@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.9.0...@daren/docs@0.10.0) (2023-02-03)
+
+
+### Bug Fixes
+
+* **typography:** spacing tweaks ([4e06f5e](https://github.com/darenmalfait/darenui/commit/4e06f5e1afa56e6c9029e8fcfb3e480e6c96ea46))
+
+
+### Features
+
+* **button:** introduce new button variants ([8dddec6](https://github.com/darenmalfait/darenui/commit/8dddec65bdb6a89f653ea4c4cf491bff1e843482))
+
+
+### BREAKING CHANGES
+
+* **button:** replaced variants and replaced LinkButton with the link variant.
+
+
+
+
+
 # [0.9.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.8.2...@daren/docs@0.9.0) (2023-01-30)
 
 

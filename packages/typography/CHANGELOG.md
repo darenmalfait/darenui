@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.10](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.9...@daren/typography@1.9.10) (2023-02-03)
+
+
+### Bug Fixes
+
+* **typography:** spacing tweaks ([4e06f5e](https://github.com/darenmalfait/darenui/commit/4e06f5e1afa56e6c9029e8fcfb3e480e6c96ea46))
+
+
+
+
+
 ## [1.9.9](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.8...@daren/typography@1.9.9) (2023-01-30)
 
 **Note:** Version bump only for package @daren/typography
