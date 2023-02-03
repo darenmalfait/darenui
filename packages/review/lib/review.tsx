@@ -49,7 +49,7 @@ function Review({
                 ))
               : null}
           </div>
-          <Paragraph className="ml-3 text-sm text-secondary">
+          <Paragraph className="ml-3 mt-0 text-sm text-secondary">
             {rating}
             <span className="sr-only"> out of 5 stars</span>
           </Paragraph>
