@@ -59,8 +59,8 @@ export function Layout({
             {pkg ? (
               <div className="mx-auto max-w-5xl">
                 <ButtonLink
-                  size="small"
-                  variant="secondary"
+                  size="sm"
+                  variant="subtle"
                   href={`https://github.com/darenmalfait/darenui/tree/main/packages/${pkg}`}
                   className="mb-12 inline-flex space-x-2 text-gray-900 dark:text-white"
                   external

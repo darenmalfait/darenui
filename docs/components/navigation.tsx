@@ -260,7 +260,6 @@ export const navigation = [
       {title: 'Button', href: '/button'},
       {title: 'ButtonLink', href: '/button-link'},
       {title: 'Link', href: '/link'},
-      {title: 'LinkButton', href: '/link-button'},
       {title: 'DoubleLabelLink', href: '/double-label-link'},
     ],
   },

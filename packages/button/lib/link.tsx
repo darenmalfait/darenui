@@ -1,37 +1,33 @@
 import * as React from 'react'
-import {ExtractProps, cx} from '@daren/utils'
+import {cx} from '@daren/utils'
 import {ChevronRightIcon} from '@heroicons/react/24/solid'
 
-type LinkProps<T extends React.ElementType> = React.DetailedHTMLProps<
+type LinkProps = React.DetailedHTMLProps<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 > & {
-  /* Makes link disabled */
   disabled?: boolean
-  /* Makes link open in new tab */
   external?: boolean
-  /* The element or component to use in place of `a` */
-  as?: T
-  /* Action to perform when clicked */
+  as?: React.ElementType
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
-  /* React node */
+  to?: string
   children?: React.ReactNode
-} & ElementProps<T>
+}
 
-// conditional type to check if tag is a react element
-type ElementProps<T> = T extends keyof JSX.IntrinsicElements
-  ? JSX.IntrinsicElements[T]
-  : ExtractProps<T>
-
-declare function LinkFn<Tag extends React.ElementType>(
-  props: LinkProps<Tag>,
-): JSX.Element
-
-const Link = React.forwardRef<HTMLElement, LinkProps<any>>(function Link(
+const Link = React.forwardRef<HTMLElement, LinkProps>(function Link(
   props,
   ref,
 ) {
-  const {disabled, external, onClick, className, as: Tag = 'a', ...rest} = props
+  const {
+    disabled,
+    external,
+    onClick,
+    to,
+    href = to,
+    className,
+    as: Tag = 'a',
+    ...rest
+  } = props
   const externalProps = external
     ? {target: '_blank', rel: 'noopener noreferrer'}
     : null
@@ -39,19 +35,24 @@ const Link = React.forwardRef<HTMLElement, LinkProps<any>>(function Link(
   return (
     <Tag
       ref={ref}
-      className={className}
+      className={cx(
+        'bg-transparent underline-offset-4 hover:underline text-primary hover:bg-transparent dark:hover:bg-transparent inline-flex space-x-2',
+        className,
+      )}
       tabIndex={disabled ? -1 : undefined}
+      to={href}
+      href={href}
       aria-disabled={disabled}
       onClick={disabled ? (event: any) => event.preventDefault() : onClick}
       {...externalProps}
       {...rest}
     />
   )
-}) as typeof LinkFn
+})
 
 const DoubleLabelLink = React.forwardRef<
   HTMLElement,
-  LinkProps<any> & {
+  LinkProps & {
     description?: string
   }
 >(function DoubleLabelLink(props, ref) {
@@ -61,6 +62,8 @@ const DoubleLabelLink = React.forwardRef<
     onClick,
     className,
     as: Tag = 'a',
+    to,
+    href = to,
     children,
     description,
     ...rest
@@ -76,6 +79,8 @@ const DoubleLabelLink = React.forwardRef<
         className,
         'group inline-flex items-center rounded-full p-1 pr-2 transition-colors bg-secondary text-primary hover:bg-gray-200 dark:hover:bg-gray-700 sm:text-base lg:text-sm xl:text-base',
       )}
+      to={href}
+      href={href}
       tabIndex={disabled ? -1 : undefined}
       aria-disabled={disabled}
       onClick={disabled ? (event: any) => event.preventDefault() : onClick}
@@ -95,7 +100,6 @@ const DoubleLabelLink = React.forwardRef<
       />
     </Tag>
   )
-}) as typeof LinkFn
+})
 
-export type {LinkProps}
-export {Link, DoubleLabelLink, LinkFn}
+export {Link, DoubleLabelLink, type LinkProps}

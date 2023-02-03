@@ -20,8 +20,6 @@ function PageLink({
     <ButtonLink
       href={page.href}
       aria-label={`${label}: ${page.title}`}
-      variant="secondary"
-      arrow={previous ? 'left' : 'right'}
       className="flex space-x-2"
     >
       {previous ? <ArrowLeftIcon className="h-3 w-3" /> : null}

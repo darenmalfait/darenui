@@ -59,7 +59,7 @@ function ConfirmButton({
             >
               {confirmButtonLabel}
             </Button>
-            <Button variant="secondary" onClick={() => setOpen(false)}>
+            <Button variant="ghost" onClick={() => setOpen(false)}>
               {cancelButtonLabel}
             </Button>
           </div>

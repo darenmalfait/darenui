@@ -1,114 +1,87 @@
 import * as React from 'react'
-import {cx} from '@daren/utils'
+import {ExtractProps, cx} from '@daren/utils'
 
-import {Link, LinkFn, LinkProps} from './link'
+import {Link} from './link'
 
-type ButtonProps = {
-  children?: React.ReactNode
-  variant?: 'primary' | 'secondary' | 'danger' | 'success'
-  size?: 'small' | 'medium' | 'large'
-  disabled?: boolean
+const variants = {
+  default:
+    'bg-gray-900 text-white hover:bg-gray-700 dark:bg-gray-50 dark:text-gray-900 focus-ring',
+  danger:
+    'bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-600 focus-ring',
+  success:
+    'bg-green-500 text-white hover:bg-green-600 dark:hover:bg-green-600 focus-ring',
+  outline:
+    'bg-transparent border border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700 dark:text-gray-100 focus-ring',
+  subtle:
+    'bg-gray-100 text-primary hover:bg-gray-200 dark:bg-gray-700  focus-ring',
+  ghost:
+    'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-100 dark:hover:text-gray-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent',
+  link: 'bg-transparent underline-offset-4 hover:underline text-primary hover:bg-transparent dark:hover:bg-transparent',
 }
 
-function getClassName(className?: string) {
+const sizes = {
+  default: 'h-10 py-2 px-4 text-sm',
+  sm: 'h-9 px-3 text-xs',
+  lg: 'h-11 px-8 text-sm',
+}
+
+function getButtonClassName({
+  variant = 'default',
+  size = 'default',
+  className,
+}: {
+  variant?: keyof typeof variants
+  size?: keyof typeof sizes
+  className?: string
+}) {
   return cx(
-    'group relative inline-flex text-base font-title outline-none !no-underline opacity-100 transition focus:outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 active:scale-90 rounded-md',
+    'group rounded-full font-title font-bold inline-flex space-x-2 items-center transition-transform active:scale-90',
+    variants[variant],
+    sizes[size],
     className,
   )
 }
 
-function ButtonInner({
-  children,
-  variant = 'primary',
-  size = 'medium',
-  disabled,
-}: ButtonProps) {
-  return (
-    <>
-      <div
-        className={cx(
-          'absolute inset-0 rounded-full border-0 opacity-100 outline-none transition focus-ring set-colors-current',
-          {
-            'bg-accent text-accent dark:bg-accent-100 dark:text-white':
-              variant === 'primary',
-            'bg-black/10 text-primary dark:bg-white/5': variant === 'secondary',
-            'bg-red-200 text-red-500 ': variant === 'danger',
-            'bg-green-200 text-green-500 ': variant === 'success',
-          },
-        )}
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: keyof typeof variants
+  size?: keyof typeof sizes
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({variant, size, className, ...props}, ref) => {
+    return (
+      <button
+        className={getButtonClassName({
+          variant,
+          size,
+          className,
+        })}
+        ref={ref}
+        {...props}
       />
-      <div
-        className={cx(
-          'not-prose relative flex h-full w-full items-center justify-center whitespace-nowrap',
-          {
-            'cursor-not-allowed text-gray-100 opacity-50': disabled,
-            '!text-white dark:!text-accent': variant === 'primary',
-            '!text-black dark:!text-white': variant === 'secondary',
-            '!text-red-700': variant === 'danger',
-            '!text-green-700': variant === 'success',
-            'space-x-3 py-2 px-6 text-xs': size === 'small',
-            'space-x-3 py-2 px-8': size === 'medium',
-            'space-x-5 py-3 px-10': size === 'large',
-          },
-        )}
-      >
-        {children}
-      </div>
-    </>
-  )
-}
+    )
+  },
+)
 
-function Button({
-  children,
-  size,
-  variant = 'primary',
-  className,
-  disabled,
-  ...props
-}: ButtonProps & JSX.IntrinsicElements['button']) {
-  return (
-    <button disabled={disabled} {...props} className={getClassName(className)}>
-      <ButtonInner variant={variant} size={size} disabled={disabled}>
-        {children}
-      </ButtonInner>
-    </button>
-  )
-}
-
-function LinkButton({
-  className,
-  underlined,
-  ...buttonProps
-}: {underlined?: boolean} & JSX.IntrinsicElements['button']) {
-  return (
-    <button
-      {...buttonProps}
-      className={cx(
-        className,
-        underlined
-          ? 'underlined whitespace-nowrap focus:outline-none'
-          : 'underline',
-        'inline-block text-primary',
-      )}
-    />
-  )
-}
+Button.displayName = 'Button'
 
 const ButtonLink = React.forwardRef<
   HTMLAnchorElement,
-  LinkProps<any> & ButtonProps
->(function ButtonLink(
-  {children, className, variant = 'primary', size, disabled, ...rest},
-  ref,
-) {
+  ExtractProps<typeof Link> & ButtonProps
+>(function ButtonLink({className, variant, size, disabled, ...rest}, ref) {
   return (
-    <Link ref={ref} className={getClassName(className)} {...rest}>
-      <ButtonInner disabled={disabled} variant={variant} size={size}>
-        {children}
-      </ButtonInner>
-    </Link>
+    <Link
+      ref={ref}
+      className={getButtonClassName({
+        variant,
+        size,
+        className,
+      })}
+      {...rest}
+    />
   )
-}) as typeof LinkFn
+})
 
-export type {ButtonProps}
-export {Button, ButtonLink, LinkButton}
+ButtonLink.displayName = 'ButtonLink'
+
+export {Button, ButtonLink, type ButtonProps}

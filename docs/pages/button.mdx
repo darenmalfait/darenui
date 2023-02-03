@@ -24,14 +24,25 @@ operation. If you want a link that looks like a button, go to
 
 ## Properties
 
+These properties extend
+[HTMLButtonElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement)
+
 <Properties>
-  <Property name="children" type="string">
-    The text to be displayed on the button.
-  </Property>
-  <Property name="variant" type={['primary', 'secondary', 'danger', 'success']}>
+  <Property
+    name="variant"
+    type={[
+      'default',
+      'danger',
+      'success',
+      'outline',
+      'subtle',
+      'ghost',
+      'link',
+    ]}
+  >
     styling preset for the button.
   </Property>
-  <Property name="size" type={['small', 'medium', 'large']}>
+  <Property name="size" type={['default', 'sm', 'lg']}>
     The size of the button.
   </Property>
 </Properties>
@@ -42,17 +53,23 @@ operation. If you want a link that looks like a button, go to
 
 <Preview
   code={`<Button>Button</Button>
-<Button variant="primary">Button</Button>
-<Button variant="secondary">Button</Button>
-<Button variant="success">Button</Button>
-<Button variant="danger">Button</Button>`}
+<Button variant="default">Default</Button>
+<Button variant="danger">Danger</Button>
+<Button variant="success">Success</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="subtle">Subtle</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="link">Link</Button>`}
 >
   <div className="flex w-full flex-wrap gap-2">
     <Button>Button</Button>
-    <Button variant="primary">Button</Button>
-    <Button variant="secondary">Button</Button>
-    <Button variant="success">Button</Button>
-    <Button variant="danger">Button</Button>
+    <Button variant="default">Default</Button>
+    <Button variant="danger">Danger</Button>
+    <Button variant="success">Success</Button>
+    <Button variant="outline">Outline</Button>
+    <Button variant="subtle">Subtle</Button>
+    <Button variant="ghost">Ghost</Button>
+    <Button variant="link">Link</Button>
   </div>
 </Preview>
 
@@ -60,12 +77,12 @@ operation. If you want a link that looks like a button, go to
 
 <Preview
   code={`<Button>Button</Button>
-<Button size="small">Button</Button>
-<Button size="medium">Button</Button>
-<Button size="large">Button</Button>`}
+<Button size="default">Button</Button>
+<Button size="sm">Button</Button>
+<Button size="lg">Button</Button>`}
 >
   <Button>Button</Button>
-  <Button size="small">Button</Button>
-  <Button size="medium">Button</Button>
-  <Button size="large">Button</Button>
+  <Button size="default">Button</Button>
+  <Button size="sm">Button</Button>
+  <Button size="lg">Button</Button>
 </Preview>
