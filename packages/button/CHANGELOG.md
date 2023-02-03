@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.0...@daren/button@2.0.1) (2023-02-03)
+
+
+### Bug Fixes
+
+* **button:** remove hover underline ([079a504](https://github.com/darenmalfait/darenui/commit/079a504b7fbc94639b697319c5a1e502c2f01c67))
+
+
+
+
+
 # [2.0.0](https://github.com/darenmalfait/darenui/compare/@daren/button@1.8.4...@daren/button@2.0.0) (2023-02-03)
 
 
