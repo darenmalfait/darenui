@@ -1,5 +1,4 @@
 import {Inter as interFont} from '@next/font/google'
-import localFont from '@next/font/local'
 import type {AppProps} from 'next/app'
 import {LazyMotion, domAnimation} from 'framer-motion'
 
@@ -9,11 +8,6 @@ import {AppProviders} from '../context/app-providers'
 import '@daren/theme/dist/darenui.css'
 import '../styles/styles.css'
 import {ToastViewport} from '@daren/ui-components'
-
-const cal = localFont({
-  src: '../public/fonts/CalSans-SemiBold.woff2',
-  variable: '--font-cal',
-})
 
 const inter = interFont({
   variable: '--font-inter',
@@ -33,7 +27,7 @@ const App = ({
   return (
     <AppProviders sections={pageProps.sections ?? []}>
       <LazyMotion features={domAnimation}>
-        <main className={`${inter.variable} ${cal.variable} font-sans`}>
+        <main className={`${inter.variable} font-sans`}>
           <Layout {...pageProps}>
             <Component {...pageProps} />
             <ToastViewport />

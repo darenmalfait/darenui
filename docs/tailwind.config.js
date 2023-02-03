@@ -19,7 +19,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        title: ['var(--font-cal)', 'Cal Sans', ...defaultTheme.fontFamily.sans],
+        title: [
+          'var(--font-inter)',
+          'Inter var',
+          ...defaultTheme.fontFamily.sans,
+        ],
         sans: [
           'var(--font-inter)',
           'Inter var',

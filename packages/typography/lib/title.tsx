@@ -19,7 +19,7 @@ type TitleProps = {
 const fontSize = {
   // Keep this the same to the prose styles in styles.css
   h1: 'scroll-m-20 font-title text-4xl font-extrabold leading-tight tracking-tighter md:text-5xl lg:text-6xl lg:leading-[1.1]',
-  h2: 'mt-10 first:mt-0 scroll-m-20 font-title text-3xl font-extrabold lg:text-4xl !leading-normal',
+  h2: 'mt-10 first:mt-0 scroll-m-20 font-title text-3xl font-extrabold tracking-tight lg:text-4xl',
   h3: 'mt-8 first:mt-0 scroll-m-20 text-2xl font-semibold tracking-tight',
   h4: 'mt-8 first:mt-0 scroll-m-20 text-xl font-semibold tracking-tight',
   h5: 'mt-8 first:mt-0 text-lg font-bold md:text-xl',
