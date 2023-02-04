@@ -27,7 +27,7 @@ const App = ({
   return (
     <AppProviders sections={pageProps.sections ?? []}>
       <LazyMotion features={domAnimation}>
-        <main className={`${inter.variable} font-sans`}>
+        <main className={`${inter.variable} font-sans bg-primary`}>
           <Layout {...pageProps}>
             <Component {...pageProps} />
             <ToastViewport />

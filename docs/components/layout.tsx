@@ -1,14 +1,11 @@
-import Link from 'next/link'
-import {ButtonLink} from '@daren/ui-components'
-import {motion} from 'framer-motion'
+import {ButtonLink, Container, Grid} from '@daren/ui-components'
 
 import {Footer} from './footer'
-import {Header} from './header'
 import {GithubLogo} from './icons/github-logo'
-import {Logo} from './logo'
 import {Navigation} from './navigation'
 import {Prose} from './prose'
 import {Seo} from './seo'
+import {SiteHeader} from './site-header'
 
 export function Layout({
   metaTitle: title,
@@ -33,48 +30,34 @@ export function Layout({
         title={`${title ?? pkg ?? ''} | DarenUI`}
         description={description ?? ''}
       />
-      <div className="bg-primary lg:ml-72 xl:ml-80">
-        <motion.header
-          layoutScroll
-          className="fixed inset-y-0 left-0 z-40 contents w-72 overflow-y-auto px-6 pt-4 pb-8 bg-primary shadow-outline lg:block xl:w-80"
-        >
-          <div className="hidden lg:flex">
-            <Link href="/" aria-label="Home">
-              <div className="flex items-center space-x-3">
-                <Logo className="h-6" />
-                <span className="ml-2 flex items-center space-x-2 text-lg font-semibold text-primary">
-                  Daren
-                  <span className="ml-1 rounded-md border border-black p-1 text-[8px] leading-snug dark:!border-white">
-                    UI
-                  </span>
-                </span>
-              </div>
-            </Link>
+      <SiteHeader />
+      <Grid>
+        <Container size="full">
+          <div className="flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+            <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 overflow-y-auto border-r border-r-gray-100 dark:border-r-gray-700 md:sticky md:block">
+              <Navigation className="mb-6 hidden pr-6 md:mt-6 md:block" />
+            </aside>
+            <div className="py-6">
+              {pkg ? (
+                <div className="mx-auto max-w-5xl">
+                  <ButtonLink
+                    size="sm"
+                    variant="subtle"
+                    href={`https://github.com/darenmalfait/darenui/tree/main/packages/${pkg}`}
+                    className="mb-12 inline-flex space-x-2 text-gray-900 dark:text-white"
+                    external
+                  >
+                    <GithubLogo className="h-5 w-5" />
+                    <span>View on Github</span>
+                  </ButtonLink>
+                </div>
+              ) : null}
+              <Prose as="article">{children}</Prose>
+              <Footer />
+            </div>
           </div>
-          <Header />
-          <Navigation className="hidden lg:mt-10 lg:block" />
-        </motion.header>
-        <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
-          <main className="py-16">
-            {pkg ? (
-              <div className="mx-auto max-w-5xl">
-                <ButtonLink
-                  size="sm"
-                  variant="subtle"
-                  href={`https://github.com/darenmalfait/darenui/tree/main/packages/${pkg}`}
-                  className="mb-12 inline-flex space-x-2 text-gray-900 dark:text-white"
-                  external
-                >
-                  <GithubLogo className="h-5 w-5" />
-                  <span>View on Github</span>
-                </ButtonLink>
-              </div>
-            ) : null}
-            <Prose as="article">{children}</Prose>
-          </main>
-          <Footer />
-        </div>
-      </div>
+        </Container>
+      </Grid>
     </>
   )
 }

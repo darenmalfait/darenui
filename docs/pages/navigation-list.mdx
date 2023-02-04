@@ -1,10 +1,10 @@
+import {getNavigationItemClassName} from '@daren/ui-components'
+import {CogIcon} from '@heroicons/react/24/solid'
+
 export const metaTitle = 'NavigationList'
 export const description = 'NavigationList component of DarenUI'
 export const pkg = 'navigation-list'
 export const path = 'navigation-list'
-
-import {CogIcon} from '@heroicons/react/24/solid'
-import {getNavigationItemClassName} from '@daren/ui-components'
 
 # NavigationList
 
@@ -117,9 +117,7 @@ predefined styles.
       </div>
       <div className="py-1">
         <span
-          className={getNavigationItemClassName({
-            className: '!bg-transparent pb-4 text-xl',
-          })}
+          className={getNavigationItemClassName('!bg-transparent pb-4 text-xl')}
         >
           Category
         </span>

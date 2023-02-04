@@ -10,7 +10,7 @@ type NavigationItemProps = {
   icon?: React.ElementType
 }
 
-function getNavigationItemClassName({className}: {className?: string} = {}) {
+function getNavigationItemClassName(className?: string) {
   return cx(
     'flex w-full items-center gap-x-2 px-3 py-2 text-primary rounded-lg bg-black/0 transition hover:bg-black/5 dark:bg-white/0 dark:hover:bg-white/5',
     className,
@@ -32,7 +32,7 @@ function Item<T>({
     <Link
       href={href}
       to={to}
-      className={className ?? getNavigationItemClassName({})}
+      className={getNavigationItemClassName(className as string)}
       {...props}
     >
       {Icon ? <Icon className="mr-3 -ml-1 h-6 w-6 shrink-0" /> : null}
@@ -48,7 +48,7 @@ function NavigationList({
 }: JSX.IntrinsicElements['nav']) {
   return (
     <nav {...props} className={className}>
-      <div className="space-y-1">{children}</div>
+      <div className={cx('space-y-1', className)}>{children}</div>
     </nav>
   )
 }

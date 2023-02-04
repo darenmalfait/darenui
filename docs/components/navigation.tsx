@@ -1,13 +1,13 @@
 import * as React from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import {cx} from '@daren/ui-components'
+import {NavigationList, cx} from '@daren/ui-components'
 import {AnimatePresence, motion, useIsPresent} from 'framer-motion'
 
+import {siteConfig} from '../config/site'
 import {useMobileNav} from '../context/mobile-nav-provider'
 import {useSections} from '../context/section-provider'
 import {remToPx} from '../lib/utils/rem-to-px'
-import {Tag} from './tag'
 
 function TopLevelNavItem({
   href,
@@ -31,39 +31,31 @@ function TopLevelNavItem({
 
 function NavLink({
   href,
-  tag,
   active,
   isAnchorLink = false,
-  children,
+  title,
 }: {
   href: string
-  tag?: string
   active?: boolean
   isAnchorLink?: boolean
-  children: React.ReactNode
+  title: string
 }) {
   const {close} = useMobileNav()
 
   return (
-    <Link
+    <NavigationList.Item
+      as={Link}
       onClick={close}
       href={href}
+      title={title}
       aria-current={active ? 'page' : undefined}
       className={cx(
-        'flex justify-between gap-2 py-1 pr-3 text-sm transition',
-        isAnchorLink ? 'pl-7' : 'pl-4',
+        isAnchorLink ? 'pl-7' : null,
         active
           ? 'text-primary dark:text-white'
           : 'text-secondary hover:text-primary',
       )}
-    >
-      <span className="truncate">{children}</span>
-      {tag ? (
-        <Tag variant="small" color="gray">
-          {tag}
-        </Tag>
-      ) : null}
-    </Link>
+    />
   )
 }
 
@@ -85,13 +77,16 @@ function VisibleSectionHighlight({
       section => section.id === visibleSections[0],
     ),
   )
-  const itemHeight = remToPx(2)
+  const itemHeight = remToPx(2.65)
   const height = isPresent
-    ? Math.max(1, visibleSections.length) * itemHeight
+    ? Math.max(1.1, visibleSections.length) * itemHeight
     : itemHeight
 
   const index = group.links.findIndex(link => link.href === pathname)
-  const top = index * itemHeight + firstVisibleSectionIndex * itemHeight
+  const top =
+    index * itemHeight +
+    firstVisibleSectionIndex * itemHeight -
+    index * remToPx(0.15)
 
   return (
     <motion.div
@@ -101,32 +96,6 @@ function VisibleSectionHighlight({
       exit={{opacity: 0}}
       className="absolute inset-x-0 top-0 bg-black/5 will-change-transform dark:bg-white/10"
       style={{borderRadius: 8, height, top}}
-    />
-  )
-}
-
-function ActivePageMarker({
-  group,
-  pathname,
-}: {
-  group: {
-    links: Array<{href: string}>
-  }
-  pathname: string
-}) {
-  const itemHeight = remToPx(2)
-  const offset = remToPx(0.25)
-  const activePageIndex = group.links.findIndex(link => link.href === pathname)
-  const top = offset + activePageIndex * itemHeight
-
-  return (
-    <motion.div
-      layout
-      className="absolute left-2 h-6 w-px bg-daren"
-      initial={{opacity: 0}}
-      animate={{opacity: 1, transition: {delay: 0.2}}}
-      exit={{opacity: 0}}
-      style={{top}}
     />
   )
 }
@@ -159,31 +128,25 @@ function NavigationGroup({
       >
         {group.title}
       </motion.h2>
-      <div className="relative mt-3 pl-2">
+      <div className="relative mt-3">
         <AnimatePresence initial={!isOpen}>
           {isActiveGroup ? (
             <VisibleSectionHighlight group={group} pathname={router.pathname} />
           ) : null}
         </AnimatePresence>
-        <motion.div
-          layout
-          className="bg-gray-900/10 absolute inset-y-0 left-2 w-px dark:bg-white/5"
-        />
-        <AnimatePresence initial={false}>
-          {isActiveGroup ? (
-            <ActivePageMarker group={group} pathname={router.pathname} />
-          ) : null}
-        </AnimatePresence>
-        <ul className="space-y-1 border-l border-transparent">
+
+        <NavigationList className="space-y-0">
           {group.links.map(link => (
             <motion.li
               key={link.href}
               layout="position"
-              className="relative space-y-1"
+              className="relative space-y-0"
             >
-              <NavLink href={link.href} active={link.href === router.pathname}>
-                {link.title}
-              </NavLink>
+              <NavLink
+                title={link.title}
+                href={link.href}
+                active={link.href === router.pathname}
+              />
               <AnimatePresence mode="popLayout" initial={false}>
                 {link.href === router.pathname && sections.length > 0 ? (
                   <motion.ul
@@ -202,11 +165,9 @@ function NavigationGroup({
                       <li key={section.id}>
                         <NavLink
                           href={`${link.href}#${section.id}`}
-                          tag={section.tag}
                           isAnchorLink
-                        >
-                          {section.title}
-                        </NavLink>
+                          title={section.title}
+                        />
                       </li>
                     ))}
                   </motion.ul>
@@ -214,7 +175,7 @@ function NavigationGroup({
               </AnimatePresence>
             </motion.li>
           ))}
-        </ul>
+        </NavigationList>
       </div>
     </li>
   )
@@ -282,10 +243,12 @@ export function Navigation(props: JSX.IntrinsicElements['nav']) {
   return (
     <nav {...props}>
       <ul>
-        <TopLevelNavItem href="/">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="https://www.daren.be" target="_blank">
-          Daren
-        </TopLevelNavItem>
+        {siteConfig.mainNav.map(item => (
+          <TopLevelNavItem key={item.title} href={item.href}>
+            {item.title}
+          </TopLevelNavItem>
+        ))}
+
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}

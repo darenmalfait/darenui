@@ -127,7 +127,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute z-20 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-slate-200 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute z-20 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-gray-200 focus:outline-none sm:text-sm">
               {filteredItems.length === 0 && query !== '' ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
@@ -192,7 +192,7 @@ const SelectField = React.forwardRef<
             {label}
           </Label>
           {description ? (
-            <span className="text-sm text-slate-400" id={descriptionId}>
+            <span className="text-sm text-gray-400" id={descriptionId}>
               {description}
             </span>
           ) : null}

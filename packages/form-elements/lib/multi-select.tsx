@@ -128,7 +128,7 @@ function MultiSelect({
             {label}
           </Label>
           {description ? (
-            <span className="text-sm text-slate-400" id={descriptionId}>
+            <span className="text-sm text-gray-400" id={descriptionId}>
               {description}
             </span>
           ) : null}
