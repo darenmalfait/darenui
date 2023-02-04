@@ -34,12 +34,11 @@ function Checkbox({
     >
       <input {...props} className="peer sr-only" type="checkbox" />
       <span className="inline-block h-full w-full cursor-pointer rounded-full border-2 border-primary-100 text-current transition-all duration-300 focus-ring peer-checked:animate-check peer-checked:border-transparent dark:border-primary-300" />
-      <Icon
-        className={cx(
-          textClassName,
-          'pointer-events-none absolute inset-0 h-full w-full  p-1 opacity-0 transition-opacity peer-checked:animate-fade-in-up',
-        )}
-      />
+      <span className="absolute inset-0 hidden peer-checked:block">
+        <Icon
+          className={cx(textClassName, 'pointer-events-none h-full w-full p-1')}
+        />
+      </span>
     </label>
   )
 }

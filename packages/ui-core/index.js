@@ -289,46 +289,6 @@ module.exports = plugin(
           '8xl': '96rem',
         },
         keyframes: {
-          'fade-in-down': {
-            '0%': {
-              opacity: `0`,
-              transform: `translateY(-10px)`,
-            },
-            '100%': {
-              opacity: `1`,
-              transform: `translateY(0)`,
-            },
-          },
-          'fade-out-down': {
-            from: {
-              opacity: `1`,
-              transform: `translateY(0px)`,
-            },
-            to: {
-              opacity: `0`,
-              transform: `translateY(10px)`,
-            },
-          },
-          'fade-in-up': {
-            '0%': {
-              opacity: `0`,
-              transform: `translateY(10px)`,
-            },
-            '100%': {
-              opacity: `1`,
-              transform: `translateY(0)`,
-            },
-          },
-          'fade-out-up': {
-            from: {
-              opacity: `1`,
-              transform: `translateY(0px)`,
-            },
-            to: {
-              opacity: `0`,
-              transform: `translateY(10px)`,
-            },
-          },
           shake: {
             '0%, 100%': {
               transform: `translateX(0)`,
@@ -338,19 +298,6 @@ module.exports = plugin(
             },
             '40%, 80%': {
               transform: `translateX(10px)`,
-            },
-          },
-          stroke: {
-            '100%': {
-              'stroke-dashoffset': '0',
-            },
-          },
-          scale: {
-            '0%, 100%': {
-              transform: 'none',
-            },
-            '50%': {
-              transform: 'scale3d(1.1, 1.1, 1)',
             },
           },
           check: {
@@ -378,42 +325,10 @@ module.exports = plugin(
               background: 'currentColor',
             },
           },
-          expand: {
-            '0%': {
-              opacity: 0,
-              transform: 'scale(0.25)',
-            },
-            '30%': {
-              opacity: 1,
-            },
-            '80%': {
-              opacity: 0.5,
-            },
-            '100%': {
-              transform: 'scale(28)',
-              opacity: 0,
-            },
-          },
-          'slide-right': {
-            '0%': {
-              transform: 'translateX(var(--radix-toast-swipe-end-x))',
-            },
-            '100%': {
-              transform: 'translateX(100%)',
-            },
-          },
         },
         animation: {
-          'fade-in-down': `fade-in-down 0.2s forwards`,
-          'fade-out-down': `fade-out-down 0.2s forwards`,
-          'fade-in-up': `fade-in-up 0.2s forwards`,
-          'fade-out-up': `fade-out-up 0.2s forwards`,
           shake: `shake 0.5s forwards`,
-          stroke: `stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;`,
-          scale: `scale .3s ease-in-out`,
           check: `check .5s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards`,
-          'slide-right': `slide-right 0.3s ease-out forwards`,
-          expand: `350ms linear expand forwards`,
         },
       },
     },

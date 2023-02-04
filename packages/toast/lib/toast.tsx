@@ -32,7 +32,7 @@ const Toast = React.forwardRef<
     <ToastPrimitive.Root
       {...props}
       className={cx(
-        'pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg p-4 dark:bg-gray-900 bg-secondary shadow-lg not-prose data-[state=open]:animate-fade-in-up data-[state=closed]:animate-slide-right transform data-[swipe=move]:ml-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:ml-0 data-[swipe=end]:animate-slide-right',
+        'pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg p-4 dark:bg-gray-900 bg-secondary shadow-lg not-prose data-[state=open]:animate-in data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right transform data-[swipe=move]:ml-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:ml-0 data-[swipe=end]:animate-slide-right',
         {
           'shadow-outline': type === 'default',
           'border border-orange-100 dark:border-orange-200 dark:border-orange-200/20':

@@ -23,12 +23,14 @@
 To install the component-library run the following within your project directory.
 
 ```sh
-npm i @daren/ui-core @daren/ui-components postcss tailwindcss @tailwindcss/typography @heroicons/react@2
+npm i @daren/ui-core @daren/ui-components postcss tailwindcss @tailwindcss/typography @heroicons/react@2 tailwindcss-animate
 ```
 
 ### Configuration
 
 The theme of this library depends on the @tailwindcss/typography plugin. To use it, follow the steps on the plugin source page. https://github.com/tailwindlabs/tailwindcss-typography
+For animations, you need to install the tailwindcss-animate plugin.
+
 
 ```js
 // tailwind.config.js
@@ -42,6 +44,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require('tailwindcss-animate'),
     require('@tailwindcss/typography'),
     require("@daren/ui-core"),
   ],
