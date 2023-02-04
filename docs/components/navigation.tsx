@@ -79,7 +79,7 @@ function VisibleSectionHighlight({
   )
   const itemHeight = remToPx(2.65)
   const height = isPresent
-    ? Math.max(1.1, visibleSections.length) * itemHeight
+    ? Math.max(1, visibleSections.length) * itemHeight
     : itemHeight
 
   const index = group.links.findIndex(link => link.href === pathname)
