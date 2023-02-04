@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.2...@daren/button@2.0.3) (2023-02-04)
+
+
+### Bug Fixes
+
+* **button:** add no-underline ([ad330f8](https://github.com/darenmalfait/darenui/commit/ad330f88c5e2f165d06acfb330b12ef34844f54e))
+
+
+
+
+
 ## [2.0.2](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.1...@daren/button@2.0.2) (2023-02-04)
 
 
