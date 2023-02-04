@@ -5,7 +5,7 @@ import {Link} from './link'
 
 const variants = {
   default:
-    'bg-gray-900 text-white hover:bg-gray-700 dark:bg-gray-50 dark:text-gray-900 focus-ring',
+    'bg-gray-900 text-white hover:bg-gray-700 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50 focus-ring',
   danger:
     'bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-600 focus-ring',
   success:
@@ -13,7 +13,7 @@ const variants = {
   outline:
     'bg-transparent border border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700 dark:text-gray-100 focus-ring',
   subtle:
-    'bg-gray-100 text-primary hover:bg-gray-200 dark:bg-gray-700  focus-ring',
+    'bg-gray-100 text-primary hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-200 focus-ring',
   ghost:
     'bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-100 dark:hover:text-gray-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent',
   link: 'bg-transparent hover:underline text-primary hover:bg-transparent dark:hover:bg-transparent',
@@ -35,7 +35,7 @@ function getButtonClassName({
   className?: string
 }) {
   return cx(
-    'group rounded-full font-title font-bold inline-flex space-x-2 items-center transition-transform active:scale-90',
+    'group rounded-full underline-none font-title font-bold inline-flex space-x-2 items-center transition-transform active:scale-90',
     variants[variant],
     sizes[size],
     className,
