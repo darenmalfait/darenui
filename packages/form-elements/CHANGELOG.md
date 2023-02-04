@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.2](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.13.1...@daren/form-elements@1.13.2) (2023-02-04)
+
+
+### Bug Fixes
+
+* **docs:** improve styling ([0959780](https://github.com/darenmalfait/darenui/commit/09597807a42c84fe37b6bda8d387c84110336452))
+* **input:** vertically align center ([b92a8a5](https://github.com/darenmalfait/darenui/commit/b92a8a5e1fc14be8bb3c184cc08402dc02bfe8b9))
+
+
+
+
+
 ## [1.13.1](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.13.0...@daren/form-elements@1.13.1) (2023-02-03)
 
 **Note:** Version bump only for package @daren/form-elements

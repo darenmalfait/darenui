@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.3...@daren/button@2.0.4) (2023-02-04)
+
+
+### Bug Fixes
+
+* **docs:** improve styling ([0959780](https://github.com/darenmalfait/darenui/commit/09597807a42c84fe37b6bda8d387c84110336452))
+
+
+
+
+
 ## [2.0.3](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.2...@daren/button@2.0.3) (2023-02-04)
 
 

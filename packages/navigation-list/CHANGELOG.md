@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.3.8...@daren/navigation-list@1.3.9) (2023-02-04)
+
+
+### Bug Fixes
+
+* **docs:** improve styling ([0959780](https://github.com/darenmalfait/darenui/commit/09597807a42c84fe37b6bda8d387c84110336452))
+
+
+
+
+
 ## [1.3.8](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.3.7...@daren/navigation-list@1.3.8) (2023-01-30)
 
 **Note:** Version bump only for package @daren/navigation-list

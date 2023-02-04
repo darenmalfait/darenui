@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.4](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.10.3...@daren/docs@0.10.4) (2023-02-04)
+
+
+### Bug Fixes
+
+* **docs:** improve styling ([0959780](https://github.com/darenmalfait/darenui/commit/09597807a42c84fe37b6bda8d387c84110336452))
+* **input:** vertically align center ([b92a8a5](https://github.com/darenmalfait/darenui/commit/b92a8a5e1fc14be8bb3c184cc08402dc02bfe8b9))
+
+
+
+
+
 ## [0.10.3](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.10.2...@daren/docs@0.10.3) (2023-02-04)
 
 **Note:** Version bump only for package @daren/docs
