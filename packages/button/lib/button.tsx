@@ -35,7 +35,7 @@ function getButtonClassName({
   className?: string
 }) {
   return cx(
-    'group rounded-full underline-none font-title font-bold inline-flex space-x-2 items-center transition-transform active:scale-90',
+    'group rounded-full no-underline font-title font-bold inline-flex space-x-2 items-center transition-transform active:scale-90',
     variants[variant],
     sizes[size],
     className,
