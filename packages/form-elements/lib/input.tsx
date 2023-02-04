@@ -34,13 +34,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
           aria-invalid={hasError}
           className={cx('h-36', className, {'pr-14': !!Icon})}
         />
-        {children ? <div className="flex flex-1">{children}</div> : null}
+        {children ? <div className="flex shrink-0">{children}</div> : null}
       </div>
     )
   }
 
   return (
-    <div className="flex flex-nowrap space-x-2">
+    <div className="flex flex-nowrap items-center space-x-2">
       <div className="relative w-full shadow-sm">
         <input
           type={type}
@@ -70,7 +70,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
           </div>
         ) : null}
       </div>
-      {children ? <div className="flex flex-1">{children}</div> : null}
+      {children ? <div className="flex shrink-0">{children}</div> : null}
     </div>
   )
 })
