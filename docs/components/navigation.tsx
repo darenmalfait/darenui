@@ -233,6 +233,7 @@ export const navigation = [
       {title: 'Tabs', href: '/tabs'},
       {title: 'ProgressiveImage', href: '/progressive-image'},
       {title: 'Review', href: '/review'},
+      {title: 'ScrollArea', href: '/scroll-area'},
       {title: 'Spinner', href: '/spinner'},
       {title: 'Toast', href: '/toast'},
     ],
