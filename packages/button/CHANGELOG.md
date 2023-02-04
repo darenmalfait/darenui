@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.1...@daren/button@2.0.2) (2023-02-04)
+
+
+### Bug Fixes
+
+* **button:** show correct dark bg hover  color ([ca2f4b4](https://github.com/darenmalfait/darenui/commit/ca2f4b481cbb0657768a98424e5c3569c38254e1))
+
+
+
+
+
 ## [2.0.1](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.0...@daren/button@2.0.1) (2023-02-03)
 
 
