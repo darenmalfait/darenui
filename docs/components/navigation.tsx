@@ -243,7 +243,7 @@ export const navigation = [
 export function Navigation(props: JSX.IntrinsicElements['nav']) {
   return (
     <nav {...props}>
-      <ul>
+      <ul className="font-sans">
         {siteConfig.mainNav.map(item => (
           <TopLevelNavItem key={item.title} href={item.href}>
             {item.title}
