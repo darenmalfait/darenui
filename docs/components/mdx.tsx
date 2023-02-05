@@ -16,6 +16,7 @@ import {
 import {useTheme} from '../context/theme-provider'
 import {Heading} from './heading'
 
+export * from '../components/app-demo'
 export * from '@daren/ui-components'
 
 export const a = Link

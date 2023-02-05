@@ -77,16 +77,14 @@ function VisibleSectionHighlight({
       section => section.id === visibleSections[0],
     ),
   )
-  const itemHeight = remToPx(2.65)
+  const itemHeight = remToPx(2)
   const height = isPresent
-    ? Math.max(1, visibleSections.length) * itemHeight
-    : itemHeight
+    ? Math.max(1, visibleSections.length) * (itemHeight + 1)
+    : itemHeight + 1
 
   const index = group.links.findIndex(link => link.href === pathname)
   const top =
-    index * itemHeight +
-    firstVisibleSectionIndex * itemHeight -
-    index * remToPx(0.15)
+    index * (itemHeight + 3.5) + firstVisibleSectionIndex * (itemHeight + 3.5)
 
   return (
     <motion.div
@@ -135,7 +133,7 @@ function NavigationGroup({
           ) : null}
         </AnimatePresence>
 
-        <NavigationList className="space-y-0">
+        <NavigationList className="space-y-1">
           {group.links.map(link => (
             <motion.li
               key={link.href}
