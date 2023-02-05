@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.11.2...@daren/ui-core@2.12.0) (2023-02-05)
+
+
+### Features
+
+* **global:** add default animations ([656ddf0](https://github.com/darenmalfait/darenui/commit/656ddf042e7f5cc731f466190c676b6a1c137374))
+
+
+
+
+
 ## [2.11.2](https://github.com/darenmalfait/darenui/compare/@daren/ui-core@2.11.1...@daren/ui-core@2.11.2) (2023-01-30)
 
 **Note:** Version bump only for package @daren/ui-core

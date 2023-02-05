@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.10.4...@daren/docs@0.11.0) (2023-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#83](https://github.com/darenmalfait/darenui/issues/83)) ([4f4f9bb](https://github.com/darenmalfait/darenui/commit/4f4f9bb24c67a79cbf5c1d964e54c803e23a840f))
+* **docs:** slightly reduce visible sections indicator height ([459044f](https://github.com/darenmalfait/darenui/commit/459044f3d3b6d67cd2c40d19ab220925708dd567))
+
+
+### Features
+
+* add scroll-area component ([0dc3e00](https://github.com/darenmalfait/darenui/commit/0dc3e001a4be3c9da5e8f361361e022a63060bdf))
+* **docs:** add app demo ([8fb72da](https://github.com/darenmalfait/darenui/commit/8fb72daa705a24049305db09941b13d08ceae822))
+* **global:** add default animations ([656ddf0](https://github.com/darenmalfait/darenui/commit/656ddf042e7f5cc731f466190c676b6a1c137374))
+
+
+
+
+
 ## [0.10.4](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.10.3...@daren/docs@0.10.4) (2023-02-04)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.6](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.9.5...@daren/utils@1.9.6) (2023-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#83](https://github.com/darenmalfait/darenui/issues/83)) ([4f4f9bb](https://github.com/darenmalfait/darenui/commit/4f4f9bb24c67a79cbf5c1d964e54c803e23a840f))
+
+
+
+
+
 ## [1.9.5](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.9.4...@daren/utils@1.9.5) (2023-01-30)
 
 **Note:** Version bump only for package @daren/utils

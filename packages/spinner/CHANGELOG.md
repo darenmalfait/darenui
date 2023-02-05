@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.14](https://github.com/darenmalfait/darenui/compare/@daren/spinner@1.1.13...@daren/spinner@1.1.14) (2023-02-05)
+
+**Note:** Version bump only for package @daren/spinner
+
+
+
+
+
 ## [1.1.13](https://github.com/darenmalfait/darenui/compare/@daren/spinner@1.1.12...@daren/spinner@1.1.13) (2023-01-30)
 
 **Note:** Version bump only for package @daren/spinner

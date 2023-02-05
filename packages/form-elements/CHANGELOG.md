@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.13.2...@daren/form-elements@1.14.0) (2023-02-05)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#83](https://github.com/darenmalfait/darenui/issues/83)) ([4f4f9bb](https://github.com/darenmalfait/darenui/commit/4f4f9bb24c67a79cbf5c1d964e54c803e23a840f))
+
+
+### Features
+
+* **global:** add default animations ([656ddf0](https://github.com/darenmalfait/darenui/commit/656ddf042e7f5cc731f466190c676b6a1c137374))
+
+
+
+
+
 ## [1.13.2](https://github.com/darenmalfait/darenui/compare/@daren/form-elements@1.13.1...@daren/form-elements@1.13.2) (2023-02-04)
 
 

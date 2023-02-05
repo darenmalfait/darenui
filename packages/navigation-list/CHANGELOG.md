@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.3.9...@daren/navigation-list@1.4.0) (2023-02-05)
+
+
+### Features
+
+* **docs:** add app demo ([8fb72da](https://github.com/darenmalfait/darenui/commit/8fb72daa705a24049305db09941b13d08ceae822))
+
+
+
+
+
 ## [1.3.9](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.3.8...@daren/navigation-list@1.3.9) (2023-02-04)
 
 

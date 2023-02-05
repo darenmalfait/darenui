@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.18.8...@daren/ui-components@1.19.0) (2023-02-05)
+
+
+### Features
+
+* add scroll-area component ([0dc3e00](https://github.com/darenmalfait/darenui/commit/0dc3e001a4be3c9da5e8f361361e022a63060bdf))
+
+
+
+
+
 ## [1.18.8](https://github.com/darenmalfait/darenui/compare/@daren/ui-components@1.18.7...@daren/ui-components@1.18.8) (2023-02-04)
 
 **Note:** Version bump only for package @daren/ui-components
