@@ -23,7 +23,7 @@ interface Album {
   cover: string
 }
 
-const listenNowAlbums: Album[] = [
+const highlighted: Album[] = [
   {
     name: 'Authumn Soup',
     artist: 'Cala',
@@ -171,7 +171,7 @@ function AppDemo() {
 
                     <div className="relative">
                       <div className="relative flex  space-x-4">
-                        {listenNowAlbums.map(album => (
+                        {highlighted.map(album => (
                           <AlbumArtwork
                             key={album.name}
                             album={album}

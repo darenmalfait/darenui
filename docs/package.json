@@ -6,7 +6,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "next build",
+    "build": "cd .. && yarn build && cd docs && next build",
     "dev": "next dev",
     "export": "npm run build && next export",
     "lint:src": "eslint --ext .js,.jsx,.ts,.tsx .",
@@ -50,6 +50,7 @@
     "@netlify/plugin-nextjs": "^4.30.3",
     "@svgr/webpack": "^6.5.1",
     "@types/eslint": "^8.21.0",
+    "@types/node": "^18.11.19",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.13",
