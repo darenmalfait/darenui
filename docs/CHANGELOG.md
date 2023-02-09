@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.11.0...@daren/docs@0.12.0) (2023-02-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v9 ([#84](https://github.com/darenmalfait/darenui/issues/84)) ([28664e1](https://github.com/darenmalfait/darenui/commit/28664e1930709cc33247923e2dcf0f7d4c25953b))
+
+
+### Features
+
+* **ui-components:** add hover-card component ([0586d91](https://github.com/darenmalfait/darenui/commit/0586d91dd6454da5766264708895c1ab15ea7434))
+
+
+
+
+
 # [0.11.0](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.10.4...@daren/docs@0.11.0) (2023-02-05)
 
 
