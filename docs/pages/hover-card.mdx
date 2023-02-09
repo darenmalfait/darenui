@@ -1,0 +1,55 @@
+export const metaTitle = 'HoverCard'
+export const description = 'HoverCard component of DarenUI'
+export const pkg = 'hover-card'
+export const path = 'hover-card'
+
+# HoverCard
+
+HoverCard is a component that shows extra information when the user hovers over
+it.
+
+<Code code={`import { HoverCard } from '@daren/ui-components'`} />
+
+## Preview
+
+<Preview
+  code={`<HoverCard>
+  <HoverCard.Trigger asChild>
+    <Button variant="ghost">@darenmalfait</Button>
+  </HoverCard.Trigger>
+  <HoverCard.Content className="w-80">
+    <div className="flex justify-between space-x-4">
+      <div className="space-y-1">
+        <h4 className="text-sm font-semibold">@darenmalfait</h4>
+        <p className="text-sm">Full Stack Developer, UI/UX Designer.</p>
+      </div>
+    </div>
+  </HoverCard.Content>
+</HoverCard>`}
+>
+  <div className="space-y-2">
+    <HoverCard>
+      <HoverCard.Trigger asChild>
+        <Button variant="ghost">@darenmalfait</Button>
+      </HoverCard.Trigger>
+      <HoverCard.Content className="w-80">
+        <div className="flex justify-between space-x-4">
+          <div className="space-y-1">
+            <h4 className="text-sm font-semibold">@darenmalfait</h4>
+            <p className="text-sm">Full Stack Developer, UI/UX Designer.</p>
+          </div>
+        </div>
+      </HoverCard.Content>
+    </HoverCard>
+  </div>
+</Preview>
+
+---
+
+## Properties
+
+<Properties>
+  <Property name="chldren" type="[HoverCard.Trigger, HoverCard.Content]">
+    The children of the HoverCard component.
+  </Property>
+</Properties>

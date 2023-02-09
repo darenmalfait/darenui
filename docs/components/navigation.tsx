@@ -185,9 +185,9 @@ export const navigation = [
     links: [
       {title: 'Introduction', href: '/'},
       {title: 'Quickstart', href: '/quickstart'},
-      {title: 'Utils', href: '/utils'},
       {title: 'Hooks', href: '/hooks'},
       {title: 'Typography', href: '/typography'},
+      {title: 'Utils', href: '/utils'},
     ],
   },
   {
@@ -201,16 +201,16 @@ export const navigation = [
   {
     title: 'Form Elements',
     links: [
-      {title: 'Input', href: '/input'},
-      {title: 'Field', href: '/field'},
       {title: 'Checkbox', href: '/checkbox'},
       {title: 'CheckboxField', href: '/checkbox-field'},
-      {title: 'Toggle', href: '/toggle'},
+      {title: 'Field', href: '/field'},
+      {title: 'Input', href: '/input'},
+      {title: 'MultiSelect', href: '/multi-select'},
+      {title: 'RadioGroup', href: '/radio-group'},
       {title: 'Select', href: '/select'},
       {title: 'SelectField', href: '/select-field'},
-      {title: 'MultiSelect', href: '/multi-select'},
       {title: 'TimePickerField', href: '/timepicker-field'},
-      {title: 'RadioGroup', href: '/radio-group'},
+      {title: 'Toggle', href: '/toggle'},
     ],
   },
   {
@@ -218,21 +218,22 @@ export const navigation = [
     links: [
       {title: 'Button', href: '/button'},
       {title: 'ButtonLink', href: '/button-link'},
-      {title: 'Link', href: '/link'},
       {title: 'DoubleLabelLink', href: '/double-label-link'},
+      {title: 'Link', href: '/link'},
     ],
   },
   {
     title: 'Other',
     links: [
       {title: 'Alert', href: '/alert'},
+      {title: 'HoverCard', href: '/hover-card'},
       {title: 'Modal', href: '/modal'},
       {title: 'NavigationList', href: '/navigation-list'},
-      {title: 'Tabs', href: '/tabs'},
       {title: 'ProgressiveImage', href: '/progressive-image'},
       {title: 'Review', href: '/review'},
       {title: 'ScrollArea', href: '/scroll-area'},
       {title: 'Spinner', href: '/spinner'},
+      {title: 'Tabs', href: '/tabs'},
       {title: 'Toast', href: '/toast'},
     ],
   },
