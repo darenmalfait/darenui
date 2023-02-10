@@ -58,8 +58,8 @@ const Toast = React.forwardRef<
         })}
       />
       <div className="flex items-start">
-        <div className="shrink-0">
-          {type !== 'default' ? (
+        {type !== 'default' ? (
+          <div className="shrink-0">
             <Icon
               className={cx('h-6 w-6 text-primary', {
                 'text-orange-900 dark:text-orange-200': type === 'warning',
@@ -69,8 +69,8 @@ const Toast = React.forwardRef<
               })}
               aria-hidden="true"
             />
-          ) : null}
-        </div>
+          </div>
+        ) : null}
         <div className="ml-3 flex w-0 flex-1 flex-col pt-0.5">
           {title ? (
             <ToastPrimitive.Title
