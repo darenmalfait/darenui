@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "@daren/utils": "^1.9.6",
-    "@headlessui/react": "1.7.9",
-    "@heroicons/react": "^2.0.14"
+    "@headlessui/react": "1.7.10",
+    "@heroicons/react": "^2.0.15"
   },
   "devDependencies": {
     "react": "^18.2.0"
