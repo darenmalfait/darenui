@@ -2,126 +2,79 @@
 
 import * as React from 'react'
 import {cx} from '@daren/utils'
-import {
-  CheckCircleIcon,
-  ExclamationCircleIcon,
-  InformationCircleIcon,
-  XCircleIcon,
-} from '@heroicons/react/24/solid'
 import * as ToastPrimitive from '@radix-ui/react-toast'
 
-type ToastProps = {
-  type: 'danger' | 'warning' | 'success' | 'info' | 'default'
+const variants = {
+  default: 'bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700',
+  danger:
+    'group danger bg-red-600 text-white border-red-600 dark:border-red-600',
+  success:
+    'group success bg-green-600 text-white border-green-600 dark:border-green-600',
+  warning:
+    'group warning bg-yellow-600 text-white border-yellow-600 dark:border-yellow-600',
+  info: 'group info bg-blue-600 text-white border-blue-600 dark:border-blue-600',
 }
-
-const IconMap: Record<ToastProps['type'], React.ElementType> = {
-  default: InformationCircleIcon,
-  danger: XCircleIcon,
-  warning: ExclamationCircleIcon,
-  success: CheckCircleIcon,
-  info: InformationCircleIcon,
-}
-
-const Toast = React.forwardRef<
-  React.ElementRef<typeof ToastPrimitive.Toast> & ToastProps,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitive.Toast>
->(({className, title, children, open, type = 'success', ...props}, ref) => {
-  const Icon = IconMap[type]
-
-  return (
-    <ToastPrimitive.Root
-      {...props}
-      className={cx(
-        'pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg p-4 dark:bg-gray-900 bg-secondary shadow-lg not-prose data-[state=open]:animate-in data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right transform data-[swipe=move]:ml-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:ml-0 data-[swipe=end]:animate-slide-right',
-        {
-          'shadow-outline': type === 'default',
-          'border border-orange-100 dark:border-orange-200 dark:border-orange-200/20':
-            type === 'warning',
-          'border border-green-100 dark:border-green-200 dark:border-green-200/20':
-            type === 'success',
-          'border border-blue-100 dark:border-blue-200 dark:border-blue-200/20':
-            type === 'info',
-          'border border-red-100 dark:border-red-200 dark:border-red-200/20':
-            type === 'danger',
-        },
-        className,
-      )}
-      open={open}
-      ref={ref}
-    >
-      <div
-        className={cx('absolute inset-0 -z-10', {
-          'bg-orange-50 dark:bg-orange-500/10': type === 'warning',
-          'bg-green-50 dark:bg-green-500/10': type === 'success',
-          'bg-blue-50 dark:bg-blue-500/10': type === 'info',
-          'bg-red-50 dark:bg-red-500/10': type === 'danger',
-        })}
-      />
-      <div className="flex items-start">
-        {type !== 'default' ? (
-          <div className="shrink-0">
-            <Icon
-              className={cx('h-6 w-6 text-primary', {
-                'text-orange-900 dark:text-orange-200': type === 'warning',
-                'text-green-900 dark:text-green-200': type === 'success',
-                'text-blue-900 dark:text-blue-200': type === 'info',
-                'text-red-900 dark:text-red-200': type === 'danger',
-              })}
-              aria-hidden="true"
-            />
-          </div>
-        ) : null}
-        <div className="ml-3 flex w-0 flex-1 flex-col pt-0.5">
-          {title ? (
-            <ToastPrimitive.Title
-              className={cx('text-sm font-bold text-primary', {
-                'text-orange-900 dark:text-orange-200': type === 'warning',
-                'text-green-900 dark:text-green-200': type === 'success',
-                'text-blue-900 dark:text-blue-200': type === 'info',
-                'text-red-900 dark:text-red-200': type === 'danger',
-              })}
-            >
-              {title}
-            </ToastPrimitive.Title>
-          ) : null}
-          <ToastPrimitive.Description
-            className={cx('text-sm text-primary', {
-              'mt-2': title,
-              'text-orange-900 dark:text-orange-200': type === 'warning',
-              'text-green-900 dark:text-green-200': type === 'success',
-              'text-blue-900 dark:text-blue-200': type === 'info',
-              'text-red-900 dark:text-red-200': type === 'danger',
-            })}
-          >
-            {children}
-          </ToastPrimitive.Description>
-        </div>
-        <ToastPrimitive.Close className="!leading-none" aria-label="Close">
-          <span aria-hidden>×</span>
-        </ToastPrimitive.Close>
-      </div>
-    </ToastPrimitive.Root>
-  )
-})
-Toast.displayName = ToastPrimitive.Toast.displayName
 
 const ToastProvider = ToastPrimitive.Provider
 
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitive.Viewport>
->(({className, title, children, ...props}, ref) => {
+>(({className, ...props}, ref) => (
+  <ToastPrimitive.Viewport
+    ref={ref}
+    className={cx(
+      'fixed top-0 z-50 flex max-h-screen w-full flex-col-reverse p-4 sm:top-auto sm:bottom-0 sm:right-0 sm:flex-col md:max-w-[420px]',
+      className,
+    )}
+    {...props}
+  />
+))
+ToastViewport.displayName = ToastPrimitive.Viewport.displayName
+
+const Toast = React.forwardRef<
+  React.ElementRef<typeof ToastPrimitive.Toast> & {
+    type?: keyof typeof variants
+  },
+  React.ComponentPropsWithoutRef<typeof ToastPrimitive.Toast>
+>(({className, title, children, open, type = 'default', ...props}, ref) => {
   return (
-    <ToastPrimitive.ToastViewport
+    <ToastPrimitive.Root
       {...props}
       className={cx(
-        'fixed right-0 bottom-4 sm:right-4 flex flex-col gap-2 w-full max-w-sm m-0 list-none z-50 outline-none',
+        'not-prose data-[swipe=move]:transition-none grow-1 group relative pointer-events-auto flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full mt-4 data-[state=closed]:slide-out-to-right-full dark:border-gray-700 last:mt-0 sm:last:mt-4',
+        variants[type],
         className,
       )}
+      open={open}
       ref={ref}
-    />
+    >
+      <div className="grid gap-1">
+        {title ? (
+          <ToastPrimitive.Title className="text-sm font-semibold">
+            {title}
+          </ToastPrimitive.Title>
+        ) : null}
+        <ToastPrimitive.Description className="text-sm opacity-90 m-0">
+          {children}
+        </ToastPrimitive.Description>
+      </div>
+
+      <ToastPrimitive.Close
+        className={cx(
+          'absolute top-2 right-2 rounded-md p-1 text-gray-500 opacity-0 transition-opacity hover:text-gray-900 focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 dark:hover:text-gray-50',
+          'group-[.danger]:text-red-300 group-[.danger]:hover:text-red-50 group-[.danger]:focus:ring-red-400 group-[.danger]:focus:ring-offset-red-600',
+          'group-[.success]:text-green-300 group-[.success]:hover:text-green-50 group-[.success]:focus:ring-green-400 group-[.success]:focus:ring-offset-green-600',
+          'group-[.warning]:text-yellow-300 group-[.warning]:hover:text-yellow-50 group-[.warning]:focus:ring-yellow-400 group-[.warning]:focus:ring-offset-yellow-600',
+          'group-[.info]:text-blue-300 group-[.info]:hover:text-blue-50 group-[.info]:focus:ring-blue-400 group-[.info]:focus:ring-offset-blue-600',
+        )}
+        aria-label="Close"
+      >
+        <span aria-hidden>×</span>
+      </ToastPrimitive.Close>
+    </ToastPrimitive.Root>
   )
 })
-ToastViewport.displayName = ToastPrimitive.Viewport.displayName
+Toast.displayName = ToastPrimitive.Toast.displayName
 
 export {Toast, ToastProvider, ToastViewport}
