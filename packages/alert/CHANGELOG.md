@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.17](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.16...@daren/alert@1.4.17) (2023-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#85](https://github.com/darenmalfait/darenui/issues/85)) ([e4d2cfb](https://github.com/darenmalfait/darenui/commit/e4d2cfbcb564984358629b02ec1d3d0fc21deffe))
+
+
+
+
+
 ## [1.4.16](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.15...@daren/alert@1.4.16) (2023-02-05)
 
 **Note:** Version bump only for package @daren/alert

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.4.0...@daren/navigation-list@1.4.1) (2023-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#85](https://github.com/darenmalfait/darenui/issues/85)) ([e4d2cfb](https://github.com/darenmalfait/darenui/commit/e4d2cfbcb564984358629b02ec1d3d0fc21deffe))
+
+
+
+
+
 # [1.4.0](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.3.9...@daren/navigation-list@1.4.0) (2023-02-05)
 
 

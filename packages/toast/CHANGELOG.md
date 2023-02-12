@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/darenmalfait/darenui/compare/@daren/toast@1.1.0...@daren/toast@1.1.1) (2023-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#85](https://github.com/darenmalfait/darenui/issues/85)) ([e4d2cfb](https://github.com/darenmalfait/darenui/commit/e4d2cfbcb564984358629b02ec1d3d0fc21deffe))
+* **toast:** hide div when no icon ([92516d8](https://github.com/darenmalfait/darenui/commit/92516d8c4afbcc5534d0a4d1c645aebfe29765df))
+* **toast:** new toast styling ([5835bc7](https://github.com/darenmalfait/darenui/commit/5835bc786d40f7a11a4c227ae7692464c34e077a))
+
+
+
+
+
 # [1.1.0](https://github.com/darenmalfait/darenui/compare/@daren/toast@1.0.3...@daren/toast@1.1.0) (2023-02-05)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.5...@daren/button@2.0.6) (2023-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#85](https://github.com/darenmalfait/darenui/issues/85)) ([e4d2cfb](https://github.com/darenmalfait/darenui/commit/e4d2cfbcb564984358629b02ec1d3d0fc21deffe))
+
+
+
+
+
 ## [2.0.5](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.4...@daren/button@2.0.5) (2023-02-05)
 
 **Note:** Version bump only for package @daren/button
