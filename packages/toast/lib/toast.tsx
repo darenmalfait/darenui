@@ -5,7 +5,8 @@ import {cx} from '@daren/utils'
 import * as ToastPrimitive from '@radix-ui/react-toast'
 
 const variants = {
-  default: 'bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700',
+  default:
+    'bg-white text-primary border-gray-200 dark:bg-gray-800 dark:border-gray-700',
   danger:
     'group danger bg-red-600 text-white border-red-600 dark:border-red-600',
   success:
@@ -24,7 +25,7 @@ const ToastViewport = React.forwardRef<
   <ToastPrimitive.Viewport
     ref={ref}
     className={cx(
-      'fixed top-0 z-50 flex max-h-screen w-full flex-col-reverse p-4 sm:top-auto sm:bottom-0 sm:right-0 sm:flex-col md:max-w-[420px]',
+      'fixed top-0 left-0 right-2 z-50 flex max-h-screen w-full flex-col-reverse p-4 sm:left-auto sm:top-auto sm:bottom-0 sm:right-0 sm:flex-col md:max-w-[420px]',
       className,
     )}
     {...props}

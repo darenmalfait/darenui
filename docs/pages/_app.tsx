@@ -30,8 +30,8 @@ const App = ({
         <main className={`${inter.variable} font-sans bg-primary`}>
           <Layout {...pageProps}>
             <Component {...pageProps} />
-            <ToastViewport />
           </Layout>
+          <ToastViewport />
         </main>
       </LazyMotion>
     </AppProviders>
