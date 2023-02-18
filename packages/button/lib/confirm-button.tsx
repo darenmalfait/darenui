@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import {Input} from '@daren/form-elements'
 import {H4, Paragraph} from '@daren/typography'

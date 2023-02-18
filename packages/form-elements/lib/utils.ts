@@ -1,3 +1,5 @@
+'use client'
+
 import {cx} from '@daren/utils'
 
 type InputSize = 'sm' | 'md' | 'lg'

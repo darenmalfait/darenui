@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import {cx, useControllableState} from '@daren/utils'
 import {RadioGroup as HeadlessRadioGroup} from '@headlessui/react'

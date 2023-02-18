@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import {cx} from '@daren/utils'
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'

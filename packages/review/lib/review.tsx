@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import {H2, H4, Paragraph} from '@daren/typography'
 import {cx} from '@daren/utils'
