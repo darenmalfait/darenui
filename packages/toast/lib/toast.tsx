@@ -56,7 +56,7 @@ const Toast = React.forwardRef<
             {title}
           </ToastPrimitive.Title>
         ) : null}
-        <ToastPrimitive.Description className="text-sm opacity-90 m-0">
+        <ToastPrimitive.Description className="m-0 text-sm opacity-90">
           {children}
         </ToastPrimitive.Description>
       </div>
