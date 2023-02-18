@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@daren/utils": "^1.9.6",
-    "@heroicons/react": "^2.0.15"
+    "@heroicons/react": "^2.0.16"
   },
   "devDependencies": {
     "react": "^18.2.0"
