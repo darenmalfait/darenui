@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.2](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.12.1...@daren/docs@0.12.2) (2023-02-18)
+
+
+### Bug Fixes
+
+* **toast:** change mobile positioning ([a0bc2df](https://github.com/darenmalfait/darenui/commit/a0bc2df221e14f337ac87541f8845ff483016024))
+
+
+
+
+
 ## [0.12.1](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.12.0...@daren/docs@0.12.1) (2023-02-12)
 
 
