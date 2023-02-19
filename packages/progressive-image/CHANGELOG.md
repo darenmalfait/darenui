@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.13](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.12...@daren/progressive-image@1.4.13) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [1.4.12](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.11...@daren/progressive-image@1.4.12) (2023-02-05)
 
 **Note:** Version bump only for package @daren/progressive-image

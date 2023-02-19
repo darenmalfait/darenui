@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.19](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.18...@daren/alert@1.4.19) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [1.4.18](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.17...@daren/alert@1.4.18) (2023-02-18)
 
 **Note:** Version bump only for package @daren/alert

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.7...@daren/button@2.0.8) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [2.0.7](https://github.com/darenmalfait/darenui/compare/@daren/button@2.0.6...@daren/button@2.0.7) (2023-02-18)
 
 **Note:** Version bump only for package @daren/button

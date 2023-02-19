@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.11](https://github.com/darenmalfait/darenui/compare/@daren/code-block@3.0.10...@daren/code-block@3.0.11) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [3.0.10](https://github.com/darenmalfait/darenui/compare/@daren/code-block@3.0.9...@daren/code-block@3.0.10) (2023-02-18)
 
 **Note:** Version bump only for package @daren/code-block

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.12](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.11...@daren/typography@1.9.12) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [1.9.11](https://github.com/darenmalfait/darenui/compare/@daren/typography@1.9.10...@daren/typography@1.9.11) (2023-02-05)
 
 **Note:** Version bump only for package @daren/typography

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.15](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.4.14...@daren/grid@1.4.15) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [1.4.14](https://github.com/darenmalfait/darenui/compare/@daren/grid@1.4.13...@daren/grid@1.4.14) (2023-02-05)
 
 **Note:** Version bump only for package @daren/grid

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.22](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.21...@daren/modal@1.4.22) (2023-02-19)
+
+
+### Bug Fixes
+
+* add use client to all the components ([535a566](https://github.com/darenmalfait/darenui/commit/535a56654d9b77090f4a26eae2621b55731edf26))
+
+
+
+
+
 ## [1.4.21](https://github.com/darenmalfait/darenui/compare/@daren/modal@1.4.20...@daren/modal@1.4.21) (2023-02-18)
 
 **Note:** Version bump only for package @daren/modal
