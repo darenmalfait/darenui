@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import {cx, useControllableState} from '@daren/utils'
+import {ExtractProps, cx, useControllableState} from '@daren/utils'
 import {RadioGroup as HeadlessRadioGroup} from '@headlessui/react'
 import {CheckCircleIcon} from '@heroicons/react/24/solid'
 
@@ -17,12 +17,12 @@ function Option({
   description,
   className,
   ...props
-}: OptionProps & JSX.IntrinsicElements['div']) {
+}: OptionProps & ExtractProps<typeof HeadlessRadioGroup.Option>) {
   return (
     <HeadlessRadioGroup.Option
       value={value}
       {...props}
-      className={({active, checked}) =>
+      className={({active, checked}: {active: boolean; checked: boolean}) =>
         cx(
           className,
           'relative block cursor-pointer rounded-lg px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between',
@@ -94,7 +94,7 @@ function RadioGroup({
   onChange,
   children,
   ...props
-}: JSX.IntrinsicElements['input'] & RadioGroupProps) {
+}: ExtractProps<typeof HeadlessRadioGroup> & RadioGroupProps) {
   const [value, setValue] = useControllableState(
     valueProp,
     defaultValue,
@@ -108,7 +108,7 @@ function RadioGroup({
 
   return (
     <HeadlessRadioGroup value={value} onChange={handleChange} {...props}>
-      <input name={name} value={value} type="hidden" />
+      <input name={name} value={value as string} type="hidden" />
       {label ? (
         <HeadlessRadioGroup.Label className="sr-only">
           {label}
@@ -119,6 +119,6 @@ function RadioGroup({
   )
 }
 
-RadioGroup.Option = Option
+RadioGroup.Option = Option as any
 
 export {RadioGroup}
