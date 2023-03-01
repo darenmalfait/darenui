@@ -1,7 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import {cx, useSafeEffect} from '@daren/utils'
+import {cx, useSSRLayoutEffect} from '@daren/utils'
+
+const isServer = typeof document === 'undefined'
 
 export type ResponsiveProps = {
   maxWidth?: number
@@ -19,12 +21,18 @@ function ProgressiveImage({
   placeholder?: string
   isLoaded?: boolean
 } & React.HTMLAttributes<HTMLDivElement>) {
-  const [visible, setVisible] = React.useState(!placeholder)
+  const id = React.useId()
+  const [visible, setVisible] = React.useState(() => {
+    if (isServer) return false
+
+    const el = document.getElementById(id)
+    return el instanceof HTMLImageElement && el.complete
+  })
   const imgRef = React.useRef<HTMLImageElement>(null)
 
   // make this happen asap
   // if it's alrady loaded, don't bother fading it in.
-  useSafeEffect(() => {
+  useSSRLayoutEffect(() => {
     if (imgRef.current?.complete || isLoaded) setVisible(true)
   }, [isLoaded])
 
@@ -48,7 +56,9 @@ function ProgressiveImage({
   const imgElement =
     !!placeholder &&
     React.cloneElement(img, {
+      id,
       ref: imgRef,
+      suppressHydrationWarning: true,
       className: cx(
         img.props.className,
         'object-cover absolute inset-0 w-full h-full transition-opacity duration-300',
@@ -82,6 +92,7 @@ function ProgressiveImage({
           />
         ) : null}
         {imgElement}
+        <noscript>{img}</noscript>
       </div>
     </div>
   )

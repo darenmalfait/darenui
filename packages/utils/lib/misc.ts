@@ -4,4 +4,7 @@ const isBrowser = typeof document !== 'undefined'
 
 const useSafeEffect = isBrowser ? React.useLayoutEffect : React.useEffect
 
-export {isBrowser, useSafeEffect}
+const useSSRLayoutEffect =
+  typeof window === 'undefined' ? () => {} : React.useLayoutEffect
+
+export {isBrowser, useSafeEffect, useSSRLayoutEffect}
