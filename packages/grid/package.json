@@ -1,6 +1,6 @@
 {
   "name": "@daren/grid",
-  "version": "1.4.15",
+  "version": "1.4.16",
   "repository": {
     "type": "git",
     "url": "git@github.com:darenmalfait/darenui.git",
@@ -38,7 +38,7 @@
     "version": "yarn build"
   },
   "dependencies": {
-    "@daren/utils": "^1.9.6"
+    "@daren/utils": "^1.9.7"
   },
   "devDependencies": {
     "react": "^18.2.0"

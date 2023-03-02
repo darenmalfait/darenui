@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.4](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.12.3...@daren/docs@0.12.4) (2023-03-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v10 ([#90](https://github.com/darenmalfait/darenui/issues/90)) ([aa474b8](https://github.com/darenmalfait/darenui/commit/aa474b8e527ceef4a9f1cbfc8e505a8ab2fbbd20))
+
+
+
+
+
 ## [0.12.3](https://github.com/darenmalfait/darenui/compare/@daren/docs@0.12.2...@daren/docs@0.12.3) (2023-02-19)
 
 **Note:** Version bump only for package @daren/docs

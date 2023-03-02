@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.20](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.19...@daren/alert@1.4.20) (2023-03-02)
+
+**Note:** Version bump only for package @daren/alert
+
+
+
+
+
 ## [1.4.19](https://github.com/darenmalfait/darenui/compare/@daren/alert@1.4.18...@daren/alert@1.4.19) (2023-02-19)
 
 

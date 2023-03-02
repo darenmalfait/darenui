@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.7](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.9.6...@daren/utils@1.9.7) (2023-03-02)
+
+
+### Bug Fixes
+
+* **progressive-image:** improve loading flow ([bc2ac23](https://github.com/darenmalfait/darenui/commit/bc2ac23fb24abde3336afd5849fc2641d0ec5c37))
+
+
+
+
+
 ## [1.9.6](https://github.com/darenmalfait/darenui/compare/@daren/utils@1.9.5...@daren/utils@1.9.6) (2023-02-05)
 
 

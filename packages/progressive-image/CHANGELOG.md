@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.14](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.13...@daren/progressive-image@1.4.14) (2023-03-02)
+
+
+### Bug Fixes
+
+* **progressive-image:** improve loading flow ([bc2ac23](https://github.com/darenmalfait/darenui/commit/bc2ac23fb24abde3336afd5849fc2641d0ec5c37))
+
+
+
+
+
 ## [1.4.13](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.12...@daren/progressive-image@1.4.13) (2023-02-19)
 
 

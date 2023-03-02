@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/darenmalfait/darenui/compare/@daren/toast@1.1.2...@daren/toast@1.1.3) (2023-03-02)
+
+
+### Bug Fixes
+
+* **toast:** change type prop to variant ([5119d18](https://github.com/darenmalfait/darenui/commit/5119d18ab02675b8617b9a947d6ef2b909407c18))
+
+
+
+
+
 ## [1.1.2](https://github.com/darenmalfait/darenui/compare/@daren/toast@1.1.1...@daren/toast@1.1.2) (2023-02-18)
 
 

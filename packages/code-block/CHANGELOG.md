@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.12](https://github.com/darenmalfait/darenui/compare/@daren/code-block@3.0.11...@daren/code-block@3.0.12) (2023-03-02)
+
+**Note:** Version bump only for package @daren/code-block
+
+
+
+
+
 ## [3.0.11](https://github.com/darenmalfait/darenui/compare/@daren/code-block@3.0.10...@daren/code-block@3.0.11) (2023-02-19)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.4.3...@daren/navigation-list@1.4.4) (2023-03-02)
+
+**Note:** Version bump only for package @daren/navigation-list
+
+
+
+
+
 ## [1.4.3](https://github.com/darenmalfait/darenui/compare/@daren/navigation-list@1.4.2...@daren/navigation-list@1.4.3) (2023-02-19)
 
 
