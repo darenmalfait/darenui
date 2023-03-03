@@ -65,12 +65,17 @@ function ProgressiveImage({
     <div className={cx(className, 'w-full')}>
       <div className="relative h-full w-full overflow-hidden">
         <img
+          suppressHydrationWarning
           key={placeholder}
           src={placeholder ?? img.props.src}
           srcSet={placeholder ? undefined : img.props.srcSet}
           className={cx(
             className,
             'min-h-full min-w-full object-cover transition-opacity duration-300',
+            // transparent images will otherwise have a blurry image in the background
+            {
+              'opacity-0': visible,
+            },
           )}
           alt={img.props.alt}
         />
