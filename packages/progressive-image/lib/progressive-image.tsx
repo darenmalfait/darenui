@@ -71,9 +71,6 @@ function ProgressiveImage({
           className={cx(
             className,
             'min-h-full min-w-full object-cover transition-opacity duration-300',
-            {
-              'opacity-0': visible,
-            },
           )}
           alt={img.props.alt}
         />
