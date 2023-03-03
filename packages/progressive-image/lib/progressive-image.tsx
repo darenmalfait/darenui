@@ -3,8 +3,6 @@
 import * as React from 'react'
 import {cx, useSSRLayoutEffect} from '@daren/utils'
 
-const isServer = typeof document === 'undefined'
-
 export type ResponsiveProps = {
   maxWidth?: number
   size: {width: number; height?: number}
@@ -22,12 +20,7 @@ function ProgressiveImage({
   isLoaded?: boolean
 } & React.HTMLAttributes<HTMLDivElement>) {
   const id = React.useId()
-  const [visible, setVisible] = React.useState(() => {
-    if (isServer) return false
-
-    const el = document.getElementById(id)
-    return el instanceof HTMLImageElement && el.complete
-  })
+  const [visible, setVisible] = React.useState(false)
   const imgRef = React.useRef<HTMLImageElement>(null)
 
   // make this happen asap
