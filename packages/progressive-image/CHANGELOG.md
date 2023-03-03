@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.17](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.16...@daren/progressive-image@1.4.17) (2023-03-03)
+
+
+### Bug Fixes
+
+* **progressive-image:** hide placeholder on load ([4c5e9df](https://github.com/darenmalfait/darenui/commit/4c5e9df52d0607a9766fee72a569f6adb8c2715f))
+
+
+
+
+
 ## [1.4.16](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.15...@daren/progressive-image@1.4.16) (2023-03-03)
 
 
