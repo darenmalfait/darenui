@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.15](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.14...@daren/progressive-image@1.4.15) (2023-03-03)
+
+
+### Bug Fixes
+
+* **progressive-image:** start not visible as default ([9c3efaf](https://github.com/darenmalfait/darenui/commit/9c3efafa518f509c06b87ce4b8c75c0c076f928f))
+
+
+
+
+
 ## [1.4.14](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.13...@daren/progressive-image@1.4.14) (2023-03-02)
 
 
