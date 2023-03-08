@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.18](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.17...@daren/progressive-image@1.4.18) (2023-03-08)
+
+
+### Bug Fixes
+
+* **progressive-image:** extend existing props ([4b19070](https://github.com/darenmalfait/darenui/commit/4b190706c8393f9a0e5c9b109d36c5f4c8f3ca1b))
+
+
+
+
+
 ## [1.4.17](https://github.com/darenmalfait/darenui/compare/@daren/progressive-image@1.4.16...@daren/progressive-image@1.4.17) (2023-03-03)
 
 
