@@ -49,6 +49,7 @@ function ProgressiveImage({
   const imgElement =
     !!placeholder &&
     React.cloneElement(img, {
+      ...img.props,
       id,
       ref: imgRef,
       suppressHydrationWarning: true,
@@ -65,6 +66,7 @@ function ProgressiveImage({
     <div className={cx(className, 'w-full')}>
       <div className="relative h-full w-full overflow-hidden">
         <img
+          {...img.props}
           suppressHydrationWarning
           key={placeholder}
           src={placeholder ?? img.props.src}
