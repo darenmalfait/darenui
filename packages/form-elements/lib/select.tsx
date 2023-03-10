@@ -97,7 +97,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(function Select(
           <div className="relative">
             <Combobox.Input
               aria-disabled={disabled}
-              disabled={disabled}
               className={getInputClassName(
                 props.className,
                 hasError,
