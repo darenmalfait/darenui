@@ -2,9 +2,9 @@ import {Colors} from './types'
 
 export const colors: Colors = {
   daren: {
-    100: '#e98bd4',
-    500: '#a48deb',
-    900: '#5bbdf4',
+    100: '#F19A57',
+    500: '#D46536',
+    900: '#D75C26',
   },
   accent: {
     100: '#ffffff',
