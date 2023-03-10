@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.4.8...@daren/theme@2.5.0) (2023-03-10)
+
+
+### Features
+
+* **theme:** update accents color scheme ([b4c8fcb](https://github.com/darenmalfait/darenui/commit/b4c8fcb7c776a7349d8a44dbe7e424adc0a49edb))
+
+
+
+
+
 ## [2.4.8](https://github.com/darenmalfait/darenui/compare/@daren/theme@2.4.7...@daren/theme@2.4.8) (2023-03-02)
 
 **Note:** Version bump only for package @daren/theme
