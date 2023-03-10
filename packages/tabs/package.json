@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "@daren/utils": "^1.9.7",
-    "@radix-ui/react-tabs": "^1.0.2"
+    "@radix-ui/react-tabs": "^1.0.3"
   }
 }

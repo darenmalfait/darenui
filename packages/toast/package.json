@@ -49,6 +49,6 @@
   "dependencies": {
     "@daren/utils": "^1.9.7",
     "@heroicons/react": "^2.0.16",
-    "@radix-ui/react-toast": "^1.1.2"
+    "@radix-ui/react-toast": "^1.1.3"
   }
 }
