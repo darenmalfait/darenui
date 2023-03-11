@@ -69,7 +69,7 @@
     "danger": "^11.2.4",
     "dotenv": "^16.0.3",
     "eslint": "^8.36.0",
-    "eslint-config-daren": "^4.0.11",
+    "eslint-config-daren": "^4.0.12",
     "eslint-plugin-import": "^2.27.5",
     "fast-glob": "^3.2.12",
     "husky": "^8.0.3",
